@@ -1,0 +1,119 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://enceladus/UpgradeGroup.gd" type="Script" id=1]
+[ext_resource path="res://menu/sfx/PlaySoundsOnTheseButtons.tscn" type="PackedScene" id=2]
+[ext_resource path="res://SmoothScrollTo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://enceladus/SystemShipUpgradeUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://enceladus/Upgrades/Preview.tscn" type="PackedScene" id=5]
+[ext_resource path="res://IndustriesOfEnceladus/enceladus/upgradenodes/shared/CargoMPUFURN.tscn" type="PackedScene" id=6]
+
+[node name="CargoBayFusion" type="PanelContainer"]
+margin_right = 1228.0
+margin_bottom = 572.0
+script = ExtResource( 1 )
+slot = "cargo.equipment"
+restrictType = "fusion-dec"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1221.0
+margin_bottom = 565.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 1214.0
+margin_bottom = 40.0
+alignment = 2
+
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer/HBoxContainer"]
+margin_right = 1214.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+text = "SLOT_CARGOBAY_REPL"
+flat = true
+align = 2
+
+[node name="SmoothScrollTo" parent="VBoxContainer/HBoxContainer/CheckButton" instance=ExtResource( 3 )]
+
+[node name="PlaySoundsOnTheseButtons" parent="VBoxContainer/HBoxContainer/CheckButton" instance=ExtResource( 2 )]
+
+[node name="Preview" parent="VBoxContainer/HBoxContainer/CheckButton" instance=ExtResource( 5 )]
+
+[node name="CargoBayStandard" parent="VBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 44.0
+margin_right = 1214.0
+margin_bottom = 114.0
+slot = "cargo.equipment"
+system = "SYSTEM_CARGO_STANDARD"
+manual = "SYSTEM_NONE_MANUAL"
+testProtocol = "cargo"
+default = true
+
+[node name="CargoBaffles" parent="VBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 118.0
+margin_right = 1214.0
+margin_bottom = 188.0
+slot = "cargo.equipment"
+system = "SYSTEM_CARGO_BAFFLES"
+manual = "SYSTEM_CARGO_BAFFLES_MANUAL"
+price = 2000
+testProtocol = "cargo"
+
+[node name="CargoMPUFSO" parent="VBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 192.0
+margin_right = 1214.0
+margin_bottom = 262.0
+slot = "cargo.equipment"
+system = "SYSTEM_CARGO_MPUFSO"
+manual = "SYSTEM_CARGO_MPU_MANUAL"
+price = 350000
+testProtocol = "cargo"
+
+[node name="CargoMPU" parent="VBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 266.0
+margin_right = 1214.0
+margin_bottom = 336.0
+slot = "cargo.equipment"
+system = "SYSTEM_CARGO_MPU"
+manual = "SYSTEM_CARGO_MPU_MANUAL"
+price = 500000
+testProtocol = "cargo"
+
+[node name="CargoMPUFURN" parent="VBoxContainer" instance=ExtResource( 6 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 340.0
+margin_right = 1214.0
+margin_bottom = 410.0
+
+[node name="CargoMPUSML" parent="VBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 414.0
+margin_right = 1214.0
+margin_bottom = 484.0
+slot = "cargo.equipment"
+system = "SYSTEM_CARGO_MPUSML"
+manual = "SYSTEM_CARGO_MPUSML_MANUAL"
+price = 900000
+testProtocol = "cargo"
+
+[node name="CargoMPUFAB" parent="VBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 488.0
+margin_right = 1214.0
+margin_bottom = 558.0
+slot = "cargo.equipment"
+system = "SYSTEM_CARGO_MPU_FAB"
+manual = "SYSTEM_CARGO_MPU_FAB_MANUAL"
+price = 1500000
+testProtocol = "cargo"

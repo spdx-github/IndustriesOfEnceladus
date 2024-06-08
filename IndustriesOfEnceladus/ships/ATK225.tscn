@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://ships/ATK225.tscn" type="PackedScene" id=1]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/shared/atk225/MineralProcessingUnit_Furnace.tscn" type="PackedScene" id=2]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/shared/atk225/MineralProcessingUnit_Bulker.tscn" type="PackedScene" id=3]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/shared/atk225/Aux_PreProcB.tscn" type="PackedScene" id=4]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/HoldModifiersDivided.tscn" type="PackedScene" id=6]
+
+[node name="ATK225" instance=ExtResource( 1 )]
+position = Vector2( 0, 20 )
+
+[node name="CargoHoldAreaHull" parent="." index="7"]
+visible = false
+
+[node name="CargoBaffles" parent="." index="24"]
+slot = "cargo.auxequipment"
+
+[node name="HoldModifiersDivided" parent="." index="26" instance=ExtResource( 6 )]
+
+[node name="MineralProcessingUnit_FAB" parent="." index="30"]
+position = Vector2( 0, 148 )
+
+[node name="MineralProcessingUnit_Bulker" parent="." index="31" instance=ExtResource( 3 )]
+visible = false
+
+[node name="MineralProcessingUnit_Furnace" parent="." index="32" instance=ExtResource( 2 )]
+visible = false
+
+[node name="Aux_BayFab" parent="." index="33" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/shared/atk225/Aux_BayFab.tscn"]
+visible = false
+
+[node name="Aux_BayStorageA" parent="." index="34" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/shared/atk225/Aux_BayStorageA.tscn"]
+visible = false
+
+[node name="Aux_BayStorageB" parent="." index="35" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/shared/atk225/Aux_BayStorageB.tscn"]
+visible = false
+
+[node name="Aux_PreProcA" parent="." index="36" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/shared/atk225/Aux_PreProcA.tscn"]
+visible = false
+
+[node name="Aux_PreProcB" parent="." index="37" instance=ExtResource( 4 )]
+visible = false
+
+[node name="AuxSlot" parent="." index="38"]
+position = Vector2( 0, 1 )
+
+[node name="AI" parent="." index="48"]
+visible = false
+
+[editable path="weapon-left"]
+[editable path="weapon-right"]
+[editable path="weapon-left-back"]
+[editable path="weapon-right-back"]
+[editable path="weapon-left-back2"]
+[editable path="weapon-right-back2"]
+[editable path="weapon-left-back3"]
+[editable path="weapon-right-back3"]
+[editable path="AI"]

@@ -1,0 +1,133 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://enceladus/SmoothScrollTo.gd" type="Script" id=1]
+[ext_resource path="res://menu/MenuTheme.tres" type="Theme" id=2]
+[ext_resource path="res://hud/TNTRL-theme-inventory.tres" type="Theme" id=3]
+[ext_resource path="res://SmoothScrollTo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://menu/sfx/PlaySoundsOnTheseButtons.tscn" type="PackedScene" id=5]
+[ext_resource path="res://menu/sfx/PlaySoundsOnTheseButtons.gd" type="Script" id=6]
+[ext_resource path="res://menu/MenuUpgrades.tres" type="Theme" id=7]
+[ext_resource path="res://enceladus/SystemShipUpgradeUI.tscn" type="PackedScene" id=8]
+[ext_resource path="res://enceladus/Upgrades/Preview.tscn" type="PackedScene" id=9]
+[ext_resource path="res://enceladus/UpgradeGroup.gd" type="Script" id=10]
+[ext_resource path="res://enceladus/SystemShipUpgradeUI.gd" type="Script" id=11]
+
+[node name="DroneSlot" type="PanelContainer"]
+margin_top = 17802.0
+margin_right = 1228.0
+margin_bottom = 18227.0
+theme = ExtResource( 7 )
+script = ExtResource( 10 )
+slot = "weaponSlot.drone.type"
+always = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 16.0
+margin_top = 2.0
+margin_right = 1212.0
+margin_bottom = 423.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 1196.0
+margin_bottom = 51.0
+alignment = 2
+
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer/HBoxContainer"]
+margin_right = 1196.0
+margin_bottom = 51.0
+size_flags_horizontal = 3
+text = "SLOT_DRONE"
+flat = true
+align = 2
+
+[node name="SmoothScrollTo" type="Node" parent="VBoxContainer/HBoxContainer/CheckButton" instance=ExtResource( 4 )]
+script = ExtResource( 1 )
+
+[node name="PlaySoundsOnTheseButtons" type="Node" parent="VBoxContainer/HBoxContainer/CheckButton" instance=ExtResource( 5 )]
+pause_mode = 2
+script = ExtResource( 6 )
+tooltipLabelPath = NodePath("Separation/Tooltip/MarginContainer/PanelContainer/TooltipLabel")
+tooltipContainerPath = NodePath("Separation/Tooltip/MarginContainer")
+tooltipPositionPath = NodePath("Separation/Tooltip")
+
+[node name="Preview" type="Label" parent="VBoxContainer/HBoxContainer/CheckButton" instance=ExtResource( 9 )]
+modulate = Color( 1, 1, 1, 0.580392 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+valign = 1
+
+[node name="None" type="MarginContainer" parent="VBoxContainer" instance=ExtResource( 8 )]
+margin_top = 55.0
+margin_right = 1196.0
+margin_bottom = 125.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_constants/margin_right = 16
+script = ExtResource( 11 )
+slot = "weaponSlot.main.type"
+system = "SYSTEM_NONE"
+default = true
+
+[node name="DND_TS" type="MarginContainer" parent="VBoxContainer" instance=ExtResource( 8 )]
+margin_top = 129.0
+margin_right = 1196.0
+margin_bottom = 199.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_constants/margin_right = 16
+script = ExtResource( 11 )
+slot = "weaponSlot.main.type"
+system = "SYSTEM_DND_TS"
+price = 250000
+testProtocol = "drone"
+warnIfElectricBelow = 50.0
+
+[node name="DND_HAUL" type="MarginContainer" parent="VBoxContainer" instance=ExtResource( 8 )]
+margin_top = 203.0
+margin_right = 1196.0
+margin_bottom = 273.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_constants/margin_right = 16
+script = ExtResource( 11 )
+slot = "weaponSlot.main.type"
+system = "SYSTEM_DND_HAUL"
+price = 350000
+testProtocol = "drone"
+warnIfElectricBelow = 50.0
+
+[node name="DND_FIX" type="MarginContainer" parent="VBoxContainer" instance=ExtResource( 8 )]
+margin_top = 277.0
+margin_right = 1196.0
+margin_bottom = 347.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_constants/margin_right = 16
+script = ExtResource( 11 )
+slot = "weaponSlot.main.type"
+system = "SYSTEM_DND_FIX"
+price = 400000
+testProtocol = "damage"
+warnIfElectricBelow = 50.0
+
+[node name="DND_HARVHAUL" type="MarginContainer" parent="VBoxContainer" instance=ExtResource( 8 )]
+margin_top = 351.0
+margin_right = 1196.0
+margin_bottom = 421.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_constants/margin_right = 16
+script = ExtResource( 11 )
+slot = "weaponSlot.main.type"
+system = "SYSTEM_DND_HARVHAUL"
+manual = "SYSTEM_DND_HAUL_MANUAL"
+price = 525000
+testProtocol = "drone"
+warnIfElectricBelow = 100.0
+
+[connection signal="visibility_changed" from="VBoxContainer/None" to="VBoxContainer/None" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="visibility_changed" from="VBoxContainer/DND_TS" to="VBoxContainer/DND_TS" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="visibility_changed" from="VBoxContainer/DND_HAUL" to="VBoxContainer/DND_HAUL" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="visibility_changed" from="VBoxContainer/DND_FIX" to="VBoxContainer/DND_FIX" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="visibility_changed" from="VBoxContainer/DND_HARVHAUL" to="VBoxContainer/DND_HARVHAUL" method="_on_SystemShipUpgradeUI_visibility_changed"]

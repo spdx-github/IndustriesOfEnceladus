@@ -1,0 +1,156 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://IndustriesOfEnceladus/ships/ocp-209.tscn" type="PackedScene" id=1]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/Aux_BayStorageA.tscn" type="PackedScene" id=2]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/Aux_BayFab.tscn" type="PackedScene" id=3]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/Aux_PreProcB.tscn" type="PackedScene" id=4]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/Aux_BayStorageB.tscn" type="PackedScene" id=5]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/Aux_PreProcA.tscn" type="PackedScene" id=6]
+
+[node name="OCP-209-DD" instance=ExtResource( 1 )]
+mass = 186.0
+shipName = "SHIP_OCP209_DD"
+shipType = "fission"
+hullPrice = 420000
+processedCargoCapacity = 36000
+cargoHoldArea = Rect2( -145, -275, 290, 450 )
+
+[node name="BayStopper 1" parent="Bay" index="0"]
+position = Vector2( 53, -156 )
+
+[node name="BayStopper 2" parent="Bay" index="1"]
+position = Vector2( -75, -129 )
+
+[node name="CargoBaffles" parent="Bay/Bay" index="0"]
+polygon = PoolVector2Array( -28, 67, -53, 52, -67, 32, -73, 13, -74, -9, -67, -34, -50, -54, -29, -68, 0, -72, 36, -87, 48, -103, 54, -117, 52, -129, 70, -121, 99, -98, 0, -63, -22, -59, -39, -49, -56, -27, -62, -8, -61, 16, -49, 38 )
+slot = "cargo.auxequipment"
+
+[node name="Aux_PreProcA" parent="Bay/Bay" index="1" instance=ExtResource( 6 )]
+visible = false
+position = Vector2( 0, 66 )
+polygon = PoolVector2Array( 134, -25, 116, -49, 116, -81, 134, -105, 142, -65 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="MineralProcessingUnit" parent="Bay/Bay/Aux_PreProcA" index="0"]
+visible = false
+
+[node name="CollisionPolygon2D" parent="Bay/Bay/Aux_PreProcA/MineralProcessingUnit" index="0"]
+polygon = PoolVector2Array( 142, -9, 100, 91, 0, 131, -102, 85, -142, -9, -100, -109, 0, -149, 100, -109 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CollisionPolygon2D" parent="Bay/Bay" index="2"]
+polygon = PoolVector2Array( 57, -170, 69, -166, 79, -168, 96, -155, 128, -132, 153, -98, 168, -62, 173, -20, 168, 19, 152, 57, 127, 90, 95, 114, 58, 130, 17, 136, 17, 119, 54, 114, 88, 100, 117, 78, 138, 50, 152, 16, 157, -20, 152, -57, 138, -91, 117, -119, 87, -142, 69, -150 )
+
+[node name="Collider" parent="." index="5"]
+polygon = PoolVector2Array( 0, -400, 26, -395, 50, -381, 64, -363, 70, -335, 66, -309, 58, -293, 58, -284, 151, -279, 150, -261, 90, -256, 91, -137, 86, -129, 58, -141, 36, -135, 30, -137, 40, -159, 40, -249, 20, -259, -20, -259, -40, -249, -40, -159, -30, -137, -70, -121, -99, -99, -121, -70, -135, -36, -140, 0, -135, 36, -121, 70, -99, 99, -70, 121, -36, 135, 0, 140, 37, 135, 70, 121, 81, 121, 90, 131, 90, 217, 84, 231, 70, 241, 51.1148, 240.902, 60, 249, 62, 257, 150, 262, 150, 272, 64, 281, 65, 348, 59, 368, 40, 387, 45, 397, 31, 446, -31, 446, -46, 397, -40, 387, -49, 377, -70, 377, -70, 279, -148, 277, -148, 261, -70, 257, -70, 241, -84, 231, -90, 217, -90, 131, -84, 124, -106, 107, -131, 75, -146, 39, -151, 1, -146, -39, -131, -74, -106, -107, -82.6822, -124.924, -91, -139, -92, -259, -150, -262, -150, -278, -59, -283, -59, -295, -66, -309, -70, -335, -64, -363, -50, -381, -26, -395 )
+
+[node name="CollisionPolygon2D" parent="CargoHoldArea" index="0"]
+polygon = PoolVector2Array( 38, -141, 120, -89, 146, 1, 120, 91, 43, 138, -1, 146, -40, 140, -72, 128, -103, 102, -126, 71, -140, 36, -145, 0, -140, -39, -124, -75, -102, -103, -73, -126, -37, -141, -44, -159, -44, -251, -20, -263, 20, -263, 44, -251, 44, -159 )
+
+[node name="Collider" parent="CargoHoldAreaHull" index="0"]
+polygon = PoolVector2Array( 0, -396, 22, -391, 46, -377, 62, -353, 65, -325, 59, -303, 56, -293, 56, -281, 148, -276, 148, -265, 88, -258, 89, -139, 80, -124, 71, -124, 36, -139, 44, -157, 44, -251, 22, -263, -22, -263, -44, -251, -44, -157, -36, -139, -72, -123, -100, -101, -123, -71, -137, -37, -142, 1, -137, 37, -123, 72, -100, 101, -72, 123, -37, 137, 0, 142, 39, 137, 71, 123, 80, 123, 88, 136, 88, 216, 79, 231, 63, 239, 48, 240, 58, 250, 61, 259, 148, 264, 148, 270, 62, 279, 63, 348, 57, 367, 38, 387, 43, 397, 29, 444, -29, 444, -44, 397, -37, 387, -48, 375, -67, 375, -67, 277, -146, 275, -146, 263, -67, 259, -67, 239, -77, 232, -88, 216, -88, 138, -81, 124, -105, 105, -129, 74, -144, 38, -149, 1, -144, -38, -129, -73, -104, -106, -80, -125, -89, -139, -90, -261, -148, -264, -148, -276, -57, -281, -57, -294, -61, -304, -66, -324, -60, -359, -47, -377, -25, -390 )
+
+[node name="DockForeLeft" parent="." index="23"]
+visible = false
+slot = ""
+remove = true
+
+[node name="DockForeRight" parent="." index="24"]
+visible = false
+slot = ""
+remove = true
+
+[node name="DockAftRight" parent="." index="25"]
+visible = false
+slot = ""
+remove = true
+
+[node name="DockAftLeft" parent="." index="26"]
+visible = false
+slot = ""
+remove = true
+
+[node name="HoldModifiersAmorphic" parent="." index="29"]
+type = ""
+
+[node name="CollisionPolygon2D" parent="MineralProcessingUnit_FAB/MineralProcessingUnit" index="0"]
+polygon = PoolVector2Array( -28, 24, 24, 24, 24, -18, -28, -18 )
+
+[node name="MineralProcessingUnit_Furnace" parent="." index="34"]
+visible = false
+slot = ""
+removeThis = true
+
+[node name="MineralProcessingUnit_Bulker" parent="." index="35"]
+slot = ""
+removeThis = true
+
+[node name="Aux_BayFab" parent="." index="36" instance=ExtResource( 3 )]
+visible = false
+position = Vector2( -6, -175 )
+polygon = PoolVector2Array( -34, -74, -14, -84, 2, -84, 2, -18, -14, -18, -20, -12, -20, 8, -30, 26, -34, 16 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Aux_BayStorageA" parent="." index="37" instance=ExtResource( 2 )]
+visible = false
+position = Vector2( 0, -135 )
+rotation = 3.14159
+polygon = PoolVector2Array( -40, 114, -20, 124, 20, 124, 40, 114, 40, 76, 24, 44, 24, 14, 30, 2, 42, 24, 42, 116, 20, 126, -20, 126, -42, 116, -42, 24, -30, 2, -24, 14, -24, 44, -40, 76 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Aux_BayStorageB" parent="." index="38" instance=ExtResource( 5 )]
+visible = false
+position = Vector2( 0, -135 )
+rotation = 3.14159
+polygon = PoolVector2Array( -40, 114, -20, 124, 20, 124, 40, 114, 40, 108, 30, 90, 30, 70, 20, 58, 20, 14, 30, 2, 42, 24, 42, 116, 22, 126, -22, 126, -42, 116, -42, 24, -30, 2, -20, 14, -20, 58, -30, 70, -30, 90, -40, 108 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="MineralProcessingUnit" parent="Aux_BayStorageB" index="0"]
+visible = false
+
+[node name="CollisionPolygon2D" parent="Aux_BayStorageB/MineralProcessingUnit" index="0"]
+polygon = PoolVector2Array( 30, 58, 40, 170, 20, 180, -20, 180, -40, 170, -30, 58, -2.27299e-06, 30 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Aux_PreProcB" parent="." index="39" instance=ExtResource( 4 )]
+visible = false
+position = Vector2( -36, -225 )
+rotation = 1.5708
+polygon = PoolVector2Array( -34, -64, -24, -76, -24, -64, -14, -64, 0, -58, 8, -44, 8, -28, 0, -14, -14, -8, -24, -8, -24, 4, -34, -8 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CollisionPolygon2D" parent="Aux_PreProcB/MineralProcessingUnit" index="0"]
+polygon = PoolVector2Array( -24, -20, 90, -20, 146, -60, 226, -86, 318, -60, 364, 20, 322, 122, 226, 160, 138, 130, 90, 60, -24, 60 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[editable path="Bay/Bay/Aux_PreProcA"]
+[editable path="WeaponHardTop"]
+[editable path="WeaponHardRight"]
+[editable path="DockForeLeft"]
+[editable path="DockForeRight"]
+[editable path="DockAftRight"]
+[editable path="DockAftLeft"]
+[editable path="MineralProcessingUnit_FSO"]
+[editable path="MineralProcessingUnit_SMELT"]
+[editable path="MineralProcessingUnit_FAB"]
+[editable path="MineralProcessingUnit_Furnace"]
+[editable path="MineralProcessingUnit_Bulker"]
+[editable path="Aux_BayStorageB"]
+[editable path="Aux_PreProcB"]
+[editable path="AI"]

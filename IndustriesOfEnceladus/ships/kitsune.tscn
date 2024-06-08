@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ships/kitsune.tscn" type="PackedScene" id=1]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/MineralProcessingUnit_Furnace.tscn" type="PackedScene" id=2]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/MineralProcessingUnit_Bulker.tscn" type="PackedScene" id=3]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/HoldModifiersAmorphic.tscn" type="PackedScene" id=4]
+
+[node name="Kitsune" instance=ExtResource( 1 )]
+shipType = "fissionsmall"
+
+[node name="Groove1" parent="." index="5"]
+visible = false
+
+[node name="CargoBay" parent="." index="6"]
+visible = false
+
+[node name="CargoBaffles" parent="Front" index="2"]
+visible = false
+
+[node name="CollisionPolygon2D" parent="Front" index="5"]
+visible = true
+
+[node name="CollisionPolygon2D2" parent="Front" index="6"]
+visible = true
+
+[node name="SpringOperated" parent="Front" index="8"]
+visible = false
+
+[node name="Collider" parent="." index="9"]
+visible = true
+
+[node name="HoldModifiersAmorphic" parent="." index="23" instance=ExtResource( 4 )]
+
+[node name="MineralProcessingUnit_Furnace" parent="." index="28" instance=ExtResource( 2 )]
+visible = false
+polygon = PoolVector2Array( -26, -38, -20, -38, -10, -34, -20, -30, -20, 22, -16, 26, 16, 26, 20, 22, 20, -30, 10, -34, 20, -38, 26, -38, 26, 24, 18, 32, -18, 32, -26, 24 )
+
+[node name="MineralProcessingUnit" parent="MineralProcessingUnit_Furnace" index="0"]
+visible = false
+
+[node name="CollisionPolygon2D" parent="MineralProcessingUnit_Furnace/MineralProcessingUnit" index="0"]
+polygon = PoolVector2Array( -22, 28, 22, 28, 22, -34, -22, -34 )
+
+[node name="MineralProcessingUnit_Bulker" parent="." index="29" instance=ExtResource( 3 )]
+position = Vector2( 0, 1 )
+polygon = PoolVector2Array( 0, -35, 0, -31, -18, -31, -22, -25, -22, -13, -18, -7, 18, -7, 22, -13, 24, -41, 26, -37, 26, 23, 20, 31, -18, 31, -26, 23, -26, -37, -24, -41 )
+
+[node name="CollisionPolygon2D" parent="MineralProcessingUnit_Bulker/MineralProcessingUnit" index="0"]
+polygon = PoolVector2Array( -24, 22, 24, 22, 24, -6, -24, -6 )
+
+[editable path="Front/CargoBaffles"]
+[editable path="Front/WeaponSlot"]
+[editable path="MineralProcessingUnit_FSO"]
+[editable path="MineralProcessingUnit_Furnace"]
+[editable path="MineralProcessingUnit_Bulker"]
+[editable path="AI"]
+[editable path="reactor"]

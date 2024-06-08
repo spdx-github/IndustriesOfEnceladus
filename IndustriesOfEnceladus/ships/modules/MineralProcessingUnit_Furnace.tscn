@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ships/modules/MineralProcessingUnit_FSO.tscn" type="PackedScene" id=1]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/MineralProcessingUnit_RemoveCheck.gd" type="Script" id=2]
+
+[node name="MineralProcessingUnit_Furnace" instance=ExtResource( 1 )]
+polygon = PoolVector2Array( -36, -128, -12, -92, -28, -80, -28, 0, -12, 24, 12, 24, 28, 0, 28, -80, 12, -92, 36, -128, 36, 4, 20, 32, -20, 32, -36, 4 )
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+repairReplacementPrice = 650000
+mass = 3000
+systemName = "SYSTEM_CARGO_MPUFURN"
+kgps = 25
+powerDrawPerKg = 250
+mineralEfficiency = 0.6
+removeThis = false
+
+[node name="CollisionPolygon2D" parent="MineralProcessingUnit" index="0"]
+polygon = PoolVector2Array( -32, 4, -16, 28, 16, 28, 32, 4, 32, -84, 16, -96, -16, -96, -32, -84 )

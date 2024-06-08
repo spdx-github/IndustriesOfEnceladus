@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://ships/ATK225-B.tscn" type="PackedScene" id=1]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/shared/atk225/MineralProcessingUnit_Furnace.tscn" type="PackedScene" id=2]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/shared/atk225/Aux_BayStorageA.tscn" type="PackedScene" id=3]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/shared/atk225/Aux_BayFab.tscn" type="PackedScene" id=4]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/shared/atk225/MineralProcessingUnit_Bulker.tscn" type="PackedScene" id=5]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/HoldModifiersDivided.tscn" type="PackedScene" id=6]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/shared/atk225/Aux_BayStorageB.tscn" type="PackedScene" id=7]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/shared/atk225/Aux_PreProcA.tscn" type="PackedScene" id=8]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/shared/atk225/Aux_PreProcB.tscn" type="PackedScene" id=9]
+
+[node name="ATK225" instance=ExtResource( 1 )]
+position = Vector2( 0, 20 )
+
+[node name="CargoBaffles" parent="." index="24"]
+slot = "cargo.auxequipment"
+
+[node name="HoldModifiersDivided" parent="." index="26" instance=ExtResource( 6 )]
+
+[node name="MineralProcessingUnit_Bulker" parent="." index="31" instance=ExtResource( 5 )]
+visible = false
+
+[node name="MineralProcessingUnit_Furnace" parent="." index="32" instance=ExtResource( 2 )]
+visible = false
+
+[node name="Aux_BayFab" parent="." index="33" instance=ExtResource( 4 )]
+visible = false
+
+[node name="Aux_BayStorageA" parent="." index="34" instance=ExtResource( 3 )]
+visible = false
+
+[node name="Aux_BayStorageB" parent="." index="35" instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 1, 67 )
+
+[node name="Aux_PreProcA" parent="." index="36" instance=ExtResource( 8 )]
+visible = false
+
+[node name="CollisionPolygon2D" parent="Aux_PreProcA/MineralProcessingUnit" index="0"]
+polygon = PoolVector2Array( -40, -230, 0, -254, 40, -230, 50, -182, 128, -182, 32, -14, 32, 182, -30, 182, -30, -16, -128, -182, -50, -182 )
+
+[node name="Aux_PreProcB" parent="." index="37" instance=ExtResource( 9 )]
+visible = false
+position = Vector2( 1, 62 )
+
+[node name="CollisionPolygon2D" parent="Aux_PreProcB/MineralProcessingUnit" index="0"]
+polygon = PoolVector2Array( -1, -336, 39, -316, 59, -276, 49, -178, 127, -178, 29, -8, 30, 186, -30, 186, -29, -8, -129, -178, -51, -178, -61, -276, -41, -316 )
+
+[node name="AI" parent="." index="48"]
+visible = false
+
+[editable path="Aux_PreProcA"]
+[editable path="Aux_PreProcB"]
+[editable path="weapon-left"]
+[editable path="weapon-right"]
+[editable path="weapon-left-back"]
+[editable path="weapon-right-back"]
+[editable path="weapon-left-back2"]
+[editable path="weapon-right-back2"]
+[editable path="weapon-left-back3"]
+[editable path="weapon-right-back3"]
+[editable path="AI"]

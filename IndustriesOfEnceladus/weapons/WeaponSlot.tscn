@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://weapons/WeaponSlot.tscn" type="PackedScene" id=2]
+
+[node name="WeaponSlot" instance=ExtResource( 2 )]
+
+[node name="SYSTEM_DND_FIX" parent="." index="8"]
+position = Vector2( 0, 51 )
+
+[node name="SYSTEM_DND_HARVHAUL" parent="." index="9" instance_placeholder="res://IndustriesOfEnceladus/weapons/DroneHarvester.tscn"]
+visible = false
+position = Vector2( 0, 39 )
+
+[node name="SYSTEM_SALVAGE_ARM_HEAVY" parent="." index="13" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/SalvageArmHeavy.tscn"]
+visible = false
+flip = true
+
+[node name="SYSTEM_SALVAGE_ARM_HEAVY-L" parent="." index="14" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/SalvageArmHeavy.tscn"]
+visible = false
+flip = true
+feedVelocity = Vector2( -120, -280 )
+
+[node name="SYSTEM_SALVAGE_ARM_HEAVY-R" parent="." index="15" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/SalvageArmHeavy.tscn"]
+visible = false
+feedVelocity = Vector2( 120, -280 )
+
+[node name="SYSTEM_EXODYN_L" parent="." index="40" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/StoragePodComboDock_L.tscn"]
+visible = false
+position = Vector2( 0, 196 )
+
+[node name="SYSTEM_EXODYN_R" parent="." index="41" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/StoragePodComboDock_R.tscn"]
+visible = false
+position = Vector2( 0, 196 )
+
+[node name="SYSTEM_MWTIGHTBEAM" parent="." index="42" instance_placeholder="res://IndustriesOfEnceladus/weapons/MWTightBeam.tscn"]
+visible = false
+
+[node name="SYSTEM_MWTIGHTBEAM_PDT" parent="." index="43" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/PDT-MWTightBeam.tscn"]
+visible = false
+
+[node name="SYSTEM_MWTIGHTBEAM_PDT-L" parent="." index="44" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/PDT-MWTightBeam.tscn"]
+visible = false
+position = Vector2( -75, 12 )
+rotation = -0.523599
+
+[node name="SYSTEM_MWTIGHTBEAM_PDT-R" parent="." index="45" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/PDT-MWTightBeam.tscn"]
+visible = false
+position = Vector2( 75, 12 )
+rotation = 0.523599

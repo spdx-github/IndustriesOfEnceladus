@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://IndustriesOfEnceladus/enceladus/upgradenodes/CargoModifiers.tscn" type="PackedScene" id=1]
+
+[node name="CargoModifiersDivided" instance=ExtResource( 1 )]
+slot = "cargo.modifierDivided"
+
+[node name="VBoxContainer" parent="." index="0"]
+margin_bottom = 491.0
+
+[node name="CargoModifierNone" parent="VBoxContainer" index="1"]
+slot = "cargo.modifierDivided"
+
+[node name="CargoModifierBOLTS" parent="VBoxContainer" index="2"]
+visible = false
+
+[node name="CargoModifier2K" parent="VBoxContainer" index="3"]
+margin_top = 118.0
+margin_bottom = 188.0
+
+[node name="CargoModifierAMORPH4" parent="VBoxContainer" index="4"]
+margin_top = 192.0
+margin_bottom = 262.0
+
+[node name="CargoModifier4K" parent="VBoxContainer" index="5"]
+margin_top = 266.0
+margin_bottom = 336.0
+
+[node name="CargoModifierAMORPH5" parent="VBoxContainer" index="6"]
+margin_top = 340.0
+margin_bottom = 410.0
+
+[node name="CargoModifier6K" parent="VBoxContainer" index="7"]
+margin_top = 414.0
+margin_bottom = 484.0

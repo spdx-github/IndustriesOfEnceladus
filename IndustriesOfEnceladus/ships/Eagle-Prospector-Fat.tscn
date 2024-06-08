@@ -1,0 +1,197 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://ships/Eagle-Prospector-Fat.tscn" type="PackedScene" id=1]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/MineralProcessingUnit_Furnace.tscn" type="PackedScene" id=2]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/Aux_BayStorageA.tscn" type="PackedScene" id=3]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/Aux_BayFab.tscn" type="PackedScene" id=4]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/MineralProcessingUnit_Bulker.tscn" type="PackedScene" id=5]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/HoldModifiersDivided.tscn" type="PackedScene" id=6]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/Aux_BayStorageB.tscn" type="PackedScene" id=7]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/Aux_PreProcA.tscn" type="PackedScene" id=8]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/Aux_PreProcB.tscn" type="PackedScene" id=9]
+
+[node name="Eagle" instance=ExtResource( 1 )]
+
+[node name="SYSTEM_EXSTORAGE-R" parent="WeaponLeft" index="16"]
+position = Vector2( 48, -86 )
+
+[node name="SYSTEM_EXMONO-R" parent="WeaponLeft" index="28"]
+position = Vector2( 0, -86 )
+
+[node name="SYSTEM_EXODYN_L" parent="WeaponLeft" index="36" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/StoragePodComboDock_L.tscn"]
+visible = false
+position = Vector2( 48, -86 )
+
+[node name="SYSTEM_EXODYN_R" parent="WeaponLeft" index="37" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/StoragePodComboDock_R.tscn"]
+visible = false
+position = Vector2( 48, -86 )
+
+[node name="SYSTEM_EXSTORAGE-L_ALT" parent="WeaponLeft" index="38" instance_placeholder="res://ships/modules/StorageContainerDock-L.tscn"]
+visible = false
+position = Vector2( 48, 48 )
+z_index = -10
+flip = true
+
+[node name="SYSTEM_EXSTORAGE-R_ALT" parent="WeaponLeft" index="39" instance_placeholder="res://ships/modules/StorageContainerDock.tscn"]
+visible = false
+position = Vector2( -48, 48 )
+z_index = -10
+
+[node name="SYSTEM_EXMONO-L_ALT" parent="WeaponLeft" index="40" instance_placeholder="res://ships/modules/StorageContainerDockMono-L.tscn"]
+visible = false
+position = Vector2( 48, 48 )
+flip = true
+
+[node name="SYSTEM_EXMONO-R_ALT" parent="WeaponLeft" index="41" instance_placeholder="res://ships/modules/StorageContainerDockMono.tscn"]
+visible = false
+position = Vector2( 0, 48 )
+
+[node name="SYSTEM_EXODYN_L_ALT" parent="WeaponLeft" index="42" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/StoragePodComboDock_L.tscn"]
+visible = false
+position = Vector2( 48, 48 )
+
+[node name="SYSTEM_EXODYN_R_ALT" parent="WeaponLeft" index="43" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/StoragePodComboDock_R.tscn"]
+visible = false
+position = Vector2( 48, 48 )
+
+[node name="SYSTEM_EXMONO-L" parent="WeaponRight" index="27"]
+position = Vector2( 0, -86 )
+
+[node name="SYSTEM_EXODYN_L" parent="WeaponRight" index="36" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/StoragePodComboDock_L.tscn"]
+visible = false
+position = Vector2( -48, -86 )
+
+[node name="SYSTEM_EXODYN_R" parent="WeaponRight" index="37" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/StoragePodComboDock_R.tscn"]
+visible = false
+position = Vector2( -48, -86 )
+
+[node name="SYSTEM_EXSTORAGE-L_ALT" parent="WeaponRight" index="38" instance_placeholder="res://ships/modules/StorageContainerDock-L.tscn"]
+visible = false
+position = Vector2( -48, 48 )
+z_index = -10
+flip = true
+
+[node name="SYSTEM_EXSTORAGE-R_ALT" parent="WeaponRight" index="39" instance_placeholder="res://ships/modules/StorageContainerDock.tscn"]
+visible = false
+position = Vector2( -48, 48 )
+z_index = -10
+
+[node name="SYSTEM_EXMONO-L_ALT" parent="WeaponRight" index="40" instance_placeholder="res://ships/modules/StorageContainerDockMono-L.tscn"]
+visible = false
+position = Vector2( -48, 48 )
+flip = true
+
+[node name="SYSTEM_EXMONO-R_ALT" parent="WeaponRight" index="41" instance_placeholder="res://ships/modules/StorageContainerDockMono.tscn"]
+visible = false
+position = Vector2( -48, 48 )
+
+[node name="SYSTEM_EXODYN_L_ALT" parent="WeaponRight" index="42" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/StoragePodComboDock_L.tscn"]
+visible = false
+position = Vector2( -48, 48 )
+
+[node name="SYSTEM_EXODYN_R_ALT" parent="WeaponRight" index="43" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/StoragePodComboDock_R.tscn"]
+visible = false
+position = Vector2( -48, 48 )
+
+[node name="DroneLeft" parent="." index="23"]
+visible = true
+
+[node name="SYSTEM_DND_HARVHAUL" parent="DroneLeft" index="36" instance_placeholder="res://IndustriesOfEnceladus/weapons/DroneHarvester.tscn"]
+visible = false
+position = Vector2( 0, 59 )
+z_index = -1
+
+[node name="DroneRight" parent="." index="24"]
+visible = true
+
+[node name="SYSTEM_DND_HARVHAUL" parent="DroneRight" index="36" instance_placeholder="res://IndustriesOfEnceladus/weapons/DroneHarvester.tscn"]
+visible = false
+position = Vector2( 0, 59 )
+z_index = -1
+
+[node name="CargoBaffles" parent="." index="26"]
+visible = false
+slot = "cargo.auxequipment"
+
+[node name="HoldModifiersDivided" parent="." index="28" instance=ExtResource( 6 )]
+
+[node name="MineralProcessingUnit_Furnace" parent="." index="33" instance=ExtResource( 2 )]
+visible = false
+polygon = PoolVector2Array( -42, -134, -14, -112, -38, -96, -38, 4, -26, 14, 24, 14, 38, 4, 38, -96, 14, -112, 42, -134, 42, 24, -42, 24 )
+
+[node name="MineralProcessingUnit" parent="MineralProcessingUnit_Furnace" index="0"]
+visible = false
+
+[node name="CollisionPolygon2D" parent="MineralProcessingUnit_Furnace/MineralProcessingUnit" index="0"]
+polygon = PoolVector2Array( -40, 4, -26, 16, 26, 16, 40, 4, 40, -74, 16, -92, -16, -92, -40, -76 )
+
+[node name="MineralProcessingUnit_Bulker" parent="." index="34" instance=ExtResource( 5 )]
+visible = false
+polygon = PoolVector2Array( 10, -54, 8, -48, -20, -48, -28, -42, -28, -30, -20, -24, 20, -24, 28, -30, 42, -68, 42, 24, -42, 24, -42, -70 )
+
+[node name="CollisionPolygon2D" parent="MineralProcessingUnit_Bulker/MineralProcessingUnit" index="0"]
+position = Vector2( 0, -39 )
+polygon = PoolVector2Array( -28, 17, 32, 17, 40, -13, -28, -13 )
+
+[node name="Aux_BayFab" parent="." index="35" instance=ExtResource( 4 )]
+visible = false
+position = Vector2( -7, -176 )
+polygon = PoolVector2Array( -35, -86, -17, -86, -1, -66, 1, -56, 1, -18, -20, -12, -20, 8, -35, 28 )
+
+[node name="Aux_BayStorageA" parent="." index="36" instance=ExtResource( 3 )]
+visible = false
+position = Vector2( 0, -197 )
+polygon = PoolVector2Array( -44, -65, -24, -65, -24, -33, -42, 3, -42, 219, 42, 219, 42, 3, 24, -33, 24, -65, 44, -65, 44, 221, -44, 221 )
+
+[node name="CollisionPolygon2D" parent="Aux_BayStorageA/MineralProcessingUnit" index="0"]
+position = Vector2( 0, 189 )
+
+[node name="Aux_BayStorageB" parent="." index="37" instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 0, -182 )
+polygon = PoolVector2Array( -44, -80, -24, -80, -18, -76, -18, -36, -30, -28, -30, -16, -42, 0, -42, 204, 42, 204, 42, 0, 30, -16, 30, -28, 18, -36, 18, -76, 24, -80, 44, -82, 44, 206, -44, 206 )
+
+[node name="MineralProcessingUnit" parent="Aux_BayStorageB" index="0"]
+visible = false
+
+[node name="CollisionPolygon2D" parent="Aux_BayStorageB/MineralProcessingUnit" index="0"]
+position = Vector2( 0, -72 )
+polygon = PoolVector2Array( -20, 4, 20, 4, 20, 40, -20, 40 )
+
+[node name="Aux_PreProcA" parent="." index="38" instance=ExtResource( 8 )]
+visible = false
+position = Vector2( 0, -200 )
+polygon = PoolVector2Array( -24, -62, -20, -56, -20, -50, -42, -28, -42, 222, 42, 222, 42, -28, 20, -50, 20, -56, 24, -62, 44, -62, 44, 224, -44, 224, -44, -62 )
+
+[node name="MineralProcessingUnit" parent="Aux_PreProcA" index="0"]
+visible = false
+
+[node name="CollisionPolygon2D" parent="Aux_PreProcA/MineralProcessingUnit" index="0"]
+polygon = PoolVector2Array( -40, 10, 0, -2, 42, 10, 40, 278, -40, 278 )
+
+[node name="Aux_PreProcB" parent="." index="39" instance=ExtResource( 9 )]
+position = Vector2( 0, -186 )
+polygon = PoolVector2Array( -44, -76, -24, -76, -36, -60, -26, -54, -18, -42, -18, -30, -26, -18, -42, -8, -42, 210, 42, 210, 42, -8, 26, -18, 18, -30, 18, -42, 26, -54, 36, -60, 24, -76, 44, -76, 44, 212, -44, 212 )
+
+[node name="MineralProcessingUnit" parent="Aux_PreProcB" index="0"]
+visible = false
+
+[node name="CollisionPolygon2D" parent="Aux_PreProcB/MineralProcessingUnit" index="0"]
+polygon = PoolVector2Array( -42, 22, 0, 2, 42, 22, 42, 266, -42, 266 )
+
+[editable path="Front Bumper"]
+[editable path="engine-main-1"]
+[editable path="engine-main-2"]
+[editable path="WeaponLeft"]
+[editable path="WeaponRight"]
+[editable path="MineralProcessingUnit"]
+[editable path="MineralProcessingUnit_FSO"]
+[editable path="MineralProcessingUnit_SMELT"]
+[editable path="MineralProcessingUnit_FAB"]
+[editable path="MineralProcessingUnit_Furnace"]
+[editable path="MineralProcessingUnit_Bulker"]
+[editable path="Aux_BayStorageA"]
+[editable path="Aux_BayStorageB"]
+[editable path="Aux_PreProcA"]
+[editable path="Aux_PreProcB"]
+[editable path="AI"]

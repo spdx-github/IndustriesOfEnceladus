@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ships/modules/MineralProcessingUnit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/MineralProcessingUnit_RemoveCheck.gd" type="Script" id=2]
+
+[node name="MineralProcessingUnit_Bulker" instance=ExtResource( 1 )]
+polygon = PoolVector2Array( 4, -42, 2, -36, -20, -36, -26, -30, -26, -18, -20, -12, 18, -12, 24, -18, 34, -56, 34, 32, -34, 32, -34, -56 )
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+repairReplacementPrice = 1150000
+mass = 8000
+systemName = "SYSTEM_CARGO_MPUBULK"
+kgps = 40
+powerDrawPerKg = 1000
+remassEfficiency = 0.2
+internalStorage = 10000.0
+removeThis = false
+
+[node name="MineralProcessingUnit" parent="." index="0"]
+visible = false
+
+[node name="CollisionPolygon2D" parent="MineralProcessingUnit" index="0"]
+position = Vector2( 0, -27 )
+polygon = PoolVector2Array( -28, 19, 24, 19, 32, -13, -28, -13 )

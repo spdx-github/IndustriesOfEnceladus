@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://enceladus/SystemShipUpgradeUI.tscn" type="PackedScene" id=1]
+
+[node name="CargoMPUBULK" instance=ExtResource( 1 )]
+slot = "cargo.equipment"
+system = "SYSTEM_CARGO_MPUBULK"
+description = "SYSTEM_CARGO_MPUBULK_DESC"
+manual = "SYSTEM_CARGO_MPU_MANUAL"
+specs = "SYSTEM_CARGO_MPUBULK_SPECS"
+price = 1150000
+testProtocol = "cargo"
+
+[node name="System" parent="HBox" index="0"]
+text = "SYSTEM_CARGO_MPUBULK"

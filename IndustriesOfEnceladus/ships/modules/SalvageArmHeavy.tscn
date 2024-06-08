@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://ships/modules/SalvageArm.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ships/modules/canadarm-c.png" type="Texture" id=2]
+[ext_resource path="res://ships/modules/canadarm-n.png" type="Texture" id=3]
+
+[node name="SalvageArmHeavy" instance=ExtResource( 1 )]
+torqueMassLimit = 15
+massLimit = 3200
+response = 0.6
+repairFixPrice = 5000
+repairReplacementPrice = 125000
+repairReplacementTime = 4
+mass = 14000
+powerDraw = 2.2
+thrust = 200
+fullThrust = 2000
+maxThrust = 4000
+maxVelocity = 150
+yeetVelocity = 300
+torque = 2500.0
+targetRotationVelocity = 0.9
+damageWearCapacity = 4.4e+06
+damageBentCapacity = 12000.0
+damageBentThreshold = 300.0
+damageOverheatThreshold = 100.0
+damageOverheatCapacity = 360000.0
+bendRange = 90.0
+systemName = "SYSTEM_SALVAGE_ARM_HEAVY"
+
+[node name="HeavyArm" type="Sprite" parent="Arm/A/B" index="0"]
+position = Vector2( -144, -0.00012207 )
+scale = Vector2( 1, 1.1 )
+z_index = -1
+z_as_relative = false
+texture = ExtResource( 2 )
+normal_map = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 162, 43, 347, 38 )
+
+[node name="SubClaw" type="Sprite" parent="Arm/A/B/Arm" index="0"]
+rotation = 0.785398
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 25, 9, 108, 108 )
+
+[node name="HeavyArm" type="Sprite" parent="Arm/A" index="2"]
+position = Vector2( -144, 0.000518799 )
+scale = Vector2( 1, 1.1 )
+z_index = -1
+z_as_relative = false
+texture = ExtResource( 2 )
+normal_map = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 162, 43, 347, 39 )
+
+[node name="Transfer" parent="." index="6"]
+pitch_scale = 0.21
+
+[node name="Actuation" parent="." index="7"]
+pitch_scale = 0.09
+
+[editable path="Arm"]
+[editable path="Arm/A/B/Spotlight"]

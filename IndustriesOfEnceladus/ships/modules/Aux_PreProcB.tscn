@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/Aux_PreProcA.tscn" type="PackedScene" id=1]
+
+[node name="Aux_PreProcB" instance=ExtResource( 1 )]
+polygon = PoolVector2Array( -34, -64, -20, -54, -14, -42, -14, -30, -20, -18, -32, -8, -32, 126, 32, 126, 32, -8, 20, -18, 14, -30, 14, -42, 20, -54, 34, -64, 34, 128, -34, 128 )
+repairReplacementPrice = 225000
+mass = 2000
+systemName = "SYSTEM_CARGO_AUX_PREPROC_B"
+kgps = 25
+powerDrawPerKg = 125
+mineralEfficiency = 0.2
+remassEfficiency = 0.1

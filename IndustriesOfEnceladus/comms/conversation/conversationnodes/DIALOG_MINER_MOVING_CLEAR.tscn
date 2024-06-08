@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://comms/ConversationPlayer.gd" type="Script" id=1]
+
+[node name="DIALOG_MINER_MOVING_CLEAR" type="Node"]
+script = ExtResource( 1 )
+myLine = false
+changeFear = -0.1
+changeSupport = 0.1
+onlyOnce = true
+
+[node name="DIALOG_MINER_APPRECIATED" type="Node" parent="."]
+script = ExtResource( 1 )
+mostPrelevantDisposition = "support"
+changeHostility = -0.25
+changeFear = -0.25
+
+[node name="DIALOG_MINER_YEAH_GO_AWAY" type="Node" parent="."]
+script = ExtResource( 1 )
+mostPrelevantDisposition = "hostility"
+changeHostility = -0.05
+changeFear = -0.1

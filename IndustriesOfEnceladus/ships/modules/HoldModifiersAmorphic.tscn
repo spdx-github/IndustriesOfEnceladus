@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/HoldModifiers.tscn" type="PackedScene" id=1]
+
+[node name="HoldModifiersAmorphic" instance=ExtResource( 1 )]
+type = "cargo.modifierAmorphic"
+
+[node name="SYSTEM_CARGO_MOD_2K" parent="." index="0"]
+slot = "cargo.modifierAmorphic"
+
+[node name="SYSTEM_CARGO_MOD_BOLTS" parent="." index="1" instance_placeholder="res://IndustriesOfEnceladus/ships/modules/HoldModifier.tscn"]
+systemName = "SYSTEM_CARGO_MOD_BOLTS"
+slot = "cargo.modifierAmorphic"
+repairReplacementPrice = 2500
+repairReplacementTime = 1
+repairFixPrice = 100
+repairFixTime = 1
+holdType = "divided"
+amorphicRatio = 6

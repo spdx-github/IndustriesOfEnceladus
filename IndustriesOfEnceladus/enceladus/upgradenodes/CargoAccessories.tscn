@@ -1,0 +1,790 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://enceladus/UpgradeGroup.gd" type="Script" id=1]
+[ext_resource path="res://menu/sfx/PlaySoundsOnTheseButtons.tscn" type="PackedScene" id=2]
+[ext_resource path="res://SmoothScrollTo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://enceladus/SystemShipUpgradeUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://enceladus/Upgrades/Preview.tscn" type="PackedScene" id=5]
+[ext_resource path="res://menu/MenuTheme.tres" type="Theme" id=6]
+[ext_resource path="res://hud/TNTRL-theme.tres" type="Theme" id=7]
+[ext_resource path="res://enceladus/MatchSystemName.gd" type="Script" id=8]
+[ext_resource path="res://enceladus/SystemShipUpgradeUI.gd" type="Script" id=9]
+[ext_resource path="res://enceladus/Upgrades/buy.png" type="Texture" id=10]
+[ext_resource path="res://enceladus/Warnings/ship-power.png" type="Texture" id=11]
+[ext_resource path="res://enceladus/Warnings/ship-temp-low.png" type="Texture" id=12]
+[ext_resource path="res://enceladus/Flicker.tscn" type="PackedScene" id=13]
+
+[sub_resource type="Animation" id=2]
+resource_name = "show"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.3, 2 ),
+"transitions": PoolRealArray( 1, 1, 0.25, 4 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 5, 5, 5, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "show"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.3, 2 ),
+"transitions": PoolRealArray( 1, 1, 0.25, 4 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 5, 5, 5, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "show"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.3, 2 ),
+"transitions": PoolRealArray( 1, 1, 0.25, 4 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 5, 5, 5, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="CargoAccessories" type="PanelContainer"]
+margin_right = 1228.0
+margin_bottom = 350.0
+script = ExtResource( 1 )
+slot = "cargo.auxequipment"
+restrictType = "fission"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1221.0
+margin_bottom = 565.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 1214.0
+margin_bottom = 40.0
+alignment = 2
+
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer/HBoxContainer"]
+margin_right = 1214.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+text = "SLOT_CARGOBAY_AUX"
+flat = true
+align = 2
+
+[node name="SmoothScrollTo" parent="VBoxContainer/HBoxContainer/CheckButton" instance=ExtResource( 3 )]
+
+[node name="PlaySoundsOnTheseButtons" parent="VBoxContainer/HBoxContainer/CheckButton" instance=ExtResource( 2 )]
+
+[node name="Preview" parent="VBoxContainer/HBoxContainer/CheckButton" instance=ExtResource( 5 )]
+
+[node name="CargoBayStandard" parent="VBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 44.0
+margin_right = 1214.0
+margin_bottom = 114.0
+slot = "cargo.auxequipment"
+system = "SYSTEM_NONE"
+manual = "SYSTEM_NONE_MANUAL"
+testProtocol = "cargo"
+default = true
+
+[node name="CargoBaffles" parent="VBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 118.0
+margin_right = 1214.0
+margin_bottom = 188.0
+slot = "cargo.auxequipment"
+system = "SYSTEM_CARGO_BAFFLES"
+manual = "SYSTEM_CARGO_BAFFLES_MANUAL"
+price = 2000
+testProtocol = "cargo"
+
+[node name="CargoAux_PreProcA" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 192.0
+margin_right = 1214.0
+margin_bottom = 262.0
+size_flags_horizontal = 3
+theme = ExtResource( 6 )
+custom_constants/margin_right = 16
+script = ExtResource( 9 )
+slot = "cargo.auxequipment"
+system = "SYSTEM_CARGO_AUX_PREPROC_A"
+description = "SYSTEM_CARGO_AUX_PREPROC_A_DESC"
+manual = "SYSTEM_CARGO_AUX_PREPROC_MANUAL"
+specs = "SYSTEM_CARGO_AUX_PREPROC_A_SPECS"
+price = 32000
+testProtocol = "cargo"
+
+[node name="HBox" type="HBoxContainer" parent="VBoxContainer/CargoAux_PreProcA"]
+margin_right = 1198.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_constants/separation = 8
+
+[node name="System" type="Button" parent="VBoxContainer/CargoAux_PreProcA/HBox"]
+margin_right = 948.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+text = "SYSTEM_CARGO_AUX_PREPROC_A"
+flat = true
+clip_text = true
+align = 0
+script = ExtResource( 8 )
+
+[node name="SmoothScrollTo" parent="VBoxContainer/CargoAux_PreProcA/HBox/System" instance=ExtResource( 3 )]
+focusAt = NodePath("../../..")
+
+[node name="V" type="GridContainer" parent="VBoxContainer/CargoAux_PreProcA/HBox"]
+margin_left = 956.0
+margin_right = 1110.0
+margin_bottom = 70.0
+size_flags_horizontal = 0
+theme = ExtResource( 7 )
+
+[node name="Price" type="Label" parent="VBoxContainer/CargoAux_PreProcA/HBox/V"]
+visible = false
+margin_right = 154.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 96, 0 )
+size_flags_horizontal = 3
+text = "UPGRADE_PRICE"
+align = 2
+uppercase = true
+
+[node name="StickerPrice" type="Label" parent="VBoxContainer/CargoAux_PreProcA/HBox/V"]
+margin_right = 154.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 96, 0 )
+size_flags_horizontal = 3
+text = "%s E$ (x%d)"
+align = 2
+
+[node name="Installed" type="Label" parent="VBoxContainer/CargoAux_PreProcA/HBox/V"]
+modulate = Color( 0, 2, 0, 1 )
+margin_top = 14.0
+margin_right = 154.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+text = "UPGRADE_INSTALLED"
+align = 2
+uppercase = true
+
+[node name="Replace" type="Label" parent="VBoxContainer/CargoAux_PreProcA/HBox/V"]
+modulate = Color( 2, 0.5, 0.5, 1 )
+margin_top = 28.0
+margin_right = 154.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+text = "UPGRADE_REPLACE_BUY"
+align = 2
+uppercase = true
+
+[node name="Refund" type="Label" parent="VBoxContainer/CargoAux_PreProcA/HBox/V"]
+modulate = Color( 0, 2, 0, 1 )
+margin_top = 42.0
+margin_right = 154.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+text = "UPGRADE_REPLACE_REFUND"
+align = 2
+uppercase = true
+
+[node name="NetPrice" type="Label" parent="VBoxContainer/CargoAux_PreProcA/HBox/V"]
+margin_top = 56.0
+margin_right = 154.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+text = "%s E$"
+align = 2
+uppercase = true
+
+[node name="Buy" type="Button" parent="VBoxContainer/CargoAux_PreProcA/HBox"]
+margin_left = 1118.0
+margin_right = 1198.0
+margin_bottom = 70.0
+hint_tooltip = "UPGRADE_BUY"
+disabled = true
+icon = ExtResource( 10 )
+flat = true
+
+[node name="SmoothScrollTo" parent="VBoxContainer/CargoAux_PreProcA/HBox/Buy" instance=ExtResource( 3 )]
+focusAt = NodePath("../../..")
+
+[node name="Heat" type="Sprite" parent="VBoxContainer/CargoAux_PreProcA/HBox/Buy"]
+modulate = Color( 2, 1, 1, 1 )
+position = Vector2( 14, 24 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+
+[node name="Power" type="Sprite" parent="VBoxContainer/CargoAux_PreProcA/HBox/Buy"]
+modulate = Color( 2, 1, 1, 1 )
+position = Vector2( 70, 24 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="PlaySoundsOnTheseButtons" parent="VBoxContainer/CargoAux_PreProcA/HBox" instance=ExtResource( 2 )]
+
+[node name="Flicker" parent="VBoxContainer/CargoAux_PreProcA" instance=ExtResource( 13 )]
+anims/show = SubResource( 2 )
+
+[node name="CargoAux_BayStorageA" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 266.0
+margin_right = 1214.0
+margin_bottom = 336.0
+size_flags_horizontal = 3
+theme = ExtResource( 6 )
+custom_constants/margin_right = 16
+script = ExtResource( 9 )
+slot = "cargo.auxequipment"
+system = "SYSTEM_CARGO_AUX_STORAGE_A"
+nameOverride = "SYSTEM_CARGO_AUX_STORAGE_A"
+description = "SYSTEM_CARGO_AUX_STORAGE_A_DESC"
+manual = "SYSTEM_CARGO_AUX_STORAGE_MANUAL"
+specs = "SYSTEM_CARGO_AUX_STORAGE_A_SPECS"
+price = 175000
+testProtocol = "cargo"
+
+[node name="HBox" type="HBoxContainer" parent="VBoxContainer/CargoAux_BayStorageA"]
+margin_right = 1198.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_constants/separation = 8
+
+[node name="System" type="Button" parent="VBoxContainer/CargoAux_BayStorageA/HBox"]
+margin_right = 948.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+text = "SYSTEM_CARGO_AUX_STORAGE_A"
+flat = true
+clip_text = true
+align = 0
+script = ExtResource( 8 )
+
+[node name="SmoothScrollTo" parent="VBoxContainer/CargoAux_BayStorageA/HBox/System" instance=ExtResource( 3 )]
+focusAt = NodePath("../../..")
+
+[node name="V" type="GridContainer" parent="VBoxContainer/CargoAux_BayStorageA/HBox"]
+margin_left = 956.0
+margin_right = 1110.0
+margin_bottom = 70.0
+size_flags_horizontal = 0
+theme = ExtResource( 7 )
+
+[node name="Price" type="Label" parent="VBoxContainer/CargoAux_BayStorageA/HBox/V"]
+visible = false
+margin_right = 154.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 96, 0 )
+size_flags_horizontal = 3
+text = "UPGRADE_PRICE"
+align = 2
+uppercase = true
+
+[node name="StickerPrice" type="Label" parent="VBoxContainer/CargoAux_BayStorageA/HBox/V"]
+margin_right = 154.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 96, 0 )
+size_flags_horizontal = 3
+text = "%s E$ (x%d)"
+align = 2
+
+[node name="Installed" type="Label" parent="VBoxContainer/CargoAux_BayStorageA/HBox/V"]
+modulate = Color( 0, 2, 0, 1 )
+margin_top = 14.0
+margin_right = 154.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+text = "UPGRADE_INSTALLED"
+align = 2
+uppercase = true
+
+[node name="Replace" type="Label" parent="VBoxContainer/CargoAux_BayStorageA/HBox/V"]
+modulate = Color( 2, 0.5, 0.5, 1 )
+margin_top = 28.0
+margin_right = 154.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+text = "UPGRADE_REPLACE_BUY"
+align = 2
+uppercase = true
+
+[node name="Refund" type="Label" parent="VBoxContainer/CargoAux_BayStorageA/HBox/V"]
+modulate = Color( 0, 2, 0, 1 )
+margin_top = 42.0
+margin_right = 154.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+text = "UPGRADE_REPLACE_REFUND"
+align = 2
+uppercase = true
+
+[node name="NetPrice" type="Label" parent="VBoxContainer/CargoAux_BayStorageA/HBox/V"]
+margin_top = 56.0
+margin_right = 154.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+text = "%s E$"
+align = 2
+uppercase = true
+
+[node name="Buy" type="Button" parent="VBoxContainer/CargoAux_BayStorageA/HBox"]
+margin_left = 1118.0
+margin_right = 1198.0
+margin_bottom = 70.0
+hint_tooltip = "UPGRADE_BUY"
+disabled = true
+icon = ExtResource( 10 )
+flat = true
+
+[node name="SmoothScrollTo" parent="VBoxContainer/CargoAux_BayStorageA/HBox/Buy" instance=ExtResource( 3 )]
+focusAt = NodePath("../../..")
+
+[node name="Heat" type="Sprite" parent="VBoxContainer/CargoAux_BayStorageA/HBox/Buy"]
+modulate = Color( 2, 1, 1, 1 )
+position = Vector2( 14, 24 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+
+[node name="Power" type="Sprite" parent="VBoxContainer/CargoAux_BayStorageA/HBox/Buy"]
+modulate = Color( 2, 1, 1, 1 )
+position = Vector2( 70, 24 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="PlaySoundsOnTheseButtons" parent="VBoxContainer/CargoAux_BayStorageA/HBox" instance=ExtResource( 2 )]
+
+[node name="Flicker" parent="VBoxContainer/CargoAux_BayStorageA" instance=ExtResource( 13 )]
+
+[node name="CargoAux_PreProcB" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 340.0
+margin_right = 1214.0
+margin_bottom = 410.0
+size_flags_horizontal = 3
+theme = ExtResource( 6 )
+custom_constants/margin_right = 16
+script = ExtResource( 9 )
+slot = "cargo.auxequipment"
+system = "SYSTEM_CARGO_AUX_PREPROC_B"
+description = "SYSTEM_CARGO_AUX_PREPROC_B_DESC"
+manual = "SYSTEM_CARGO_AUX_PREPROC_MANUAL"
+specs = "SYSTEM_CARGO_AUX_PREPROC_B_SPECS"
+price = 225000
+testProtocol = "cargo"
+
+[node name="HBox" type="HBoxContainer" parent="VBoxContainer/CargoAux_PreProcB"]
+margin_right = 1198.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_constants/separation = 8
+
+[node name="System" type="Button" parent="VBoxContainer/CargoAux_PreProcB/HBox"]
+margin_right = 948.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+text = "SYSTEM_CARGO_AUX_PREPROC_A"
+flat = true
+clip_text = true
+align = 0
+script = ExtResource( 8 )
+
+[node name="SmoothScrollTo" parent="VBoxContainer/CargoAux_PreProcB/HBox/System" instance=ExtResource( 3 )]
+focusAt = NodePath("../../..")
+
+[node name="V" type="GridContainer" parent="VBoxContainer/CargoAux_PreProcB/HBox"]
+margin_left = 956.0
+margin_right = 1110.0
+margin_bottom = 70.0
+size_flags_horizontal = 0
+theme = ExtResource( 7 )
+
+[node name="Price" type="Label" parent="VBoxContainer/CargoAux_PreProcB/HBox/V"]
+visible = false
+margin_right = 154.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 96, 0 )
+size_flags_horizontal = 3
+text = "UPGRADE_PRICE"
+align = 2
+uppercase = true
+
+[node name="StickerPrice" type="Label" parent="VBoxContainer/CargoAux_PreProcB/HBox/V"]
+margin_right = 154.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 96, 0 )
+size_flags_horizontal = 3
+text = "%s E$ (x%d)"
+align = 2
+
+[node name="Installed" type="Label" parent="VBoxContainer/CargoAux_PreProcB/HBox/V"]
+modulate = Color( 0, 2, 0, 1 )
+margin_top = 14.0
+margin_right = 154.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+text = "UPGRADE_INSTALLED"
+align = 2
+uppercase = true
+
+[node name="Replace" type="Label" parent="VBoxContainer/CargoAux_PreProcB/HBox/V"]
+modulate = Color( 2, 0.5, 0.5, 1 )
+margin_top = 28.0
+margin_right = 154.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+text = "UPGRADE_REPLACE_BUY"
+align = 2
+uppercase = true
+
+[node name="Refund" type="Label" parent="VBoxContainer/CargoAux_PreProcB/HBox/V"]
+modulate = Color( 0, 2, 0, 1 )
+margin_top = 42.0
+margin_right = 154.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+text = "UPGRADE_REPLACE_REFUND"
+align = 2
+uppercase = true
+
+[node name="NetPrice" type="Label" parent="VBoxContainer/CargoAux_PreProcB/HBox/V"]
+margin_top = 56.0
+margin_right = 154.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+text = "%s E$"
+align = 2
+uppercase = true
+
+[node name="Buy" type="Button" parent="VBoxContainer/CargoAux_PreProcB/HBox"]
+margin_left = 1118.0
+margin_right = 1198.0
+margin_bottom = 70.0
+hint_tooltip = "UPGRADE_BUY"
+disabled = true
+icon = ExtResource( 10 )
+flat = true
+
+[node name="SmoothScrollTo" parent="VBoxContainer/CargoAux_PreProcB/HBox/Buy" instance=ExtResource( 3 )]
+focusAt = NodePath("../../..")
+
+[node name="Heat" type="Sprite" parent="VBoxContainer/CargoAux_PreProcB/HBox/Buy"]
+modulate = Color( 2, 1, 1, 1 )
+position = Vector2( 14, 24 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+
+[node name="Power" type="Sprite" parent="VBoxContainer/CargoAux_PreProcB/HBox/Buy"]
+modulate = Color( 2, 1, 1, 1 )
+position = Vector2( 70, 24 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="PlaySoundsOnTheseButtons" parent="VBoxContainer/CargoAux_PreProcB/HBox" instance=ExtResource( 2 )]
+
+[node name="Flicker" parent="VBoxContainer/CargoAux_PreProcB" instance=ExtResource( 13 )]
+anims/show = SubResource( 3 )
+
+[node name="CargoAux_BayStorageB" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 414.0
+margin_right = 1214.0
+margin_bottom = 484.0
+size_flags_horizontal = 3
+theme = ExtResource( 6 )
+custom_constants/margin_right = 16
+script = ExtResource( 9 )
+slot = "cargo.auxequipment"
+system = "SYSTEM_CARGO_AUX_STORAGE_B"
+description = "SYSTEM_CARGO_AUX_STORAGE_B_DESC"
+manual = "SYSTEM_CARGO_AUX_STORAGE_B_MANUAL"
+specs = "SYSTEM_CARGO_AUX_STORAGE_B_SPECS"
+price = 435000
+testProtocol = "cargo"
+
+[node name="HBox" type="HBoxContainer" parent="VBoxContainer/CargoAux_BayStorageB"]
+margin_right = 1198.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_constants/separation = 8
+
+[node name="System" type="Button" parent="VBoxContainer/CargoAux_BayStorageB/HBox"]
+margin_right = 948.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+text = "SYSTEM_CARGO_AUX_STORAGE_B"
+flat = true
+clip_text = true
+align = 0
+script = ExtResource( 8 )
+
+[node name="SmoothScrollTo" parent="VBoxContainer/CargoAux_BayStorageB/HBox/System" instance=ExtResource( 3 )]
+focusAt = NodePath("../../..")
+
+[node name="V" type="GridContainer" parent="VBoxContainer/CargoAux_BayStorageB/HBox"]
+margin_left = 956.0
+margin_right = 1110.0
+margin_bottom = 70.0
+size_flags_horizontal = 0
+theme = ExtResource( 7 )
+
+[node name="Price" type="Label" parent="VBoxContainer/CargoAux_BayStorageB/HBox/V"]
+visible = false
+margin_right = 154.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 96, 0 )
+size_flags_horizontal = 3
+text = "UPGRADE_PRICE"
+align = 2
+uppercase = true
+
+[node name="StickerPrice" type="Label" parent="VBoxContainer/CargoAux_BayStorageB/HBox/V"]
+margin_right = 154.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 96, 0 )
+size_flags_horizontal = 3
+text = "%s E$ (x%d)"
+align = 2
+
+[node name="Installed" type="Label" parent="VBoxContainer/CargoAux_BayStorageB/HBox/V"]
+modulate = Color( 0, 2, 0, 1 )
+margin_top = 14.0
+margin_right = 154.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+text = "UPGRADE_INSTALLED"
+align = 2
+uppercase = true
+
+[node name="Replace" type="Label" parent="VBoxContainer/CargoAux_BayStorageB/HBox/V"]
+modulate = Color( 2, 0.5, 0.5, 1 )
+margin_top = 28.0
+margin_right = 154.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+text = "UPGRADE_REPLACE_BUY"
+align = 2
+uppercase = true
+
+[node name="Refund" type="Label" parent="VBoxContainer/CargoAux_BayStorageB/HBox/V"]
+modulate = Color( 0, 2, 0, 1 )
+margin_top = 42.0
+margin_right = 154.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+text = "UPGRADE_REPLACE_REFUND"
+align = 2
+uppercase = true
+
+[node name="NetPrice" type="Label" parent="VBoxContainer/CargoAux_BayStorageB/HBox/V"]
+margin_top = 56.0
+margin_right = 154.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+text = "%s E$"
+align = 2
+uppercase = true
+
+[node name="Buy" type="Button" parent="VBoxContainer/CargoAux_BayStorageB/HBox"]
+margin_left = 1118.0
+margin_right = 1198.0
+margin_bottom = 70.0
+hint_tooltip = "UPGRADE_BUY"
+disabled = true
+icon = ExtResource( 10 )
+flat = true
+
+[node name="SmoothScrollTo" parent="VBoxContainer/CargoAux_BayStorageB/HBox/Buy" instance=ExtResource( 3 )]
+focusAt = NodePath("../../..")
+
+[node name="Heat" type="Sprite" parent="VBoxContainer/CargoAux_BayStorageB/HBox/Buy"]
+modulate = Color( 2, 1, 1, 1 )
+position = Vector2( 14, 24 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+
+[node name="Power" type="Sprite" parent="VBoxContainer/CargoAux_BayStorageB/HBox/Buy"]
+modulate = Color( 2, 1, 1, 1 )
+position = Vector2( 70, 24 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="PlaySoundsOnTheseButtons" parent="VBoxContainer/CargoAux_BayStorageB/HBox" instance=ExtResource( 2 )]
+
+[node name="Flicker" parent="VBoxContainer/CargoAux_BayStorageB" instance=ExtResource( 13 )]
+anims/show = SubResource( 1 )
+
+[node name="CargoAux_Fab" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 488.0
+margin_right = 1214.0
+margin_bottom = 558.0
+size_flags_horizontal = 3
+theme = ExtResource( 6 )
+custom_constants/margin_right = 16
+script = ExtResource( 9 )
+slot = "cargo.auxequipment"
+system = "SYSTEM_CARGO_AUX_FAB"
+nameOverride = "SYSTEM_CARGO_AUX_FAB"
+description = "SYSTEM_CARGO_AUX_FAB_DESC"
+manual = "SYSTEM_CARGO_AUX_FAB_MANUAL"
+specs = "SYSTEM_CARGO_AUX_FAB_SPECS"
+price = 2500000
+testProtocol = "cargo"
+
+[node name="HBox" type="HBoxContainer" parent="VBoxContainer/CargoAux_Fab"]
+margin_right = 1198.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_constants/separation = 8
+
+[node name="System" type="Button" parent="VBoxContainer/CargoAux_Fab/HBox"]
+margin_right = 948.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+text = "SYSTEM_CARGO_AUX_FAB"
+flat = true
+clip_text = true
+align = 0
+script = ExtResource( 8 )
+
+[node name="SmoothScrollTo" parent="VBoxContainer/CargoAux_Fab/HBox/System" instance=ExtResource( 3 )]
+focusAt = NodePath("../../..")
+
+[node name="V" type="GridContainer" parent="VBoxContainer/CargoAux_Fab/HBox"]
+margin_left = 956.0
+margin_right = 1110.0
+margin_bottom = 70.0
+size_flags_horizontal = 0
+theme = ExtResource( 7 )
+
+[node name="Price" type="Label" parent="VBoxContainer/CargoAux_Fab/HBox/V"]
+visible = false
+margin_right = 154.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 96, 0 )
+size_flags_horizontal = 3
+text = "UPGRADE_PRICE"
+align = 2
+uppercase = true
+
+[node name="StickerPrice" type="Label" parent="VBoxContainer/CargoAux_Fab/HBox/V"]
+margin_right = 154.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 96, 0 )
+size_flags_horizontal = 3
+text = "%s E$ (x%d)"
+align = 2
+
+[node name="Installed" type="Label" parent="VBoxContainer/CargoAux_Fab/HBox/V"]
+modulate = Color( 0, 2, 0, 1 )
+margin_top = 14.0
+margin_right = 154.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+text = "UPGRADE_INSTALLED"
+align = 2
+uppercase = true
+
+[node name="Replace" type="Label" parent="VBoxContainer/CargoAux_Fab/HBox/V"]
+modulate = Color( 2, 0.5, 0.5, 1 )
+margin_top = 28.0
+margin_right = 154.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+text = "UPGRADE_REPLACE_BUY"
+align = 2
+uppercase = true
+
+[node name="Refund" type="Label" parent="VBoxContainer/CargoAux_Fab/HBox/V"]
+modulate = Color( 0, 2, 0, 1 )
+margin_top = 42.0
+margin_right = 154.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+text = "UPGRADE_REPLACE_REFUND"
+align = 2
+uppercase = true
+
+[node name="NetPrice" type="Label" parent="VBoxContainer/CargoAux_Fab/HBox/V"]
+margin_top = 56.0
+margin_right = 154.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+text = "%s E$"
+align = 2
+uppercase = true
+
+[node name="Buy" type="Button" parent="VBoxContainer/CargoAux_Fab/HBox"]
+margin_left = 1118.0
+margin_right = 1198.0
+margin_bottom = 70.0
+hint_tooltip = "UPGRADE_BUY"
+disabled = true
+icon = ExtResource( 10 )
+flat = true
+
+[node name="SmoothScrollTo" parent="VBoxContainer/CargoAux_Fab/HBox/Buy" instance=ExtResource( 3 )]
+focusAt = NodePath("../../..")
+
+[node name="Heat" type="Sprite" parent="VBoxContainer/CargoAux_Fab/HBox/Buy"]
+modulate = Color( 2, 1, 1, 1 )
+position = Vector2( 14, 24 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+
+[node name="Power" type="Sprite" parent="VBoxContainer/CargoAux_Fab/HBox/Buy"]
+modulate = Color( 2, 1, 1, 1 )
+position = Vector2( 70, 24 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="PlaySoundsOnTheseButtons" parent="VBoxContainer/CargoAux_Fab/HBox" instance=ExtResource( 2 )]
+
+[node name="Flicker" parent="VBoxContainer/CargoAux_Fab" instance=ExtResource( 13 )]
+
+[connection signal="visibility_changed" from="VBoxContainer/CargoAux_PreProcA" to="VBoxContainer/CargoAux_PreProcA" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="focus_entered" from="VBoxContainer/CargoAux_PreProcA/HBox/System" to="VBoxContainer/CargoAux_PreProcA" method="_on_System_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/CargoAux_PreProcA/HBox/System" to="VBoxContainer/CargoAux_PreProcA" method="_on_System_pressed"]
+[connection signal="focus_entered" from="VBoxContainer/CargoAux_PreProcA/HBox/Buy" to="VBoxContainer/CargoAux_PreProcA" method="_on_Buy_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/CargoAux_PreProcA/HBox/Buy" to="VBoxContainer/CargoAux_PreProcA" method="_on_Buy_pressed"]
+[connection signal="visibility_changed" from="VBoxContainer/CargoAux_BayStorageA" to="VBoxContainer/CargoAux_BayStorageA" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="focus_entered" from="VBoxContainer/CargoAux_BayStorageA/HBox/System" to="VBoxContainer/CargoAux_BayStorageA" method="_on_System_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/CargoAux_BayStorageA/HBox/System" to="VBoxContainer/CargoAux_BayStorageA" method="_on_System_pressed"]
+[connection signal="focus_entered" from="VBoxContainer/CargoAux_BayStorageA/HBox/Buy" to="VBoxContainer/CargoAux_BayStorageA" method="_on_Buy_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/CargoAux_BayStorageA/HBox/Buy" to="VBoxContainer/CargoAux_BayStorageA" method="_on_Buy_pressed"]
+[connection signal="visibility_changed" from="VBoxContainer/CargoAux_PreProcB" to="VBoxContainer/CargoAux_PreProcB" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="focus_entered" from="VBoxContainer/CargoAux_PreProcB/HBox/System" to="VBoxContainer/CargoAux_PreProcB" method="_on_System_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/CargoAux_PreProcB/HBox/System" to="VBoxContainer/CargoAux_PreProcB" method="_on_System_pressed"]
+[connection signal="focus_entered" from="VBoxContainer/CargoAux_PreProcB/HBox/Buy" to="VBoxContainer/CargoAux_PreProcB" method="_on_Buy_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/CargoAux_PreProcB/HBox/Buy" to="VBoxContainer/CargoAux_PreProcB" method="_on_Buy_pressed"]
+[connection signal="visibility_changed" from="VBoxContainer/CargoAux_BayStorageB" to="VBoxContainer/CargoAux_BayStorageB" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="focus_entered" from="VBoxContainer/CargoAux_BayStorageB/HBox/System" to="VBoxContainer/CargoAux_BayStorageB" method="_on_System_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/CargoAux_BayStorageB/HBox/System" to="VBoxContainer/CargoAux_BayStorageB" method="_on_System_pressed"]
+[connection signal="focus_entered" from="VBoxContainer/CargoAux_BayStorageB/HBox/Buy" to="VBoxContainer/CargoAux_BayStorageB" method="_on_Buy_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/CargoAux_BayStorageB/HBox/Buy" to="VBoxContainer/CargoAux_BayStorageB" method="_on_Buy_pressed"]
+[connection signal="visibility_changed" from="VBoxContainer/CargoAux_Fab" to="VBoxContainer/CargoAux_Fab" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="focus_entered" from="VBoxContainer/CargoAux_Fab/HBox/System" to="VBoxContainer/CargoAux_Fab" method="_on_System_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/CargoAux_Fab/HBox/System" to="VBoxContainer/CargoAux_Fab" method="_on_System_pressed"]
+[connection signal="focus_entered" from="VBoxContainer/CargoAux_Fab/HBox/Buy" to="VBoxContainer/CargoAux_Fab" method="_on_Buy_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/CargoAux_Fab/HBox/Buy" to="VBoxContainer/CargoAux_Fab" method="_on_Buy_pressed"]

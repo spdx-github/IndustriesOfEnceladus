@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ships/modules/ThrusterSlot.gd" type="Script" id=1]
+
+[node name="HoldModifiers" type="Node2D"]
+script = ExtResource( 1 )
+notAThruster = true
+type = "cargo.modifier"
+default = "SYSTEM_NONE"
+
+[node name="SYSTEM_CARGO_MOD_2K" parent="." instance_placeholder="res://IndustriesOfEnceladus/ships/modules/HoldModifier.tscn"]
+systemName = "SYSTEM_CARGO_MOD_2K"
+repairReplacementPrice = 45000
+repairReplacementTime = 1
+repairFixPrice = 5000
+repairFixTime = 4
+mass = 1000.0
+holdType = "both"
+addedSpace = 2000
+amorphicRatio = 6
+
+[node name="SYSTEM_CARGO_MOD_4K" parent="." instance_placeholder="res://IndustriesOfEnceladus/ships/modules/HoldModifier.tscn"]
+systemName = "SYSTEM_CARGO_MOD_4K"
+repairReplacementPrice = 150000
+repairReplacementTime = 1
+repairFixPrice = 5000
+repairFixTime = 4
+mass = 2000.0
+holdType = "both"
+addedSpace = 4000
+amorphicRatio = 6
+
+[node name="SYSTEM_CARGO_MOD_6K" parent="." instance_placeholder="res://IndustriesOfEnceladus/ships/modules/HoldModifier.tscn"]
+repairReplacementPrice = 350000
+repairReplacementTime = 1
+repairFixPrice = 5000
+repairFixTime = 4
+mass = 3500.0
+holdType = "both"
+addedSpace = 6000
+amorphicRatio = 6

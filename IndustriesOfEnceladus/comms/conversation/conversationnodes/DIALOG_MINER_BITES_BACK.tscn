@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://comms/ConversationPlayer.gd" type="Script" id=1]
+
+[node name="DIALOG_MINER_BITES_BACK" type="Node"]
+script = ExtResource( 1 )
+mostPrelevantDisposition = "hostility"
+dispositionRequired = 0.5
+changeHostility = 0.5
+changeFear = -0.5
+changeSupport = -0.25
+
+[node name="DIALOG_MINER_BACK_DOWN" type="Node" parent="."]
+script = ExtResource( 1 )
+myLine = false
+changeHostility = -1.25
+changeFear = -0.15
+changeSupport = 0.05
+
+[node name="DIALOG_MINER_STEP_UP" type="Node" parent="."]
+script = ExtResource( 1 )
+myLine = false
+changeHostility = 2.0
+changeFear = 0.25
+changeSupport = -1.0

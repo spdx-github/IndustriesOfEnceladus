@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://IndustriesOfEnceladus/enceladus/upgradenodes/CargoModifiers.tscn" type="PackedScene" id=1]
+
+[node name="CargoModifiersAmorphic" instance=ExtResource( 1 )]
+slot = "cargo.modifierAmorphic"
+
+[node name="VBoxContainer" parent="." index="0"]
+margin_bottom = 417.0
+
+[node name="CargoModifierNone" parent="VBoxContainer" index="1"]
+slot = "cargo.modifierAmorphic"
+
+[node name="CargoModifierAMORPH4" parent="VBoxContainer" index="4"]
+visible = false
+
+[node name="CargoModifier4K" parent="VBoxContainer" index="5"]
+margin_top = 266.0
+margin_bottom = 336.0
+
+[node name="CargoModifierAMORPH5" parent="VBoxContainer" index="6"]
+visible = false
+margin_top = 340.0
+margin_bottom = 410.0
+
+[node name="CargoModifier6K" parent="VBoxContainer" index="7"]
+margin_top = 340.0
+margin_bottom = 410.0

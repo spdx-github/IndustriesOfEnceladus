@@ -1,0 +1,89 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://ships/EIME.tscn" type="PackedScene" id=1]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/MineralProcessingUnit_Furnace.tscn" type="PackedScene" id=2]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/HoldModifiersDivided.tscn" type="PackedScene" id=3]
+
+[node name="EIME" instance=ExtResource( 1 )]
+position = Vector2( 1, 0 )
+
+[node name="AI" parent="." index="1"]
+visible = false
+
+[node name="CargoBaffle" parent="." index="2"]
+visible = false
+
+[node name="HoldModifiersDivided" parent="." index="3" instance=ExtResource( 3 )]
+
+[node name="MineralProcessingUnit_Furnace" parent="Beak/Claw Right" index="5" instance=ExtResource( 2 )]
+visible = false
+position = Vector2( 13, 23 )
+polygon = PoolVector2Array( -23, 0, 19, 0, 26, -9, 14, -68, 6, -78, -15, -78, -23, -68, -23, -20, -30, -26, -30, -78, -18, -92, 11, -92, 39, 31, -30, 2 )
+
+[node name="MineralProcessingUnit" parent="Beak/Claw Right/MineralProcessingUnit_Furnace" index="0"]
+visible = false
+
+[node name="CollisionPolygon2D" parent="Beak/Claw Right/MineralProcessingUnit_Furnace/MineralProcessingUnit" index="0"]
+polygon = PoolVector2Array( -27, 2, 30, 2, 12, -79, -28, -79 )
+
+[node name="MineralProcessingUnit_SMELT" parent="Beak/Claw Left" index="0"]
+visible = false
+
+[node name="GroveLeft1" parent="Beak" index="4"]
+visible = false
+
+[node name="GroveLeft2" parent="Beak" index="5"]
+visible = false
+
+[node name="GroveRight1" parent="Beak" index="6"]
+visible = false
+
+[node name="GroveRight2" parent="Beak" index="7"]
+visible = false
+
+[node name="SpringLeft1" parent="Beak" index="8"]
+visible = false
+
+[node name="SpringLeft4" parent="Beak" index="9"]
+visible = false
+
+[node name="SpringLeft2" parent="Beak" index="10"]
+visible = false
+
+[node name="SpringLeft5" parent="Beak" index="11"]
+visible = false
+
+[node name="SpringLeft3" parent="Beak" index="12"]
+visible = false
+
+[node name="SpringLeft6" parent="Beak" index="13"]
+visible = false
+
+[node name="SpringRight1" parent="Beak" index="14"]
+visible = false
+
+[node name="SpringRight4" parent="Beak" index="15"]
+visible = false
+
+[node name="SpringRight2" parent="Beak" index="16"]
+visible = false
+
+[node name="SpringRight5" parent="Beak" index="17"]
+visible = false
+
+[node name="SpringRight3" parent="Beak" index="18"]
+visible = false
+
+[node name="SpringRight6" parent="Beak" index="19"]
+visible = false
+
+[editable path="Noises"]
+[editable path="AI"]
+[editable path="Beak/Claw Right/MineralProcessingUnit"]
+[editable path="Beak/Claw Right/MineralProcessingUnit_Furnace"]
+[editable path="Beak/Claw Left/MineralProcessingUnit_SMELT"]
+[editable path="Beak/Claw Left/MineralProcessingUnit_FAB"]
+[editable path="MineralProcessingUnit_FSO"]
+[editable path="WeaponSlot"]
+[editable path="WeaponLeft"]
+[editable path="WeaponRight"]

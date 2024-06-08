@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/Aux_BayStorageA.tscn" type="PackedScene" id=1]
+
+[node name="Aux_BayStorageA" instance=ExtResource( 1 )]
+position = Vector2( 0, -120 )
+polygon = PoolVector2Array( -46, -99, -20, -128, -20, -89, -34, -75, -44, -51, -44, 161, 0, 164, 46, 161, 46, -51, 34, -75, 17, -89, 17, -128, 48, -101, 48, 165, -46, 165 )
+
+[node name="CollisionPolygon2D" parent="MineralProcessingUnit" index="0"]
+position = Vector2( 0, 134 )

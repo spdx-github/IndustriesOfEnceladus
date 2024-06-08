@@ -1,0 +1,297 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://enceladus/SmoothScrollTo.gd" type="Script" id=1]
+[ext_resource path="res://menu/MenuTheme.tres" type="Theme" id=2]
+[ext_resource path="res://hud/TNTRL-theme-inventory.tres" type="Theme" id=3]
+[ext_resource path="res://SmoothScrollTo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://menu/sfx/PlaySoundsOnTheseButtons.tscn" type="PackedScene" id=5]
+[ext_resource path="res://menu/sfx/PlaySoundsOnTheseButtons.gd" type="Script" id=6]
+[ext_resource path="res://enceladus/SystemShipUpgradeUI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://enceladus/Upgrades/Preview.tscn" type="PackedScene" id=8]
+[ext_resource path="res://enceladus/UpgradeGroup.gd" type="Script" id=9]
+[ext_resource path="res://enceladus/SystemShipUpgradeUI.gd" type="Script" id=10]
+
+[node name="TorchRCS" type="PanelContainer"]
+margin_top = 31000.0
+margin_right = 1228.0
+margin_bottom = 32091.0
+script = ExtResource( 9 )
+slot = "propulsion.rcsLarge"
+always = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 16.0
+margin_top = 2.0
+margin_right = 1212.0
+margin_bottom = 1089.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 1196.0
+margin_bottom = 51.0
+alignment = 2
+
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer/HBoxContainer"]
+margin_right = 1196.0
+margin_bottom = 51.0
+size_flags_horizontal = 3
+text = "SLOT_RCS"
+flat = true
+align = 2
+
+[node name="SmoothScrollTo" type="Node" parent="VBoxContainer/HBoxContainer/CheckButton" instance=ExtResource( 4 )]
+script = ExtResource( 1 )
+
+[node name="PlaySoundsOnTheseButtons" type="Node" parent="VBoxContainer/HBoxContainer/CheckButton" instance=ExtResource( 5 )]
+pause_mode = 2
+script = ExtResource( 6 )
+tooltipLabelPath = NodePath("Separation/Tooltip/MarginContainer/PanelContainer/TooltipLabel")
+tooltipContainerPath = NodePath("Separation/Tooltip/MarginContainer")
+tooltipPositionPath = NodePath("Separation/Tooltip")
+
+[node name="Preview" type="Label" parent="VBoxContainer/HBoxContainer/CheckButton" instance=ExtResource( 8 )]
+modulate = Color( 1, 1, 1, 0.580392 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+valign = 1
+
+[node name="PNTR" type="MarginContainer" parent="VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 55.0
+margin_right = 1196.0
+margin_bottom = 125.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_constants/margin_right = 16
+script = ExtResource( 10 )
+slot = "propulsion.main"
+system = "SYSTEM_MAIN_ENGINE_PNTR"
+manual = "SYSTEM_MAIN_ENGINE_MANUAL"
+price = 7000
+testProtocol = "autopilot"
+default = true
+warnIfThermalBelow = 5.6
+warnIfElectricBelow = 200.0
+
+[node name="K37" type="MarginContainer" parent="VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 129.0
+margin_right = 1196.0
+margin_bottom = 199.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_constants/margin_right = 16
+script = ExtResource( 10 )
+slot = "propulsion.main"
+system = "SYSTEM_MAIN_ENGINE_K37"
+manual = "SYSTEM_MAIN_ENGINE_MANUAL"
+price = 15000
+testProtocol = "autopilot"
+default = true
+warnIfThermalBelow = 5.6
+warnIfElectricBelow = 100.0
+
+[node name="NDNTR" type="MarginContainer" parent="VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 203.0
+margin_right = 1196.0
+margin_bottom = 273.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_constants/margin_right = 16
+script = ExtResource( 10 )
+slot = "propulsion.main"
+system = "SYSTEM_MAIN_ENGINE_NDNTR"
+manual = "SYSTEM_MAIN_ENGINE_MANUAL"
+price = 30000
+testProtocol = "autopilot"
+default = true
+warnIfThermalBelow = 12.2
+warnIfElectricBelow = 20.0
+
+[node name="SOYUZ" type="MarginContainer" parent="VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 277.0
+margin_right = 1196.0
+margin_bottom = 347.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_constants/margin_right = 16
+script = ExtResource( 10 )
+slot = "weaponSlot.main.type"
+system = "SYSTEM_MAIN_ENGINE_SOYUZ"
+manual = "SYSTEM_MAIN_ENGINE_MANUAL"
+price = 35000
+testProtocol = "autopilot"
+default = true
+
+[node name="K44" type="MarginContainer" parent="VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 351.0
+margin_right = 1196.0
+margin_bottom = 421.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_constants/margin_right = 16
+script = ExtResource( 10 )
+slot = "propulsion.main"
+system = "SYSTEM_MAIN_ENGINE_K44"
+manual = "SYSTEM_MAIN_ENGINE_MANUAL"
+price = 40000
+testProtocol = "autopilot"
+warnIfThermalBelow = 13.5
+warnIfElectricBelow = 100.0
+
+[node name="THUNDER" type="MarginContainer" parent="VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 425.0
+margin_right = 1196.0
+margin_bottom = 495.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_constants/margin_right = 16
+script = ExtResource( 10 )
+slot = "weaponSlot.main.type"
+system = "SYSTEM_MAIN_ENGINE_THUNDER"
+manual = "SYSTEM_MAIN_ENGINE_MANUAL"
+price = 102000
+testProtocol = "autopilot"
+storyFlag = "ringrace"
+storyFlagMin = 1
+
+[node name="BWMT535" type="MarginContainer" parent="VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 499.0
+margin_right = 1196.0
+margin_bottom = 569.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_constants/margin_right = 16
+script = ExtResource( 10 )
+slot = "propulsion.main"
+system = "SYSTEM_MAIN_ENGINE_BWMT535"
+manual = "SYSTEM_MAIN_ENGINE_MANUAL"
+price = 120000
+testProtocol = "autopilot"
+warnIfThermalBelow = 8.2
+
+[node name="ERS-DFMPD 2205" type="MarginContainer" parent="VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 573.0
+margin_right = 1196.0
+margin_bottom = 643.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_constants/margin_right = 16
+script = ExtResource( 10 )
+slot = "propulsion.main"
+system = "SYSTEM_MAIN_ENGINE_DFMPD2205"
+manual = "SYSTEM_MAIN_ENGINE_MANUAL"
+price = 175000
+testProtocol = "autopilot"
+warnIfThermalBelow = 15.4
+warnIfElectricBelow = 120.0
+
+[node name="NMPD" type="MarginContainer" parent="VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 647.0
+margin_right = 1196.0
+margin_bottom = 717.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_constants/margin_right = 16
+script = ExtResource( 10 )
+slot = "propulsion.main"
+system = "SYSTEM_MAIN_ENGINE_NMPD"
+manual = "SYSTEM_MAIN_ENGINE_MANUAL"
+price = 300000
+testProtocol = "autopilot"
+default = true
+warnIfThermalBelow = 18.4
+warnIfElectricBelow = 150.0
+
+[node name="NANI" type="MarginContainer" parent="VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 721.0
+margin_right = 1196.0
+margin_bottom = 791.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_constants/margin_right = 16
+script = ExtResource( 10 )
+slot = "weaponSlot.main.type"
+system = "SYSTEM_MAIN_ENGINE_NANI"
+manual = "SYSTEM_MAIN_ENGINE_MANUAL"
+price = 300000
+testProtocol = "autopilot"
+default = true
+
+[node name="GEMINI" type="MarginContainer" parent="VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 795.0
+margin_right = 1196.0
+margin_bottom = 865.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_constants/margin_right = 16
+script = ExtResource( 10 )
+slot = "propulsion.main"
+system = "SYSTEM_MAIN_ENGINE_GEMINI"
+manual = "SYSTEM_MAIN_ENGINE_MANUAL"
+price = 345000
+testProtocol = "autopilot"
+default = true
+warnIfThermalBelow = 5.6
+warnIfElectricBelow = 100.0
+
+[node name="PIN1200" type="MarginContainer" parent="VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 869.0
+margin_right = 1196.0
+margin_bottom = 939.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_constants/margin_right = 16
+script = ExtResource( 10 )
+slot = "weaponSlot.main.type"
+system = "SYSTEM_MAIN_ENGINE_PIN1200"
+manual = "SYSTEM_MAIN_ENGINE_MANUAL"
+price = 580000
+testProtocol = "autopilot"
+storyFlag = "ringrace"
+storyFlagMin = 1
+
+[node name="NPMP" type="MarginContainer" parent="VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 943.0
+margin_right = 1196.0
+margin_bottom = 1013.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_constants/margin_right = 16
+script = ExtResource( 10 )
+slot = "propulsion.main"
+system = "SYSTEM_MAIN_ENGINE_NPMP"
+manual = "SYSTEM_MAIN_ENGINE_MANUAL"
+price = 700000
+testProtocol = "autopilot"
+default = true
+warnIfThermalBelow = 24.7
+warnIfElectricBelow = 200.0
+
+[node name="ZAP" type="MarginContainer" parent="VBoxContainer" instance=ExtResource( 7 )]
+margin_top = 1017.0
+margin_right = 1196.0
+margin_bottom = 1087.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_constants/margin_right = 16
+script = ExtResource( 10 )
+slot = "propulsion.main"
+system = "SYSTEM_MAIN_ENGINE_EIZAP"
+price = 1000000
+testProtocol = "autopilot"
+default = true
+warnIfElectricBelow = 150.0
+
+[connection signal="visibility_changed" from="VBoxContainer/PNTR" to="VBoxContainer/PNTR" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="visibility_changed" from="VBoxContainer/K37" to="VBoxContainer/K37" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="visibility_changed" from="VBoxContainer/NDNTR" to="VBoxContainer/NDNTR" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="visibility_changed" from="VBoxContainer/SOYUZ" to="VBoxContainer/SOYUZ" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="visibility_changed" from="VBoxContainer/K44" to="VBoxContainer/K44" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="visibility_changed" from="VBoxContainer/THUNDER" to="VBoxContainer/THUNDER" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="visibility_changed" from="VBoxContainer/BWMT535" to="VBoxContainer/BWMT535" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="visibility_changed" from="VBoxContainer/ERS-DFMPD 2205" to="VBoxContainer/ERS-DFMPD 2205" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="visibility_changed" from="VBoxContainer/NMPD" to="VBoxContainer/NMPD" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="visibility_changed" from="VBoxContainer/NANI" to="VBoxContainer/NANI" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="visibility_changed" from="VBoxContainer/GEMINI" to="VBoxContainer/GEMINI" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="visibility_changed" from="VBoxContainer/PIN1200" to="VBoxContainer/PIN1200" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="visibility_changed" from="VBoxContainer/NPMP" to="VBoxContainer/NPMP" method="_on_SystemShipUpgradeUI_visibility_changed"]
+[connection signal="visibility_changed" from="VBoxContainer/ZAP" to="VBoxContainer/ZAP" method="_on_SystemShipUpgradeUI_visibility_changed"]

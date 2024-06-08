@@ -1,0 +1,128 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://ships/ocp-209.tscn" type="PackedScene" id=1]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/MineralProcessingUnit_Furnace.tscn" type="PackedScene" id=2]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/HoldModifiersAmorphic.tscn" type="PackedScene" id=3]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/MineralProcessingUnit_Bulker.tscn" type="PackedScene" id=4]
+[ext_resource path="res://weapons/WeaponSlot.tscn" type="PackedScene" id=5]
+
+[node name="OCP-209" instance=ExtResource( 1 )]
+shipType = "fissionsmall"
+
+[node name="Spring 1" parent="Bay" index="2"]
+visible = false
+
+[node name="Spring 2" parent="Bay" index="3"]
+visible = false
+
+[node name="Collider" parent="." index="5"]
+visible = true
+polygon = PoolVector2Array( 0, -400, 26, -395, 50, -381, 64, -363, 70, -335, 66, -309, 58, -293, 58, -284, 151, -279, 150, -261, 90, -256, 91, -137, 82, -121, 71, -121, 37, -135, 0, -140, 0, -156, -17, -155, -36, -135, -70, -121, -99, -99, -121, -70, -135, -36, -140, 0, -135, 36, -121, 70, -99, 99, -70, 121, -36, 135, 0, 140, 37, 135, 70, 121, 81, 121, 90, 131, 90, 217, 84, 231, 70, 241, 51.1148, 240.902, 60, 249, 62, 257, 150, 262, 150, 272, 64, 281, 65, 348, 59, 368, 40, 387, 45, 397, 31, 446, -31, 446, -46, 397, -40, 387, -49, 377, -70, 377, -70, 279, -148, 277, -148, 261, -70, 257, -70, 241, -84, 231, -90, 217, -90, 131, -84, 124, -106, 107, -131, 75, -146, 39, -151, 1, -146, -39, -131, -74, -106, -107, -82.6822, -124.924, -91, -139, -92, -259, -150, -262, -150, -278, -59, -283, -59, -295, -66, -309, -70, -335, -64, -363, -50, -381, -26, -395 )
+
+[node name="CollisionPolygon2D" parent="CargoHoldArea" index="0"]
+polygon = PoolVector2Array( 38, -141, 120, -89, 146, 1, 120, 91, 43, 138, -1, 146, -40, 140, -72, 128, -103, 102, -126, 71, -140, 36, -145, 0, -140, -39, -124, -75, -102, -103, -73, -126, -37, -141, 2, -145 )
+
+[node name="DockForeLeft" parent="." index="23" instance=ExtResource( 5 )]
+position = Vector2( -50, -335 )
+slot = "leftBay1"
+toggleCommand = "ship_slot_5"
+
+[node name="SYSTEM_EXSTORAGE-L" parent="DockForeLeft" index="15"]
+visible = true
+
+[node name="SYSTEM_ACTEMD14" parent="DockForeLeft" index="19"]
+pivotPath = NodePath("Pivot")
+weaponPath = NodePath("Pivot/massdriver")
+audioPath = NodePath("Actuation")
+lightPath = NodePath("Pivot/Light")
+
+[node name="SYSTEM_ACL200P" parent="DockForeLeft" index="20"]
+weaponPath = NodePath("Pivot/laster-pulse")
+
+[node name="DockForeRight" parent="." index="24" instance=ExtResource( 5 )]
+position = Vector2( 50, -335 )
+slot = "rightBay1"
+toggleCommand = "ship_slot_6"
+
+[node name="SYSTEM_EXSTORAGE-R" parent="DockForeRight" index="16"]
+visible = true
+
+[node name="SYSTEM_ACTEMD14" parent="DockForeRight" index="19"]
+pivotPath = NodePath("Pivot")
+weaponPath = NodePath("Pivot/massdriver")
+audioPath = NodePath("Actuation")
+lightPath = NodePath("Pivot/Light")
+
+[node name="SYSTEM_ACL200P" parent="DockForeRight" index="20"]
+weaponPath = NodePath("Pivot/laster-pulse")
+
+[node name="DockAftRight" parent="." index="25" instance=ExtResource( 5 )]
+position = Vector2( 50, 335 )
+rotation = -3.14159
+slot = "leftBay3"
+toggleCommand = "ship_slot_7"
+
+[node name="SYSTEM_EXSTORAGE-L" parent="DockAftRight" index="15"]
+visible = true
+
+[node name="SYSTEM_ACTEMD14" parent="DockAftRight" index="19"]
+pivotPath = NodePath("Pivot")
+weaponPath = NodePath("Pivot/massdriver")
+audioPath = NodePath("Actuation")
+lightPath = NodePath("Pivot/Light")
+
+[node name="SYSTEM_ACL200P" parent="DockAftRight" index="20"]
+weaponPath = NodePath("Pivot/laster-pulse")
+
+[node name="DockAftLeft" parent="." index="26" instance=ExtResource( 5 )]
+position = Vector2( -50, 335 )
+rotation = 3.14159
+slot = "rightBay3"
+toggleCommand = "ship_slot_8"
+
+[node name="SYSTEM_EXSTORAGE-R" parent="DockAftLeft" index="16"]
+visible = true
+
+[node name="SYSTEM_ACTEMD14" parent="DockAftLeft" index="19"]
+pivotPath = NodePath("Pivot")
+weaponPath = NodePath("Pivot/massdriver")
+audioPath = NodePath("Actuation")
+lightPath = NodePath("Pivot/Light")
+
+[node name="SYSTEM_ACL200P" parent="DockAftLeft" index="20"]
+weaponPath = NodePath("Pivot/laster-pulse")
+
+[node name="HoldModifiersAmorphic" parent="." index="29" instance=ExtResource( 3 )]
+
+[node name="MineralProcessingUnit_FAB" parent="." index="33"]
+visible = false
+
+[node name="MineralProcessingUnit_Furnace" parent="." index="34" instance=ExtResource( 2 )]
+polygon = PoolVector2Array( -122, 71, -136, 37, -142, 1, -136, -35, -122, -69, -100, -101, -72, -123, -36, -135, -64, -19, -74, -21, -84, -27, -72, -29, -54, -103, -62, -113, -74, -113, -94, -95, -116, -65, -128, -33, -134, 1, -128, 35, -116, 67, -96, 93, -74, 111, -62, 111, -54, 101, -72, 31, -84, 29, -74, 23, -64, 21, -36, 137, -70, 123, -100, 99 )
+
+[node name="MineralProcessingUnit" parent="MineralProcessingUnit_Furnace" index="0"]
+visible = false
+
+[node name="CollisionPolygon2D" parent="MineralProcessingUnit_Furnace/MineralProcessingUnit" index="0"]
+polygon = PoolVector2Array( -70, -119, -50, -119, -72, 1, -50, 117, -72, 117, -120, 69, -136, 1, -120, -69 )
+
+[node name="MineralProcessingUnit_Bulker" parent="." index="35" instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 11, 109 )
+rotation = -1.5708
+scale = Vector2( -1, 1 )
+polygon = PoolVector2Array( -28, -15, -20, -9, 18, -21, 24, -29, 23.9998, -45.0001, 13.9998, -51.0001, -4.00016, -45, -4.00039, -107, 34, -54, 34, 32, 20, 63, -34, 32, -34, -33, -28, -39 )
+
+[node name="CollisionPolygon2D" parent="MineralProcessingUnit_Bulker/MineralProcessingUnit" index="0"]
+polygon = PoolVector2Array( -28, 19, 28, 17.9999, 27.9998, -30.0001, -28.0001, -9.9999 )
+
+[editable path="WeaponHardTop"]
+[editable path="WeaponHardRight"]
+[editable path="DockForeLeft"]
+[editable path="DockForeRight"]
+[editable path="DockAftRight"]
+[editable path="DockAftLeft"]
+[editable path="MineralProcessingUnit_FSO"]
+[editable path="MineralProcessingUnit_Furnace"]
+[editable path="MineralProcessingUnit_Bulker"]
+[editable path="AI"]

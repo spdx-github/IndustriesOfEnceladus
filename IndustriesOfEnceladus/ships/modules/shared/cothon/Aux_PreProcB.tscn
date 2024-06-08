@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/Aux_PreProcB.tscn" type="PackedScene" id=1]
+
+[node name="Aux_PreProcB" instance=ExtResource( 1 )]
+position = Vector2( 2, -162 )
+polygon = PoolVector2Array( -48, -74, -38, -58, -28, -54, -20, -42, -20, -30, -28, -18, -38, -14, -46, -14, -46, 206, 44, 206, 44, -14, 36, -14, 26, -18, 18, -30, 18, -42, 26, -54, 36, -58, 46, -74, 46, -58, 46, 208, -48, 208, -48, -58 )
+
+[node name="CollisionPolygon2D" parent="MineralProcessingUnit" index="0"]
+polygon = PoolVector2Array( -46, 0, -18, -24, 12, -24, 44, 0, 44, 192, 36, 228, 20, 262, -22, 262, -38, 228, -46, 192 )

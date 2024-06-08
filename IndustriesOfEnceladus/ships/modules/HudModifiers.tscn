@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ships/modules/ThrusterSlot.gd" type="Script" id=1]
+[ext_resource path="res://IndustriesOfEnceladus/ships/modules/HudModifier.tscn" type="PackedScene" id=2]
+
+[node name="HudModifiers" type="Node2D"]
+script = ExtResource( 1 )
+notAThruster = true
+type = "hud.modifier"
+default = "SYSTEM_NONE"
+
+[node name="SYSTEM_HUD_MOD_RES_A" parent="." instance=ExtResource( 2 )]
+systemName = "SYSTEM_HUD_MOD_RES_A"
+cargoScannerSampleMult = 2.0
+cargoScannerSampleSpeed = 5.0

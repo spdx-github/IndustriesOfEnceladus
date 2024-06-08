@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://sfx/thrusters-short.png" type="Texture" id=1]
+[ext_resource path="res://ships/modules/magnozzle-n.png" type="Texture" id=2]
+[ext_resource path="res://ships/modules/magnozzle-cl.png" type="Texture" id=3]
+[ext_resource path="res://ships/modules/magnozzle-cd.png" type="Texture" id=4]
+[ext_resource path="res://sfx/diffraction-spike.png" type="Texture" id=5]
+[ext_resource path="res://sfx/torch-k44.tscn" type="PackedScene" id=6]
+[ext_resource path="res://sfx/dv-plume-hit.wav" type="AudioStream" id=7]
+
+[node name="SYSTEM_MAIN_ENGINE_CANDAON" instance=ExtResource( 6 )]
+position = Vector2( 0, 0 )
+texture = ExtResource( 1 )
+thrust = 65000.0
+fadeSeconds = 0.1
+specialFuelLimit = 100
+specificImpulse = 140
+thermalFactor = 0.05
+powerDraw = 100.0
+gimbal = 0.0
+ignitionsPerSecond = 1
+pulsePerSecond = 0.25
+tuneThrustMin = 1.0
+tuneThrustMax = 1.0
+systemName = "SYSTEM_MAIN_ENGINE_CANDAON"
+mass = 3200
+
+[node name="AudioStart" parent="." index="1"]
+stream = ExtResource( 7 )
+pitch_scale = 0.2
+
+[node name="Flare" parent="." index="2"]
+texture = ExtResource( 5 )
+texture_scale = 12.0
+color = Color( 1, 0.921569, 0.901961, 1 )
+energy = 15.0
+
+[node name="nozzle" parent="." index="3"]
+position = Vector2( 0, 0 )
+scale = Vector2( 2, 1 )
+texture = ExtResource( 4 )
+normal_map = ExtResource( 2 )
+peakTemperature = 4000
+
+[node name="heat" parent="nozzle" index="0"]
+texture = ExtResource( 3 )
+
+[editable path="nozzle"]
