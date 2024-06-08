@@ -1,3 +1,6 @@
+# 0.25.2
+ * Adjusted excavator collider for better handling under high G load
+ * Adjusted RP-25 colliders to prevent chunk clipping
 # 0.25.1
  * Fixed the 1x SO6 Fuel Rod being "default" in some ships
  * Clarified preprocessor efficiency multiplier

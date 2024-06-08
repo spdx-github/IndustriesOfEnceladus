@@ -4,7 +4,7 @@
 
 [node name="Aux_PreProcA" instance=ExtResource( 1 )]
 position = Vector2( 0, -182 )
-polygon = PoolVector2Array( -30, -64, -12, -56, -12, -48, -24, -28, -24, 204, 24, 204, 24, -28, 12, -48, 12, -56, 30, -64, 30, 210, -30, 210 )
+polygon = PoolVector2Array( -26, -64, -12, -56, -12, -48, -24, -28, -24, 204, 24, 204, 24, -28, 12, -48, 12, -56, 26, -64, 26, 206, -26, 206 )
 kgps = 10
 
 [node name="CollisionPolygon2D" parent="MineralProcessingUnit" index="0"]
