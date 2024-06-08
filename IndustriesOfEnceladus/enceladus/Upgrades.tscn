@@ -1289,7 +1289,6 @@ system = "SYSTEM_RODS_1"
 manual = "SYSTEM_RODS_MANUAL"
 price = 20000
 testProtocol = "takeoff"
-default = true
 
 [node name="Rods4" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/Rods/VBoxContainer" index="2"]
 margin_top = 129.0
@@ -1367,7 +1366,6 @@ system = "SYSTEM_RODS_1"
 manual = "SYSTEM_RODS_MANUAL"
 price = 20000
 testProtocol = "takeoff"
-default = true
 
 [node name="Rods4" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/RodsSmall/VBoxContainer" index="2" instance=ExtResource( 1 )]
 anchor_right = 0.0

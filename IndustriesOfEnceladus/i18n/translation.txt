@@ -172,6 +172,9 @@ SYSTEM_MAIN_ENGINE_PIN1200_DESC|The Rasamama Material Solutions Pin-M200 impleme
 
 SYSTEM_MAIN_ENGINE_PIN1200_SPECS|Thrust: 1,200 kN \nExhaust velocity: 105 km/s \nPropellant consumption: 11.4 kg/s \nPower consumption: 510 MW \nOperation mode: Virtual variable thrust, gimballed \nGimbal angle: 36 deg \nGimbal speed: instantaneous \nPropellant: Hydrogen plasma \nMass: 2,650 kg \nManufacturer: Rasamama Material Solutions
 
+// firecracker
+SYSTEM_MAIN_ENGINE_CRACK|NDFD
+
 ------ THRUSTERS ------
 // pit 150
 SYSTEM_THRUSTER_PIN150|RMS Pin-C50 thruster
@@ -306,14 +309,14 @@ SYSTEM_CARGO_AUX_PREPROC_A|Rasamama RP-25
 
 SYSTEM_CARGO_AUX_PREPROC_A_DESC|The Rasamama Material Solutions RP-25 is a low-profile ore preprocessor designed to melt ice from mineral chunks within a vessel's cargo bay. The unit taps the reactor turbine bleed line for thermal power and requires very little electrical energy to function. \n\nRemass is recovered by running process exhaust through a condenser panel on the vessel's outer hull. Rasamama MS recommends monthly flow tests followed by hot gas purges to prevent fouling.
 
-SYSTEM_CARGO_AUX_PREPROC_A_SPECS|Ice melt rate: 10 kg/s \nPower draw: 25 KW / chunk \nRemass processing efficiency: 30% \nMass: 750 kg \nManufacturer: Rasamama Material Solutions
+SYSTEM_CARGO_AUX_PREPROC_A_SPECS|Ice melt rate: 10 kg/s \nPower draw: 25 KW / chunk \nMPU mineral efficiency: x100% (no change) \nRemass processing efficiency: 30% \nMass: 750 kg \nManufacturer: Rasamama Material Solutions
 
 // aux cargo bay equipment: preprocessor b
 SYSTEM_CARGO_AUX_PREPROC_B|Nakamura Big MT
 
 SYSTEM_CARGO_AUX_PREPROC_B_DESC|Nakamura Dynamics' Big MT Ore Preprocessor utilises the fundamental principles of its operation to its advantage when processing ore chunks. Free steam in the cargo bay is superheated by the unit's massive toroidal radiator, quickly ablating ice it comes into contact with and preheating the ore within them for more efficient processing. \n\nWhile some process steam can be reclaimed as propellant, its high temperature means that a significant amount is lost to its condenser vents.
 
-SYSTEM_CARGO_AUX_PREPROC_B_SPECS|Ice melt rate: 25 kg/s \nPower draw: 125 KW / chunk \nMPU mineral efficiency: 120% \nRemass processing efficiency: 10% \nMass: 2,000 kg \nManufacturer: Nakamura Dynamics
+SYSTEM_CARGO_AUX_PREPROC_B_SPECS|Ice melt rate: 25 kg/s \nPower draw: 125 KW / chunk \nMPU mineral efficiency: x120% \nRemass processing efficiency: 10% \nMass: 2,000 kg \nManufacturer: Nakamura Dynamics
 
 SYSTEM_CARGO_AUX_PREPROC_MANUAL|Reduces ice mass of chunks within a large area. \nReplenishes propellant. \nIncreases MPU efficiency multiplicatively. \nLarger cargo holds have greater processing reach. \nProcesses multiple ore chunks simultaneously. \nPower requirements and processing speed listed per chunk. \nDoes not extract minerals or destroy chunks.
 

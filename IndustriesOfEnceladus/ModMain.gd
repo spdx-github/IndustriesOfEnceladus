@@ -8,7 +8,7 @@ const MOD_PRIORITY = 0
 var _savedObjects = []
 
 var modName = "[SPDX] Industries of Enceladus"
-var modVersion = "0.24.1"
+var modVersion = "0.25.1"
 var modPath = ""
 
 func _init(modLoader = ModLoader):
