@@ -12,10 +12,8 @@
  * Added Pin-M200
  * Added OPG-14 StatPlasma
  * Added MPI City-class MPDG
-# 0.22.4
- * Further adjusted physics elements of OCP-207-SNAP for better and more reliable behaviour
 # 0.22.3
- * Adjusted OCP-207-SNAP bay door catches to prevent ore getting stuck against the hull
+ * Adjusted physics elements of OCP-207-SNAP for better and more reliable behaviour
 # 0.22.2
  * Fixed refund cost on Pin-150
  * Fixed new turbines not appearing on some ships
