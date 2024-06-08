@@ -1,3 +1,5 @@
+# 0.25.1
+ * Fixed the 1x SO6 Fuel Rod being "default" in some ships
 # 0.25.0
  * Adjusted Oberon hull colliders and cargo bay detection area for better entry detection and drone behaviour
  * Added ND-iSMB
