@@ -32,8 +32,8 @@
  - ND-iSMB: lighter capacitor that uses SMES tech
  - ND-iSMB Dual Coupling: even lighter capacitor that's just two smaller iSMB units braided together
 
-#### Turbines:
- - Thermocouple Array: uses reactor heat and cold propellant to produce a little power, very Light, best used in conjunction with an MPDG
+#### Turbines
+ - Thermocouple Array: uses reactor heat and cold propellant to produce a little power, very light, best used in conjunction with an MPDG
  - Laminar Turbine: a lighter turbine that produces more power than the base turbine
  - Dual Laminar Turbine: two of them!
 
