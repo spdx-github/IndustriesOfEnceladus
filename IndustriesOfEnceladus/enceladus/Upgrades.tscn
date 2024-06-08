@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://enceladus/SystemShipUpgradeUI.tscn" type="PackedScene" id=1]
 [ext_resource path="res://enceladus/Upgrades.tscn" type="PackedScene" id=2]
@@ -22,7 +22,6 @@
 [ext_resource path="res://IndustriesOfEnceladus/enceladus/upgradenodes/CargoModifiersDivided.tscn" type="PackedScene" id=20]
 [ext_resource path="res://IndustriesOfEnceladus/enceladus/upgradenodes/CargoModifiersAmorphic.tscn" type="PackedScene" id=21]
 [ext_resource path="res://IndustriesOfEnceladus/enceladus/upgradenodes/TorchRCS.tscn" type="PackedScene" id=22]
-[ext_resource path="res://IndustriesOfEnceladus/enceladus/upgradenodes/HudModifiers.tscn" type="PackedScene" id=23]
 [ext_resource path="res://IndustriesOfEnceladus/enceladus/upgradenodes/TsukuyomiTorpedoTube.tscn" type="PackedScene" id=24]
 [ext_resource path="res://IndustriesOfEnceladus/enceladus/upgradenodes/shared/MWTIGHTBEAM_PDT.tscn" type="PackedScene" id=25]
 [ext_resource path="res://IndustriesOfEnceladus/enceladus/upgradenodes/shared/MWTIGHTBEAM.tscn" type="PackedScene" id=26]
@@ -716,6 +715,9 @@ margin_top = 18231.0
 margin_bottom = 18878.0
 slot = "weaponSlot.turretLeft.type"
 
+[node name="CheckButton" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/LeftTurretSlot/VBoxContainer/HBoxContainer" index="0"]
+text = "SLOT_TURRET_LEFT"
+
 [node name="PDT-R" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/LeftTurretSlot/VBoxContainer" index="4"]
 margin_top = 129.0
 margin_bottom = 199.0
@@ -730,6 +732,9 @@ margin_bottom = 273.0
 
 [node name="RightTurretSlot" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="14" instance=ExtResource( 29 )]
 slot = "weaponSlot.turretRight.type"
+
+[node name="CheckButton" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/RightTurretSlot/VBoxContainer/HBoxContainer" index="0"]
+text = "SLOT_TURRET_RIGHT"
 
 [node name="PDT-R" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/RightTurretSlot/VBoxContainer" index="4"]
 margin_top = 129.0
@@ -1267,6 +1272,19 @@ margin_bottom = 1013.0
 [node name="ZAP" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/Torches/VBoxContainer" index="14"]
 margin_top = 1017.0
 margin_bottom = 1087.0
+
+[node name="CRACK" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/Torches/VBoxContainer" index="15" instance=ExtResource( 1 )]
+visible = false
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 1091.0
+margin_right = 1196.0
+margin_bottom = 1161.0
+slot = "weaponSlot.main.type"
+system = "SYSTEM_MAIN_ENGINE_CRACK"
+manual = "SYSTEM_MAIN_ENGINE_MANUAL"
+price = 1375000
+testProtocol = "autopilot"
 
 [node name="TorchRCS" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="30" instance=ExtResource( 22 )]
 
@@ -1823,17 +1841,11 @@ margin_bottom = 39666.0
 margin_top = 39670.0
 margin_bottom = 40465.0
 
-[node name="HudModifiers" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="45" instance=ExtResource( 23 )]
-visible = false
-margin_top = 30924.0
-margin_bottom = 31127.0
-always = false
-
-[node name="Lidar" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="46"]
+[node name="Lidar" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="45"]
 margin_top = 40469.0
 margin_bottom = 40894.0
 
-[node name="ReconDrone" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="47"]
+[node name="ReconDrone" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="46"]
 margin_top = 40898.0
 margin_bottom = 41249.0
 

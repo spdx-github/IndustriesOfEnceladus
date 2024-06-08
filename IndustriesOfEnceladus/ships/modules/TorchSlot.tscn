@@ -22,3 +22,5 @@ systemName = "SYSTEM_MAIN_ENGINE_NANI"
 gimbal = 0.628
 gimbalPerSecond = 25.133
 tuneThrustMax = 1.25
+
+[node name="SYSTEM_MAIN_ENGINE_CRACK" parent="." index="16" instance_placeholder="res://IndustriesOfEnceladus/sfx/torch-crack.tscn"]

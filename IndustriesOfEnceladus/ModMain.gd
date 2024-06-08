@@ -22,6 +22,7 @@ func _init(modLoader = ModLoader):
 	
 # inject generic hardware
 	replaceScene("ships/modules/AuxSlot.tscn")
+	replaceScene("ships/modules/Excavator.tscn")
 	replaceScene("ships/modules/TorchSlot.tscn")
 	replaceScene("ships/modules/ThrusterSlot.tscn")
 	replaceScene("enceladus/Upgrades/WeaponSlotUpgrade.tscn")

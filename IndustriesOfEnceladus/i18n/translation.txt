@@ -166,14 +166,18 @@ SYSTEM_MAIN_ENGINE_THUNDER_DESC|This torch is a custom-engineered piece of equip
 SYSTEM_MAIN_ENGINE_THUNDER_SPECS|Thrust: 1,600 kN \nExhaust velocity: 12 km/s \nPropellant consumption: 133.2 kg/s \nPower consumption: 100 MW \nThermal consumption: 14.4 GW \nOperation mode: Pulsed thrust, gimballed \nGimbal angle: 25 deg \nGimbal speed: 360 deg/s \nPropellant: Oxygen-Hydrogen plasma \nMass: 950 kg \nManufacturer: Custom-built / Rusatom-Antonoff
 
 // pit 1200
-SYSTEM_MAIN_ENGINE_PIN1200|RMS Pin-M200 thruster
+SYSTEM_MAIN_ENGINE_PIN1200|RMS Pin-M200 engine
 
 SYSTEM_MAIN_ENGINE_PIN1200_DESC|The Rasamama Material Solutions Pin-M200 implements the same pulsed induction technology that powers its Pin-150 series of solid-state RCS thrusters on a larger scale. It produces phenomenal thrust with remarkable efficiency, but its truly enormous power requirements make it an impractical choice for most nuclear thermal rockets.
 
 SYSTEM_MAIN_ENGINE_PIN1200_SPECS|Thrust: 1,200 kN \nExhaust velocity: 105 km/s \nPropellant consumption: 11.4 kg/s \nPower consumption: 510 MW \nOperation mode: Virtual variable thrust, gimballed \nGimbal angle: 36 deg \nGimbal speed: instantaneous \nPropellant: Hydrogen plasma \nMass: 2,650 kg \nManufacturer: Rasamama Material Solutions
 
 // firecracker
-SYSTEM_MAIN_ENGINE_CRACK|NDFD
+SYSTEM_MAIN_ENGINE_CRACK|NDDFD engine
+
+SYSTEM_MAIN_ENGINE_CRACK_DESC|The Directed Fusion Detonation engine by Nakamura Dynamics is one of the most powerful - and earliest! - fusion propulsion solutions still on the market. Popularised by a now-infamous 2214 advertisement backed by the Vengaboys' "Boom, Boom, Boom, Boom", the NDDFD utilises powerful electromagnets to crush remass-heated ferromagnetic shells containing pressurised deuterium and tritium, then direct the resultant detonation out of its cage-like nozzle assembly.
+
+SYSTEM_MAIN_ENGINE_CRACK_SPECS|Thrust: 1,800 kN \nExhaust velocity: 1,850 km/s \nPropellant consumption: 1 kg/s \nPower consumption: 220 MJ \nOperation mode: Pulsed thrust \n Propellant: Hydrogen plasma \nFusion fuel: D-T \nBurn time: 30 minutes (est) \nMass: 4,650 kg \nManufacturer: Nakamura Dynamics
 
 ------ THRUSTERS ------
 // pit 150

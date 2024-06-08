@@ -45,13 +45,17 @@ visible = false
 position = Vector2( 0, -68 )
 
 [node name="Aux_PreProcA" parent="." index="34" instance=ExtResource( 8 )]
-visible = false
 position = Vector2( 0, -57 )
+polygon = PoolVector2Array( -38, -67, -12, -62, -12, -44, -33, -16, -33, 148, 33, 148, 33, -16, 12, -44, 12, -62, 38, -67, 38, 153, -38, 153 )
+
+[node name="MineralProcessingUnit" parent="Aux_PreProcA" index="0"]
+visible = false
 
 [node name="CollisionPolygon2D" parent="Aux_PreProcA/MineralProcessingUnit" index="0"]
 polygon = PoolVector2Array( -33, 12, -7, 8, 5, 8, 33, 12, 33, 118, 21, 144, -19, 144, -33, 118 )
 
 [node name="Aux_PreProcB" parent="." index="35" instance=ExtResource( 9 )]
+visible = false
 position = Vector2( 0, -39 )
 
 [node name="CollisionPolygon2D" parent="Aux_PreProcB/MineralProcessingUnit" index="0"]
