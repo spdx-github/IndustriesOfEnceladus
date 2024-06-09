@@ -1,12 +1,14 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://ships/tnrtl-engine_01.wav" type="AudioStream" id=1]
-[ext_resource path="res://IndustriesOfEnceladus/ships/modules/Aux_PreProc.gd" type="Script" id=2]
-[ext_resource path="res://asteroids/dust-c.png" type="Texture" id=3]
-[ext_resource path="res://asteroids/dust-n.png" type="Texture" id=4]
-[ext_resource path="res://sfx/PitchAdjustedAudio.gd" type="Script" id=5]
-[ext_resource path="res://lights/distant-proxy.png" type="Texture" id=6]
-[ext_resource path="res://ships/excavator_close.wav" type="AudioStream" id=7]
+[ext_resource path="res://ships/tntrl_engine_on.wav" type="AudioStream" id=2]
+[ext_resource path="res://ships/tntrl_engine_off.wav" type="AudioStream" id=3]
+[ext_resource path="res://asteroids/dust-c.png" type="Texture" id=4]
+[ext_resource path="res://asteroids/dust-n.png" type="Texture" id=5]
+[ext_resource path="res://sfx/PitchAdjustedAudio.gd" type="Script" id=6]
+[ext_resource path="res://lights/distant-proxy.png" type="Texture" id=7]
+[ext_resource path="res://ships/excavator_close.wav" type="AudioStream" id=8]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/MineralProcessingUnit.patch.gd" type="Script" id=9]
 
 [sub_resource type="Gradient" id=1]
 colors = PoolColorArray( 1, 1, 1, 1, 0, 0, 0, 0 )
@@ -53,22 +55,24 @@ scale_random = 1.0
 scale_curve = SubResource( 5 )
 color_ramp = SubResource( 2 )
 
-[node name="Aux_PreProcA" type="CollisionPolygon2D"]
-position = Vector2( 0, -32 )
+[node name="MineralProcessingUnit_Furnace" type="CollisionPolygon2D"]
 z_index = 50
-polygon = PoolVector2Array( -34, -64, -14, -56, -14, -48, -32, -28, -32, 126, 32, 126, 32, -28, 14, -48, 14, -56, 34, -64, 34, 128, -34, 128 )
-script = ExtResource( 2 )
-repairReplacementPrice = 32000
-repairFixPrice = 5000
-repairFixTime = 4
-mass = 750
-systemName = "SYSTEM_CARGO_AUX_PREPROC_A"
-kgps = 20
-powerDrawPerKg = 25
-mineralEfficiency = 0.0
-remassEfficiency = 0.3
+polygon = PoolVector2Array( -32, -72, -24, -48, -12, -40, -24, -32, -24, 44, -12, 64, 12, 64, 24, 44, 24, -32, 12, -40, 24, -48, 32, -72, 32, -24, 32, 46, 16, 72, -16, 72, -32, 46, -32, -24 )
+script = ExtResource( 9 )
+__meta__ = {
+"_editor_description_": ""
+}
+repairReplacementPrice = 650000
+repairFixPrice = 35000
+mass = 3000
+systemName = "SYSTEM_CARGO_MPU_FURN"
+kgps = 25
+powerDrawPerKg = 250
+mineralEfficiency = 0.6
+remassEfficiency = 0.4
 
 [node name="MineralProcessingUnit" type="Area2D" parent="."]
+visible = false
 z_index = 50
 collision_layer = 524288
 monitorable = false
@@ -79,32 +83,32 @@ linear_damp = 0.0
 angular_damp = 0.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MineralProcessingUnit"]
-position = Vector2( 0, -56 )
-polygon = PoolVector2Array( -32, 16, 0, -8, 34, 16, 32, 182, -32, 182 )
+polygon = PoolVector2Array( -24, 44, -12, 64, 12, 64, 24, 44, 24, -40, -24, -40 )
 
 [node name="Processing" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
-volume_db = -40.0
-pitch_scale = 0.2
+volume_db = -15.0
+pitch_scale = 7.0
 bus = "ShipBowels"
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 
 [node name="ProStart" type="AudioStreamPlayer" parent="."]
-pitch_scale = 0.01
-bus = "SFX"
-script = ExtResource( 5 )
-
-[node name="ProStop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
 pitch_scale = 7.0
 bus = "SFX"
-script = ExtResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ProStop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+pitch_scale = 7.0
+bus = "SFX"
+script = ExtResource( 6 )
 
 [node name="Processed" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 7 )
-volume_db = -15.0
-pitch_scale = 0.2
+stream = ExtResource( 8 )
+pitch_scale = 0.5
 bus = "SFX"
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 
 [node name="VentRemass" type="Particles2D" parent="."]
 show_behind_parent = true
@@ -115,8 +119,8 @@ lifetime = 0.75
 visibility_rect = Rect2( -500, -500, 1000, 1000 )
 local_coords = false
 process_material = SubResource( 3 )
-texture = ExtResource( 3 )
-normal_map = ExtResource( 4 )
+texture = ExtResource( 4 )
+normal_map = ExtResource( 5 )
 
 [node name="VentMineral" type="Particles2D" parent="."]
 show_behind_parent = true
@@ -128,13 +132,13 @@ explosiveness = 0.75
 visibility_rect = Rect2( -501.795, -477.743, 985.024, 993.438 )
 local_coords = false
 process_material = SubResource( 6 )
-texture = ExtResource( 3 )
-normal_map = ExtResource( 4 )
+texture = ExtResource( 4 )
+normal_map = ExtResource( 5 )
 
 [node name="Light2D" type="Light2D" parent="."]
-position = Vector2( -140, -212 )
+position = Vector2( -184, -204 )
 editor_only = true
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 range_height = 380.4
 
 [connection signal="body_entered" from="MineralProcessingUnit" to="." method="_on_MineralProcessingUnit_body_entered"]

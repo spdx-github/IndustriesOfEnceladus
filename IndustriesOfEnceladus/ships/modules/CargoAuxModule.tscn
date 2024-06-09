@@ -1,12 +1,14 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://ships/tnrtl-engine_01.wav" type="AudioStream" id=1]
 [ext_resource path="res://asteroids/dust-c.png" type="Texture" id=2]
 [ext_resource path="res://asteroids/dust-n.png" type="Texture" id=3]
 [ext_resource path="res://sfx/PitchAdjustedAudio.gd" type="Script" id=4]
-[ext_resource path="res://lights/distant-proxy.png" type="Texture" id=5]
-[ext_resource path="res://ships/excavator_close.wav" type="AudioStream" id=6]
-[ext_resource path="res://IndustriesOfEnceladus/ships/modules/Aux_PreProc.gd" type="Script" id=7]
+[ext_resource path="res://ships/MaterialReadout.gd" type="Script" id=5]
+[ext_resource path="res://ships/modules/MineralProcessingUnit.gd" type="Script" id=6]
+[ext_resource path="res://lights/distant-proxy.png" type="Texture" id=7]
+[ext_resource path="res://ships/excavator_close.wav" type="AudioStream" id=8]
+[ext_resource path="res://ships/shipHull.phymat" type="PhysicsMaterial" id=9]
 
 [sub_resource type="Gradient" id=1]
 colors = PoolColorArray( 1, 1, 1, 1, 0, 0, 0, 0 )
@@ -53,19 +55,39 @@ scale_random = 1.0
 scale_curve = SubResource( 5 )
 color_ramp = SubResource( 2 )
 
-[node name="Aux_BayStorageB" type="CollisionPolygon2D"]
-position = Vector2( 0, -32 )
+[node name="CargoAuxModule" type="RigidBody2D"]
 z_index = 50
-polygon = PoolVector2Array( -34, -64, -14, -56, -14, -12, -22, -6, -22, 10, -30, 16, -30, 124, 30, 124, 30, 16, 22, 10, 22, -6, 14, -12, 14, -56, 34, -64, 34, 128, -34, 128 )
-script = ExtResource( 7 )
-repairReplacementPrice = 435000
-mass = 8000
-systemName = "SYSTEM_CARGO_AUX_STORAGE_B"
-kgps = 5
-powerDrawPerKg = 25
-mineralEfficiency = 0.0
-remassEfficiency = 0.1
-internalStorage = 8000.0
+mass = 1
+physics_material_override = ExtResource( 9 )
+continuous_cd = 1
+script = ExtResource( 6 )
+__meta__ = {
+"_editor_description_": ""
+}
+mass = 1
+
+[node name="Pin1" type="PinJoint2D" parent="."]
+position = Vector2( -40, 0 )
+node_b = NodePath("..")
+
+[node name="Pin2" type="PinJoint2D" parent="."]
+position = Vector2( 40, 0 )
+node_b = NodePath("..")
+
+[node name="Collider1" type="CollisionPolygon2D" parent="."]
+position = Vector2( -20, 0 )
+z_index = 50
+polygon = PoolVector2Array( -10, -14, 6, -4, 6, 4, -10, 14 )
+script = ExtResource( 5 )
+snapBackDistance = 0.0
+
+[node name="Collider2" type="CollisionPolygon2D" parent="."]
+position = Vector2( 20, 0 )
+scale = Vector2( -1, 1 )
+z_index = 50
+polygon = PoolVector2Array( -10, -14, 6, -4, 6, 4, -10, 14 )
+script = ExtResource( 5 )
+snapBackDistance = 0.0
 
 [node name="MineralProcessingUnit" type="Area2D" parent="."]
 z_index = 50
@@ -78,34 +100,11 @@ linear_damp = 0.0
 angular_damp = 0.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MineralProcessingUnit"]
-position = Vector2( 0, -56 )
-polygon = PoolVector2Array( -16, 4, 16, 4, 16, 40, -16, 40 )
-
-[node name="Processing" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 1 )
-volume_db = -25.0
-bus = "ShipBowels"
-script = ExtResource( 4 )
-
-[node name="ProStart" type="AudioStreamPlayer" parent="."]
-pitch_scale = 7.0
-bus = "SFX"
-script = ExtResource( 4 )
-
-[node name="ProStop" type="AudioStreamPlayer" parent="."]
-pitch_scale = 7.0
-bus = "SFX"
-script = ExtResource( 4 )
-
-[node name="Processed" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
-volume_db = -15.0
-pitch_scale = 0.2
-bus = "SFX"
-script = ExtResource( 4 )
+polygon = PoolVector2Array( -30, 14, 0, -14, 30, 14 )
 
 [node name="VentRemass" type="Particles2D" parent="."]
 show_behind_parent = true
+position = Vector2( 0, -32 )
 z_index = -50
 emitting = false
 amount = 64
@@ -118,6 +117,7 @@ normal_map = ExtResource( 3 )
 
 [node name="VentMineral" type="Particles2D" parent="."]
 show_behind_parent = true
+position = Vector2( 0, -32 )
 z_index = -50
 emitting = false
 amount = 128
@@ -130,10 +130,34 @@ texture = ExtResource( 2 )
 normal_map = ExtResource( 3 )
 
 [node name="Light2D" type="Light2D" parent="."]
-position = Vector2( -140, -212 )
+position = Vector2( -140, -244 )
 editor_only = true
-texture = ExtResource( 5 )
+texture = ExtResource( 7 )
 range_height = 380.4
 
-[connection signal="body_entered" from="MineralProcessingUnit" to="." method="_on_MineralProcessingUnit_body_entered"]
-[connection signal="body_exited" from="MineralProcessingUnit" to="." method="_on_MineralProcessingUnit_body_exited"]
+[node name="Processing" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -40.0
+pitch_scale = 0.2
+bus = "ShipBowels"
+script = ExtResource( 4 )
+
+[node name="ProStart" type="AudioStreamPlayer" parent="."]
+pitch_scale = 0.01
+bus = "SFX"
+script = ExtResource( 4 )
+
+[node name="ProStop" type="AudioStreamPlayer" parent="."]
+pitch_scale = 7.0
+bus = "SFX"
+script = ExtResource( 4 )
+
+[node name="Processed" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -15.0
+pitch_scale = 0.2
+bus = "SFX"
+script = ExtResource( 4 )
+
+[connection signal="body_entered" from="MineralProcessingUnit" to="Collider1" method="_on_MineralProcessingUnit_body_entered"]
+[connection signal="body_exited" from="MineralProcessingUnit" to="Collider1" method="_on_MineralProcessingUnit_body_exited"]
