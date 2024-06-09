@@ -8,7 +8,7 @@ func _ready():
 	if removeThis:
 		Tool.remove(self)
 		
-	if mounted == systemName:
+	else: if mounted == systemName:
 		if ship.processedCargoStorage == "amorphic":
 			ship.processedCargoCapacity += internalStorage * 6
 		else:

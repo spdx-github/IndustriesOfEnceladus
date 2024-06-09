@@ -4,4 +4,7 @@
 
 [node name="MineralProcessingUnit_Bulker" instance=ExtResource( 1 )]
 position = Vector2( 0, -17 )
-polygon = PoolVector2Array( 2, -32, 0, -24, -18, -24, -24, -18, -24, -6, -18, 0, 18, 0, 24, -8, 32, -56, 32, -8, 32, 20, 20, 48, -20, 48, -32, 20, -32, -24, -32, -56, -24, -40, -14, -34 )
+polygon = PoolVector2Array( 2, -32, 0, -24, -18, -24, -24, -18, -24, -6, -18, 0, 18, 0, 24, -8, 32, -56, 32, -8, 32, 20, 20, 48, -20, 48, -32, 20, -32, -24, -32, -56, -18, -38 )
+
+[node name="MineralProcessingUnit" parent="." index="0"]
+visible = false
