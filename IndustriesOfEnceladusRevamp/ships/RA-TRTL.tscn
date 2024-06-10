@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://ships/RA-TRTL.tscn" type="PackedScene" id=1]
-[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/trtl/CargoAuxStorage4K.tscn" type="PackedScene" id=2]
 
 [node name="TRTL" instance=ExtResource( 1 )]
 position = Vector2( 0, -7 )
@@ -56,15 +55,8 @@ visible = false
 [node name="MineralProcessingUnit_Furnace" parent="." index="30" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/trtl/MineralProcessingUnit_Furnace.tscn"]
 visible = false
 
-[node name="CargoAuxStorage4K" parent="." index="31" instance=ExtResource( 2 )]
-position = Vector2( 0, -90 )
-continuous_cd = 1
-
-[node name="LeftPin" parent="CargoAuxStorage4K/LeftCollider" index="0"]
-node_a = NodePath("../../..")
-
-[node name="RightPin" parent="CargoAuxStorage4K/RightCollider" index="0"]
-node_a = NodePath("../../..")
+[node name="CargoAuxSlot" parent="." index="31" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/trtl/CargoAuxSlot.tscn"]
+position = Vector2( 0, -92 )
 
 [node name="AI" parent="." index="34"]
 visible = false
@@ -74,5 +66,4 @@ visible = false
 slot = "cargo.aux"
 
 [editable path="MineralProcessingUnit_FAB"]
-[editable path="CargoAuxStorage4K"]
 [editable path="AI"]

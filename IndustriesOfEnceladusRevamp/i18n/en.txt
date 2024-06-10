@@ -27,5 +27,31 @@ SYSTEM_CARGO_AUX_STORAGE_4K_DESC|The Conlido RVM Internal Storage Rack, tried an
 SYSTEM_CARGO_AUX_STORAGE_4K_SPECS|Cargo capacity: 4,000 kg / mineral (24,000 kg total) \nMass: 3,000 kg \nManufacturer: Conlido RVM
 
 
+SYSTEM_CARGO_AUX_STORPROC_8K|THI Mineral Tank Module
+
+SYSTEM_CARGO_AUX_STORPROC_8K_DESC|Titan Heavy Industries' internal storage solution is as experimental as it is novel. By tapping reactor heat from the vessel's radiators, processed materials can be held in a liquid state indefinitely, increasing storage efficiency by up to 20%. \n\nSome miners have taken to using the unit as a rudimentary ore preprocessor, as the relatively thin insulation bleeds heat into the space between the tanks. THI does not endorse nor recommend usage in this manner.
+
+SYSTEM_CARGO_AUX_STORPROC_8K_SPECS|Cargo capacity: 8,000kg / mineral (48,000 kg total) \nIce melt rate: 5 kg/s \nPower draw: 250 KW / chunk (heating losses) \n Remass processing efficiency: 10% \nMass: 8,000 kg \nManufacturer: Titan Heavy Industries
+
 
 SYSTEM_CARGO_AUX_STORAGE_MANUAL|Requires an MPU to properly utilise. \nPassively increases onboard processed cargo volume. \nProcessed ore stored in seperate containers, with capacity limited per mineral type. \nTakes up some space in the cargo bay. \nDoes not require power or reactor heat.
+
+SYSTEM_CARGO_AUX_STORPROC_MANUAL|Requires an MPU to properly utilise. \nPassively increases onboard processed cargo volume. \nProcessed ore stored in seperate containers, with capacity limited per mineral type. \nReduces ice mass of chunks within a small area. \nTakes up some space in the cargo bay.
+
+
+
+SYSTEM_CARGO_AUX_PREPROC_0x30|Rasamama RP-25
+
+SYSTEM_CARGO_AUX_PREPROC_0x30_DESC|The Rasamama Material Solutions RP-25 is a low-profile ore preprocessor designed to melt ice from mineral chunks within a vessel's cargo bay. The unit taps the reactor turbine bleed line for thermal power and requires very little electrical energy to function. \n\nRemass is recovered by running process exhaust through a condenser panel on the vessel's outer hull. Rasamama MS recommends monthly flow tests followed by hot gas purges to prevent fouling.
+
+SYSTEM_CARGO_AUX_PREPROC_0x30_SPECS|Ice melt rate: 10 kg/s \nPower draw: 25 KW / chunk \nMPU mineral efficiency: x100% (no change) \nRemass processing efficiency: 30% \nMass: 750 kg \nManufacturer: Rasamama Material Solutions
+
+
+SYSTEM_CARGO_AUX_PREPROC_20x10|Nakamura Big MT
+
+SYSTEM_CARGO_AUX_PREPROC_20x10_DESC|Nakamura Dynamics' Big MT Ore Preprocessor utilises the fundamental principles of its operation to its advantage when processing ore chunks. Free steam in the cargo bay is superheated by the unit's massive toroidal radiator, quickly ablating ice it comes into contact with and preheating the ore within them for more efficient processing. \n\nWhile some process steam can be reclaimed as propellant, its high temperature means that a significant amount is lost to its condenser vents.
+
+SYSTEM_CARGO_AUX_PREPROC_20x10_SPECS|Ice melt rate: 25 kg/s \nPower draw: 125 KW / chunk \nMPU mineral efficiency: x120% \nRemass processing efficiency: 10% \nMass: 2,000 kg \nManufacturer: Nakamura Dynamics
+
+
+SYSTEM_CARGO_AUX_PREPROC_MANUAL|Reduces ice mass of chunks within a large area. \nReplenishes propellant. \nIncreases MPU efficiency multiplicatively. \nLarger cargo holds have greater processing reach. \nProcesses multiple ore chunks simultaneously. \nPower requirements and processing speed listed per chunk. \nDoes not extract minerals or destroy chunks.

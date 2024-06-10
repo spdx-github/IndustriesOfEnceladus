@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/CargoAuxStorProc8K.tscn" type="PackedScene" id=1]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/CargoAuxStorage4K.tscn" type="PackedScene" id=2]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/CargoAuxPreProc20x10.tscn" type="PackedScene" id=3]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/CargoAuxPreProc0x30.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ships/modules/ThrusterSlot.gd" type="Script" id=5]
+
+[node name="CargoAuxSlot" type="Node2D"]
+script = ExtResource( 5 )
+notAThruster = true
+type = "cargo.aux"
+default = "SYSTEM_NONE"
+
+[node name="CargoAuxPreProc0x30" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[node name="CargoAuxPreProc20x10" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[node name="CargoAuxStorProc8K" parent="." instance=ExtResource( 1 )]
+visible = false
+
+[node name="CargoAuxStorage4K" parent="." instance=ExtResource( 2 )]
+visible = false
+
+[editable path="CargoAuxPreProc0x30"]
+[editable path="CargoAuxPreProc20x10"]
+[editable path="CargoAuxStorProc8K"]
+[editable path="CargoAuxStorage4K"]

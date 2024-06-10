@@ -1,18 +1,19 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://ships/RA-TRTL-K44.tscn" type="PackedScene" id=1]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/trtl/CargoAuxSlot.tscn" type="PackedScene" id=2]
 
 [node name="TRTL-K44" instance=ExtResource( 1 )]
 position = Vector2( 0, -7 )
 
 [node name="Collider" parent="." index="6"]
 visible = true
-polygon = PoolVector2Array( -32, -235, -30, -241, -12, -239, -12, -217, -12, -181, -32, -161, -32, 3, -20, 31, 20, 31, 32, 3, 32, -161, 12, -181, 12, -217, 12, -239, 30, -241, 32, -235, 56, -235, 56, -259, 72, -259, 72, -213, 72, 47, 72, 127, 56, 127, 56, 87, 40, 95, 34, 109, 20, 119, 24, 135, 20, 141, -20, 141, -24, 135, -20, 119, -34, 109, -40, 95, -56, 87, -56, 127, -70, 127, -70, 47, -72, -213, -72, -259, -56, -259, -56, -235 )
+polygon = PoolVector2Array( -32, -235, -30, -241, -12, -239, -12, -217, -12, -185, -32, -161, -32, 3, -20, 31, 20, 31, 32, 3, 32, -161, 12, -185, 12, -217, 12, -239, 30, -241, 32, -235, 56, -235, 56, -259, 72, -259, 72, -213, 72, 47, 72, 127, 56, 127, 56, 87, 40, 95, 34, 109, 20, 119, 24, 135, 20, 141, -20, 141, -24, 135, -20, 119, -34, 109, -40, 95, -56, 87, -56, 127, -70, 127, -70, 47, -72, -213, -72, -259, -56, -259, -56, -235 )
 
 [node name="CollisionPolygon2D" parent="CargoHoldArea" index="0"]
 visible = true
 light_mask = 0
-polygon = PoolVector2Array( 14, -183, 34, -163, 34, 5, 22, 33, -22, 33, -34, 5, -34, -163, -14, -183, -14, -237, 14, -237 )
+polygon = PoolVector2Array( 14, -187, 34, -161, 34, 5, 22, 33, -22, 33, -34, 5, -34, -161, -14, -187, -14, -237, 14, -237 )
 
 [node name="CollisionPolygon2D" parent="CargoHoldAreaHull" index="0"]
 light_mask = 0
@@ -44,10 +45,26 @@ position = Vector2( 0, 23 )
 visible = false
 position = Vector2( 0, 29 )
 
-[node name="CargoBaffles" parent="." index="39"]
+[node name="CargoAuxSlot" parent="." index="34" instance=ExtResource( 2 )]
+position = Vector2( 0, -119 )
+
+[node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc0x30/ProcessingArea" index="1"]
+polygon = PoolVector2Array( 26, 0, 24, 112, 12, 136, -12, 136, -24, 112, -26, 0 )
+
+[node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc20x10/ProcessingArea" index="1"]
+polygon = PoolVector2Array( 26, 0, 24, 112, 12, 136, -12, 136, -24, 112, -26, 0 )
+
+[node name="CargoBaffles" parent="." index="40"]
+visible = false
 position = Vector2( 0, -26 )
+slot = "cargo.aux"
 
 [editable path="WeaponLeftBack"]
 [editable path="WeaponRightBack"]
 [editable path="MineralProcessingUnit_FAB"]
+[editable path="CargoAuxSlot"]
+[editable path="CargoAuxSlot/CargoAuxPreProc0x30"]
+[editable path="CargoAuxSlot/CargoAuxPreProc20x10"]
+[editable path="CargoAuxSlot/CargoAuxStorProc8K"]
+[editable path="CargoAuxSlot/CargoAuxStorage4K"]
 [editable path="AI"]
