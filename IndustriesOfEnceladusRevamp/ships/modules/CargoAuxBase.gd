@@ -23,7 +23,9 @@ func _ready():
 	if ship.getConfig(slot) != systemName:
 		Tool.remove(self)
 	else: if not (self in ship.get_children()):
-		ship.add_child(self.duplicate())
+		var dupe = self.duplicate()
+		dupe.set_position(Vector2(self.position[0], self.get_parent().position[1]))
+		ship.call_deferred("add_child", dupe)
 		Tool.remove(self)
 	else :
 		visible = true

@@ -4,13 +4,14 @@
 [ext_resource path="res://enceladus/Upgrades/Preview.tscn" type="PackedScene" id=2]
 [ext_resource path="res://enceladus/SystemShipUpgradeUI.tscn" type="PackedScene" id=3]
 [ext_resource path="res://menu/sfx/PlaySoundsOnTheseButtons.tscn" type="PackedScene" id=4]
-[ext_resource path="res://enceladus/UpgradeGroup.gd" type="Script" id=5]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/enceladus/UpgradeGroup.gd" type="Script" id=5]
 
 [node name="CargoEquipment" type="PanelContainer"]
 margin_right = 1228.0
 margin_bottom = 499.0
 script = ExtResource( 5 )
-restrictType = "fission"
+onlyForShipNames = [ "SHIP_PROSPECTOR_BALD", "SHIP_KITSUNE", "SHIP_OCP209", "SHIP_TRTL_T", "SHIP_TRTL_R" ]
+invertNameLogic = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 7.0
@@ -76,9 +77,9 @@ testProtocol = "cargo"
 [node name="CargoMPUFURN" parent="VBoxContainer" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 277.0
-margin_right = 1196.0
-margin_bottom = 347.0
+margin_top = 266.0
+margin_right = 1214.0
+margin_bottom = 336.0
 __meta__ = {
 "_editor_description_": ""
 }

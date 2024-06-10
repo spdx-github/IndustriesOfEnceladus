@@ -18,7 +18,7 @@ SYSTEM_CARGO_MPU_BULK_SPECS|Cargo capacity: 10,000 kg / mineral (60,000 kg total
 SLOT_CARGO_MPU|Cargo Bay MPU
 SLOT_CARGO_AUX|Cargo Bay Accessories
 
-
+------ AUX STORAGE
 
 SYSTEM_CARGO_AUX_STORAGE_4K|Conlido Internal Storage Rack
 
@@ -38,7 +38,7 @@ SYSTEM_CARGO_AUX_STORAGE_MANUAL|Requires an MPU to properly utilise. \nPassively
 
 SYSTEM_CARGO_AUX_STORPROC_MANUAL|Requires an MPU to properly utilise. \nPassively increases onboard processed cargo volume. \nProcessed ore stored in seperate containers, with capacity limited per mineral type. \nReduces ice mass of chunks within a small area. \nTakes up some space in the cargo bay.
 
-
+------ AUX PREPROCESSORS
 
 SYSTEM_CARGO_AUX_PREPROC_0x30|Rasamama RP-25
 
@@ -55,3 +55,73 @@ SYSTEM_CARGO_AUX_PREPROC_20x10_SPECS|Ice melt rate: 25 kg/s \nPower draw: 125 KW
 
 
 SYSTEM_CARGO_AUX_PREPROC_MANUAL|Reduces ice mass of chunks within a large area. \nReplenishes propellant. \nIncreases MPU efficiency multiplicatively. \nLarger cargo holds have greater processing reach. \nProcesses multiple ore chunks simultaneously. \nPower requirements and processing speed listed per chunk. \nDoes not extract minerals or destroy chunks.
+
+--- AUX FABRICATOR
+
+SYSTEM_CARGO_AUX_FAB|SSE Voyager Fabricator
+
+SYSTEM_CARGO_AUX_FAB_DESC|A custom-made and completely unlicensed monstrosity from Sin Space Engineering that became popular among ringside miners in the 2260s. The fabricator unit of a Voyager RSLS MPU has been torn out and placed further up in the cargo bay, along with a small mineral storage volume to replace its specialised feed hoppers. \n\nDue to the replacement of its power bus with a lower-grade distributor, moderate power efficiency losses are to be expected over the standard unit. \n\nDisclaimer: Nakamura Dynamics does not provide a warranty for this unit, and does not recognise it as part of its range of products, express or implied. Use of modified equipment may incur damages and present unexpected hazards.
+
+SYSTEM_CARGO_AUX_FAB_SPECS|Print power draw: 120 MW \nPrinting capability: drones, ammunition \nCargo capacity: 2,000 kg / mineral (12,000 kg total) \nMass: 5,000 kg \nManufacturer: Sin Space Engineering / Nakamura-Obonto
+
+SYSTEM_CARGO_AUX_FAB_MANUAL|Requires an MPU to properly utilise. \nPassively increases onboard processed cargo volume. \nProcessed ore stored in seperate containers, with capacity limited per mineral type. \nProduces kinetic ammunition from a 9:1 ratio of iron to vanadium. \nProduces nanodrone components from a 4:1 ratio of iron to platinum. \nTakes up some space in the cargo bay.
+
+
+------ MINERAL HOLD MODS ------
+// cargo bay modifier setup
+SLOT_CARGOBAY_MOD|Mineral Hold Kits
+
+
+SYSTEM_CARGO_MOD_BOLTS_MANUAL|Converts the mineral hold storage volume to Divided. \nDivisions are equally divided into sixths of the total combined capacity. \nDoes not require power or reactor heat.
+
+SYSTEM_CARGO_MOD_BOTH_MANUAL|Requires an MPU to properly utilise. \nPassively increases onboard processed cargo volume.
+
+
+// hold mod: +2k
+SYSTEM_CARGO_MOD_2K|SSE Saddlebags
+
+SYSTEM_CARGO_MOD_2K_DESC|A basic set of expansion modules from Sin Space Engineering, offering a minor boost to cargo hold space. Disclaimer: use of unlicensed equipment may void your vessel's warranty.
+
+SYSTEM_CARGO_MOD_2K_SPECS|Cargo capacity: 2,000 kg / mineral (12,000 kg total) \nCompatibility: Divided and Dynamic \nMass: 1,000kg \nManufacturer: Sin Space Engineering
+
+
+// hold mod: +4k
+SYSTEM_CARGO_MOD_4K|E-Prime Hold Rejoin
+
+SYSTEM_CARGO_MOD_4K_DESC|An order to have your ship's processed cargo hold extended, courtesy of the local shipyard. Installation comes with a money-back guarantee, a special warranty addendum, and a full structural integrity review for peace of mind. Fly safe!
+
+SYSTEM_CARGO_MOD_4K_SPECS|Cargo capacity: 4,000 kg / mineral (24,000 kg total) \nCompatibility: Divided and Dynamic \nMass: 2,000kg \nManufacturer: N/A
+
+
+// hold mod: +6k
+SYSTEM_CARGO_MOD_6K|Conlido freightReady Hoppers
+
+SYSTEM_CARGO_MOD_6K_DESC|A set of hull-embedded mineral containers that implement patented Never-Void technology to ensure that all possible space is utilised to its fullest extent. Comes with warranty addendum. This product was tested by REAL miners doing REAL work in REAL SPACE ENVIRONMENTS! \n\nNotice: vessels with installations more recent than 2237 are not able to claim workplace injury compensation involving the operation / maintenance / installation / removal / utilisation of, or visual / auditory / gustatory / olfactory / physical / mental contact with, Conlido freightReady Hoppers. Familiarise yourself and coworkers with proper operational procedures before undertaking duties involving Conlido freightReady Hoppers.
+
+SYSTEM_CARGO_MOD_6K_SPECS|Cargo capacity: 6,000 kg / mineral (36,000 kg total) \nCompatibility: Divided and Dynamic \nMass: 3,500kg \nManufacturer: Conlido RVM
+
+
+// cargo hold modifier: divided 6:6
+SYSTEM_CARGO_MOD_BOLTS|Locking Bolts
+
+SYSTEM_CARGO_MOD_BOLTS_DESC|An assortment of standard locking bolts for ships with variable-geometry holds, to be applied to appropriate fixture points.
+
+SYSTEM_CARGO_MOD_BOLTS_SPECS|Conversion mode: Dynamic to Divided \nConversion ratio: 1:1 (no reduction)
+
+
+// cargo hold modifier: amorphic 6:4
+SYSTEM_CARGO_MOD_AMORPH4|Conlido aMorphIV
+
+SYSTEM_CARGO_MOD_AMORPH4_DESC|While the Cothon-217's experimental storage geometry was met with limited success, Conlido RVM was still keen on the concept. Agreements were made between ship manufacturers for trials and, false starts and missed deadlines not withstanding, the aMorphIV Hold Conversion Kit eventually entered the market. \n\nIts modular parts can be retrofitted to all ship systems currently available on the market, and employs the same fundamental principles as its vessel of origin.
+
+SYSTEM_CARGO_MOD_AMORPH4_SPECS|Conversion mode: Divided to Dynamic \nConversion ratio: 6:4 (33% reduction) \nMass: 1,500 kg \nManufacturer: Conlido RVM
+
+
+// cargo hold modifier: amorphic 6:5
+SYSTEM_CARGO_MOD_AMORPH5|THI MD-5
+
+SYSTEM_CARGO_MOD_AMORPH5_DESC|The Titan Heavy Industries MD-5 Hold Kit is well-known among shipyard engineers for its accordion-style collapsing internal volumes. Lessons were learned from prior implementations and the hardware takes up much less space in the hold as a result, but its compact linear actuators and precision assembly translate to high upfront costs.
+
+SYSTEM_CARGO_MOD_AMORPH5_SPECS|Conversion mode: Divided to Dynamic \nConversion ratio: 6:5 (17% reduction) \nMass: 2,500 kg \nManufacturer: Titan Heavy Industries
+
+SYSTEM_CARGO_MOD_AMORPH_MANUAL|Requires an MPU to properly utilise. \nConverts the mineral hold storage volume to Dynamic. \nIncreases or decreases total hold storage volume according to the conversion ratio. Percentage indicated in specification. \nDoes not require power or reactor heat.

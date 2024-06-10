@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://ships/Eagle-Prospector-VP.tscn" type="PackedScene" id=1]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/prospector/CargoAuxSlot.tscn" type="PackedScene" id=2]
 
 [node name="Eagle" instance=ExtResource( 1 )]
 
@@ -26,6 +27,7 @@ visible = false
 
 [node name="CargoBaffles" parent="." index="26"]
 visible = false
+slot = "cargo.aux"
 
 [node name="HoldModifiers" parent="." index="28" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/HoldModifiers.tscn"]
 type = "cargo.modifierDivided"
@@ -34,13 +36,27 @@ type = "cargo.modifierDivided"
 visible = false
 
 [node name="MineralProcessingUnit_Furnace" parent="." index="30" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/prospector/MineralProcessingUnit_Furnace.tscn"]
-visible = false
 light_mask = 0
 
-[node name="MineralProcessingUnit" parent="." index="31"]
+[node name="CargoAuxSlot" parent="." index="31" instance=ExtResource( 2 )]
+position = Vector2( 0, -148 )
+
+[node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc0x30/ProcessingArea" index="1"]
+polygon = PoolVector2Array( 22, 0, 16, 164, -16, 164, -22, 0 )
+
+[node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc20x10/ProcessingArea" index="1"]
+polygon = PoolVector2Array( 22, 0, 16, 164, -16, 164, -22, 0 )
+
+[node name="CargoAuxStorProc8K" parent="CargoAuxSlot" index="2"]
+visible = false
+
+[node name="CargoAuxFab" parent="CargoAuxSlot" index="4"]
+polygon = PoolVector2Array( -24, -20, -4, -4, 0, 6, 0, 28, -6, 40, -14, 40, -18, 44, -18, 58, -24, 72 )
+
+[node name="MineralProcessingUnit" parent="." index="32"]
 polygon = PoolVector2Array( -24, -46, -19, -36, -14, -12, -22, -4, -22, 12, -10, 24, 10, 24, 22, 12, 22, -4, 14, -12, 19, -36, 24, -46, 24, 32, -24, 32 )
 
-[node name="MineralProcessingUnit_FSO" parent="." index="32"]
+[node name="MineralProcessingUnit_FSO" parent="." index="33"]
 polygon = PoolVector2Array( -24, -166, -22, -162, -20, 8, -12, 18, 12, 18, 20, 8, 22, -162, 24, -166, 24, 28, -24, 28 )
 
 [node name="MineralProcessingUnit" parent="MineralProcessingUnit_FSO" index="0"]
@@ -49,10 +65,10 @@ visible = false
 [node name="CollisionPolygon2D" parent="MineralProcessingUnit_FSO/MineralProcessingUnit" index="0"]
 polygon = PoolVector2Array( -20, 18, 20, 18, 22, -162, -22, -162 )
 
-[node name="MineralProcessingUnit_SMELT" parent="." index="33"]
+[node name="MineralProcessingUnit_SMELT" parent="." index="34"]
 polygon = PoolVector2Array( -24, -65, -16, -60, -12, -28, -18, -22, -18, -4, -10, 4, 10, 4, 18, -4, 18, -22, 12, -28, 16, -60, 24, -65, 24, 32, -24, 32 )
 
-[node name="MineralProcessingUnit_FAB" parent="." index="34"]
+[node name="MineralProcessingUnit_FAB" parent="." index="35"]
 position = Vector2( 0, -4 )
 polygon = PoolVector2Array( -24, -84, -4, -68, 0, -58, 0, -18, -12, -18, -22, -9, -22, 12, -10, 24, 10, 24, 24, 10, 24, 28, -24, 28, -24, -20 )
 
@@ -62,13 +78,19 @@ visible = false
 [node name="CollisionPolygon2D" parent="MineralProcessingUnit_FAB/MineralProcessingUnit" index="0"]
 polygon = PoolVector2Array( -24, 24, 22, 24, 22, -18, -24, -18 )
 
-[node name="AI" parent="." index="36"]
+[node name="AI" parent="." index="37"]
 visible = false
 
 [editable path="engine-main-1"]
 [editable path="engine-main-2"]
 [editable path="WeaponLeft"]
 [editable path="WeaponRight"]
+[editable path="CargoAuxSlot"]
+[editable path="CargoAuxSlot/CargoAuxPreProc0x30"]
+[editable path="CargoAuxSlot/CargoAuxPreProc20x10"]
+[editable path="CargoAuxSlot/CargoAuxStorProc8K"]
+[editable path="CargoAuxSlot/CargoAuxStorage4K"]
+[editable path="CargoAuxSlot/CargoAuxFab"]
 [editable path="MineralProcessingUnit"]
 [editable path="MineralProcessingUnit_FSO"]
 [editable path="MineralProcessingUnit_SMELT"]

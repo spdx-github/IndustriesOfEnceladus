@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://enceladus/Upgrades.tscn" type="PackedScene" id=1]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/enceladus/custom/CargoEquipment.tscn" type="PackedScene" id=2]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/enceladus/custom/CargoAccessories.tscn" type="PackedScene" id=3]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/enceladus/custom/HoldModifiers.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ViewportTexture" id=1]
 flags = 5
@@ -26,37 +27,148 @@ texture = SubResource( 1 )
 texture = SubResource( 2 )
 
 [node name="MarginContainer" parent="VB/MarginContainer/ScrollContainer" index="0"]
-margin_bottom = 25417.0
+margin_bottom = 26719.0
 
 [node name="Items" parent="VB/MarginContainer/ScrollContainer/MarginContainer" index="0"]
-margin_bottom = 25401.0
+margin_bottom = 26703.0
 
 [node name="CargoBay" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="27"]
 visible = false
 
-[node name="CargoEquipment" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="28" instance=ExtResource( 2 )]
+[node name="HoldModifiersDivided" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="28" instance=ExtResource( 4 )]
 margin_top = 22535.0
-margin_bottom = 23108.0
+margin_bottom = 23034.0
+slot = "cargo.modifierDivided"
 
-[node name="CargoAccessories" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="29" instance=ExtResource( 3 )]
-margin_top = 23112.0
-margin_bottom = 23315.0
+[node name="VBoxContainer" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersDivided" index="0"]
+margin_left = 16.0
+margin_top = 2.0
+margin_right = 1212.0
+margin_bottom = 497.0
 
-[node name="Autopilot" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="30"]
-margin_top = 23319.0
-margin_bottom = 23818.0
+[node name="HBoxContainer" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersDivided/VBoxContainer" index="0"]
+margin_right = 1196.0
+margin_bottom = 51.0
 
-[node name="Hud" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="31"]
-margin_top = 23822.0
+[node name="CheckButton" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersDivided/VBoxContainer/HBoxContainer" index="0"]
+margin_right = 1196.0
+margin_bottom = 51.0
+
+[node name="CargoModifierNone" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersDivided/VBoxContainer" index="1"]
+margin_top = 55.0
+margin_right = 1196.0
+margin_bottom = 125.0
+
+[node name="CargoModifierBOLTS" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersDivided/VBoxContainer" index="2"]
+visible = false
+margin_top = 129.0
+margin_right = 1196.0
+margin_bottom = 199.0
+
+[node name="CargoModifier2K" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersDivided/VBoxContainer" index="3"]
+margin_top = 129.0
+margin_right = 1196.0
+margin_bottom = 199.0
+
+[node name="CargoModifierAMORPH4" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersDivided/VBoxContainer" index="4"]
+margin_top = 203.0
+margin_right = 1196.0
+margin_bottom = 273.0
+
+[node name="CargoModifier4K" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersDivided/VBoxContainer" index="5"]
+margin_top = 277.0
+margin_right = 1196.0
+margin_bottom = 347.0
+
+[node name="CargoModifierAMORPH5" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersDivided/VBoxContainer" index="6"]
+margin_top = 351.0
+margin_right = 1196.0
+margin_bottom = 421.0
+
+[node name="CargoModifier6K" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersDivided/VBoxContainer" index="7"]
+margin_top = 425.0
+margin_right = 1196.0
+margin_bottom = 495.0
+
+[node name="HoldModifiersAmorphic" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="29" instance=ExtResource( 4 )]
+margin_top = 23038.0
+margin_bottom = 23463.0
+slot = "cargo.modifierAmorphic"
+
+[node name="VBoxContainer" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersAmorphic" index="0"]
+margin_left = 16.0
+margin_top = 2.0
+margin_right = 1212.0
+margin_bottom = 423.0
+
+[node name="HBoxContainer" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersAmorphic/VBoxContainer" index="0"]
+margin_right = 1196.0
+margin_bottom = 51.0
+
+[node name="CheckButton" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersAmorphic/VBoxContainer/HBoxContainer" index="0"]
+margin_right = 1196.0
+margin_bottom = 51.0
+
+[node name="CargoModifierNone" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersAmorphic/VBoxContainer" index="1"]
+margin_top = 55.0
+margin_right = 1196.0
+margin_bottom = 125.0
+
+[node name="CargoModifierBOLTS" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersAmorphic/VBoxContainer" index="2"]
+margin_top = 129.0
+margin_right = 1196.0
+margin_bottom = 199.0
+
+[node name="CargoModifier2K" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersAmorphic/VBoxContainer" index="3"]
+margin_top = 203.0
+margin_right = 1196.0
+margin_bottom = 273.0
+
+[node name="CargoModifierAMORPH4" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersAmorphic/VBoxContainer" index="4"]
+visible = false
+margin_top = 277.0
+margin_right = 1196.0
+margin_bottom = 347.0
+
+[node name="CargoModifier4K" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersAmorphic/VBoxContainer" index="5"]
+margin_top = 277.0
+margin_right = 1196.0
+margin_bottom = 347.0
+
+[node name="CargoModifierAMORPH5" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersAmorphic/VBoxContainer" index="6"]
+visible = false
+margin_top = 351.0
+margin_right = 1196.0
+margin_bottom = 421.0
+
+[node name="CargoModifier6K" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersAmorphic/VBoxContainer" index="7"]
+margin_top = 351.0
+margin_right = 1196.0
+margin_bottom = 421.0
+
+[node name="CargoEquipment" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="30" instance=ExtResource( 2 )]
+margin_top = 23467.0
+margin_bottom = 24040.0
+
+[node name="CargoAccessories" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="31" instance=ExtResource( 3 )]
+margin_top = 24044.0
 margin_bottom = 24617.0
 
-[node name="Lidar" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="32"]
+[node name="Autopilot" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="32"]
 margin_top = 24621.0
-margin_bottom = 25046.0
+margin_bottom = 25120.0
 
-[node name="ReconDrone" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="33"]
-margin_top = 25050.0
-margin_bottom = 25401.0
+[node name="Hud" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="33"]
+margin_top = 25124.0
+margin_bottom = 25919.0
+
+[node name="Lidar" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="34"]
+margin_top = 25923.0
+margin_bottom = 26348.0
+
+[node name="ReconDrone" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="35"]
+margin_top = 26352.0
+margin_bottom = 26703.0
 
 [editable path="VB/HeaderWithMoney"]
 [editable path="VB/WindowMargin/TabHintContainer"]
@@ -80,3 +192,5 @@ margin_bottom = 25401.0
 [editable path="VB/MarginContainer/ScrollContainer/MarginContainer/Items/RightBay2"]
 [editable path="VB/MarginContainer/ScrollContainer/MarginContainer/Items/LeftBay3"]
 [editable path="VB/MarginContainer/ScrollContainer/MarginContainer/Items/RightBay3"]
+[editable path="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersDivided"]
+[editable path="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersAmorphic"]
