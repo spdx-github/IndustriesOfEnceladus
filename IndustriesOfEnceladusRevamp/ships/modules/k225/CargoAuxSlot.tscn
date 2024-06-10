@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/CargoAuxSlot.tscn" type="PackedScene" id=1]
+
+[node name="CargoAuxSlot" instance=ExtResource( 1 )]
+position = Vector2( 0, -244 )
+
+[node name="ZoneTop" parent="CargoAuxPreProc0x30/ProcessingArea" index="0"]
+polygon = PoolVector2Array( 26, 0, 0, -38, -26, 0 )
+
+[node name="ZoneBottom" parent="CargoAuxPreProc0x30/ProcessingArea" index="1"]
+polygon = PoolVector2Array( 26, 0, 24, 394, 14, 426, -14, 426, -24, 394, -26, 0 )
+
+[node name="CargoAuxPreProc20x10" parent="." index="1"]
+polygon = PoolVector2Array( 0, 20, 0, -14, 10, -26, 10, -16, 16, -6, 16, 6, 10, 16 )
+
+[node name="ZoneTop" parent="CargoAuxPreProc20x10/ProcessingArea" index="0"]
+polygon = PoolVector2Array( 26, 0, 0, -38, -26, 0 )
+
+[node name="ZoneBottom" parent="CargoAuxPreProc20x10/ProcessingArea" index="1"]
+polygon = PoolVector2Array( 26, 0, 24, 394, 14, 426, -14, 426, -24, 394, -26, 0 )
+
+[node name="CargoAuxStorProc8K" parent="." index="2"]
+polygon = PoolVector2Array( 0, 38, 0, 8, 0, -14, 14, -30, 20, -22, 20, 10, 10, 14, 10, 28 )
+
+[node name="ZoneBottom" parent="CargoAuxStorProc8K/ProcessingArea" index="1"]
+polygon = PoolVector2Array( 16, -22, 26, 30, -26, 30, -16, -22 )
+
+[node name="CargoAuxStorage4K" parent="." index="3"]
+polygon = PoolVector2Array( 0, 24, 0, -14, 10, -26, 10, 4 )
+
+[node name="CargoAuxFab" parent="." index="4"]
+polygon = PoolVector2Array( -18, -30, -18, -18, -4, -4, -4, 32, -16, 32, -22, 38, -22, 54, -32, 64, -32, 24, -32, -14 )
+
+[editable path="CargoAuxPreProc0x30"]
+[editable path="CargoAuxPreProc20x10"]
+[editable path="CargoAuxStorProc8K"]
+[editable path="CargoAuxStorage4K"]
+[editable path="CargoAuxFab"]
