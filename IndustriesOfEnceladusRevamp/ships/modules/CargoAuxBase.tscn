@@ -1,8 +1,29 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/CargoAuxBase.gd" type="Script" id=1]
+[ext_resource path="res://ships/MaterialReadout.gd" type="Script" id=2]
 
-[node name="CargoAuxBase" type="CollisionPolygon2D"]
-z_index = 50
-polygon = PoolVector2Array( 0, -8, 8, 0, 0, 8 )
+[node name="CargoAuxBase" type="RigidBody2D"]
 script = ExtResource( 1 )
+registerExternal = true
+
+[node name="LeftCollider" type="CollisionPolygon2D" parent="."]
+position = Vector2( -20, 0 )
+polygon = PoolVector2Array( 0, 8, 0, -8, 8, 0 )
+script = ExtResource( 2 )
+
+[node name="LeftPin" type="PinJoint2D" parent="LeftCollider"]
+node_a = NodePath("../../..")
+node_b = NodePath("../..")
+bias = 0.9
+
+[node name="RightCollider" type="CollisionPolygon2D" parent="."]
+position = Vector2( 20, 0 )
+scale = Vector2( -1, 1 )
+polygon = PoolVector2Array( 0, 8, 0, -8, 8, 0 )
+script = ExtResource( 2 )
+
+[node name="RightPin" type="PinJoint2D" parent="RightCollider"]
+node_a = NodePath("../../..")
+node_b = NodePath("../..")
+bias = 0.9

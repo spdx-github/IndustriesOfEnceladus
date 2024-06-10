@@ -19,6 +19,13 @@ func _init(modLoader = ModLoader):
 
 # Must load DLC early for it to properly function.
 	loadDLC()
+
+# install ship-ctrl which modifies the mass calculation algo
+	installScriptExtension("ships/ship-ctrl.gd")
+# install the Shipyard.gd script extension, which loads replacements + new ships
+	installScriptExtension("ships/Shipyard.gd")
+# replace the Upgrades.tscn containing equipment modifications
+	replaceScene("enceladus/Upgrades.tscn")
 	
 # Load custom translations
 	updateTL() 
@@ -32,7 +39,7 @@ func _ready():
 
 # Helper script to load translations, as the ModLoader one seemingly does not function.
 # This is not a good function, but it works.
-func updateTL(path:String = modPath + "i18n/translation.txt"):
+func updateTL(path:String = modPath + "i18n/en.txt"):
 	Debug.l(modName + ": Updating Translations")
 
 	var tlFile = File.new()
@@ -45,7 +52,6 @@ func updateTL(path:String = modPath + "i18n/translation.txt"):
 		var line = tlFile.get_line()
 		var split = line.split("|", false)
 		if split.size() == 2:
-			# quick update to allow changes to base strings
 			var key = split[0]
 			var val = tr(split[1]).c_unescape()
 			

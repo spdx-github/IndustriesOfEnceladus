@@ -1,8 +1,62 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://enceladus/Upgrades.tscn" type="PackedScene" id=1]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/enceladus/custom/CargoEquipment.tscn" type="PackedScene" id=2]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/enceladus/custom/CargoAccessories.tscn" type="PackedScene" id=3]
+
+[sub_resource type="ViewportTexture" id=1]
+flags = 5
+viewport_path = NodePath("VB/WindowMargin/TabHintContainer/Window/UPGRADE_SIMULATION/VP/Contain1/Viewport")
+
+[sub_resource type="ViewportTexture" id=2]
+viewport_path = NodePath("VB/WindowMargin/TabHintContainer/Window/UPGRADE_SIMULATION/VP/Contain2/Control")
 
 [node name="Upgrades" instance=ExtResource( 1 )]
+
+[node name="TextureRect" parent="VB/WindowMargin/TabHintContainer/Window/UPGRADE_SIMULATION/VP" index="2"]
+texture = SubResource( 1 )
+
+[node name="ControlTexture" parent="VB/WindowMargin/TabHintContainer/Window/UPGRADE_SIMULATION/VP" index="3"]
+texture = SubResource( 2 )
+
+[node name="TextureRect2" parent="VB/WindowMargin/TabHintContainer/Window/UPGRADE_MANUAL/Sims" index="0"]
+texture = SubResource( 1 )
+
+[node name="ControlTexture2" parent="VB/WindowMargin/TabHintContainer/Window/UPGRADE_MANUAL/Sims" index="1"]
+texture = SubResource( 2 )
+
+[node name="MarginContainer" parent="VB/MarginContainer/ScrollContainer" index="0"]
+margin_bottom = 25417.0
+
+[node name="Items" parent="VB/MarginContainer/ScrollContainer/MarginContainer" index="0"]
+margin_bottom = 25401.0
+
+[node name="CargoBay" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="27"]
+visible = false
+
+[node name="CargoEquipment" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="28" instance=ExtResource( 2 )]
+margin_top = 22535.0
+margin_bottom = 23108.0
+
+[node name="CargoAccessories" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="29" instance=ExtResource( 3 )]
+margin_top = 23112.0
+margin_bottom = 23315.0
+
+[node name="Autopilot" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="30"]
+margin_top = 23319.0
+margin_bottom = 23818.0
+
+[node name="Hud" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="31"]
+margin_top = 23822.0
+margin_bottom = 24617.0
+
+[node name="Lidar" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="32"]
+margin_top = 24621.0
+margin_bottom = 25046.0
+
+[node name="ReconDrone" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="33"]
+margin_top = 25050.0
+margin_bottom = 25401.0
 
 [editable path="VB/HeaderWithMoney"]
 [editable path="VB/WindowMargin/TabHintContainer"]
