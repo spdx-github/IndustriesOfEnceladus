@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://ships/modules/TorchSlot.tscn" type="PackedScene" id=1]
-[ext_resource path="res://IndustriesOfEnceladusRevamp/sfx/torch-pin1200.tscn" type="PackedScene" id=2]
 
 [node name="TorchSlot" instance=ExtResource( 1 )]
 
@@ -19,7 +18,7 @@ systemName = "SYSTEM_MAIN_ENGINE_NANI"
 
 [node name="SYSTEM_MAIN_ENGINE_THUNDER" parent="." index="14" instance_placeholder="res://IndustriesOfEnceladusRevamp/sfx/torch-thunder.tscn"]
 
-[node name="SYSTEM_MAIN_ENGINE_PIN1200" parent="." index="15" instance=ExtResource( 2 )]
+[node name="SYSTEM_MAIN_ENGINE_PIN1200" parent="." index="15" instance_placeholder="res://IndustriesOfEnceladusRevamp/sfx/torch-pin1200.tscn"]
 gimbal = 0.628
 gimbalPerSecond = 25.133
 tuneThrustMax = 1.25

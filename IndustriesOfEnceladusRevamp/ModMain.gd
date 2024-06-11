@@ -22,14 +22,14 @@ func _init(modLoader = ModLoader):
 
 # install ship-ctrl which modifies the mass calculation algo
 	#installScriptExtension("ships/ship-ctrl.gd")
-# install the Shipyard.gd script extension, which loads replacements + new ships
-	installScriptExtension("ships/Shipyard.gd")
 # replace slots for all our new equipment
 	replaceScene("weapons/WeaponSlot.tscn")
 	replaceScene("ships/modules/ThrusterSlot.tscn")
 	replaceScene("ships/modules/TorchSlot.tscn")
 # replace the Upgrades.tscn containing equipment modifications
 	replaceScene("enceladus/Upgrades.tscn")
+# install the Shipyard.gd script extension, which loads replacements + new ships
+	installScriptExtension("ships/Shipyard.gd")
 	
 # Load custom translations
 	updateTL("en") 
