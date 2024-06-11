@@ -24,8 +24,10 @@ func _init(modLoader = ModLoader):
 	#installScriptExtension("ships/ship-ctrl.gd")
 # install the Shipyard.gd script extension, which loads replacements + new ships
 	installScriptExtension("ships/Shipyard.gd")
-# replace WeaponSlot for all our new equipment
+# replace slots for all our new equipment
 	replaceScene("weapons/WeaponSlot.tscn")
+	replaceScene("ships/modules/ThrusterSlot.tscn")
+	replaceScene("ships/modules/TorchSlot.tscn")
 # replace the Upgrades.tscn containing equipment modifications
 	replaceScene("enceladus/Upgrades.tscn")
 	
@@ -41,26 +43,47 @@ func _ready():
 
 # Helper script to load translations, as the ModLoader one seemingly does not function.
 # This is not a good function, but it works.
-func updateTL(locale:String, path:String = modPath + "i18n/"):
+func updateTL(locale:String, path:String = modPath + "i18n"):
 	Debug.l(modName + ": Updating translations")
 
-	var tlFile = File.new()
-	tlFile.open(path + "%s.txt" % locale, File.READ)
+	# preprocess i18n directory files
+	var operatingPath = "%s/%s/" % [path, locale]
+	var dir = Directory.new()
+	if dir.open(operatingPath) == OK:
+		dir.list_dir_begin(true)
+		
+		var tlFile = File.new()
+		var marchDone = false
 
-	var translation = Translation.new()
-	translation.locale = locale
-	
-	while tlFile.get_position() < tlFile.get_len():
-		var line = tlFile.get_line()
-		var split = line.split("|", false)
-		if split.size() == 2:
-			var key = split[0]
-			var val = tr(split[1]).c_unescape()
+		var translation = Translation.new()
+		translation.locale = locale
+		
+		while not marchDone:
+			var fileName = dir.get_next()
 			
-			translation.add_message(key, val)
-			Debug.l("Added translation %s" % key)
+			if fileName:
+				tlFile.open(operatingPath + fileName)
+				
+				Debug.l("%s: Loaded translation file %s" % [modName, fileName])
+		
+				while tlFile.get_position() < tlFile.get_len():
+					var line = tlFile.get_line()
+					var split = line.split("|", false)
+					if split.size() == 2:
+						var key = split[0]
+						var val = tr(split[1]).c_unescape()
+						
+						translation.add_message(key, val)
+						Debug.l("Added translation %s" % key)
+				
+				tlFile.close()
+			else:
+				marchDone = true
+				break
 
-	TranslationServer.add_translation(translation)
+		TranslationServer.add_translation(translation)
+	else:
+		Debug.l("%s: Error in loading translation files" % modName)
 
 	Debug.l(modName + ": Translations updated")
 

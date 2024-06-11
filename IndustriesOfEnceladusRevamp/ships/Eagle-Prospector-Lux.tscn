@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://ships/Eagle-Prospector-Lux.tscn" type="PackedScene" id=1]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/prospector/CargoAuxSlot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/weapons/WeaponSlotProspector.tscn" type="PackedScene" id=3]
 
 [node name="Eagle-Lux" instance=ExtResource( 1 )]
 
@@ -18,12 +19,12 @@ visible = false
 [node name="CollisionPolygon2D" parent="CargoHoldAreaHull" index="0"]
 polygon = PoolVector2Array( 30, -246, 30, 8, 68, 92, 30, 116.471, 30, 222, -30, 222, -30, 116, -68, 92, -30, 8, -30, -246 )
 
-[node name="WeaponLeftRepl" parent="." index="20" instance_placeholder="res://IndustriesOfEnceladusRevamp/weapons/WeaponSlotProspector.tscn"]
+[node name="WeaponLeftRepl" parent="." index="20" instance=ExtResource( 3 )]
 position = Vector2( -48, -62 )
 slot = "left"
 toggleCommand = "ship_slot_1"
 
-[node name="WeaponRightRepl" parent="." index="21" instance_placeholder="res://IndustriesOfEnceladusRevamp/weapons/WeaponSlotProspector.tscn"]
+[node name="WeaponRightRepl" parent="." index="21" instance=ExtResource( 3 )]
 position = Vector2( 48, -62 )
 slot = "right"
 toggleCommand = "ship_slot_2"

@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ships/modules/DockingArm.tscn" type="PackedScene" id=1]
-[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/drone/StoragePodCombo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ships/modules/ClaimOwner.gd" type="Script" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -11,6 +10,10 @@ extents = Vector2( 200, 300 )
 radius = 1.0
 
 [node name="SYSTEM_EXODYN-R" instance=ExtResource( 1 )]
+position = Vector2( 0, 196 )
+__meta__ = {
+"_editor_description_": ""
+}
 hardLock = true
 timeAccelerationOverride = 2
 repairFixPrice = 30000
@@ -74,7 +77,7 @@ shape = SubResource( 2 )
 [node name="ClaimOwner" type="Node2D" parent="." index="5"]
 script = ExtResource( 8 )
 
-[node name="StoragePodCombo" parent="ClaimOwner" index="0" instance=ExtResource( 2 )]
+[node name="StoragePodCombo" parent="ClaimOwner" index="0" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/drone/StoragePodCombo.tscn"]
 position = Vector2( 80, -40 )
 
 [editable path="Arm"]

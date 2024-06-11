@@ -5,6 +5,7 @@
 [node name="WeaponSlotProspector" instance=ExtResource( 1 )]
 position = Vector2( 0, -62 )
 z_index = 19
+directMount = false
 
 [node name="SYSTEM_EXSTORAGE-L" parent="." index="15"]
 position = Vector2( 48, -86 )
@@ -40,9 +41,11 @@ position = Vector2( 48, -86 )
 position = Vector2( -48, -86 )
 
 [node name="SYSTEM_EXODYN-L" parent="." index="37"]
+visible = true
 position = Vector2( 48, -86 )
 
 [node name="SYSTEM_EXODYN-R" parent="." index="38"]
+visible = true
 position = Vector2( -48, -86 )
 
 [node name="SYSTEM_EXSTORAGE-L_ALT" parent="." index="39" instance_placeholder="res://ships/modules/StorageContainerDock-L.tscn"]
@@ -71,10 +74,3 @@ repairReplacementPrice = 135000
 [node name="SYSTEM_EXODYN-R_ALT" parent="." index="44" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/StoragePodComboDock.tscn"]
 visible = false
 position = Vector2( -48, 54 )
-
-[editable path="SYSTEM_EXODYN-L"]
-[editable path="SYSTEM_EXODYN-L/Arm"]
-[editable path="SYSTEM_EXODYN-L/Arm/A/B/Spotlight"]
-[editable path="SYSTEM_EXODYN-R"]
-[editable path="SYSTEM_EXODYN-R/Arm"]
-[editable path="SYSTEM_EXODYN-R/Arm/A/B/Spotlight"]

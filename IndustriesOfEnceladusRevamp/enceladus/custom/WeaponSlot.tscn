@@ -111,6 +111,7 @@ margin_bottom = 1531.0
 slot = "weaponSlot.left.type"
 system = "SYSTEM_EXODYN-L"
 nameOverride = "SYSTEM_EXODYN"
+manual = "SYSTEM_EXSTORAGE_MANUAL"
 price = 132500
 testProtocol = "detach"
 
@@ -123,6 +124,7 @@ margin_bottom = 1605.0
 slot = "weaponSlot.right.type"
 system = "SYSTEM_EXODYN-R"
 nameOverride = "SYSTEM_EXODYN"
+manual = "SYSTEM_EXSTORAGE_MANUAL"
 price = 132500
 testProtocol = "detach"
 

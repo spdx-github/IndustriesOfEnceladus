@@ -1,0 +1,5 @@
+SYSTEM_DND_HARVHAUL|THI Harvester-class Haul Drones
+
+SYSTEM_DND_HARVHAUL_DESC|This monstrous piece of hardware is an industrial assembly line masquerading as a disposable nanodrone assembler. Its enormous infrared laser array and fabrication unit have be connected to individual low-stress buses, but when it has enough power, it's a thing to behold. The unit's behaviour guides drones to intercept any high-albedo objects and tows them towards your ship.
+
+SYSTEM_DND_HARVHAUL_SPECS|Power draw: 120 MW \nEffective range: 800 m (line of sight) \nDrone launch capability: 100 dps \nDrone wet mass: 0.1 kg \nThrust: 1 kN (per drone) \nMass: 8,000 kg \nManufacturer: Titan Heavy Industries

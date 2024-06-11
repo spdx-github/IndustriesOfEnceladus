@@ -1,16 +1,16 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://weapons/WeaponSlot.tscn" type="PackedScene" id=1]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/weapons/WeaponSlot.patch.gd" type="Script" id=2]
 
 [node name="WeaponSlot" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
 
 [node name="SYSTEM_SALVAGE_ARM_HEAVY" parent="." index="36" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/SalvageArmHeavy.tscn"]
 visible = false
 
 [node name="SYSTEM_EXODYN-L" parent="." index="37" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/StoragePodComboDock-L.tscn"]
 visible = false
-position = Vector2( 0, 196 )
 
 [node name="SYSTEM_EXODYN-R" parent="." index="38" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/StoragePodComboDock.tscn"]
 visible = false
-position = Vector2( 0, 196 )
