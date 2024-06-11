@@ -1,0 +1,74 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://IndustriesOfEnceladusRevamp/weapons/WeaponSlot.tscn" type="PackedScene" id=1]
+
+[node name="WeaponSlotProspector" instance=ExtResource( 1 )]
+position = Vector2( 0, -62 )
+z_index = 19
+
+[node name="SYSTEM_EXSTORAGE-L" parent="." index="15"]
+position = Vector2( 48, -86 )
+
+[node name="SYSTEM_EXSTORAGE-R" parent="." index="16"]
+position = Vector2( -48, -86 )
+
+[node name="SYSTEM_CLAIM-L" parent="." index="17"]
+position = Vector2( 48, -86 )
+
+[node name="SYSTEM_CLAIM-R" parent="." index="18"]
+position = Vector2( -48, -86 )
+
+[node name="SYSTEM_ACTEMD14" parent="." index="19"]
+pivotPath = NodePath("Pivot")
+weaponPath = NodePath("Pivot/massdriver")
+audioPath = NodePath("Actuation")
+lightPath = NodePath("Pivot/Light")
+
+[node name="SYSTEM_ACL200P" parent="." index="20"]
+weaponPath = NodePath("Pivot/laster-pulse")
+
+[node name="SYSTEM_SCOOP-R" parent="." index="21"]
+position = Vector2( -48, -86 )
+
+[node name="SYSTEM_SCOOP-L" parent="." index="22"]
+position = Vector2( 48, -86 )
+
+[node name="SYSTEM_EXMONO-L" parent="." index="27"]
+position = Vector2( 48, -86 )
+
+[node name="SYSTEM_EXMONO-R" parent="." index="28"]
+position = Vector2( -48, -86 )
+
+[node name="SYSTEM_EXODYN-L" parent="." index="37"]
+position = Vector2( 48, -86 )
+repairReplacementPrice = 135000
+
+[node name="SYSTEM_EXODYN-R" parent="." index="38"]
+position = Vector2( -48, -86 )
+
+[node name="SYSTEM_EXSTORAGE-L_ALT" parent="." index="39" instance_placeholder="res://ships/modules/StorageContainerDock-L.tscn"]
+visible = false
+position = Vector2( 48, 54 )
+flip = true
+
+[node name="SYSTEM_EXSTORAGE-R_ALT" parent="." index="40" instance_placeholder="res://ships/modules/StorageContainerDock.tscn"]
+visible = false
+position = Vector2( -48, 54 )
+
+[node name="SYSTEM_EXMONO-L_ALT" parent="." index="41" instance_placeholder="res://ships/modules/StorageContainerDockMono-L.tscn"]
+visible = false
+position = Vector2( 48, 54 )
+flip = true
+
+[node name="SYSTEM_EXMONO-R_ALT" parent="." index="42" instance_placeholder="res://ships/modules/StorageContainerDockMono.tscn"]
+visible = false
+position = Vector2( -48, 54 )
+
+[node name="SYSTEM_EXODYN-L_ALT" parent="." index="43" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/StoragePodComboDock-L.tscn"]
+visible = false
+position = Vector2( 48, 54 )
+repairReplacementPrice = 135000
+
+[node name="SYSTEM_EXODYN-R_ALT" parent="." index="44" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/StoragePodComboDock.tscn"]
+visible = false
+position = Vector2( -48, 54 )

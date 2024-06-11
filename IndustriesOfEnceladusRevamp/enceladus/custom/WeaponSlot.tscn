@@ -8,13 +8,11 @@
 script = ExtResource( 2 )
 slot = "weaponSlot.main.type"
 always = false
-onlyForShipNames = [  ]
-invertNameLogic = false
-onlyForShipModels = [  ]
-invertModelLogic = false
+onlyForShipNames = [ "SHIP_PROSPECTOR", "SHIP_PROSPECTOR_FAT", "SHIP_PROSPECTOR_LUX", "SHIP_PROSPECTOR_VP" ]
+invertNameLogic = true
 
 [node name="VBoxContainer" parent="." index="0"]
-margin_bottom = 2643.0
+margin_bottom = 2791.0
 
 [node name="HUNK-L" parent="VBoxContainer" index="2"]
 visible = true
@@ -104,77 +102,101 @@ price = 125000
 testProtocol = "arm"
 warnIfElectricBelow = 100.0
 
-[node name="PDT" parent="VBoxContainer" index="20"]
-visible = true
+[node name="EXODYN-L" parent="VBoxContainer" index="20" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_top = 1461.0
+margin_right = 1226.0
 margin_bottom = 1531.0
+slot = "weaponSlot.left.type"
+system = "SYSTEM_EXODYN-L"
+nameOverride = "SYSTEM_EXODYN"
+price = 132500
+testProtocol = "detach"
 
-[node name="PDT-L" parent="VBoxContainer" index="21"]
-visible = true
+[node name="EXODYN-R" parent="VBoxContainer" index="21" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_top = 1535.0
+margin_right = 1226.0
 margin_bottom = 1605.0
+slot = "weaponSlot.right.type"
+system = "SYSTEM_EXODYN-R"
+nameOverride = "SYSTEM_EXODYN"
+price = 132500
+testProtocol = "detach"
 
-[node name="PDT-R" parent="VBoxContainer" index="22"]
+[node name="PDT" parent="VBoxContainer" index="22"]
 visible = true
 margin_top = 1609.0
 margin_bottom = 1679.0
 
-[node name="CL150" parent="VBoxContainer" index="23"]
+[node name="PDT-L" parent="VBoxContainer" index="23"]
+visible = true
 margin_top = 1683.0
 margin_bottom = 1753.0
 
-[node name="IROH" parent="VBoxContainer" index="24"]
+[node name="PDT-R" parent="VBoxContainer" index="24"]
 visible = true
 margin_top = 1757.0
-margin_right = 1226.0
 margin_bottom = 1827.0
 
-[node name="PDMWG" parent="VBoxContainer" index="25"]
+[node name="CL150" parent="VBoxContainer" index="25"]
 margin_top = 1831.0
 margin_bottom = 1901.0
 
-[node name="PDMWG-L" parent="VBoxContainer" index="26"]
+[node name="IROH" parent="VBoxContainer" index="26"]
+visible = true
 margin_top = 1905.0
+margin_right = 1226.0
 margin_bottom = 1975.0
 
-[node name="PDMWG-R" parent="VBoxContainer" index="27"]
+[node name="PDMWG" parent="VBoxContainer" index="27"]
 margin_top = 1979.0
 margin_bottom = 2049.0
 
-[node name="ACL200P" parent="VBoxContainer" index="28"]
+[node name="PDMWG-L" parent="VBoxContainer" index="28"]
 margin_top = 2053.0
 margin_bottom = 2123.0
 
-[node name="DND_TS" parent="VBoxContainer" index="29"]
+[node name="PDMWG-R" parent="VBoxContainer" index="29"]
 margin_top = 2127.0
 margin_bottom = 2197.0
 
-[node name="SYNCHRO-L" parent="VBoxContainer" index="30"]
-visible = true
+[node name="ACL200P" parent="VBoxContainer" index="30"]
 margin_top = 2201.0
-margin_right = 1226.0
 margin_bottom = 2271.0
 
-[node name="SYNCHRO-R" parent="VBoxContainer" index="31"]
-visible = true
+[node name="DND_TS" parent="VBoxContainer" index="31"]
 margin_top = 2275.0
-margin_right = 1226.0
 margin_bottom = 2345.0
 
-[node name="NANI" parent="VBoxContainer" index="32"]
+[node name="SYNCHRO-L" parent="VBoxContainer" index="32"]
 visible = true
 margin_top = 2349.0
 margin_right = 1226.0
 margin_bottom = 2419.0
 
-[node name="CL600P" parent="VBoxContainer" index="33"]
+[node name="SYNCHRO-R" parent="VBoxContainer" index="33"]
+visible = true
 margin_top = 2423.0
+margin_right = 1226.0
 margin_bottom = 2493.0
 
-[node name="DND_HAUL" parent="VBoxContainer" index="34"]
+[node name="NANI" parent="VBoxContainer" index="34"]
+visible = true
 margin_top = 2497.0
+margin_right = 1226.0
 margin_bottom = 2567.0
 
-[node name="DND_FIX" parent="VBoxContainer" index="35"]
+[node name="CL600P" parent="VBoxContainer" index="35"]
 margin_top = 2571.0
 margin_bottom = 2641.0
+
+[node name="DND_HAUL" parent="VBoxContainer" index="36"]
+margin_top = 2645.0
+margin_bottom = 2715.0
+
+[node name="DND_FIX" parent="VBoxContainer" index="37"]
+margin_top = 2719.0
+margin_bottom = 2789.0
