@@ -41,7 +41,6 @@ position = Vector2( -48, -86 )
 
 [node name="SYSTEM_EXODYN-L" parent="." index="37"]
 position = Vector2( 48, -86 )
-repairReplacementPrice = 135000
 
 [node name="SYSTEM_EXODYN-R" parent="." index="38"]
 position = Vector2( -48, -86 )
@@ -72,3 +71,10 @@ repairReplacementPrice = 135000
 [node name="SYSTEM_EXODYN-R_ALT" parent="." index="44" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/StoragePodComboDock.tscn"]
 visible = false
 position = Vector2( -48, 54 )
+
+[editable path="SYSTEM_EXODYN-L"]
+[editable path="SYSTEM_EXODYN-L/Arm"]
+[editable path="SYSTEM_EXODYN-L/Arm/A/B/Spotlight"]
+[editable path="SYSTEM_EXODYN-R"]
+[editable path="SYSTEM_EXODYN-R/Arm"]
+[editable path="SYSTEM_EXODYN-R/Arm/A/B/Spotlight"]

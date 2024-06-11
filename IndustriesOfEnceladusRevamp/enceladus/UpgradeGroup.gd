@@ -8,7 +8,7 @@ func reexamine():
 	
 	var ship = CurrentGame.getPlayerShip()
 	
-	print("Ship is %s" % String(ship))
+	#print("Ship is %s" % String(ship))
 	
 	if onlyForShipNames.size() > 0:
 		var logic
