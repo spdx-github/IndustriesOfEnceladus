@@ -24,6 +24,8 @@ func _init(modLoader = ModLoader):
 	installScriptExtension("ships/ship-ctrl.gd")
 # install the Shipyard.gd script extension, which loads replacements + new ships
 	installScriptExtension("ships/Shipyard.gd")
+# replace WeaponSlot for all our new equipment
+	replaceScene("weapons/WeaponSlot.tscn")
 # replace the Upgrades.tscn containing equipment modifications
 	replaceScene("enceladus/Upgrades.tscn")
 	
