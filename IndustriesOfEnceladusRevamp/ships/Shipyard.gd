@@ -18,6 +18,7 @@ var shipReplacementPaths = {
 	"COTHON-LND":"Cothon-Lnd",
 	"COTHON-V":"Cothon-V",
 	"COTHON":"Cothon",
+	"EIME":"EIME",
 	"OCP209":"ocp-209",
 	"PROSPECTOR-BALD": "Eagle-Prospector-Bald",
 	"PROSPECTOR-FAT": "Eagle-Prospector-Fat",

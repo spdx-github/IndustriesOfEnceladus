@@ -149,7 +149,6 @@ slot = "cargo.aux"
 system = "SYSTEM_CARGO_BAFFLES"
 manual = "SYSTEM_NONE_MANUAL"
 testProtocol = "cargo"
-default = true
 
 [node name="PreProc0x30" type="MarginContainer" parent="VBoxContainer"]
 margin_top = 192.0

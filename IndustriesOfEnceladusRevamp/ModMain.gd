@@ -21,7 +21,7 @@ func _init(modLoader = ModLoader):
 	loadDLC()
 	
 # install drone-plant.gd which adjusts drone tuning behaviour
-	installScriptExtension("weapons/drone_plant.gd")
+	installScriptExtension("weapons/drone-plant.gd")
 # replace slots for all our new equipment
 	replaceScene("ships/modules/AuxSlot.tscn")
 	replaceScene("ships/modules/ThrusterSlot.tscn")

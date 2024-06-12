@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://ships/ocp-209.tscn" type="PackedScene" id=1]
 [ext_resource path="res://lights/light-mask.png" type="Texture" id=2]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/MineralProcessingUnit_Bulker.tscn" type="PackedScene" id=3]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/trtl/MineralProcessingUnit_Furnace.tscn" type="PackedScene" id=4]
-[ext_resource path="res://IndustriesOfEnceladusRevamp/weapons/WeaponSlot.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 70.0071
@@ -63,23 +62,27 @@ visible = false
 [node name="Light2D2" parent="." index="22"]
 visible = false
 
-[node name="DockForePort" parent="." index="27" instance=ExtResource( 5 )]
+[node name="DockForePort" parent="." index="27" instance_placeholder="res://IndustriesOfEnceladusRevamp/weapons/WeaponSlot.tscn"]
 position = Vector2( -56, -336 )
 slot = "leftBay1"
+toggleCommand = "ship_slot_5"
 
-[node name="DockForeStbd" parent="." index="28" instance=ExtResource( 5 )]
+[node name="DockForeStbd" parent="." index="28" instance_placeholder="res://IndustriesOfEnceladusRevamp/weapons/WeaponSlot.tscn"]
 position = Vector2( 56, -336 )
 slot = "rightBay1"
+toggleCommand = "ship_slot_6"
 
-[node name="DockAftPort" parent="." index="29" instance=ExtResource( 5 )]
+[node name="DockAftPort" parent="." index="29" instance_placeholder="res://IndustriesOfEnceladusRevamp/weapons/WeaponSlot.tscn"]
 position = Vector2( -56, 336 )
 rotation = 3.14159
 slot = "leftBayRev1"
+toggleCommand = "ship_slot_7"
 
-[node name="DockAftStbd" parent="." index="30" instance=ExtResource( 5 )]
+[node name="DockAftStbd" parent="." index="30" instance_placeholder="res://IndustriesOfEnceladusRevamp/weapons/WeaponSlot.tscn"]
 position = Vector2( 56, 336 )
 rotation = 3.14159
 slot = "rightBayRev1"
+toggleCommand = "ship_slot_8"
 
 [node name="HoldModifiers" parent="." index="33" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/HoldModifiers.tscn"]
 type = "cargo.modifierAmorphic"

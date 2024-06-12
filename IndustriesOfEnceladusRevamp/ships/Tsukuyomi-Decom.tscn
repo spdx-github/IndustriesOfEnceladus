@@ -100,7 +100,7 @@ blend_mode = 1
 [node name="Tsukuyomi-Decom" type="RigidBody2D" groups=["ships"]]
 collision_layer = 530
 collision_mask = 7
-mass = 455.35
+mass = 655.35
 physics_material_override = ExtResource( 7 )
 linear_damp = 0.0
 angular_damp = 0.0
@@ -171,9 +171,10 @@ angular_damp = 0.0
 light_mask = 0
 position = Vector2( 3, -966 )
 scale = Vector2( 1.3, 1.3 )
-polygon = PoolVector2Array( 70, -200, 91.5385, -184.615, 91.5385, 98.4615, 33.0769, 189.231, 33.0769, 407.692, -37.6923, 407.692, -37.6923, 189.231, -96.1539, 98.4615, -96.1539, -184.615, -74.6154, -200, -74.6154, -209.231, 70, -209.231 )
+polygon = PoolVector2Array( 71.5385, -201.539, 93.0769, -186.154, 93.0769, 98.4615, 34.6154, 189.231, 34.6154, 409.231, -39.2308, 409.231, -39.2308, 189.231, -97.6923, 98.4615, -97.6923, -186.154, -76.1539, -201.539, -76.1539, -209.231, 71.5385, -209.231 )
 
 [node name="CargoHoldAreaHull" type="Area2D" parent="."]
+visible = false
 light_mask = 0
 z_index = 50
 collision_layer = 0
@@ -184,9 +185,8 @@ linear_damp = 0.0
 angular_damp = 0.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CargoHoldAreaHull"]
-visible = false
 light_mask = 0
-polygon = PoolVector2Array( -196, -1238, 196, -1238, 136, -176, 336, -68, 252, 74, 246, 268, 336, 768, -336, 776, -248, 272, -248, 78, -338, -78, -136, -176 )
+polygon = PoolVector2Array( -196, -1238, 196, -1238, 136, -176, 336, -68, 248, 80, 248, 272, 336, 776, -336, 776, -248, 272, -248, 80, -338, -78, -136, -176 )
 
 [node name="Hull" type="Sprite" parent="."]
 material = SubResource( 1 )
@@ -237,7 +237,7 @@ pinned = false
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BigHatch/Claw Left"]
 light_mask = 0
 position = Vector2( 9, 21 )
-polygon = PoolVector2Array( -100, -26, -8, -26, -8, -24, 6, -18, 6, -16, -110, -16 )
+polygon = PoolVector2Array( -100, -26, -8, -26, -8, -24, 6, -18, 6, -16, -12, -16, -110, -16 )
 
 [node name="LeftGrooveJointTop" type="GrooveJoint2D" parent="BigHatch/Claw Left"]
 position = Vector2( -111, -25 )
@@ -289,7 +289,7 @@ pinned = false
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BigHatch/Claw Right"]
 light_mask = 0
 position = Vector2( -9, 21 )
-polygon = PoolVector2Array( -6, -26, 100, -26, 110, -16, 8, -16, 8, -18, -6, -24 )
+polygon = PoolVector2Array( -6, -26, 12, -26, 100, -26, 110, -16, 8, -16, 8, -18, -6, -24 )
 
 [node name="RightGrooveJointTop" type="GrooveJoint2D" parent="BigHatch/Claw Right"]
 position = Vector2( 111, -25 )
@@ -365,45 +365,13 @@ lightPath = NodePath("Pivot/Light")
 [node name="SYSTEM_ACL200P" parent="HiStressFore" index="20"]
 weaponPath = NodePath("Pivot/laster-pulse")
 
-[node name="TurretMidLeft" parent="." instance=ExtResource( 28 )]
-position = Vector2( -310, -740 )
-rotation = -1.309
-z_index = 25
-slot = "turretLeft"
-toggleCommand = "ship_slot_2"
-
-[node name="SYSTEM_ACTEMD14" parent="TurretMidLeft" index="19"]
-pivotPath = NodePath("Pivot")
-weaponPath = NodePath("Pivot/massdriver")
-audioPath = NodePath("Actuation")
-lightPath = NodePath("Pivot/Light")
-
-[node name="SYSTEM_ACL200P" parent="TurretMidLeft" index="20"]
-weaponPath = NodePath("Pivot/laster-pulse")
-
-[node name="TurretMidRight" parent="." instance=ExtResource( 28 )]
-position = Vector2( 310, -740 )
-rotation = 1.309
-z_index = 25
-slot = "turretRight"
-toggleCommand = "ship_slot_2"
-
-[node name="SYSTEM_ACTEMD14" parent="TurretMidRight" index="19"]
-pivotPath = NodePath("Pivot")
-weaponPath = NodePath("Pivot/massdriver")
-audioPath = NodePath("Actuation")
-lightPath = NodePath("Pivot/Light")
-
-[node name="SYSTEM_ACL200P" parent="TurretMidRight" index="20"]
-weaponPath = NodePath("Pivot/laster-pulse")
-
 [node name="TorpedoTubeLeftUp" parent="." instance=ExtResource( 28 )]
 position = Vector2( -160, -1300 )
 __meta__ = {
 "_editor_description_": ""
 }
 slot = "tubeLeftUp"
-toggleCommand = "ship_slot_3"
+toggleCommand = "ship_slot_2"
 
 [node name="SYSTEM_ACTEMD14" parent="TorpedoTubeLeftUp" index="19"]
 pivotPath = NodePath("Pivot")
@@ -437,7 +405,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 slot = "tubeLeftDn"
-toggleCommand = "ship_slot_4"
+toggleCommand = "ship_slot_2"
 
 [node name="SYSTEM_ACTEMD14" parent="TorpedoTubeLeftDn" index="19"]
 pivotPath = NodePath("Pivot")
@@ -454,7 +422,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 slot = "tubeRightDn"
-toggleCommand = "ship_slot_4"
+toggleCommand = "ship_slot_3"
 
 [node name="SYSTEM_ACTEMD14" parent="TorpedoTubeRightDn" index="19"]
 pivotPath = NodePath("Pivot")
@@ -463,6 +431,38 @@ audioPath = NodePath("Actuation")
 lightPath = NodePath("Pivot/Light")
 
 [node name="SYSTEM_ACL200P" parent="TorpedoTubeRightDn" index="20"]
+weaponPath = NodePath("Pivot/laster-pulse")
+
+[node name="TurretMidLeft" parent="." instance=ExtResource( 28 )]
+position = Vector2( -310, -740 )
+rotation = -1.309
+z_index = 25
+slot = "turretLeft"
+toggleCommand = "ship_slot_4"
+
+[node name="SYSTEM_ACTEMD14" parent="TurretMidLeft" index="19"]
+pivotPath = NodePath("Pivot")
+weaponPath = NodePath("Pivot/massdriver")
+audioPath = NodePath("Actuation")
+lightPath = NodePath("Pivot/Light")
+
+[node name="SYSTEM_ACL200P" parent="TurretMidLeft" index="20"]
+weaponPath = NodePath("Pivot/laster-pulse")
+
+[node name="TurretMidRight" parent="." instance=ExtResource( 28 )]
+position = Vector2( 310, -740 )
+rotation = 1.309
+z_index = 25
+slot = "turretRight"
+toggleCommand = "ship_slot_4"
+
+[node name="SYSTEM_ACTEMD14" parent="TurretMidRight" index="19"]
+pivotPath = NodePath("Pivot")
+weaponPath = NodePath("Pivot/massdriver")
+audioPath = NodePath("Actuation")
+lightPath = NodePath("Pivot/Light")
+
+[node name="SYSTEM_ACL200P" parent="TurretMidRight" index="20"]
 weaponPath = NodePath("Pivot/laster-pulse")
 
 [node name="DockML" parent="." instance=ExtResource( 28 )]
@@ -507,14 +507,14 @@ default = "SYSTEM_MAIN_ENGINE_NDNTR"
 [node name="thruster-lb" parent="." instance=ExtResource( 11 )]
 position = Vector2( -304, 793 )
 type = "propulsion.rcsLarge"
-command = "f"
+command = "fr"
 default = "SYSTEM_MAIN_ENGINE_NDNTR"
 toggleCommand = ""
 
 [node name="thruster-rb" parent="." instance=ExtResource( 11 )]
 position = Vector2( 304, 793 )
 type = "propulsion.rcsLarge"
-command = "f"
+command = "fl"
 default = "SYSTEM_MAIN_ENGINE_NDNTR"
 toggleCommand = ""
 
@@ -522,7 +522,7 @@ toggleCommand = ""
 position = Vector2( -205, -744 )
 rotation = 2.61799
 type = "propulsion.rcsLarge"
-command = "b"
+command = "bl"
 default = "SYSTEM_MAIN_ENGINE_NDNTR"
 toggleCommand = ""
 
@@ -530,7 +530,7 @@ toggleCommand = ""
 position = Vector2( 205, -744 )
 rotation = -2.61799
 type = "propulsion.rcsLarge"
-command = "b"
+command = "br"
 default = "SYSTEM_MAIN_ENGINE_NDNTR"
 toggleCommand = ""
 
@@ -754,9 +754,10 @@ pitch_scale = 0.2
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="SYSTEM_REACTIONWHEEL" parent="." instance=ExtResource( 20 )]
-mass = 1.0
+mass = 2.5
 maxRpm = 600.0
 powerDraw = 25000.0
+rpmPS = 120.0
 whirlMax = 10
 
 [node name="HoldModifiers" parent="." instance=ExtResource( 41 )]
@@ -897,12 +898,14 @@ scale = Vector2( -1, 1 )
 polygon = PoolVector2Array( 6, -4, 84, 6, 86, 10, 4, 8, 0, 0 )
 
 [node name="LeftSpring" parent="CargoBaffles" index="2"]
+position = Vector2( -3, 29 )
 length = 144.0
-rest_length = 72.0
+rest_length = 144.0
 
 [node name="RightString" parent="CargoBaffles" index="3"]
+position = Vector2( 3, 29 )
 length = 144.0
-rest_length = 72.0
+rest_length = 144.0
 
 [node name="CabinLight" type="Sprite" parent="."]
 material = SubResource( 6 )
@@ -937,12 +940,12 @@ shadow_item_cull_mask = 3
 [connection signal="body_exited" from="CargoHoldAreaHull" to="." method="_on_CargoHoldArea_body_exited"]
 
 [editable path="HiStressFore"]
-[editable path="TurretMidLeft"]
-[editable path="TurretMidRight"]
 [editable path="TorpedoTubeLeftUp"]
 [editable path="TorpedoTubeRightUp"]
 [editable path="TorpedoTubeLeftDn"]
 [editable path="TorpedoTubeRightDn"]
+[editable path="TurretMidLeft"]
+[editable path="TurretMidRight"]
 [editable path="reactor-c"]
 [editable path="reactor-l"]
 [editable path="reactor-l/ExtendingRadiator/ExtendingRadiator"]

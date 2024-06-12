@@ -1,5 +1,5 @@
-SLOT_TURRET_MID-L|Left Turret Mount
-SLOT_TURRET_MID-R|Right Turret Mount
+SLOT_TURRET_LEFT|Left Turret Mount
+SLOT_TURRET_RIGHT|Right Turret Mount
 
 
 

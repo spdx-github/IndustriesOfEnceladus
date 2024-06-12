@@ -8,11 +8,12 @@
 script = ExtResource( 2 )
 slot = "weaponSlot.main.type"
 always = false
-onlyForShipNames = [ "SHIP_PROSPECTOR", "SHIP_PROSPECTOR_FAT", "SHIP_PROSPECTOR_LUX", "SHIP_PROSPECTOR_VP" ]
-invertNameLogic = true
+onlyForShipNames = [  ]
+invertNameLogic = false
+evaluateNamesFirst = true
 
 [node name="VBoxContainer" parent="." index="0"]
-margin_bottom = 3013.0
+margin_bottom = 3087.0
 
 [node name="HUNK-L" parent="VBoxContainer" index="2"]
 visible = true
@@ -276,3 +277,16 @@ margin_bottom = 2937.0
 [node name="DND_FIX" parent="VBoxContainer" index="42"]
 margin_top = 2941.0
 margin_bottom = 3011.0
+
+[node name="DND_HARVHAUL" parent="VBoxContainer" index="43" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 3015.0
+margin_right = 1226.0
+margin_bottom = 3085.0
+slot = "weaponSlot.main.type"
+system = "SYSTEM_DND_HARVHAUL"
+manual = "SYSTEM_DND_HAUL_MANUAL"
+price = 525000
+testProtocol = "drone"
+warnIfElectricBelow = 50.0

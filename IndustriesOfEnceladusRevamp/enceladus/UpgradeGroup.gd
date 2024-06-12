@@ -1,14 +1,15 @@
 extends "res://enceladus/UpgradeGroup.gd"
 
-export (Array, String) var onlyForShipNames
+export (Array, String) var onlyForShipNames = []
 export (bool) var invertNameLogic = false
+export (bool) var evaluateNamesFirst = true
 
-func reexamine():
-	.reexamine()
-	
+func reexamine():	
 	var ship = CurrentGame.getPlayerShip()
 	
 	#print("Ship is %s" % String(ship))
+	
+	if not evaluateNamesFirst: .reexamine()
 	
 	if onlyForShipNames.size() > 0:
 		var logic
@@ -25,3 +26,5 @@ func reexamine():
 			visible = not logic
 		else:
 			visible = logic
+	
+	if evaluateNamesFirst: .reexamine()
