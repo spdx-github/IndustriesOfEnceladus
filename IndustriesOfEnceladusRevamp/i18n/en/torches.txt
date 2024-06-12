@@ -1,6 +1,6 @@
 SYSTEM_MAIN_ENGINE_NANI|SSE NANI Torch Refit
 
-SYSTEM_MAIN_ENGINE_NANI_DESC|This comically impractical and completely disgusting main torch is the ultimate logical conclusion of many a night spent drinking and ruminating on life's purpose. Coming to the determination that there isn't one, the team at Sin Space Engineering put their heads together and produced this thing. \n\nDisclaimer: Omaewamou-Shindeiru thinks this is really funny and fully endorses the NANI's use as a propulsion solution. May void vessel warranty. Usage as main torch in some vessels may damage your reactor.
+SYSTEM_MAIN_ENGINE_NANI_DESC|This comically impractical and completely disgusting main torch is the ultimate logical conclusion of many a night spent drinking and ruminating on life's purpose. Coming to the determination that there isn't one, the team at Sin Space Engineering put their heads together and produced this thing. \n\nDisclaimer: Omaewamou-Shindeiru thinks this is really funny and fully endorses the NANI's use as a propulsion solution. May void vessel warranty. Usage as main torch in some vessels may damage your reactor. Have fun!
 
 SYSTEM_MAIN_ENGINE_NANI_SPECS|Thrust: 3,450 kN \nExhaust velocity: 132 km/s \nPropellant consumption: 0.5 kg/s \nPower consumption: 200 MW \nThermal consumption: 2 GW \nPropellant: Supercritical liquid uranium salt \nBurn time: 1 minute (est) \nMass: 10,000 kg \nManufacturer: Sin Space Engineering / Omaewamou-Shindeiru
 
@@ -24,7 +24,7 @@ SYSTEM_MAIN_ENGINE_SOYUZ_SPECS|Thrust: 1,600 kN \nExhaust velocity: 15 km/s \nPr
 
 SYSTEM_MAIN_ENGINE_THUNDER|RA-K69V quad engine
 
-SYSTEM_MAIN_ENGINE_THUNDER_DESC|This torch is a custom-engineered piece of equipment that takes the frame of an R44 and replaces its engines with K69V thrusters, complete with the gimbal mountings the line is so famous for among ringside racers. Installation comes with optional and entirely legal "Thunderbarge-class" transponder modification.
+SYSTEM_MAIN_ENGINE_THUNDER_DESC|This torch is a custom-engineered piece of equipment that takes the frame of an R44 and replaces its engines with K69V thrusters, complete with the gimbal mountings the line is so famous for among ringside racers. Installation comes with optional and entirely legal "Thunderbarge-class" transponder modification. Personal grappling hook available on special request.
 
 SYSTEM_MAIN_ENGINE_THUNDER_SPECS|Thrust: 1,600 kN \nExhaust velocity: 12 km/s \nPropellant consumption: 133.2 kg/s \nPower consumption: 100 MW \nThermal consumption: 14.4 GW \nOperation mode: Pulsed thrust, gimballed \nGimbal angle: 25 deg \nGimbal speed: 360 deg/s \nPropellant: Oxygen-Hydrogen plasma \nMass: 950 kg \nManufacturer: Custom-built / Rusatom-Antonoff
 

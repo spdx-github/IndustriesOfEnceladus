@@ -1,0 +1,98 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/Cothon-Lnd.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ships/lifepod-cd.png" type="Texture" id=2]
+[ext_resource path="res://ships/lifepod-n.png" type="Texture" id=3]
+
+[node name="Cothon-Lux" instance=ExtResource( 1 )]
+mass = 77.25
+crewMoraleBonus = 0.2
+shipName = "SHIP_COTHON_LUX"
+crew = 6
+hullPrice = 250000
+processedCargoCapacity = 25000
+model = "COTHON"
+spriteHullPaths = PoolStringArray( "Hull", "SecondPod", "UnderHull" )
+
+[node name="SecondPod" type="Sprite" parent="." index="2"]
+position = Vector2( -71, -181 )
+scale = Vector2( 0.304688, 0.304688 )
+z_index = 17
+texture = ExtResource( 2 )
+normal_map = ExtResource( 3 )
+
+[node name="Front Bumper" parent="." index="4"]
+position = Vector2( 0, -259 )
+
+[node name="Pod" parent="." index="8"]
+position = Vector2( -70, -182 )
+
+[node name="engine-main" parent="." index="13"]
+visible = false
+notAThruster = true
+type = ""
+command = ""
+default = "SYSTEM_NONE"
+toggleCommand = ""
+
+[node name="thruster-bl" parent="." index="16"]
+position = Vector2( -139, -43 )
+rotation = 0.523599
+command = "rf"
+
+[node name="thruster-l" parent="." index="17" instance_placeholder="res://ships/modules/ThrusterSlot.tscn"]
+position = Vector2( -148, -58 )
+rotation = 1.5708
+z_index = 15
+command = ">r"
+
+[node name="thruster-r" parent="." index="18" instance_placeholder="res://ships/modules/ThrusterSlot.tscn"]
+position = Vector2( 148, -58 )
+rotation = -1.5708
+z_index = 15
+command = "<l"
+
+[node name="thruster-br" parent="." index="19"]
+position = Vector2( 139, -44 )
+rotation = -0.523599
+command = "lf"
+
+[node name="thruster-tr" parent="." index="20"]
+rotation = -2.61799
+
+[node name="thruster-tl" parent="." index="21"]
+position = Vector2( -139, -70 )
+rotation = 2.61799
+
+[node name="MineralProcessingUnit_Bulker" parent="." index="29"]
+position = Vector2( 0, 0 )
+
+[node name="MineralProcessingUnit_Furnace" parent="." index="30"]
+position = Vector2( -2, 0 )
+
+[node name="MineralProcessingUnit_FSO" parent="." index="32"]
+position = Vector2( -2, 0 )
+polygon = PoolVector2Array( -44, -100, -28, -84, -22, 12, -10, 24, 10, 24, 22, 12, 32, -84, 48, -100, 48, -32, 42, 10, 26, 44, -22, 44, -38, 10, -44, -32 )
+
+[node name="MineralProcessingUnit" parent="MineralProcessingUnit_FSO" index="0"]
+visible = false
+
+[node name="CollisionPolygon2D" parent="MineralProcessingUnit_FSO/MineralProcessingUnit" index="0"]
+polygon = PoolVector2Array( -24, 12, -14, 28, 16, 28, 24, 12, 34, -84, -30, -84 )
+
+[node name="MineralProcessingUnit_SMELT" parent="." index="33"]
+position = Vector2( -2, 0 )
+polygon = PoolVector2Array( -44, -76, -14, -60, -10, -28, -16, -22, -16, -4, -8, 4, 12, 4, 20, -4, 20, -22, 14, -28, 18, -60, 48, -76, 48, -32, 42, 10, 26, 44, -22, 44, -38, 10, -44, -32 )
+
+[node name="MineralProcessingUnit_FAB" parent="." index="34"]
+position = Vector2( -2, 0 )
+polygon = PoolVector2Array( -44, -96, -3.37474, -55.3747, 0, -49, 2, -42.1517, 2, -18, -14, -18, -22, -9, -22, 12, -10, 24, 16, 24, 27, 12, 26, -42, 48, -96, 48, -32, 42, 10, 26, 44, -22, 44, -38, 10, -44, -32 )
+
+[editable path="CargoBaffles"]
+[editable path="MineralProcessingUnit_FSO"]
+[editable path="MineralProcessingUnit_FAB"]
+[editable path="weapon-left"]
+[editable path="weapon-right"]
+[editable path="weapon-left-back"]
+[editable path="weapon-right-back"]
+[editable path="AI"]
