@@ -12,6 +12,7 @@ radius = 450.0
 height = 200.0
 
 [node name="SYSTEM_SALVAGE_ARM_HEAVY" instance=ExtResource( 1 )]
+actuationPitchFactor = 0.25
 torqueMassLimit = 15
 massLimit = 3200
 response = 0.6
@@ -115,16 +116,16 @@ shape = SubResource( 1 )
 visible = false
 
 [node name="Lock" parent="." index="5"]
-pitch_scale = 0.35
+pitch_scale = 0.1
 
 [node name="Release" parent="." index="6"]
-pitch_scale = 0.4
+pitch_scale = 0.2
 
 [node name="Transfer" parent="." index="7"]
 pitch_scale = 0.2
 
 [node name="Actuation" parent="." index="8"]
-pitch_scale = 0.2
+pitch_scale = 0.1
 
 [editable path="Arm"]
 [editable path="Arm/A/B/Spotlight"]

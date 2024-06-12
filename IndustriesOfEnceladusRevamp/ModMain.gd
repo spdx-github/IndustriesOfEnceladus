@@ -19,18 +19,23 @@ func _init(modLoader = ModLoader):
 
 # Must load DLC early for it to properly function.
 	loadDLC()
-
-# install ship-ctrl which modifies the mass calculation algo
-	#installScriptExtension("ships/ship-ctrl.gd")
+	
+# install drone-plant.gd which adjusts drone tuning behaviour
+	installScriptExtension("weapons/drone_plant.gd")
 # replace slots for all our new equipment
 	replaceScene("ships/modules/AuxSlot.tscn")
 	replaceScene("ships/modules/ThrusterSlot.tscn")
 	replaceScene("ships/modules/TorchSlot.tscn")
 	replaceScene("weapons/WeaponSlot.tscn")
-# replace the Upgrades.tscn containing equipment modifications
-	replaceScene("enceladus/Upgrades.tscn")
 # install the Shipyard.gd script extension, which loads replacements + new ships
 	installScriptExtension("ships/Shipyard.gd")
+	
+# replace the Upgrades.tscn containing equipment modifications
+	replaceScene("enceladus/Upgrades.tscn")
+	replaceScene("enceladus/Dealer.tscn")
+	
+# install CurrentGame.gd which loads new ships into the game
+	installScriptExtension("CurrentGame.gd")
 	
 # Load custom translations
 	updateTL("en") 

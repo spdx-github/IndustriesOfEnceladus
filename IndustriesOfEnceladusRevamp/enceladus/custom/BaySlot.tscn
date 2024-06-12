@@ -2,14 +2,16 @@
 
 [ext_resource path="res://IndustriesOfEnceladusRevamp/enceladus/custom/WeaponSlot.tscn" type="PackedScene" id=1]
 
-[node name="ReversedBay" instance=ExtResource( 1 )]
-slot = "weaponSlot.BayRev.type"
+[node name="BaySlot" instance=ExtResource( 1 )]
+slot = "weaponSlot.Bay.type"
+onlyForShipNames = [  ]
+invertNameLogic = false
 
 [node name="VBoxContainer" parent="." index="0"]
-margin_bottom = 1385.0
+margin_bottom = 1607.0
 
 [node name="CheckButton" parent="VBoxContainer/HBoxContainer" index="0"]
-text = "SLOT__BAY3"
+text = "SLOT_BAY"
 
 [node name="HUNK-L" parent="VBoxContainer" index="2"]
 visible = false
@@ -122,52 +124,64 @@ visible = false
 margin_top = 1017.0
 margin_bottom = 1087.0
 
-[node name="PDMWG" parent="VBoxContainer" index="27"]
-visible = false
+[node name="MWTIGHTBEAM_PDT" parent="VBoxContainer" index="27"]
 margin_top = 1017.0
 margin_bottom = 1087.0
 
-[node name="PDMWG-L" parent="VBoxContainer" index="28"]
-margin_top = 1017.0
-margin_bottom = 1087.0
-
-[node name="PDMWG-R" parent="VBoxContainer" index="29"]
+[node name="MWTIGHTBEAM_PDT-L" parent="VBoxContainer" index="28"]
 margin_top = 1091.0
 margin_bottom = 1161.0
 
-[node name="ACL200P" parent="VBoxContainer" index="30"]
-visible = false
+[node name="MWTIGHTBEAM_PDT-R" parent="VBoxContainer" index="29"]
 margin_top = 1165.0
 margin_bottom = 1235.0
 
-[node name="DND_TS" parent="VBoxContainer" index="31"]
-margin_top = 1165.0
-margin_bottom = 1235.0
-
-[node name="SYNCHRO-L" parent="VBoxContainer" index="32"]
+[node name="PDMWG" parent="VBoxContainer" index="30"]
 visible = false
-margin_top = 1313.0
-margin_bottom = 1383.0
+margin_top = 1017.0
+margin_bottom = 1087.0
 
-[node name="SYNCHRO-R" parent="VBoxContainer" index="33"]
-visible = false
-margin_top = 1313.0
-margin_bottom = 1383.0
-
-[node name="NANI" parent="VBoxContainer" index="34"]
-visible = false
-margin_top = 1313.0
-margin_bottom = 1383.0
-
-[node name="CL600P" parent="VBoxContainer" index="35"]
-visible = false
-margin_top = 1313.0
-margin_bottom = 1383.0
-
-[node name="DND_HAUL" parent="VBoxContainer" index="36"]
+[node name="PDMWG-L" parent="VBoxContainer" index="31"]
 margin_top = 1239.0
 margin_bottom = 1309.0
 
-[node name="DND_FIX" parent="VBoxContainer" index="37"]
+[node name="PDMWG-R" parent="VBoxContainer" index="32"]
 margin_top = 1313.0
 margin_bottom = 1383.0
+
+[node name="ACL200P" parent="VBoxContainer" index="33"]
+visible = false
+margin_top = 1165.0
+margin_bottom = 1235.0
+
+[node name="DND_TS" parent="VBoxContainer" index="34"]
+margin_top = 1387.0
+margin_bottom = 1457.0
+
+[node name="SYNCHRO-L" parent="VBoxContainer" index="35"]
+visible = false
+margin_top = 1313.0
+margin_bottom = 1383.0
+
+[node name="SYNCHRO-R" parent="VBoxContainer" index="36"]
+visible = false
+margin_top = 1313.0
+margin_bottom = 1383.0
+
+[node name="NANI" parent="VBoxContainer" index="37"]
+visible = false
+margin_top = 1313.0
+margin_bottom = 1383.0
+
+[node name="CL600P" parent="VBoxContainer" index="38"]
+visible = false
+margin_top = 1313.0
+margin_bottom = 1383.0
+
+[node name="DND_HAUL" parent="VBoxContainer" index="39"]
+margin_top = 1461.0
+margin_bottom = 1531.0
+
+[node name="DND_FIX" parent="VBoxContainer" index="40"]
+margin_top = 1535.0
+margin_bottom = 1605.0

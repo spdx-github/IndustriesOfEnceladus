@@ -2,6 +2,14 @@ extends "res://ships/Shipyard.gd"
 
 var modName = "IndustriesOfEnceladusRevamp"
 
+var hardOverrides = {
+#	"PROSPECTOR-BALD": preload("res://IndustriesOfEnceladusRevamp/ships/Eagle-Prospector-Bald.tscn"),
+#	"PROSPECTOR-FAT": preload("res://IndustriesOfEnceladusRevamp/ships/Eagle-Prospector-Fat.tscn"),
+#	"PROSPECTOR-LUX": preload("res://IndustriesOfEnceladusRevamp/ships/Eagle-Prospector-Lux.tscn"),
+#	"PROSPECTOR-VP": preload("res://IndustriesOfEnceladusRevamp/ships/Eagle-Prospector-VP.tscn"),
+#	"PROSPECTOR": preload("res://IndustriesOfEnceladusRevamp/ships/Eagle-Prospector.tscn"),
+}
+
 var shipReplacementPaths = {
 	"AT225-B": "ATK225-B",
 	"AT225-R": "ATK225-R",
@@ -25,11 +33,11 @@ var shipReplacementPaths = {
 
 var newShipNames = {
 	"Cothon-Lux": "COTHON",
-#	"Tsukuyomi-Decom": "TSUKUYOMI",
-#	"OCP-209-DD": "OCP209",
-#	"OCP-209-Snap": "OCP209",
-#	"MAD-CERF-Civ": "MADCERF",
-#	"Oberon": "OBERON"
+	"Tsukuyomi-Decom": "TSUKUYOMI",
+	"OCP-209-DD": "OCP209",
+	"OCP-209-Snap": "OCP209",
+	"MAD-CERF-Civ": "MADCERF",
+	"Oberon": "OBERON"
 }
 
 var shipConfigs = {
@@ -135,7 +143,7 @@ var shipConfigs = {
 		}, 
 		"cargo":{
 			"equipment":"SYSTEM_CARGO_MPU",
-			"auxequipment":"SYSTEM_NONE",
+			"aux":"SYSTEM_NONE",
 			"modifierAmorphic":"SYSTEM_CARGO_MOD_2K"
 		},
 		"drones":{
@@ -162,8 +170,8 @@ var shipConfigs = {
 			"middleRight":{"type":"SYSTEM_PDMWG"},
 			"leftBay1":{"type":"SYSTEM_NONE"}, 
 			"rightBay1":{"type":"SYSTEM_NONE"},
-			"leftBay3":{"type":"SYSTEM_NONE"}, 
-			"rightBay3":{"type":"SYSTEM_NONE"},
+			"leftBayRev1":{"type":"SYSTEM_NONE"}, 
+			"rightBayRev1":{"type":"SYSTEM_NONE"},
 		},
 	}},
 	"OCP-209-Snap": {"config": {
@@ -205,8 +213,8 @@ var shipConfigs = {
 			"middleRight":{"type":"SYSTEM_PDMWG"},
 			"leftBay1":{"type":"SYSTEM_NONE"}, 
 			"rightBay1":{"type":"SYSTEM_NONE"},
-			"leftBay3":{"type":"SYSTEM_NONE"}, 
-			"rightBay3":{"type":"SYSTEM_NONE"},
+			"leftBayRev1":{"type":"SYSTEM_NONE"}, 
+			"rightBayRev1":{"type":"SYSTEM_NONE"},
 		},
 	}},
 	"Tsukuyomi-Decom": {"config": {
@@ -222,7 +230,7 @@ var shipConfigs = {
 		}, 
 		"cargo":{
 			"equipment":"SYSTEM_CARGO_STANDARD",
-			"auxequipment":"SYSTEM_NONE",
+			"aux":"SYSTEM_NONE",
 			"modifierDivided":"SYSTEM_CARGO_MOD_2K"
 		},
 		"drones":{
@@ -264,22 +272,26 @@ var shipConfigsUsed = {
 	"Cothon-Lux": [
 		{
 			"weaponSlot":{
-				"right":{"type":"SYSTEM_MWG"}, 
-				"left":{"type":"SYSTEM_MWG"}
+				"left":{"type":"SYSTEM_MWG"},
+				"right":{"type":"SYSTEM_MWG"},
 			},
 			"ammo":{
 				"capacity": 0,
-				"initial": 0
+				"initial": 0,
 			}
 		}, {
 			"weaponSlot":{
+				"left":{"type":"SYSTEM_PDMWG"},
 				"right":{"type":"SYSTEM_PDMWG"}, 
-				"left":{"type":"SYSTEM_PDMWG"}
 			},
 			"ammo":{
 				"capacity": 0,
-				"initial": 0
+				"initial": 0,
 			}
+		}, {
+			"weaponSlot":{
+				
+			},
 		}
 	],
 	"MAD-CERF-Civ": [
@@ -302,7 +314,7 @@ var shipConfigsUsed = {
 			},
 			"cargo": {
 				"equipment":"SYSTEM_CARGO_MPUFSO",
-				"auxequipment":"SYSTEM_CARGO_AUX_PREPROC_A"
+				"aux":"SYSTEM_CARGO_AUX_PREPROC_A"
 			}
 		}
 	],
@@ -344,6 +356,9 @@ var phantomVars = {
 	},
 }
 func _ready():
+	for key in hardOverrides.keys():
+		ships[key] = hardOverrides[key]
+	
 	# add phantomVars
 	for key in phantomVars.keys():
 		var varToChange = get(key)
@@ -358,8 +373,10 @@ func _ready():
 	
 	
 	for key in newShipNames.keys():
-		# get the ship from the files
-		ships[key] = load("res://IndustriesOfEnceladus/ships/%s.tscn" % key)
+		# make sure we're not accidentally overriding the... hard override. lol
+		if not (key in hardOverrides.keys()):
+			# get the ship from the files
+			ships[key] = load("res://%s/ships/%s.tscn" % [modName, key])
 		# set the model alias
 		configAlias[key] = newShipNames[key]
 		# create a new defaultShipConfig

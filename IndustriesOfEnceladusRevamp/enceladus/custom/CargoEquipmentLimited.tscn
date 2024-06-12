@@ -11,6 +11,9 @@ invertNameLogic = false
 [node name="VBoxContainer" parent="." index="0"]
 margin_bottom = 639.0
 
+[node name="CheckButton" parent="VBoxContainer/HBoxContainer" index="0"]
+text = "SLOT_CARGOBAY"
+
 [node name="CargoBaffles" parent="VBoxContainer" index="2" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -20,8 +23,8 @@ margin_bottom = 188.0
 slot = "cargo.equipment"
 system = "SYSTEM_CARGO_BAFFLES"
 manual = "SYSTEM_NONE_MANUAL"
+price = 5000
 testProtocol = "cargo"
-default = true
 
 [node name="CargoMPUFSO" parent="VBoxContainer" index="3"]
 margin_top = 192.0

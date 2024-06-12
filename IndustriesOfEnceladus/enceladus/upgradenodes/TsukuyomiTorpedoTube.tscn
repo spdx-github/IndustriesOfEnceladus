@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://IndustriesOfEnceladus/enceladus/upgradenodes/shared/MWTIGHTBEAM.tscn" type="PackedScene" id=1]
+[ext_resource path="res://IndustriesOfEnceladus/enceladus/upgradenodes/shared/MWTIGHTBEAM_PDT.tscn" type="PackedScene" id=2]
 [ext_resource path="res://SmoothScrollTo.tscn" type="PackedScene" id=6]
 [ext_resource path="res://enceladus/Upgrades/Preview.tscn" type="PackedScene" id=7]
 [ext_resource path="res://enceladus/SystemShipUpgradeUI.tscn" type="PackedScene" id=8]
@@ -20,7 +21,7 @@ always = false
 margin_left = 16.0
 margin_top = 2.0
 margin_right = 1212.0
-margin_bottom = 1237.0
+margin_bottom = 1385.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 margin_right = 1196.0
@@ -158,12 +159,28 @@ margin_top = 721.0
 margin_right = 1196.0
 margin_bottom = 791.0
 
-[node name="ACL200P" parent="VBoxContainer" instance=ExtResource( 8 )]
+[node name="MWTIGHTBEAM_PDT-L" parent="VBoxContainer" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 795.0
 margin_right = 1196.0
 margin_bottom = 865.0
+system = "SYSTEM_MWTIGHTBEAM_PDT-L"
+
+[node name="MWTIGHTBEAM_PDT-R" parent="VBoxContainer" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 869.0
+margin_right = 1196.0
+margin_bottom = 939.0
+system = "SYSTEM_MWTIGHTBEAM_PDT-R"
+
+[node name="ACL200P" parent="VBoxContainer" instance=ExtResource( 8 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 943.0
+margin_right = 1196.0
+margin_bottom = 1013.0
 slot = "weaponSlot.main.type"
 system = "SYSTEM_ACL200P"
 price = 220000
@@ -173,9 +190,9 @@ warnIfElectricBelow = 200.0
 [node name="DND_TS" parent="VBoxContainer" instance=ExtResource( 8 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 869.0
+margin_top = 1017.0
 margin_right = 1196.0
-margin_bottom = 939.0
+margin_bottom = 1087.0
 slot = "weaponSlot.main.type"
 system = "SYSTEM_DND_TS"
 price = 250000
@@ -185,9 +202,9 @@ warnIfElectricBelow = 50.0
 [node name="CL600P" parent="VBoxContainer" instance=ExtResource( 8 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 943.0
+margin_top = 1091.0
 margin_right = 1196.0
-margin_bottom = 1013.0
+margin_bottom = 1161.0
 slot = "weaponSlot.main.type"
 system = "SYSTEM_CL600P"
 price = 320000
@@ -197,9 +214,9 @@ warnIfElectricBelow = 600.0
 [node name="DND_HAUL" parent="VBoxContainer" instance=ExtResource( 8 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 1017.0
+margin_top = 1165.0
 margin_right = 1196.0
-margin_bottom = 1087.0
+margin_bottom = 1235.0
 slot = "weaponSlot.main.type"
 system = "SYSTEM_DND_HAUL"
 price = 350000
@@ -209,9 +226,9 @@ warnIfElectricBelow = 50.0
 [node name="DND_FIX" parent="VBoxContainer" instance=ExtResource( 8 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 1091.0
+margin_top = 1239.0
 margin_right = 1196.0
-margin_bottom = 1161.0
+margin_bottom = 1309.0
 slot = "weaponSlot.main.type"
 system = "SYSTEM_DND_FIX"
 price = 400000
@@ -221,9 +238,9 @@ warnIfElectricBelow = 50.0
 [node name="DND_HARVHAUL" parent="VBoxContainer" instance=ExtResource( 8 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 1165.0
+margin_top = 1313.0
 margin_right = 1196.0
-margin_bottom = 1235.0
+margin_bottom = 1383.0
 slot = "weaponSlot.main.type"
 system = "SYSTEM_DND_HARVHAUL"
 manual = "SYSTEM_DND_HAUL_MANUAL"

@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://ships/Eagle-Prospector-Lux.tscn" type="PackedScene" id=1]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/prospector/CargoAuxSlot.tscn" type="PackedScene" id=2]
-[ext_resource path="res://IndustriesOfEnceladusRevamp/weapons/WeaponSlotProspector.tscn" type="PackedScene" id=3]
 
 [node name="Eagle-Lux" instance=ExtResource( 1 )]
 
@@ -19,56 +18,32 @@ visible = false
 [node name="CollisionPolygon2D" parent="CargoHoldAreaHull" index="0"]
 polygon = PoolVector2Array( 30, -246, 30, 8, 68, 92, 30, 116.471, 30, 222, -30, 222, -30, 116, -68, 92, -30, 8, -30, -246 )
 
-[node name="WeaponLeftRepl" parent="." index="20" instance=ExtResource( 3 )]
-position = Vector2( -48, -62 )
-slot = "left"
-toggleCommand = "ship_slot_1"
-
-[node name="WeaponRightRepl" parent="." index="21" instance=ExtResource( 3 )]
-position = Vector2( 48, -62 )
-slot = "right"
-toggleCommand = "ship_slot_2"
-
-[node name="WeaponLeft" parent="." index="22"]
-visible = false
-slot = "REPLACED"
-command = ""
-remove = true
-toggleCommand = ""
-
-[node name="WeaponRight" parent="." index="23"]
-visible = false
-slot = "REPLACED"
-command = ""
-remove = true
-toggleCommand = ""
-
-[node name="CargoBaffles" parent="." index="27"]
+[node name="CargoBaffles" parent="." index="25"]
 visible = false
 slot = "cargo.aux"
 
-[node name="HoldModifiers" parent="." index="29" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/HoldModifiers.tscn"]
+[node name="HoldModifiers" parent="." index="27" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/HoldModifiers.tscn"]
 type = "cargo.modifierDivided"
 
-[node name="MineralProcessingUnit_Bulker" parent="." index="30" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/prospector/MineralProcessingUnit_Bulker.tscn"]
+[node name="MineralProcessingUnit_Bulker" parent="." index="28" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/prospector/MineralProcessingUnit_Bulker.tscn"]
 visible = false
 
-[node name="MineralProcessingUnit_Furnace" parent="." index="31" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/prospector/MineralProcessingUnit_Furnace.tscn"]
+[node name="MineralProcessingUnit_Furnace" parent="." index="29" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/prospector/MineralProcessingUnit_Furnace.tscn"]
 visible = false
 light_mask = 0
 
-[node name="CargoAuxSlot" parent="." index="32" instance=ExtResource( 2 )]
+[node name="CargoAuxSlot" parent="." index="30" instance=ExtResource( 2 )]
 visible = false
 
 [node name="CargoAuxStorProc8K" parent="CargoAuxSlot" index="2"]
 visible = false
 
-[node name="MineralProcessingUnit" parent="." index="33"]
+[node name="MineralProcessingUnit" parent="." index="31"]
 visible = false
 light_mask = 0
 polygon = PoolVector2Array( -24, -46, -19, -36, -14, -12, -22, -4, -22, 12, -10, 24, 10, 24, 22, 12, 22, -4, 14, -12, 19, -36, 24, -46, 24, 32, -24, 32 )
 
-[node name="MineralProcessingUnit_FSO" parent="." index="34"]
+[node name="MineralProcessingUnit_FSO" parent="." index="32"]
 visible = false
 light_mask = 0
 polygon = PoolVector2Array( -24, -212, -22, -208, -20, 8, -12, 18, 12, 18, 20, 8, 22, -208, 24, -212, 24, 28, -24, 28 )
@@ -80,11 +55,11 @@ visible = false
 light_mask = 0
 polygon = PoolVector2Array( -20, 18, 20, 18, 22, -208, -22, -208 )
 
-[node name="MineralProcessingUnit_SMELT" parent="." index="35"]
+[node name="MineralProcessingUnit_SMELT" parent="." index="33"]
 visible = false
 polygon = PoolVector2Array( -24, -66, -16, -60, -12, -28, -18, -22, -18, -4, -10, 4, 10, 4, 18, -4, 18, -22, 12, -28, 16, -60, 24, -66, 24, 32, -24, 32 )
 
-[node name="MineralProcessingUnit_FAB" parent="." index="36"]
+[node name="MineralProcessingUnit_FAB" parent="." index="34"]
 position = Vector2( 0, -4 )
 polygon = PoolVector2Array( -24, -84, -4, -68, 0, -58, 0, -18, -12, -18, -22, -9, -22, 12, -10, 24, 10, 24, 24, 10, 24, 28, -24, 28, -24, -20 )
 
@@ -94,7 +69,7 @@ visible = false
 [node name="CollisionPolygon2D" parent="MineralProcessingUnit_FAB/MineralProcessingUnit" index="0"]
 polygon = PoolVector2Array( -24, 24, 22, 24, 22, -18, -24, -18 )
 
-[node name="AI" parent="." index="38"]
+[node name="AI" parent="." index="36"]
 visible = false
 
 [editable path="engine-main-1"]
