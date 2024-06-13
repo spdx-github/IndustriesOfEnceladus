@@ -101,7 +101,7 @@ upgradeLimits = {
 }
 shipName = "SHIP_OBERON"
 baseShipName = "SHIP_OBERON"
-shipType = "fissionsmall"
+shipType = "fission"
 hullPrice = 1245000
 processedCargoCapacity = 12000
 processedCargoStorageType = "amorphic"

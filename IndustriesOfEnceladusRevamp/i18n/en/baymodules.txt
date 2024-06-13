@@ -8,7 +8,7 @@ SYSTEM_CARGO_AUX_FAB_SPECS|Print power draw: 120 MW \nPrinting capability: drone
 
 SYSTEM_CARGO_AUX_BIGFAB|RMS-PAL Fabricator
 
-SYSTEM_CARGO_AUX_BIGFAB|Rasamama Material Solutions' Portable Assembly Line is a true marvel of automation, incorporating two Class-1 AIs (ARTEMIS and APOLLO) that oversee eachother's work in an adversarial relationship. Its remarkable production speed is entirely owed to the two's constant situational optimisations, and its large output hoppers can be connected to vessels' internal magazines as auxiliary consumable storage units. \n\nDisclaimer: AI specifications comply with Class-1 categorisation as per the Los Angeles Convention of 2184. Neither ARTEMIS nor APOLLO are intended to be capable of sapience or communication. Report any aberrant behaviour to ATLAS immediately.
+SYSTEM_CARGO_AUX_BIGFAB_DESC|Rasamama Material Solutions' Portable Assembly Line is a true marvel of automation, incorporating two Class-1 AIs (ARTEMIS and APOLLO) that oversee eachother's work in an adversarial relationship. Its remarkable production speed is entirely owed to the two's constant situational optimisations, and its large output hoppers can be connected to vessels' internal magazines as auxiliary consumable storage units. \n\nDisclaimer: AI specifications comply with Class-1 categorisation as per the Los Angeles Convention of 2184. Neither ARTEMIS nor APOLLO are intended to be capable of sapience or communication. Report any aberrant behaviour to ATLAS immediately.
 
 SYSTEM_CARGO_AUX_BIGFAB_SPECS|Print power draw: 210 MW \nPrinting capability: drones, ammunition \nAmmunition capacity: 5,000 kg \nDrone capacity: 5,000 kg \nMass: 10,500 kg \nManufacturer: Rasamama Material Solutions
 

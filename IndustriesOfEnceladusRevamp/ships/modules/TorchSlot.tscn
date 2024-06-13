@@ -19,6 +19,7 @@ systemName = "SYSTEM_MAIN_ENGINE_NANI"
 [node name="SYSTEM_MAIN_ENGINE_THUNDER" parent="." index="14" instance_placeholder="res://IndustriesOfEnceladusRevamp/sfx/torch-thunder.tscn"]
 
 [node name="SYSTEM_MAIN_ENGINE_PIN1200" parent="." index="15" instance_placeholder="res://IndustriesOfEnceladusRevamp/sfx/torch-pin1200.tscn"]
+repairReplacementPrice = 1180000
 gimbal = 0.628
 gimbalPerSecond = 25.133
 tuneThrustMax = 1.25

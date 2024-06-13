@@ -141,7 +141,7 @@ radius = 64.0
 [node name="MAD-CERF-Civ" type="RigidBody2D" groups=["ships"]]
 collision_layer = 1042
 collision_mask = 7
-mass = 352.0
+mass = 212.0
 physics_material_override = ExtResource( 22 )
 linear_damp = 0.0
 angular_damp = 0.0
@@ -495,20 +495,20 @@ polygon = PoolVector2Array( 220, -302, 266, -256, 266, -196, 374, -196, 372, 154
 [node name="torch-fore-port" parent="." instance_placeholder="res://ships/modules/TorchSlot.tscn"]
 position = Vector2( -327, -225 )
 rotation = 3.14159
-command = "b"
+command = "bl"
 
 [node name="torch-fore-stbd" parent="." instance_placeholder="res://ships/modules/TorchSlot.tscn"]
 position = Vector2( 327, -225 )
 rotation = 3.14159
-command = "b"
+command = "br"
 
 [node name="torch-aft-port" parent="." instance_placeholder="res://ships/modules/TorchSlot.tscn"]
 position = Vector2( -327, 185 )
-command = "fm"
+command = "fmr"
 
 [node name="torch-aft-stbd" parent="." instance_placeholder="res://ships/modules/TorchSlot.tscn"]
 position = Vector2( 327, 185 )
-command = "fm"
+command = "fml"
 
 [node name="rcs-stbd-fore" parent="." instance=ExtResource( 27 )]
 position = Vector2( 415, -118 )

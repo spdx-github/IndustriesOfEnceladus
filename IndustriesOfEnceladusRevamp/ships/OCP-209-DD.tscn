@@ -4,7 +4,7 @@
 [ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/CargoAuxSlot.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 132.0
+radius = 140.0
 
 [node name="OCP-209-DD" instance=ExtResource( 1 )]
 mass = 186.0
@@ -43,7 +43,7 @@ mirrorCollider = false
 
 [node name="ZoneTop" parent="CargoAuxSlot/CargoAuxPreProc0x30/ProcessingArea" index="0"]
 position = Vector2( 108, -140 )
-polygon = PoolVector2Array( 24, 4, 24, -92, 0, -102, -24, -92, -24, 4, 0, 20 )
+polygon = PoolVector2Array( 24, 4, 32, -20, 32, -84, 24, -104, 0, -112, -24, -104, -32, -84, -32, -20, -24, 4 )
 
 [node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc0x30/ProcessingArea" index="1"]
 visible = false
@@ -62,7 +62,7 @@ mirrorCollider = false
 
 [node name="ZoneTop" parent="CargoAuxSlot/CargoAuxPreProc20x10/ProcessingArea" index="0"]
 position = Vector2( 108, -140 )
-polygon = PoolVector2Array( 24, 4, 24, -92, 0, -102, -24, -92, -24, 4, 0, 20 )
+polygon = PoolVector2Array( 24, 4, 32, -20, 32, -84, 24, -104, 0, -112, -24, -104, -32, -84, -32, -20, -24, 4 )
 __meta__ = {
 "_editor_description_": ""
 }
@@ -71,7 +71,7 @@ __meta__ = {
 visible = false
 disabled = true
 
-[node name="CollisionShape2D" parent="CargoAuxSlot/CargoAuxPreProc20x10/ProcessingArea" index="2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CargoAuxSlot/CargoAuxPreProc20x10/ProcessingArea" index="2"]
 light_mask = 0
 position = Vector2( 108, 0 )
 shape = SubResource( 1 )

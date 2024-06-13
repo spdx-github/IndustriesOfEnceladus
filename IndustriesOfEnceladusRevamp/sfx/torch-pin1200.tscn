@@ -10,12 +10,13 @@
 position = Vector2( 0, 0.15625 )
 scale = Vector2( 1, 1.5 )
 texture = ExtResource( 5 )
-repairReplacementPrice = 580000
+repairReplacementPrice = 1180000
 repairReplacementTime = 4
 repairFixPrice = 36000
 repairFixTime = 8
 exhaustEmitOffset = 16
 wearPowerMaxChance = 0.01
+startJolt = 25000
 thrust = 12000.0
 randomness = 0.01
 minPower = 0.1

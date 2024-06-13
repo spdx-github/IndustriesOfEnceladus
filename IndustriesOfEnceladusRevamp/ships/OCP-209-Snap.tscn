@@ -85,12 +85,14 @@ position = Vector2( -140, 23 )
 rotation = -0.523599
 length = 150.0
 rest_length = 135.0
+damping = 0.75
 
 [node name="Spring 2" parent="Bay" index="5"]
 position = Vector2( -130, 1.00001 )
 rotation = -0.523599
 length = 150.0
 rest_length = 135.0
+damping = 0.75
 
 [node name="Spring 3" type="DampedSpringJoint2D" parent="Bay" index="6"]
 position = Vector2( -130, 0.999992 )
@@ -102,6 +104,7 @@ bias = 0.5
 length = 150.0
 rest_length = 135.0
 stiffness = 64.0
+damping = 0.75
 
 [node name="Spring 4" type="DampedSpringJoint2D" parent="Bay" index="7"]
 position = Vector2( -140, -20 )
@@ -113,6 +116,7 @@ bias = 0.5
 length = 150.0
 rest_length = 135.0
 stiffness = 64.0
+damping = 0.75
 
 [node name="Open" parent="Bay" index="8"]
 stream = ExtResource( 11 )
@@ -128,7 +132,7 @@ rotation = 3.14159
 z_index = -1
 collision_layer = 2
 collision_mask = 7
-mass = 25.0
+mass = 7.5
 physics_material_override = ExtResource( 4 )
 script = ExtResource( 6 )
 
@@ -175,6 +179,9 @@ angular_damp = 0.0
 light_mask = 0
 scale = Vector2( 1, -1 )
 polygon = PoolVector2Array( 38, -141, -36.0003, -127, -80.0003, -101, -118, -60.9997, -145, 0, -140, -39, -124, -75, -102, -103, -73, -126, -37, -141, 2, -145 )
+
+[node name="Bay" parent="Bay" index="11"]
+mass = 7.5
 
 [node name="CargoBaffles" parent="Bay/Bay" index="0"]
 scale = Vector2( 1, -1 )

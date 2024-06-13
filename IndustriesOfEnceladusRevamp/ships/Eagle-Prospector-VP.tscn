@@ -46,11 +46,17 @@ polygon = PoolVector2Array( -24, -30, -12, -22, -20, -14, -20, 44, -12, 64, 12, 
 [node name="CargoAuxSlot" parent="." index="31" instance=ExtResource( 2 )]
 position = Vector2( 0, -136 )
 
+[node name="CargoAuxPreProc0x30" parent="CargoAuxSlot" index="0"]
+visible = false
+
 [node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc0x30/ProcessingArea" index="1"]
-polygon = PoolVector2Array( 22, 0, 16, 164, -16, 164, -22, 0 )
+polygon = PoolVector2Array( 22, 0, 24, 92, 24, 160, -24, 160, -24, 92, -22, 0 )
+
+[node name="CargoAuxPreProc20x10" parent="CargoAuxSlot" index="1"]
+visible = false
 
 [node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc20x10/ProcessingArea" index="1"]
-polygon = PoolVector2Array( 22, 0, 16, 164, -16, 164, -22, 0 )
+polygon = PoolVector2Array( 22, 0, 24, 92, 24, 160, -24, 160, -24, 92, -22, 0 )
 
 [node name="CargoAuxFab" parent="CargoAuxSlot" index="4"]
 position = Vector2( 0, 0 )

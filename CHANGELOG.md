@@ -1,3 +1,10 @@
+# 1.0.1
+ * Bugfixes for the upgrade menu, display architecture is now much more reliable and configurable
+ * Increased RMS Pin-series thruster prices
+ * Added small start jolt to Pin-series
+ * Adjusted hull masses on MAD-CERF, Tsukuyomi, and OCP + variants
+ * Adjusted processing area of MPPs
+ * Fixed RMS-PAL description and name
 # 1.0.0: THE BIG ONE
  * Full reimplementation of features aimed at improved performance and better pipelining for future development
  * Major rework of Upgrades.tscn, expanded UpgradeGroup functionality to target specific ship names

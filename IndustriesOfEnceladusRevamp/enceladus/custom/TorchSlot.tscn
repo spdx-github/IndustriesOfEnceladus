@@ -193,26 +193,12 @@ manual = "SYSTEM_MAIN_ENGINE_MANUAL"
 price = 425000
 testProtocol = "autopilot"
 
-[node name="PIN1200" parent="VBoxContainer" instance=ExtResource( 5 )]
+[node name="NPMP" parent="VBoxContainer" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 858.0
 margin_right = 1214.0
 margin_bottom = 928.0
-slot = "weaponSlot.main.type"
-system = "SYSTEM_MAIN_ENGINE_PIN1200"
-manual = "SYSTEM_MAIN_ENGINE_MANUAL"
-price = 580000
-testProtocol = "autopilot"
-storyFlag = "ringrace"
-storyFlagMin = 1
-
-[node name="NPMP" parent="VBoxContainer" instance=ExtResource( 5 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 932.0
-margin_right = 1214.0
-margin_bottom = 1002.0
 slot = "propulsion.main"
 system = "SYSTEM_MAIN_ENGINE_NPMP"
 manual = "SYSTEM_MAIN_ENGINE_MANUAL"
@@ -225,15 +211,27 @@ warnIfElectricBelow = 200.0
 [node name="ZAP" parent="VBoxContainer" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 1006.0
+margin_top = 932.0
 margin_right = 1214.0
-margin_bottom = 1076.0
+margin_bottom = 1002.0
 slot = "propulsion.main"
 system = "SYSTEM_MAIN_ENGINE_EIZAP"
 price = 1000000
 testProtocol = "autopilot"
 default = true
 warnIfElectricBelow = 150.0
+
+[node name="PIN1200" parent="VBoxContainer" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 1006.0
+margin_right = 1214.0
+margin_bottom = 1076.0
+slot = "weaponSlot.main.type"
+system = "SYSTEM_MAIN_ENGINE_PIN1200"
+manual = "SYSTEM_MAIN_ENGINE_MANUAL"
+price = 1180000
+testProtocol = "autopilot"
 
 [node name="CRACK" parent="VBoxContainer" instance=ExtResource( 5 )]
 anchor_right = 0.0
@@ -244,5 +242,5 @@ margin_bottom = 1150.0
 slot = "weaponSlot.main.type"
 system = "SYSTEM_MAIN_ENGINE_CRACK"
 manual = "SYSTEM_MAIN_ENGINE_MANUAL"
-price = 1375000
+price = 1575000
 testProtocol = "autopilot"

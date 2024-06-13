@@ -7,9 +7,8 @@
 [ext_resource path="res://enceladus/SystemShipUpgradeUI.tscn" type="PackedScene" id=5]
 
 [node name="ThrusterSlot" type="PanelContainer"]
-margin_top = 18111.0
 margin_right = 1228.0
-margin_bottom = 18906.0
+margin_bottom = 868.0
 script = ExtResource( 3 )
 onlyForShipNames = [ "SHIP_TSUKUYOMI_IOT" ]
 invertNameLogic = true
@@ -189,7 +188,7 @@ margin_bottom = 854.0
 slot = "propulsion.rcs"
 system = "SYSTEM_THRUSTER_PIN150"
 manual = "SYSTEM_THRUSTER_MANUAL"
-price = 25000
+price = 31500
 testProtocol = "autopilot"
 warnIfThermalBelow = 1.3
 warnIfElectricBelow = 250.0

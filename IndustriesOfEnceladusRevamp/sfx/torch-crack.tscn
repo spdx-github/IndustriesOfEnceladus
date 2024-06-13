@@ -27,7 +27,7 @@ __meta__ = {
 }
 priorityOffset = 8.0
 mainBrightRatio = 2.0
-repairReplacementPrice = 1375000
+repairReplacementPrice = 1575000
 repairReplacementTime = 48
 repairFixPrice = 50000
 repairFixTime = 24

@@ -508,14 +508,14 @@ default = "SYSTEM_MAIN_ENGINE_NDNTR"
 [node name="thruster-lb" parent="." instance=ExtResource( 11 )]
 position = Vector2( -304, 793 )
 type = "propulsion.rcsLarge"
-command = "fr"
+command = "f"
 default = "SYSTEM_MAIN_ENGINE_NDNTR"
 toggleCommand = ""
 
 [node name="thruster-rb" parent="." instance=ExtResource( 11 )]
 position = Vector2( 304, 793 )
 type = "propulsion.rcsLarge"
-command = "fl"
+command = "f"
 default = "SYSTEM_MAIN_ENGINE_NDNTR"
 toggleCommand = ""
 
@@ -523,7 +523,7 @@ toggleCommand = ""
 position = Vector2( -205, -744 )
 rotation = 2.61799
 type = "propulsion.rcsLarge"
-command = "bl"
+command = "b"
 default = "SYSTEM_MAIN_ENGINE_NDNTR"
 toggleCommand = ""
 
@@ -531,7 +531,7 @@ toggleCommand = ""
 position = Vector2( 205, -744 )
 rotation = -2.61799
 type = "propulsion.rcsLarge"
-command = "br"
+command = "b"
 default = "SYSTEM_MAIN_ENGINE_NDNTR"
 toggleCommand = ""
 
