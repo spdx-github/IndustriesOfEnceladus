@@ -1,6 +1,7 @@
 # 1.0.0: THE BIG ONE
  * Full reimplementation of features aimed at improved performance and better pipelining for future development
  * Major rework of Upgrades.tscn, expanded UpgradeGroup functionality to target specific ship names
+ * Updated nearly every ship collider for (hopefully) better optimisation
  * Added NDDFD engine
  * Added RMS-PAL
 # 0.25.2
