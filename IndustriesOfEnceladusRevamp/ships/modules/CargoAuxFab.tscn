@@ -6,7 +6,7 @@
 [node name="CargoAuxFab" type="CollisionPolygon2D"]
 light_mask = 0
 z_index = 50
-polygon = PoolVector2Array( -32, -52, -4, -26, 0, -16, 0, 12, -14, 12, -22, 20, -22, 34, -32, 48, -32, 6 )
+polygon = PoolVector2Array( 0, -52, 28, -26, 32, -16, 32, 12, 18, 12, 10, 20, 10, 34, 0, 48, 0, 4 )
 script = ExtResource( 2 )
 repairReplacementPrice = 2500000
 repairFixPrice = 50000

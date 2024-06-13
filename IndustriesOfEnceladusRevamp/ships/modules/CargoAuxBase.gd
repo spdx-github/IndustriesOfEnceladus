@@ -10,7 +10,9 @@ export var mass = 1000
 export  var systemName = "SYSTEM_CARGO_AUX"
 export  var slot = "cargo.aux"
 
-export (float, 0, 25000, 1000) var internalStorage = 0.0
+export (float, 0, 25000, 500) var internalStorage = 0.0
+export (float, 0, 25000, 500) var ammoStorage = 0.0
+export (float, 0, 25000, 500) var droneStorage = 0.0
 export  var registerExternal = false
 
 export var mirrorCollider = false
@@ -36,6 +38,9 @@ func _ready():
 			ship.processedCargoCapacity += internalStorage * 6
 		else:
 			ship.processedCargoCapacity += internalStorage
+		
+		ship.massDriverAmmo += ammoStorage
+		ship.droneParts += droneStorage
 		
 		extend(ship)
 			

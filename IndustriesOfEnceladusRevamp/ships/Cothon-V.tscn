@@ -58,8 +58,6 @@ polygon = PoolVector2Array( -44, 14, -12, -4, -4, 0, -14, 12, -44, 18 )
 type = "cargo.modifierDivided"
 
 [node name="CargoAuxSlot" parent="." index="23" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/cothon/CargoAuxSlot.tscn"]
-visible = false
-position = Vector2( 0, -218 )
 
 [node name="MineralProcessingUnit_Bulker" parent="." index="24" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/cothon/MineralProcessingUnit_Bulker.tscn"]
 visible = false

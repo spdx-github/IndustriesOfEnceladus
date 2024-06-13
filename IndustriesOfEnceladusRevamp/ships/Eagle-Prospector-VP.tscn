@@ -33,6 +33,7 @@ visible = false
 slot = "cargo.aux"
 
 [node name="HoldModifiers" parent="." index="28" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/HoldModifiers.tscn"]
+visible = false
 type = "cargo.modifierDivided"
 
 [node name="MineralProcessingUnit_Bulker" parent="." index="29" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/prospector/MineralProcessingUnit_Bulker.tscn"]
@@ -40,9 +41,10 @@ visible = false
 
 [node name="MineralProcessingUnit_Furnace" parent="." index="30" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/prospector/MineralProcessingUnit_Furnace.tscn"]
 light_mask = 0
+polygon = PoolVector2Array( -24, -30, -12, -22, -20, -14, -20, 44, -12, 64, 12, 64, 20, 44, 20, -14, 12, -22, 24, -30, 24, 66, -24, 66 )
 
 [node name="CargoAuxSlot" parent="." index="31" instance=ExtResource( 2 )]
-position = Vector2( 0, -148 )
+position = Vector2( 0, -136 )
 
 [node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc0x30/ProcessingArea" index="1"]
 polygon = PoolVector2Array( 22, 0, 16, 164, -16, 164, -22, 0 )
@@ -50,10 +52,8 @@ polygon = PoolVector2Array( 22, 0, 16, 164, -16, 164, -22, 0 )
 [node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc20x10/ProcessingArea" index="1"]
 polygon = PoolVector2Array( 22, 0, 16, 164, -16, 164, -22, 0 )
 
-[node name="CargoAuxStorProc8K" parent="CargoAuxSlot" index="2"]
-visible = false
-
 [node name="CargoAuxFab" parent="CargoAuxSlot" index="4"]
+position = Vector2( 0, 0 )
 polygon = PoolVector2Array( -24, -20, -4, -4, 0, 6, 0, 28, -6, 40, -14, 40, -18, 44, -18, 58, -24, 72 )
 
 [node name="MineralProcessingUnit" parent="." index="32"]

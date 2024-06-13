@@ -64,6 +64,9 @@ rotation = -2.61799
 position = Vector2( -139, -70 )
 rotation = 2.61799
 
+[node name="CargoAuxSlot" parent="." index="28"]
+visible = true
+
 [node name="MineralProcessingUnit_Bulker" parent="." index="29"]
 position = Vector2( 0, 0 )
 

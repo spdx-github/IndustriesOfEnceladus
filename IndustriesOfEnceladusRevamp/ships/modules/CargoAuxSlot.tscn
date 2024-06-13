@@ -30,7 +30,12 @@ polygon = PoolVector2Array( 16, -28, 24, 22, -24, 22, -16, -28 )
 [node name="CargoAuxStorage4K" parent="." instance=ExtResource( 2 )]
 
 [node name="CargoAuxFab" parent="." instance=ExtResource( 6 )]
-polygon = PoolVector2Array( -32, -32, -4, -4, -4, 32, -16, 32, -22, 38, -22, 54, -32, 64, -32, 24 )
+position = Vector2( -32, 0 )
+polygon = PoolVector2Array( 0, -32, 28, -12, 32, -4, 32, 30, 18, 30, 10, 40, 10, 52, 0, 64, 0, 24 )
+
+[node name="CargoAuxBigFab" parent="." instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/CargoAuxBigFab.tscn"]
+position = Vector2( -32, 0 )
+polygon = PoolVector2Array( 0, -32, 16, -32, 32, -28, 32, 38, 24, 40, 18, 40, 16, 46, 10, 48, 10, 60, 0, 72, 0, 32 )
 
 [editable path="CargoAuxPreProc0x30"]
 [editable path="CargoAuxPreProc20x10"]

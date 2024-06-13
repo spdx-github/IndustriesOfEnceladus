@@ -84,20 +84,11 @@ polygon = PoolVector2Array( -25, 24, 23, 24, 23, -18, -25, -18 )
 
 [node name="CargoAuxSlot" parent="." index="33" instance=ExtResource( 2 )]
 
-[node name="CargoAuxPreProc0x30" parent="CargoAuxSlot" index="0"]
-visible = false
-
-[node name="CargoAuxPreProc20x10" parent="CargoAuxSlot" index="1"]
-visible = false
-
-[node name="CargoAuxStorProc8K" parent="CargoAuxSlot" index="2"]
-visible = false
-
-[node name="CargoAuxStorage4K" parent="CargoAuxSlot" index="3"]
-visible = false
-
 [node name="CargoAuxFab" parent="CargoAuxSlot" index="4"]
 visible = false
+
+[node name="CargoAuxBigFab" parent="CargoAuxSlot" index="5"]
+polygon = PoolVector2Array( 0, -14, 14, -30, 14, -22, 32, -2, 32, 46, 24, 48, 18, 48, 16, 54, 10, 56, 10, 68, 0, 82, 0, 36 )
 
 [node name="AI" parent="." index="44"]
 visible = false

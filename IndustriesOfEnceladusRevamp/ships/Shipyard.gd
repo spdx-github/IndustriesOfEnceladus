@@ -11,17 +11,18 @@ var hardOverrides = {
 }
 
 var shipReplacementPaths = {
-	"AT225-B": "ATK225-B",
+	"AT225-B": "ATK225-B", # custom aux modules
 	"AT225-R": "ATK225-R",
 	"AT225": "ATK225",
-	"COTHON-CHK":"Cothon-CHK",
-	"COTHON-LND":"Cothon-Lnd",
-	"COTHON-V":"Cothon-V",
-	"COTHON":"Cothon",
-	"EIME":"EIME",
-	"OCP209":"ocp-209",
+	"COTHON-CHK": "Cothon-CHK", # custom aux modules
+	"COTHON-LND": "Cothon-Lnd",
+	"COTHON-V": "Cothon-V",
+	"COTHON": "Cothon",
+	"EIME": "EIME",
+	"KITSUNE": "kitsune",
+	"OCP209": "ocp-209",
 	"PROSPECTOR-BALD": "Eagle-Prospector-Bald",
-	"PROSPECTOR-FAT": "Eagle-Prospector-Fat",
+	"PROSPECTOR-FAT": "Eagle-Prospector-Fat", # custom aux modules
 	"PROSPECTOR-LUX": "Eagle-Prospector-Lux",
 	"PROSPECTOR-VP": "Eagle-Prospector-VP",
 	"PROSPECTOR": "Eagle-Prospector",
@@ -34,10 +35,10 @@ var shipReplacementPaths = {
 
 var newShipNames = {
 	"Cothon-Lux": "COTHON",
-	"Tsukuyomi-Decom": "TSUKUYOMI",
-	"OCP-209-DD": "OCP209",
+	"Tsukuyomi-Decom": "TSUKUYOMI", # custom aux modules
+	"OCP-209-DD": "OCP209", # custom aux modules
 	"OCP-209-Snap": "OCP209",
-	"MAD-CERF-Civ": "MADCERF",
+	"MAD-CERF-Civ": "MADCERF", # custom aux modules
 	"Oberon": "OBERON"
 }
 

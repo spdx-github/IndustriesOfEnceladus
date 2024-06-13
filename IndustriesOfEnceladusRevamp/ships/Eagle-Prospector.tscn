@@ -33,13 +33,9 @@ type = "cargo.modifierDivided"
 visible = false
 
 [node name="MineralProcessingUnit_Furnace" parent="." index="29" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/prospector/MineralProcessingUnit_Furnace.tscn"]
-visible = false
 light_mask = 0
 
 [node name="CargoAuxSlot" parent="." index="30" instance=ExtResource( 2 )]
-
-[node name="CargoAuxStorProc8K" parent="CargoAuxSlot" index="2"]
-visible = false
 
 [node name="MineralProcessingUnit" parent="." index="31"]
 visible = false

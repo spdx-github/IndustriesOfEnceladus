@@ -109,8 +109,12 @@ visible = false
 polygon = PoolVector2Array( -8, 14, -8, -32, 4, -32, 4, -2 )
 
 [node name="CargoAuxFab" parent="CargoAuxSlot" index="4"]
-visible = false
-polygon = PoolVector2Array( -40, -32, -24, -32, -12, -16, -8, -2, -8, 30, -24, 30, -30, 36, -30, 54, -40, 70, -40, 26 )
+position = Vector2( -40, 0 )
+polygon = PoolVector2Array( 0, -32, 16, -32, 32, -4, 32, 30, 18, 30, 10, 40, 10, 52, 0, 64, 0, 4 )
+
+[node name="CargoAuxBigFab" parent="CargoAuxSlot" index="5"]
+position = Vector2( -40, 0 )
+polygon = PoolVector2Array( 0, -32, 16, -32, 24, -30, 32, -24, 36, -16, 36, 38, 24, 40, 18, 40, 16, 46, 10, 48, 10, 60, 0, 72, 0, 4 )
 
 [editable path="Front Bumper"]
 [editable path="engine-main-1"]

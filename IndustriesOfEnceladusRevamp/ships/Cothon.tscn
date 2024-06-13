@@ -71,8 +71,6 @@ polygon = PoolVector2Array( -44, 14, -12, -4, -4, 0, -14, 12, -44, 18 )
 type = "cargo.modifierDivided"
 
 [node name="CargoAuxSlot" parent="." index="23" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/cothon/CargoAuxSlot.tscn"]
-visible = false
-position = Vector2( 0, -218 )
 
 [node name="MineralProcessingUnit_Bulker" parent="." index="24" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/cothon/MineralProcessingUnit_Bulker.tscn"]
 visible = false
@@ -97,7 +95,6 @@ light_mask = 0
 polygon = PoolVector2Array( -44, -80, -16, -60, -12, -28, -18, -22, -18, -4, -10, 4, 10, 4, 18, -4, 18, -22, 12, -28, 16, -60, 44, -80, 44, -32, 34, 16, 28, 44, -0.217682, 44, -28, 44, -34, 18, -44, -32 )
 
 [node name="MineralProcessingUnit_FAB" parent="." index="29"]
-visible = true
 polygon = PoolVector2Array( -44, -96, -6, -58, -2, -50, 0, -42, 0, -18, -16, -18, -24, -10, -24, 14, -14, 24, 14, 24, 24, 12, 24, -40, 26, -58, 44, -96, 44, -32, 34, 18, 28, 44, -28, 44, -34, 18, -40, -8, -44, -32 )
 
 [node name="CollisionPolygon2D" parent="MineralProcessingUnit_FAB/MineralProcessingUnit" index="0"]

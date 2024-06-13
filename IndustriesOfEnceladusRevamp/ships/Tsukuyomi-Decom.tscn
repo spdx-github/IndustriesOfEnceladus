@@ -138,6 +138,7 @@ colliderPaths = [ "Collider", "NacelleTip" ]
 dialogTree = NodePath("UberConversation")
 iffWeight = 5.0
 cargoHoldArea = Rect2( -120, -1300, 240, 900 )
+cargoHoldOffset = Vector2( 0, -600 )
 
 [node name="ShipCamera" parent="." instance=ExtResource( 3 )]
 minZoomOut = 2.0
@@ -824,6 +825,10 @@ polygon = PoolVector2Array( -18, 17, -18, -17, -8, -11, -8, 11 )
 visible = false
 position = Vector2( -66, 0 )
 polygon = PoolVector2Array( -22, -8, -22, 32, -32, 32, -40, 40, -40, 56, -50, 72, -50, 40, -50, 24, -50, -36 )
+
+[node name="CargoAuxBigFab" parent="CargoAuxSlot" index="5"]
+visible = false
+position = Vector2( -84, 0 )
 
 [node name="MineralProcessingUnit" parent="." instance=ExtResource( 33 )]
 visible = false
