@@ -11,19 +11,19 @@ __meta__ = {
 }
 
 [node name="ZoneTop" parent="CargoAuxPreProc0x30/ProcessingArea" index="0"]
-polygon = PoolVector2Array( 26, 0, 0, -28, -26, 0 )
+polygon = PoolVector2Array( 32, 0, 0, -28, -32, 0 )
 
 [node name="ZoneBottom" parent="CargoAuxPreProc0x30/ProcessingArea" index="1"]
-polygon = PoolVector2Array( 26, 0, 32, 55, 32, 95, 20, 123, -20, 123, -32, 95, -32, 55, -26, 0 )
+polygon = PoolVector2Array( 32, 0, 32, 95, 20, 123, -20, 123, -32, 95, -32, 0 )
 
 [node name="CargoAuxPreProc20x10" parent="." index="1"]
 polygon = PoolVector2Array( 0, 20, 0, -2, 10, -16, 16, -6, 16, 6, 10, 16 )
 
 [node name="ZoneTop" parent="CargoAuxPreProc20x10/ProcessingArea" index="0"]
-polygon = PoolVector2Array( 26, 0, 0, -28, -26, 0 )
+polygon = PoolVector2Array( 32, 0, 0, -28, -32, 0 )
 
 [node name="ZoneBottom" parent="CargoAuxPreProc20x10/ProcessingArea" index="1"]
-polygon = PoolVector2Array( 26, 0, 32, 55, 32, 95, 20, 123, -20, 123, -32, 95, -32, 55, -26, 0 )
+polygon = PoolVector2Array( 32, 0, 32, 95, 20, 123, -20, 123, -32, 95, -32, 0 )
 
 [node name="CargoAuxStorProc8K" parent="." index="2"]
 visible = false

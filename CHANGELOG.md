@@ -1,3 +1,7 @@
+# 1.1.0: THE RAM
+ * Added TNTRL KX37-RAM
+ * Thickened sliding bay doors on CERF and Tsukuyomi
+ * Fixed RMS-PAL print time
 # 1.0.1
  * Bugfixes for the upgrade menu, display architecture is now much more reliable and configurable
  * Increased RMS Pin-series thruster prices

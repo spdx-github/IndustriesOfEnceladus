@@ -8,6 +8,7 @@ func _ready():
 		"Oberon",
 		"OCP-209-DD",
 		"OCP-209-Snap",
+		"TRTL-Ram",
 		"Tsukuyomi-Decom",
 	]
 	

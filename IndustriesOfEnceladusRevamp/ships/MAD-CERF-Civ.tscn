@@ -206,7 +206,7 @@ script = ExtResource( 35 )
 registerExternal = true
 
 [node name="LeftSpringJoint" type="DampedSpringJoint2D" parent="BigHatch"]
-position = Vector2( -150, -9 )
+position = Vector2( -150, -11 )
 rotation = -1.5708
 node_a = NodePath("../..")
 node_b = NodePath("../Claw Left")
@@ -229,7 +229,6 @@ stiffness = 64.0
 position = Vector2( -9, 0 )
 collision_layer = 2
 collision_mask = 7
-mass = 0.4
 physics_material_override = ExtResource( 18 )
 script = ExtResource( 10 )
 pinned = false
@@ -237,7 +236,7 @@ pinned = false
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BigHatch/Claw Left"]
 light_mask = 0
 position = Vector2( 9, 21 )
-polygon = PoolVector2Array( -102, -24, -8, -24, -8, -22, 6, -18, 6, -16, -110, -16 )
+polygon = PoolVector2Array( -102, -30, -8, -30, -8, -26, 6, -16, 6, -12, -16, -12, -110, -12, -110, -22 )
 
 [node name="LeftGrooveJointTop" type="GrooveJoint2D" parent="BigHatch/Claw Left"]
 position = Vector2( -111, -25 )
@@ -258,7 +257,7 @@ length = 120.0
 initial_offset = 110.0
 
 [node name="RightSpringJoint" type="DampedSpringJoint2D" parent="BigHatch"]
-position = Vector2( 150, -9 )
+position = Vector2( 150, -11 )
 rotation = 1.5708
 node_a = NodePath("../..")
 node_b = NodePath("../Claw Right")
@@ -281,7 +280,6 @@ stiffness = 64.0
 position = Vector2( 9, 0 )
 collision_layer = 2
 collision_mask = 7
-mass = 0.4
 physics_material_override = ExtResource( 18 )
 script = ExtResource( 10 )
 pinned = false
@@ -289,7 +287,7 @@ pinned = false
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BigHatch/Claw Right"]
 light_mask = 0
 position = Vector2( -9, 21 )
-polygon = PoolVector2Array( -6, -24, 102, -24, 110, -16, 8, -16, 8, -18, -6, -22 )
+polygon = PoolVector2Array( -6, -30, 16, -30, 104, -30, 112, -22, 112, -12, 8, -12, 8, -16, -6, -26 )
 
 [node name="RightGrooveJointTop" type="GrooveJoint2D" parent="BigHatch/Claw Right"]
 position = Vector2( 111, -25 )
@@ -455,7 +453,7 @@ offset = Vector2( 0, 25 )
 [node name="Collider" type="CollisionPolygon2D" parent="."]
 light_mask = 0
 z_index = 100
-polygon = PoolVector2Array( 70, -306, 222, -306, 270, -256, 270, -200, 378, -200, 378, -86, 394, -60, 394, 20, 378, 46, 378, 160, 278, 160, 270, 156, 240, 156, 240, 116, 110, 116, 100, 110, 100, 104, 240, 104, 240, -150, 40, -150, 30, -160, 30, -240, 20, -250, -20, -250, -30, -240, -30, -160, -40, -150, -240, -150, -240, 104, -100, 104, -100, 110, -110, 116, -240, 116, -240, 156, -270, 156, -278, 160, -378, 160, -378, 46, -394, 20, -394, -60, -378, -86, -378, -200, -270, -200, -270, -256, -222, -306, -70, -306 )
+polygon = PoolVector2Array( 222, -306, 270, -256, 270, -200, 378, -200, 378, -86, 394, -60, 394, 20, 378, 46, 378, 96, 378, 160, 278, 160, 270, 156, 240, 156, 240, 120, 110, 120, 100, 110, 100, 90, 106, 90, 110, 96, 240, 96, 240, 46, 240, -86, 240, -150, 40, -150, 30, -160, 30, -240, 20, -250, -20, -250, -30, -240, -30, -160, -40, -150, -240, -150, -240, -86, -240, 46, -240, 96, -110, 96, -106, 90, -100, 90, -100, 110, -110, 120, -240, 120, -240, 156, -270, 156, -278, 160, -378, 160, -378, 96, -378, 46, -394, 20, -394, -60, -378, -86, -378, -200, -270, -200, -270, -256, -222, -306, -104, -306, -20, -306, 20, -306, 104, -306 )
 
 [node name="Cabin" type="CollisionShape2D" parent="."]
 light_mask = 0
@@ -475,7 +473,7 @@ angular_damp = 0.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CargoHoldArea"]
 light_mask = 0
-polygon = PoolVector2Array( -246, -156, -44, -156, -36, -164, -36, -244, -24, -256, 24, -256, 36, -244, 36, -164, 44, -156, 246, -156, 246, 110, 110, 110, 108, 114, -108, 114, -110, 110, -246, 110 )
+polygon = PoolVector2Array( -246, -156, -44, -156, -36, -164, -36, -244, -24, -256, 24, -256, 36, -244, 36, -164, 44, -156, 246, -156, 246, 110, 110, 110, 110, 120, -110, 120, -110, 110, -246, 110 )
 
 [node name="CargoHoldAreaHull" type="Area2D" parent="."]
 visible = false
@@ -490,7 +488,7 @@ angular_damp = 0.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CargoHoldAreaHull"]
 light_mask = 0
-polygon = PoolVector2Array( 220, -302, 266, -256, 266, -196, 374, -196, 372, 154, 282, 154, 240, 110, -240, 110, -280, 156, -372, 156, -374, -196, -266, -196, -266, -256, -220, -302 )
+polygon = PoolVector2Array( 220, -302, 266, -256, 266, -196, 374, -196, 374, 154, 282, 154, 240, 110, -240, 110, -280, 156, -374, 156, -374, -196, -266, -196, -266, -256, -220, -302 )
 
 [node name="torch-fore-port" parent="." instance_placeholder="res://ships/modules/TorchSlot.tscn"]
 position = Vector2( -327, -225 )

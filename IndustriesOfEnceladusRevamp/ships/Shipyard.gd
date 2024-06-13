@@ -35,11 +35,12 @@ var shipReplacementPaths = {
 
 var newShipNames = {
 	"Cothon-Lux": "COTHON",
-	"Tsukuyomi-Decom": "TSUKUYOMI", # custom aux modules
+	"MAD-CERF-Civ": "MADCERF", # custom aux modules
 	"OCP-209-DD": "OCP209", # custom aux modules
 	"OCP-209-Snap": "OCP209",
-	"MAD-CERF-Civ": "MADCERF", # custom aux modules
-	"Oberon": "OBERON"
+	"Oberon": "OBERON",
+	"TRTL-Ram": "RA-TRTL-Ram",
+	"Tsukuyomi-Decom": "TSUKUYOMI", # custom aux modules
 }
 
 var shipConfigs = {

@@ -58,14 +58,17 @@ position = Vector2( 0, 9 )
 [node name="CargoAuxSlot" parent="." index="32" instance=ExtResource( 2 )]
 position = Vector2( 0, -95 )
 
+[node name="CargoAuxPreProc0x30" parent="CargoAuxSlot" index="0"]
+visible = false
+
 [node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc0x30/ProcessingArea" index="1"]
-polygon = PoolVector2Array( 26, 0, 32, 86, 32, 118, 20, 146, -20, 146, -32, 118, -32, 86, -26, 0 )
+polygon = PoolVector2Array( 32, 0, 32, 118, 20, 146, -20, 146, -32, 118, -32, 0 )
 
 [node name="CargoAuxPreProc20x10" parent="CargoAuxSlot" index="1"]
 visible = false
 
 [node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc20x10/ProcessingArea" index="1"]
-polygon = PoolVector2Array( 26, 0, 32, 86, 32, 118, 20, 146, -20, 146, -32, 118, -32, 86, -26, 0 )
+polygon = PoolVector2Array( 32, 0, 32, 118, 20, 146, -20, 146, -32, 118, -32, 0 )
 
 [node name="AI" parent="." index="35"]
 visible = false
