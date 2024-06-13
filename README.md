@@ -14,6 +14,7 @@
  - OCP-207-SNAP: adds a unique Pacman-style jaw excavator to the 209 and has some funny sound effects, no autopilot assist
  - Tsukuyomi-class Frigate (Decommissioned): has a ton of hardpoints, torch RCS, and is very heavy. technically demilitarised but you can totally make it into a horrific murder machine
  - UMC Oberon MLP-60: entirely custom ship with textures graciously provided by Liqvo! dandy little racing vessel with utterly ridiculous performance
+ - KX37 TNTRL RAM: Ringa Aftermarket Modification variant of the KX37, has a grinder and an extra pair of thrusters, plus heavy layout reconfigurations. Heavily inspired by redditor BLKCandy and their custom KX37 mod!
 	
 ### Engines
  - SSE NANI Torch Refit: it's the NANI in a torch slot. Have fun
