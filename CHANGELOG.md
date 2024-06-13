@@ -1,3 +1,5 @@
+# 1.1.1
+ * Fixed RMS-PAL not showing in ships
 # 1.1.0: THE RAM
  * Added TNTRL KX37-RAM
  * Thickened sliding bay doors on CERF and Tsukuyomi
