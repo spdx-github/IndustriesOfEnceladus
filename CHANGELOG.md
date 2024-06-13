@@ -1,3 +1,5 @@
+# 1.1.2
+ * Fixed amorphic modules not being offered on the RAM
 # 1.1.1
  * Fixed RMS-PAL not showing in ships
 # 1.1.0: THE RAM

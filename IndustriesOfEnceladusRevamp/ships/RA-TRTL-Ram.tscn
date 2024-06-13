@@ -126,6 +126,9 @@ z_index = 22
 slot = "rightDrone"
 toggleCommand = "ship_slot_5"
 
+[node name="HoldModifiers" parent="." index="30"]
+type = "cargo.modifierAmorphic"
+
 [node name="Hud" parent="." index="41"]
 repairReplacementPrice = 4500
 repairReplacementTime = 2
