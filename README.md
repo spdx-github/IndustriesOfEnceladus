@@ -2,7 +2,10 @@
 
 ## Features
 ### Changes
- - Adds four docking bays to the OCP-209 (extends to the DD variant)
+ - Adds four docking bays to the OCP-209 (extends to the DD and SNAP variants)
+ - Reworks all ship colliders in the interest of better performance
+ - Subcolliders (MPUs and cargo baffles) too
+ - Extends some default functionalities on the backend like a ship-name filter on UpgradeGroups and removal of hard caps on drone tuning
 
 ### Ships
  - SSE Cothon-2200-XL: expands crew space to 6, increases flight comfort, adds a set of left-right translatory thrusters and optimises the manual firing binds
@@ -18,6 +21,7 @@
  - RA-TNTRL-R44: quad torch, literally just the K44 RCS thrusters on a torch mount
  - RA-K69V Quad Engine: custom-made quad torch, same as above but it's the K69Vs and they fucking gimbal
  - RMS Pin-M200: super efficient and gimbal like the C50 but requires a comically impractical amount of power
+ - NDDFD: Directed Fusion Detonation. highest specific impulse in the game, ridiculously powerful but extreme energy demands
 
 ### Thrusters
  - RMS Pin-C50: extremely efficient pulsed induction thruster that has incredible gimbal range and second-to-none wear statistics but has very high power demand
@@ -60,6 +64,7 @@
  - Nakamura Big MT: somewhat bulky ore preprocessor, does the same thing as the RP-25 but faster and less efficient, increases MPU mineral efficiency though
  - THI Mineral Tank Module: bulky storage module that increases mineral hold space and behaves kind of like an ore preprocessor since it's warm
  - SSE Voyager Fabricator: literally just the Voyager RSLS Fabrication Plant but without the mineral processor
+ - RMS-PAL: a much better fabricator that produces at a faster rate than both the fabricator MPU and aux module combined
 
 ### Mineral Hold Kits
  - Both amorphic and divided holds are supported
