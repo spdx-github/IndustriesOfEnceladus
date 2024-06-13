@@ -144,11 +144,12 @@ systemName = "SYSTEM_REACTOR_TNTRL_FORT"
 
 [editable path="Front Bumper"]
 [editable path="Grinder"]
+[editable path="MineralProcessingUnit_FAB"]
 [editable path="CargoAuxSlot"]
 [editable path="CargoAuxSlot/CargoAuxPreProc0x30"]
 [editable path="CargoAuxSlot/CargoAuxPreProc20x10"]
 [editable path="CargoAuxSlot/CargoAuxStorProc8K"]
 [editable path="CargoAuxSlot/CargoAuxStorage4K"]
 [editable path="CargoAuxSlot/CargoAuxFab"]
-[editable path="MineralProcessingUnit_FAB"]
+[editable path="CargoAuxSlot/CargoAuxBigFab"]
 [editable path="AI"]

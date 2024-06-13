@@ -977,6 +977,7 @@ shadow_item_cull_mask = 3
 [editable path="CargoAuxSlot/CargoAuxStorProc8K"]
 [editable path="CargoAuxSlot/CargoAuxStorage4K"]
 [editable path="CargoAuxSlot/CargoAuxFab"]
+[editable path="CargoAuxSlot/CargoAuxBigFab"]
 [editable path="MineralProcessingUnit_FAB"]
 [editable path="MineralProcessingUnit_FSO"]
 [editable path="MineralProcessingUnit_SMELT"]
