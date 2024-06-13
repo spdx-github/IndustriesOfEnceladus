@@ -12,7 +12,7 @@
 [ext_resource path="res://ships/modules/nozzle.tscn" type="PackedScene" id=10]
 
 [node name="SYSTEM_MAIN_ENGINE_CRACK" type="Sprite"]
-self_modulate = Color( 1, 0.0784314, 0.572549, 1 )
+self_modulate = Color( 1, 0, 0.537255, 1 )
 light_mask = 0
 position = Vector2( 0, -22 )
 scale = Vector2( 0.6, 1 )
@@ -31,7 +31,7 @@ repairReplacementPrice = 1575000
 repairReplacementTime = 48
 repairFixPrice = 50000
 repairFixTime = 24
-distanceScale = 800
+distanceScale = 300
 accelerationFailLimit = 600
 accelerationFailScale = 400
 thrust = 18000.0
@@ -76,14 +76,14 @@ pitch_scale = 12.0
 bus = "SFX"
 
 [node name="Flare" type="Light2D" parent="."]
-position = Vector2( -16.1281, 158.002 )
+position = Vector2( 0.00255591, 86 )
 rotation = 9.58465e-05
 scale = Vector2( 6, 4 )
 texture = ExtResource( 7 )
 texture_scale = 8.0
-color = Color( 0.615686, 0.192157, 1, 1 )
+color = Color( 1, 0.592157, 0.92549, 1 )
 energy = 24.0
-range_height = -15.0
+range_height = 5.0
 range_z_min = -4096
 range_z_max = 4096
 range_layer_min = -1

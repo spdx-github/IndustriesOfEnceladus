@@ -8,7 +8,7 @@
 
 [node name="SYSTEM_MAIN_ENGINE_PIN1200" instance=ExtResource( 1 )]
 position = Vector2( 0, 0.15625 )
-scale = Vector2( 1, 1.5 )
+scale = Vector2( 0.6, 1 )
 texture = ExtResource( 5 )
 repairReplacementPrice = 1180000
 repairReplacementTime = 4

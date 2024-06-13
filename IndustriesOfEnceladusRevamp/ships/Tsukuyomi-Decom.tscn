@@ -148,9 +148,10 @@ maxZoomOut = 6.0
 [node name="Collider" type="CollisionPolygon2D" parent="."]
 light_mask = 0
 z_index = 50
-polygon = PoolVector2Array( -206, -1242, -136, -1242, -92, -1242, -88, -1238, -88, -1222, -116, -1202, -116, -1040, -116, -842, -40, -722, -40, -600, -40, -442, 40, -442, 40, -600, 40, -722, 116, -842, 116, -1040, 116, -1202, 88, -1222, 88, -1238, 92, -1242, 144, -1242, 206, -1242, 206, -1030, 192, -994, 192, -780, 218, -720, 218, -606, 190, -568, 190, -370, 150, -224, 150, -182, 332, -112, 346, -66, 352, 40, 260, 80, 260, 260, 364, 300, 364, 690, 352, 790, -352, 790, -364, 700, -364, 300, -260, 260, -260, 80, -352, 40, -346, -58, -332, -112, -150, -182, -150, -224, -190, -370, -190, -568, -218, -602, -218, -720, -190, -780, -192, -994, -206, -1030 )
+polygon = PoolVector2Array( -206, -1242, -92, -1242, -88, -1238, -88, -1222, -116, -1202, -116, -1040, -116, -842, -40, -722, -40, -600, -40, -442, 40, -442, 40, -600, 40, -722, 116, -842, 116, -1040, 116, -1202, 88, -1222, 88, -1238, 92, -1242, 206, -1242, 206, -1030, 192, -994, 192, -780, 218, -720, 218, -606, 190, -568, 190, -370, 150, -224, 150, -182, 332, -112, 346, -66, 352, 40, 260, 80, 260, 260, 364, 300, 364, 690, 352, 790, -352, 790, -364, 700, -364, 300, -260, 260, -260, 80, -352, 40, -346, -58, -332, -112, -150, -182, -150, -224, -190, -370, -190, -568, -218, -602, -218, -720, -190, -780, -192, -994, -206, -1030 )
 
 [node name="NacelleTip" type="CollisionShape2D" parent="."]
+visible = false
 light_mask = 0
 position = Vector2( 0, -96 )
 rotation = 1.5708
@@ -207,6 +208,7 @@ script = ExtResource( 38 )
 registerExternal = true
 
 [node name="LeftSpringJoint" type="DampedSpringJoint2D" parent="BigHatch"]
+visible = false
 position = Vector2( -150, -11 )
 rotation = -1.5708
 node_a = NodePath("../..")
@@ -217,6 +219,7 @@ rest_length = 140.0
 stiffness = 64.0
 
 [node name="LeftSpringJoint2" type="DampedSpringJoint2D" parent="BigHatch"]
+visible = false
 position = Vector2( -150, 11 )
 rotation = -1.5708
 node_a = NodePath("../..")
@@ -240,6 +243,7 @@ position = Vector2( 9, 21 )
 polygon = PoolVector2Array( -96, -28, -8, -28, -8, -24, 6, -18, 6, -14, -12, -14, -96, -14 )
 
 [node name="LeftGrooveJointTop" type="GrooveJoint2D" parent="BigHatch/Claw Left"]
+visible = false
 position = Vector2( -111, -25 )
 rotation = -1.5708
 node_a = NodePath("../../..")
@@ -249,6 +253,7 @@ length = 120.0
 initial_offset = 110.0
 
 [node name="LeftGrooveJointBottom" type="GrooveJoint2D" parent="BigHatch/Claw Left"]
+visible = false
 position = Vector2( -111, 25 )
 rotation = -1.5708
 node_a = NodePath("../../..")
@@ -258,6 +263,7 @@ length = 120.0
 initial_offset = 110.0
 
 [node name="RightSpringJoint" type="DampedSpringJoint2D" parent="BigHatch"]
+visible = false
 position = Vector2( 150, -11 )
 rotation = 1.5708
 node_a = NodePath("../..")
@@ -268,6 +274,7 @@ rest_length = 140.0
 stiffness = 64.0
 
 [node name="RightSpringJoint2" type="DampedSpringJoint2D" parent="BigHatch"]
+visible = false
 position = Vector2( 150, 11 )
 rotation = 1.5708
 node_a = NodePath("../..")
@@ -291,6 +298,7 @@ position = Vector2( -9, 21 )
 polygon = PoolVector2Array( -6, -28, 12, -28, 96, -28, 96, -14, 8, -14, 8, -18, -6, -24 )
 
 [node name="RightGrooveJointTop" type="GrooveJoint2D" parent="BigHatch/Claw Right"]
+visible = false
 position = Vector2( 111, -25 )
 rotation = 1.5708
 node_a = NodePath("../../..")
@@ -300,6 +308,7 @@ length = 120.0
 initial_offset = 110.0
 
 [node name="RightGrooveJointBottom" type="GrooveJoint2D" parent="BigHatch/Claw Right"]
+visible = false
 position = Vector2( 111, 25 )
 rotation = 1.5708
 node_a = NodePath("../../..")
@@ -334,7 +343,7 @@ position = Vector2( 0, 81 )
 rotation = 3.14159
 texture = ExtResource( 43 )
 texture_scale = 4.0
-color = Color( 1, 0.607843, 0.105882, 1 )
+color = Color( 0.733333, 1, 0.980392, 1 )
 energy = 10.0
 range_height = 200.0
 range_z_min = -4096
@@ -702,6 +711,7 @@ temperatureMax = 3500
 region_rect = Rect2( 812, 765, 177, 200 )
 
 [node name="Light2D" type="Light2D" parent="."]
+visible = false
 material = SubResource( 3 )
 position = Vector2( -32, -238.33 )
 editor_only = true
@@ -710,6 +720,7 @@ energy = 5.0
 range_height = 50.0
 
 [node name="Light2D2" type="Light2D" parent="."]
+visible = false
 position = Vector2( 348, -46.3298 )
 editor_only = true
 texture = ExtResource( 12 )
@@ -778,22 +789,24 @@ position = Vector2( 98, 0 )
 polygon = PoolVector2Array( 112, 0, 88, -52, 0, -68, -96, -52, -112, 0 )
 
 [node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc0x30/ProcessingArea" index="1"]
-polygon = PoolVector2Array( 112, 0, 104, 304, 32, 424, 32, 700, -32, 700, -32, 424, -104, 304, -112, 0 )
+polygon = PoolVector2Array( 112, 0, 116, 84, 116, 306, 40, 426, 40, 706, -40, 706, -40, 426, -116, 306, -116, 84, -112, 0 )
 
 [node name="CargoAuxPreProc20x10" parent="CargoAuxSlot" index="1"]
 visible = false
 light_mask = 0
 position = Vector2( -98, 0 )
-polygon = PoolVector2Array( -12, 19, -12, 25, -18, 25, -18, 1, -18, -25, -12, -25, -12, -19, -8, -19, 0, -15, 6, -5, 6, 5, 0, 15, -8, 19 )
+polygon = PoolVector2Array( -12, 25, -14, 30, -18, 30, -18, 20, -18, -20, -18, -30, -14, -30, -12, -25, -2, -22, 4, -16, 8, -4, 8, 4, 4, 16, -2, 22 )
 
 [node name="ProcessingArea" parent="CargoAuxSlot/CargoAuxPreProc20x10" index="0"]
 position = Vector2( 98, 0 )
 
 [node name="ZoneTop" parent="CargoAuxSlot/CargoAuxPreProc20x10/ProcessingArea" index="0"]
+light_mask = 0
 polygon = PoolVector2Array( 112, 0, 88, -52, 0, -68, -96, -52, -112, 0 )
 
 [node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc20x10/ProcessingArea" index="1"]
-polygon = PoolVector2Array( 112, 0, 104, 304, 32, 424, 32, 700, -32, 700, -32, 424, -104, 304, -112, 0 )
+light_mask = 0
+polygon = PoolVector2Array( 112, 0, 116, 84, 116, 306, 40, 426, 40, 706, -40, 706, -40, 426, -116, 306, -116, 84, -112, 0 )
 
 [node name="CargoAuxStorProc8K" parent="CargoAuxSlot" index="2"]
 visible = false
@@ -923,6 +936,7 @@ light_mask = 7
 position = Vector2( 0, -20 )
 texture = ExtResource( 43 )
 texture_scale = 12.0
+color = Color( 0.788235, 0.941176, 1, 1 )
 energy = 12.0
 range_height = 20.0
 range_z_min = -4096

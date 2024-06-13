@@ -39,7 +39,7 @@ var newShipNames = {
 	"OCP-209-DD": "OCP209", # custom aux modules
 	"OCP-209-Snap": "OCP209",
 	"Oberon": "OBERON",
-	"TRTL-Ram": "RA-TRTL-Ram",
+	"RA-TRTL-Ram": "TRTL",
 	"Tsukuyomi-Decom": "TSUKUYOMI", # custom aux modules
 }
 
@@ -220,28 +220,57 @@ var shipConfigs = {
 			"rightBayRev1":{"type":"SYSTEM_NONE"},
 		},
 	}},
+	"RA-TRTL-Ram": {"config": {
+		"ammo":{
+			"capacity": 1000.0, 
+			"initial": 1000.0, 
+		}, 
+		"autopilot":{"type":"SYSTEM_AUTOPILOT_MK2"}, 
+		"capacitor":{"capacity": 500.0}, 
+		"cargo":{
+			"equipment":"SYSTEM_CARGO_STANDARD",
+			"modifierDivided":"SYSTEM_CARGO_MOD_2K"
+		},
+		"fuel":{
+			"capacity": 30000.0, 
+			"initial": 30000.0, 
+		}, 
+		"propulsion":{
+			"main":"SYSTEM_MAIN_ENGINE_PNTR", 
+			"rcs":"SYSTEM_THRUSTER_NDSTR"
+		}, 
+		"reactor":{	"power": 8.0},
+		"shielding":{"emp": 100},  
+		"turbine":{"power": 200.0}, 
+		"weaponSlot":{
+			"main": {"type":"SYSTEM_NONE"},
+			"right":{"type":"SYSTEM_EMD14"}, 
+			"left":{"type":"SYSTEM_EMD14"}
+		}, 
+	}},
 	"Tsukuyomi-Decom": {"config": {
 		"ammo":{
-			"capacity":5000.0, 
+			"capacity":50000.0, 
 			"initial":5000.0, 
 		}, 
 		"autopilot":{
-			"type":"SYSTEM_AUTOPILOT_MK2"
+			"type":"SYSTEM_AUTOPILOT_MK3"
 		}, 
 		"capacitor":{
-				"capacity":1000.0
+				"capacity":1500.0,
+				"initial":1500.0
 		}, 
 		"cargo":{
-			"equipment":"SYSTEM_CARGO_STANDARD",
+			"equipment":"SYSTEM_CARGO_MPU",
 			"aux":"SYSTEM_NONE",
 			"modifierDivided":"SYSTEM_CARGO_MOD_2K"
 		},
 		"drones":{
 			"initial":0.0, 
-			"capacity":0.0, 
+			"capacity":50000.0, 
 		}, 
 		"fuel":{
-			"capacity":200000.0, 
+			"capacity":500000.0, 
 			"initial":200000.0
 		}, 
 		"propulsion":{
@@ -255,8 +284,6 @@ var shipConfigs = {
 			"power":500.0
 		}, 
 		"weaponSlot":{
-			"mainLeft":{"type":"SYSTEM_NONE"}, 
-			"mainRight":{"type":"SYSTEM_NONE"}, 
 			"tubeLeftUp":{"type":"SYSTEM_NONE"}, 
 			"tubeRightUp":{"type":"SYSTEM_NONE"}, 
 			"tubeLeftDn":{"type":"SYSTEM_NONE"}, 
@@ -272,53 +299,49 @@ var shipConfigs = {
 }
 
 var shipConfigsUsed = {
-	"Cothon-Lux": [
-		{
-			"weaponSlot":{
-				"left":{"type":"SYSTEM_MWG"},
-				"right":{"type":"SYSTEM_MWG"},
-			},
-			"ammo":{
-				"capacity": 0,
-				"initial": 0,
-			}
-		}, {
-			"weaponSlot":{
-				"left":{"type":"SYSTEM_PDMWG"},
-				"right":{"type":"SYSTEM_PDMWG"}, 
-			},
-			"ammo":{
-				"capacity": 0,
-				"initial": 0,
-			}
-		}, {
-			"weaponSlot":{
-				
-			},
-		}
-	],
+	"Cothon-Lux": usedShipConfigs["COTHON"],
 	"MAD-CERF-Civ": [
 		
 	],
 	"Oberon": [
 		
 	],
-	"OCP-209-DD": [
-		
-	],
-	"OCP-209-Snap": [
-		
-	],
+	"OCP-209-DD": usedShipConfigs["OCP209"],
+	"OCP-209-Snap": usedShipConfigs["OCP209"],
+	"RA-TRTL-Ram": usedShipConfigs["TRTL"],
 	"Tsukuyomi-Decom": [
 		{
 			"weaponSlot": {
 				"turretLeft":"SYSTEM_PDMWG",
 				"turretRight":"SYSTEM_PDMWG"
 			},
+			"autopilot": {
+				"type":"SYSTEM_AUTOPILOT_MK2"
+			},
 			"cargo": {
 				"equipment":"SYSTEM_CARGO_MPUFSO",
 				"aux":"SYSTEM_CARGO_AUX_PREPROC_A"
 			}
+		},
+		{
+			"autopilot": {
+				"type":"SYSTEM_AUTOPILOT_NONE"
+			},
+			"cargo": {
+				"equipment":"SYSTEM_CARGO_MPU_FURN",
+				"aux":"SYSTEM_CARGO_STORAGE_4K"
+			},
+			"drones":{
+				"capacity": 10000.0,
+				"initial":4523.6
+			}, 
+			"weaponSlot": {
+				"main": "SYSTEM_SALVAGE_ARM_HEAVY",
+				"tubeLeftDn": "SYSTEM_DND_HAUL",
+				"tubeRightDn": "SYSTEM_DND_HAUL",
+				"turretLeft": "SYSTEM_PDMWG",
+				"turretRight": "SYSTEM_PDMWG",
+			},
 		}
 	],
 }
@@ -358,6 +381,7 @@ var phantomVars = {
 		320.0: 1200,
 	},
 }
+
 func _ready():
 	for key in hardOverrides.keys():
 		ships[key] = hardOverrides[key]
@@ -373,8 +397,7 @@ func _ready():
 			[modName, shipReplacementPaths[key]]
 		)
 		ships[key] = replacementShip.duplicate()
-	
-	
+		
 	for key in newShipNames.keys():
 		# make sure we're not accidentally overriding the... hard override. lol
 		if not (key in hardOverrides.keys()):
