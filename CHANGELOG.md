@@ -1,3 +1,5 @@
+# 1.1.3
+ * Fixed MPUs not showing up on a bunch of ships (wow i'm really sorry christ)
 # 1.1.2
  * Fixed amorphic modules not being offered on the RAM
 # 1.1.1

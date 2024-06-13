@@ -8,9 +8,10 @@
 script = ExtResource( 2 )
 slot = "weaponSlot.main.type"
 always = false
+onlyForShipModels = [  ]
+invertModelLogic = false
 onlyForShipNames = [  ]
 invertNameLogic = false
-evaluateNamesFirst = true
 
 [node name="VBoxContainer" parent="." index="0"]
 margin_bottom = 3087.0
@@ -184,12 +185,32 @@ margin_top = 1905.0
 margin_right = 1226.0
 margin_bottom = 1975.0
 
-[node name="MWTIGHTBEAM_PDT" parent="VBoxContainer" index="29" instance=ExtResource( 3 )]
+[node name="PDMWG" parent="VBoxContainer" index="29"]
+margin_top = 1979.0
+margin_bottom = 2049.0
+
+[node name="PDMWG-L" parent="VBoxContainer" index="30"]
+margin_top = 2053.0
+margin_bottom = 2123.0
+
+[node name="PDMWG-R" parent="VBoxContainer" index="31"]
+margin_top = 2127.0
+margin_bottom = 2197.0
+
+[node name="ACL200P" parent="VBoxContainer" index="32"]
+margin_top = 2201.0
+margin_bottom = 2271.0
+
+[node name="DND_TS" parent="VBoxContainer" index="33"]
+margin_top = 2275.0
+margin_bottom = 2345.0
+
+[node name="MWTIGHTBEAM_PDT" parent="VBoxContainer" index="34" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 1979.0
+margin_top = 2349.0
 margin_right = 1226.0
-margin_bottom = 2049.0
+margin_bottom = 2419.0
 __meta__ = {
 "_editor_description_": ""
 }
@@ -198,12 +219,12 @@ system = "SYSTEM_MWTIGHTBEAM_PDT"
 manual = "SYSTEM_PDMWG_MANUAL"
 price = 265000
 
-[node name="MWTIGHTBEAM_PDT-L" parent="VBoxContainer" index="30" instance=ExtResource( 3 )]
+[node name="MWTIGHTBEAM_PDT-L" parent="VBoxContainer" index="35" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 2053.0
+margin_top = 2423.0
 margin_right = 1226.0
-margin_bottom = 2123.0
+margin_bottom = 2493.0
 __meta__ = {
 "_editor_description_": ""
 }
@@ -213,12 +234,12 @@ nameOverride = "SYSTEM_MWTIGHTBEAM_PDT"
 manual = "SYSTEM_PDMWG_MANUAL"
 price = 265000
 
-[node name="MWTIGHTBEAM_PDT-R" parent="VBoxContainer" index="31" instance=ExtResource( 3 )]
+[node name="MWTIGHTBEAM_PDT-R" parent="VBoxContainer" index="36" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 2127.0
+margin_top = 2497.0
 margin_right = 1226.0
-margin_bottom = 2197.0
+margin_bottom = 2567.0
 __meta__ = {
 "_editor_description_": ""
 }
@@ -227,26 +248,6 @@ system = "SYSTEM_MWTIGHTBEAM_PDT-R"
 nameOverride = "SYSTEM_MWTIGHTBEAM_PDT"
 manual = "SYSTEM_PDMWG_MANUAL"
 price = 265000
-
-[node name="PDMWG" parent="VBoxContainer" index="32"]
-margin_top = 2201.0
-margin_bottom = 2271.0
-
-[node name="PDMWG-L" parent="VBoxContainer" index="33"]
-margin_top = 2275.0
-margin_bottom = 2345.0
-
-[node name="PDMWG-R" parent="VBoxContainer" index="34"]
-margin_top = 2349.0
-margin_bottom = 2419.0
-
-[node name="ACL200P" parent="VBoxContainer" index="35"]
-margin_top = 2423.0
-margin_bottom = 2493.0
-
-[node name="DND_TS" parent="VBoxContainer" index="36"]
-margin_top = 2497.0
-margin_bottom = 2567.0
 
 [node name="SYNCHRO-L" parent="VBoxContainer" index="37"]
 visible = true
