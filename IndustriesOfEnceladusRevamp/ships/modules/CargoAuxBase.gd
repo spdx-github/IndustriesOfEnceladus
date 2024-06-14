@@ -39,8 +39,8 @@ func _ready():
 		else:
 			ship.processedCargoCapacity += internalStorage
 		
-		ship.massDriverAmmo += ammoStorage
-		ship.droneParts += droneStorage
+		ship.massDriverAmmoMax = ship.getConfig("ammo.capacity") + ammoStorage
+		ship.dronePartsMax = ship.getConfig("drones.capacity") + droneStorage
 		
 		extend(ship)
 			
