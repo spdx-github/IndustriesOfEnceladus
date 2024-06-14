@@ -62,16 +62,16 @@ extraGimbal = 0.087
 extraGimbal = 0.175
 
 [node name="thruster-lt" parent="." index="12"]
-position = Vector2( -73, -194 )
+position = Vector2( -73, -193 )
 rotation = 2.35619
 extraGimbal = 0.175
-command = "bl"
+command = "br>"
 
 [node name="thruster-rt" parent="." index="13"]
 position = Vector2( 73, -194 )
 rotation = -2.35619
 extraGimbal = 0.175
-command = "bl"
+command = "bl<"
 
 [node name="thruster-rb" parent="." index="14"]
 extraGimbal = 0.175

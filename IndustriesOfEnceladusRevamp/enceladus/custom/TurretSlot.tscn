@@ -4,7 +4,6 @@
 
 [node name="TurretSlot" instance=ExtResource( 1 )]
 slot = "weaponSlot.turret.type"
-evaluateNamesFirst = true
 
 [node name="VBoxContainer" parent="." index="0"]
 margin_bottom = 645.0
@@ -134,71 +133,76 @@ visible = false
 margin_top = 351.0
 margin_bottom = 421.0
 
-[node name="MWTIGHTBEAM_PDT" parent="VBoxContainer" index="29"]
+[node name="MWTIGHTBEAM" parent="VBoxContainer" index="29"]
+visible = false
 margin_top = 203.0
 margin_bottom = 273.0
 
-[node name="MWTIGHTBEAM_PDT-L" parent="VBoxContainer" index="30"]
-visible = false
-margin_top = 425.0
-margin_bottom = 495.0
+[node name="PDMWG" parent="VBoxContainer" index="30"]
+margin_top = 203.0
+margin_bottom = 273.0
 
-[node name="MWTIGHTBEAM_PDT-R" parent="VBoxContainer" index="31"]
-visible = false
-margin_top = 425.0
-margin_bottom = 495.0
-
-[node name="PDMWG" parent="VBoxContainer" index="32"]
-margin_top = 277.0
-margin_bottom = 347.0
-
-[node name="PDMWG-L" parent="VBoxContainer" index="33"]
+[node name="PDMWG-L" parent="VBoxContainer" index="31"]
 visible = false
 margin_top = 499.0
 margin_bottom = 569.0
 
-[node name="PDMWG-R" parent="VBoxContainer" index="34"]
+[node name="PDMWG-R" parent="VBoxContainer" index="32"]
 visible = false
 margin_top = 499.0
 margin_bottom = 569.0
 
-[node name="ACL200P" parent="VBoxContainer" index="35"]
+[node name="ACL200P" parent="VBoxContainer" index="33"]
 visible = false
 margin_top = 573.0
 margin_bottom = 643.0
 
-[node name="DND_TS" parent="VBoxContainer" index="36"]
+[node name="DND_TS" parent="VBoxContainer" index="34"]
+margin_top = 277.0
+margin_bottom = 347.0
+
+[node name="MWTIGHTBEAM_PDT" parent="VBoxContainer" index="35"]
 margin_top = 351.0
 margin_bottom = 421.0
 
-[node name="SYNCHRO-L" parent="VBoxContainer" index="37"]
+[node name="MWTIGHTBEAM_PDT-L" parent="VBoxContainer" index="36"]
 visible = false
-margin_top = 647.0
-margin_bottom = 717.0
-
-[node name="SYNCHRO-R" parent="VBoxContainer" index="38"]
-visible = false
-margin_top = 647.0
-margin_bottom = 717.0
-
-[node name="NANI" parent="VBoxContainer" index="39"]
-visible = false
-margin_top = 869.0
-margin_bottom = 939.0
-
-[node name="CL600P" parent="VBoxContainer" index="40"]
-visible = false
-margin_top = 869.0
-margin_bottom = 939.0
-
-[node name="DND_HAUL" parent="VBoxContainer" index="41"]
 margin_top = 425.0
 margin_bottom = 495.0
 
-[node name="DND_FIX" parent="VBoxContainer" index="42"]
+[node name="MWTIGHTBEAM_PDT-R" parent="VBoxContainer" index="37"]
+visible = false
+margin_top = 425.0
+margin_bottom = 495.0
+
+[node name="SYNCHRO-L" parent="VBoxContainer" index="38"]
+visible = false
+margin_top = 647.0
+margin_bottom = 717.0
+
+[node name="SYNCHRO-R" parent="VBoxContainer" index="39"]
+visible = false
+margin_top = 647.0
+margin_bottom = 717.0
+
+[node name="NANI" parent="VBoxContainer" index="40"]
+visible = false
+margin_top = 869.0
+margin_bottom = 939.0
+
+[node name="CL600P" parent="VBoxContainer" index="41"]
+visible = false
+margin_top = 869.0
+margin_bottom = 939.0
+
+[node name="DND_HAUL" parent="VBoxContainer" index="42"]
+margin_top = 425.0
+margin_bottom = 495.0
+
+[node name="DND_FIX" parent="VBoxContainer" index="43"]
 margin_top = 499.0
 margin_bottom = 569.0
 
-[node name="DND_HARVHAUL" parent="VBoxContainer" index="43"]
+[node name="DND_HARVHAUL" parent="VBoxContainer" index="44"]
 margin_top = 573.0
 margin_bottom = 643.0

@@ -6,7 +6,7 @@
 slot = "weaponSlot.drone.type"
 
 [node name="VBoxContainer" parent="." index="0"]
-margin_bottom = 349.0
+margin_bottom = 423.0
 
 [node name="CheckButton" parent="VBoxContainer/HBoxContainer" index="0"]
 text = "SLOT_DRONE"
@@ -65,35 +65,31 @@ visible = false
 [node name="SALVAGE_HEAVY" parent="VBoxContainer" index="19"]
 visible = false
 
-[node name="EXODYN-L" parent="VBoxContainer" index="20"]
+[node name="EXODYN-L" parent="VBoxContainer" index="22"]
 visible = false
 
-[node name="EXODYN-R" parent="VBoxContainer" index="21"]
+[node name="EXODYN-R" parent="VBoxContainer" index="23"]
 visible = false
 
-[node name="PDT" parent="VBoxContainer" index="22"]
+[node name="PDT" parent="VBoxContainer" index="24"]
 visible = false
 
-[node name="PDT-L" parent="VBoxContainer" index="23"]
+[node name="PDT-L" parent="VBoxContainer" index="25"]
 visible = false
 
-[node name="PDT-R" parent="VBoxContainer" index="24"]
+[node name="PDT-R" parent="VBoxContainer" index="26"]
 visible = false
 
-[node name="CL150" parent="VBoxContainer" index="25"]
+[node name="CL150" parent="VBoxContainer" index="27"]
 visible = false
 
-[node name="IROH" parent="VBoxContainer" index="26"]
+[node name="IROH" parent="VBoxContainer" index="28"]
 visible = false
 
-[node name="MWTIGHTBEAM_PDT" parent="VBoxContainer" index="27"]
+[node name="MWTIGHTBEAM" parent="VBoxContainer" index="29"]
 visible = false
-
-[node name="MWTIGHTBEAM_PDT-L" parent="VBoxContainer" index="28"]
-visible = false
-
-[node name="MWTIGHTBEAM_PDT-R" parent="VBoxContainer" index="29"]
-visible = false
+margin_top = 129.0
+margin_bottom = 199.0
 
 [node name="PDMWG" parent="VBoxContainer" index="30"]
 visible = false
@@ -111,22 +107,35 @@ visible = false
 margin_top = 129.0
 margin_bottom = 199.0
 
-[node name="SYNCHRO-L" parent="VBoxContainer" index="35"]
+[node name="MWTIGHTBEAM_PDT" parent="VBoxContainer" index="35"]
 visible = false
 
-[node name="SYNCHRO-R" parent="VBoxContainer" index="36"]
+[node name="MWTIGHTBEAM_PDT-L" parent="VBoxContainer" index="36"]
 visible = false
 
-[node name="NANI" parent="VBoxContainer" index="37"]
+[node name="MWTIGHTBEAM_PDT-R" parent="VBoxContainer" index="37"]
 visible = false
 
-[node name="CL600P" parent="VBoxContainer" index="38"]
+[node name="SYNCHRO-L" parent="VBoxContainer" index="38"]
 visible = false
 
-[node name="DND_HAUL" parent="VBoxContainer" index="39"]
+[node name="SYNCHRO-R" parent="VBoxContainer" index="39"]
+visible = false
+
+[node name="NANI" parent="VBoxContainer" index="40"]
+visible = false
+
+[node name="CL600P" parent="VBoxContainer" index="41"]
+visible = false
+
+[node name="DND_HAUL" parent="VBoxContainer" index="42"]
 margin_top = 203.0
 margin_bottom = 273.0
 
-[node name="DND_FIX" parent="VBoxContainer" index="40"]
+[node name="DND_FIX" parent="VBoxContainer" index="43"]
 margin_top = 277.0
 margin_bottom = 347.0
+
+[node name="DND_HARVHAUL" parent="VBoxContainer" index="44"]
+margin_top = 351.0
+margin_bottom = 421.0

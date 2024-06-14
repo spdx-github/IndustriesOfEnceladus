@@ -4754,18 +4754,18 @@ margin_bottom = 421.0
 margin_top = 44747.0
 margin_bottom = 45394.0
 always = true
-onlyForShipNames = [ "SHIP_PROSPECTOR_BALD", "SHIP_KITSUNE", "SHIP_TRTL_T", "SHIP_TRTL_R", "SHIP_EIME", "SHIP_OCP209", "SHIP_OCP209_DD", "SHIP_OCP209_SNAP" ]
+onlyForShipNames = [ "SHIP_PROSPECTOR_BALD", "SHIP_KITSUNE", "SHIP_TRTL_T", "SHIP_TRTL_R", "SHIP_EIME", "SHIP_OCP209", "SHIP_OCP209_SNAP" ]
 
 [node name="CargoEquipment" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="67" instance=ExtResource( 2 )]
 margin_top = 45398.0
 margin_bottom = 45971.0
 slot = "cargo.equipment"
-onlyForShipNames = [ "SHIP_PROSPECTOR_BALD", "SHIP_KITSUNE", "SHIP_TRTL_T", "SHIP_TRTL_R", "SHIP_EIME", "SHIP_OCP209", "SHIP_OCP209_DD", "SHIP_OCP209_SNAP" ]
+onlyForShipNames = [ "SHIP_PROSPECTOR_BALD", "SHIP_KITSUNE", "SHIP_TRTL_T", "SHIP_TRTL_R", "SHIP_EIME", "SHIP_OCP209", "SHIP_OCP209_SNAP" ]
 
 [node name="CargoAccessories" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="68" instance=ExtResource( 3 )]
 margin_top = 45975.0
 margin_bottom = 46622.0
-onlyForShipNames = [ "SHIP_PROSPECTOR_BALD", "SHIP_KITSUNE", "SHIP_TRTL_T", "SHIP_TRTL_R", "SHIP_EIME", "SHIP_OCP209", "SHIP_OCP209_DD", "SHIP_OCP209_SNAP" ]
+onlyForShipNames = [ "SHIP_PROSPECTOR_BALD", "SHIP_KITSUNE", "SHIP_TRTL_T", "SHIP_TRTL_R", "SHIP_EIME", "SHIP_OCP209", "SHIP_OCP209_SNAP" ]
 
 [node name="Autopilot" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="69"]
 margin_top = 46626.0

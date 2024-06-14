@@ -14,7 +14,7 @@ onlyForShipNames = [  ]
 invertNameLogic = false
 
 [node name="VBoxContainer" parent="." index="0"]
-margin_bottom = 3087.0
+margin_bottom = 3161.0
 
 [node name="HUNK-L" parent="VBoxContainer" index="2"]
 visible = true
@@ -185,41 +185,41 @@ margin_top = 1905.0
 margin_right = 1226.0
 margin_bottom = 1975.0
 
-[node name="PDMWG" parent="VBoxContainer" index="29"]
-margin_top = 1979.0
-margin_bottom = 2049.0
-
-[node name="PDMWG-L" parent="VBoxContainer" index="30"]
-margin_top = 2053.0
-margin_bottom = 2123.0
-
-[node name="PDMWG-R" parent="VBoxContainer" index="31"]
-margin_top = 2127.0
-margin_bottom = 2197.0
-
-[node name="ACL200P" parent="VBoxContainer" index="32"]
-margin_top = 2201.0
-margin_bottom = 2271.0
-
-[node name="DND_TS" parent="VBoxContainer" index="33"]
-margin_top = 2275.0
-margin_bottom = 2345.0
-
-[node name="MWTIGHTBEAM_PDT" parent="VBoxContainer" index="34" instance=ExtResource( 3 )]
+[node name="MWTIGHTBEAM" parent="VBoxContainer" index="29" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 2349.0
+margin_top = 1979.0
 margin_right = 1226.0
-margin_bottom = 2419.0
+margin_bottom = 2049.0
 __meta__ = {
 "_editor_description_": ""
 }
 slot = "weaponSlot.main.type"
-system = "SYSTEM_MWTIGHTBEAM_PDT"
-manual = "SYSTEM_PDMWG_MANUAL"
-price = 265000
+system = "SYSTEM_MWTIGHTBEAM"
+manual = "SYSTEM_MWG_MANUAL"
+price = 165000
 
-[node name="MWTIGHTBEAM_PDT-L" parent="VBoxContainer" index="35" instance=ExtResource( 3 )]
+[node name="PDMWG" parent="VBoxContainer" index="30"]
+margin_top = 2053.0
+margin_bottom = 2123.0
+
+[node name="PDMWG-L" parent="VBoxContainer" index="31"]
+margin_top = 2127.0
+margin_bottom = 2197.0
+
+[node name="PDMWG-R" parent="VBoxContainer" index="32"]
+margin_top = 2201.0
+margin_bottom = 2271.0
+
+[node name="ACL200P" parent="VBoxContainer" index="33"]
+margin_top = 2275.0
+margin_bottom = 2345.0
+
+[node name="DND_TS" parent="VBoxContainer" index="34"]
+margin_top = 2349.0
+margin_bottom = 2419.0
+
+[node name="MWTIGHTBEAM_PDT" parent="VBoxContainer" index="35" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 2423.0
@@ -229,12 +229,11 @@ __meta__ = {
 "_editor_description_": ""
 }
 slot = "weaponSlot.main.type"
-system = "SYSTEM_MWTIGHTBEAM_PDT-L"
-nameOverride = "SYSTEM_MWTIGHTBEAM_PDT"
+system = "SYSTEM_MWTIGHTBEAM_PDT"
 manual = "SYSTEM_PDMWG_MANUAL"
 price = 265000
 
-[node name="MWTIGHTBEAM_PDT-R" parent="VBoxContainer" index="36" instance=ExtResource( 3 )]
+[node name="MWTIGHTBEAM_PDT-L" parent="VBoxContainer" index="36" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 2497.0
@@ -244,47 +243,62 @@ __meta__ = {
 "_editor_description_": ""
 }
 slot = "weaponSlot.main.type"
+system = "SYSTEM_MWTIGHTBEAM_PDT-L"
+nameOverride = "SYSTEM_MWTIGHTBEAM_PDT"
+manual = "SYSTEM_PDMWG_MANUAL"
+price = 265000
+
+[node name="MWTIGHTBEAM_PDT-R" parent="VBoxContainer" index="37" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 2571.0
+margin_right = 1226.0
+margin_bottom = 2641.0
+__meta__ = {
+"_editor_description_": ""
+}
+slot = "weaponSlot.main.type"
 system = "SYSTEM_MWTIGHTBEAM_PDT-R"
 nameOverride = "SYSTEM_MWTIGHTBEAM_PDT"
 manual = "SYSTEM_PDMWG_MANUAL"
 price = 265000
 
-[node name="SYNCHRO-L" parent="VBoxContainer" index="37"]
-visible = true
-margin_top = 2571.0
-margin_right = 1226.0
-margin_bottom = 2641.0
-
-[node name="SYNCHRO-R" parent="VBoxContainer" index="38"]
+[node name="SYNCHRO-L" parent="VBoxContainer" index="38"]
 visible = true
 margin_top = 2645.0
 margin_right = 1226.0
 margin_bottom = 2715.0
 
-[node name="NANI" parent="VBoxContainer" index="39"]
+[node name="SYNCHRO-R" parent="VBoxContainer" index="39"]
 visible = true
 margin_top = 2719.0
 margin_right = 1226.0
 margin_bottom = 2789.0
 
-[node name="CL600P" parent="VBoxContainer" index="40"]
+[node name="NANI" parent="VBoxContainer" index="40"]
+visible = true
 margin_top = 2793.0
+margin_right = 1226.0
 margin_bottom = 2863.0
 
-[node name="DND_HAUL" parent="VBoxContainer" index="41"]
+[node name="CL600P" parent="VBoxContainer" index="41"]
 margin_top = 2867.0
 margin_bottom = 2937.0
 
-[node name="DND_FIX" parent="VBoxContainer" index="42"]
+[node name="DND_HAUL" parent="VBoxContainer" index="42"]
 margin_top = 2941.0
 margin_bottom = 3011.0
 
-[node name="DND_HARVHAUL" parent="VBoxContainer" index="43" instance=ExtResource( 3 )]
+[node name="DND_FIX" parent="VBoxContainer" index="43"]
+margin_top = 3015.0
+margin_bottom = 3085.0
+
+[node name="DND_HARVHAUL" parent="VBoxContainer" index="44" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 3015.0
+margin_top = 3089.0
 margin_right = 1226.0
-margin_bottom = 3085.0
+margin_bottom = 3159.0
 slot = "weaponSlot.main.type"
 system = "SYSTEM_DND_HARVHAUL"
 manual = "SYSTEM_DND_HAUL_MANUAL"

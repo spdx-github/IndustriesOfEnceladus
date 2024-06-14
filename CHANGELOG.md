@@ -1,3 +1,10 @@
+# 1.1.4
+ * Fixed SNAP cargo bay behaviour
+ * Fixed RA MPU Mk2 not showing in the OCPs
+ * Fixed cargo bay accessories not being available in the DD
+ * Fixed DMW Cannon not having a fixed variant
+ * Fixed DMW Cannon Turret position in vendor
+ * Adjusted RAM firing groups
 # 1.1.3
  * Fixed MPUs not showing up on a bunch of ships (wow i'm really sorry christ)
 # 1.1.2

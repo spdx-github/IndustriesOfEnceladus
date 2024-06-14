@@ -36,7 +36,7 @@ shader_param/charges = ExtResource( 3 )
 shader_param/map = ExtResource( 7 )
 
 [node name="OCP-209-Snap" instance=ExtResource( 1 )]
-mass = 179.0
+mass = 150.0
 shipName = "SHIP_OCP209_SNAP"
 hullPrice = 360000
 autopilotRotationPartOffsetPath = NodePath("")
@@ -132,7 +132,7 @@ rotation = 3.14159
 z_index = -1
 collision_layer = 2
 collision_mask = 7
-mass = 7.5
+mass = 18.0
 physics_material_override = ExtResource( 4 )
 script = ExtResource( 6 )
 
@@ -181,7 +181,7 @@ scale = Vector2( 1, -1 )
 polygon = PoolVector2Array( 38, -141, -36.0003, -127, -80.0003, -101, -118, -60.9997, -145, 0, -140, -39, -124, -75, -102, -103, -73, -126, -37, -141, 2, -145 )
 
 [node name="Bay" parent="Bay" index="11"]
-mass = 7.5
+mass = 18.0
 
 [node name="CargoBaffles" parent="Bay/Bay" index="0"]
 scale = Vector2( 1, -1 )
@@ -213,34 +213,11 @@ polygon = PoolVector2Array( 38, -141, -36.0003, -127, -80.0003, -101, -118, -60.
 [node name="Collider" parent="." index="6"]
 polygon = PoolVector2Array( 92, -282, 92, -140, 82, -121, 70, -121, 36, -135, 0, -140, -36, -135, -70, -121, -99, -99, -121, -70, -135, -36, -140, 0, -135, 37, -121, 70, -99, 99, -70, 121, -36, 135, 0, 140, 37, 135, 70, 121, 84, 125, 90, 137, 90, 215, 86, 229, 74, 239, 60, 241, 60, 369, 40, 386, 46, 396, 30, 446, -30, 446, -46, 396, -40, 386, -52, 378, -70, 378, -70, 240, -86, 230, -90, 215, -90, 137, -83, 125, -106, 107, -131, 75, -146, 39, -151, 0, -146, -39, -131, -75, -107, -106, -82.6822, -124.924, -92, -140, -92, -282, -72, -284, 0.00810242, -284, 72, -284 )
 
-[node name="SYSTEM_ACTEMD14" parent="WeaponHardTop" index="19"]
-pivotPath = NodePath("Pivot")
-weaponPath = NodePath("Pivot/massdriver")
-audioPath = NodePath("Actuation")
-lightPath = NodePath("Pivot/Light")
-
-[node name="SYSTEM_ACL200P" parent="WeaponHardTop" index="20"]
-weaponPath = NodePath("Pivot/laster-pulse")
-
-[node name="SYSTEM_ACTEMD14" parent="WeaponHardRight" index="19"]
-pivotPath = NodePath("Pivot")
-weaponPath = NodePath("Pivot/massdriver")
-audioPath = NodePath("Actuation")
-lightPath = NodePath("Pivot/Light")
-
-[node name="SYSTEM_ACL200P" parent="WeaponHardRight" index="20"]
-weaponPath = NodePath("Pivot/laster-pulse")
-
 [node name="MineralProcessingUnit_Furnace" parent="." index="35"]
-removeThis = true
+visible = true
 
 [connection signal="body_entered" from="Bay/Bay2/CargoHoldArea" to="." method="_on_CargoHoldArea_body_entered"]
 [connection signal="body_exited" from="Bay/Bay2/CargoHoldArea" to="." method="_on_CargoHoldArea_body_exited"]
 
 [editable path="Noises"]
-[editable path="WeaponHardTop"]
-[editable path="WeaponHardRight"]
-[editable path="MineralProcessingUnit_Bulker"]
-[editable path="MineralProcessingUnit_Furnace"]
-[editable path="MineralProcessingUnit_FSO"]
 [editable path="AI"]
