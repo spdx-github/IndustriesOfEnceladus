@@ -31,9 +31,11 @@ shader_param/shine = 1.0
 shader_param/charges = ExtResource( 6 )
 shader_param/map = ExtResource( 9 )
 
-[node name="Eagle" instance=ExtResource( 2 )]
+[node name="Eagle-Prospector-Pigeon" instance=ExtResource( 2 )]
+mass = 43.16
 shipName = "SHIP_PROSPECTOR_PIGEON"
-hullPrice = 5752500
+hullPrice = 9752500
+cargoHoldArea = Rect2( -47, -260, 94, 290 )
 
 [node name="Hull" parent="." index="1"]
 position = Vector2( 0, 115 )
@@ -43,7 +45,7 @@ region_rect = Rect2( 0, 220, 2816, 300 )
 position = Vector2( 0, -49 )
 region_rect = Rect2( 0, 76, 2816, 186 )
 
-[node name="Hull" type="Sprite" parent="FatHull" index="0"]
+[node name="ForeBlisterLeft" type="Sprite" parent="FatHull" index="0"]
 material = SubResource( 1 )
 position = Vector2( -17, -100 )
 rotation = 3.14159
@@ -56,7 +58,7 @@ region_rect = Rect2( 163, 358, 38, 19 )
 script = ExtResource( 7 )
 hullCustomPaintFile = "user://custom-prospector.png"
 
-[node name="Hull2" type="Sprite" parent="FatHull" index="1"]
+[node name="ForeBlisterRight" type="Sprite" parent="FatHull" index="1"]
 material = SubResource( 1 )
 position = Vector2( 17, -100 )
 rotation = 3.14159
@@ -73,9 +75,32 @@ hullCustomPaintFile = "user://custom-prospector.png"
 visible = false
 script = ExtResource( 1 )
 rampUpTime = 1.0
+systemName = ""
 removeThis = true
 
-[node name="CabinLight" parent="." index="4"]
+[node name="Grinder" parent="." index="4" instance=ExtResource( 4 )]
+position = Vector2( 0, -182 )
+
+[node name="ArmLeft" parent="Grinder" index="0"]
+position = Vector2( -30, -8 )
+
+[node name="Grinder" parent="Grinder/ArmLeft" index="2"]
+position = Vector2( -1.52588e-05, -28 )
+
+[node name="RightArm" parent="Grinder" index="1"]
+position = Vector2( 30, -8 )
+
+[node name="LeftSpring" parent="Grinder" index="2"]
+position = Vector2( -68, -46 )
+length = 56.0
+rest_length = 56.0
+
+[node name="RightSpring" parent="Grinder" index="3"]
+position = Vector2( 67.9999, -46 )
+length = 56.0
+rest_length = 56.0
+
+[node name="CabinLight" parent="." index="5"]
 position = Vector2( 0, -3 )
 scale = Vector2( 1, 1.1 )
 
@@ -85,41 +110,63 @@ position = Vector2( 0, -24 )
 texture_scale = 3.0
 energy = 12.0
 
-[node name="Collider" parent="." index="6"]
-visible = false
-polygon = PoolVector2Array( -50, -194, -50, 40, -74, 64, -74, 108, -61, 120, -34, 120, -38, 148, -38, 202, -30, 230, 30, 230, 38, 202, 38, 148, 34, 120, 61, 120, 74, 108, 74, 64, 50, 40, 50, -194, 36, -206, 20, -188, 20, -182, 40, -182, 40, 24, -40, 24, -40, -182, -20, -182, -20, -188, -36, -206 )
+[node name="Collider" parent="." index="7"]
+polygon = PoolVector2Array( -50, -194, -50, 40, -74, 64, -74, 108, -61, 120, -34, 120, -38, 148, -38, 202, -30, 230, 30, 230, 38, 202, 38, 148, 34, 120, 61, 120, 74, 108, 74, 64, 50, 40, 50, -194, 44, -200, 30, -200, 24, -192, 24, -182, 40, -182, 40, 24, -40, 24, -40, -182, -24, -182, -24, -192, -30, -200, -44, -200 )
 
-[node name="Light2D" parent="." index="19"]
+[node name="CollisionPolygon2D" parent="CargoHoldArea" index="0"]
+polygon = PoolVector2Array( 44, -186, 44, 28, -44, 28, -44, -160, -44, -186, -28, -186, -30, -200, 30, -200, 28, -186 )
+
+[node name="CollisionPolygon2D" parent="CargoHoldAreaHull" index="0"]
+polygon = PoolVector2Array( 24, -200, 48, -190, 48, 40, 70, 104, 32, 118, 28, 228, -28, 228, -32, 118, -70, 104, -48, 40, -48, -190, -24, -200, -20, -208, 20, -208 )
+
+[node name="Light2D" parent="." index="20"]
 visible = false
 
-[node name="Light2D2" parent="." index="20"]
-visible = false
+[node name="Light2D2" parent="." index="21"]
 position = Vector2( 0, -48.3298 )
 texture = ExtResource( 3 )
 texture_scale = 10.0
 energy = 2.5
 range_height = 1271.9
 
-[node name="HiStressFore" parent="." index="21" instance=ExtResource( 11 )]
+[node name="HiStressFore" parent="." index="22" instance=ExtResource( 11 )]
 position = Vector2( 0, -258 )
 toggleCommand = "ship_slot_1"
 
-[node name="WeaponLeft" parent="." index="22"]
+[node name="WeaponLeft" parent="." index="23"]
 toggleCommand = "ship_slot_2"
 
-[node name="WeaponRight" parent="." index="23"]
+[node name="SYSTEM_ACTEMD14" parent="WeaponLeft" index="19"]
+pivotPath = NodePath("Pivot")
+weaponPath = NodePath("Pivot/massdriver")
+audioPath = NodePath("Actuation")
+lightPath = NodePath("Pivot/Light")
+
+[node name="SYSTEM_ACL200P" parent="WeaponLeft" index="20"]
+weaponPath = NodePath("Pivot/laster-pulse")
+
+[node name="WeaponRight" parent="." index="24"]
 toggleCommand = "ship_slot_3"
 
-[node name="DroneLeft" parent="." index="24"]
+[node name="SYSTEM_ACTEMD14" parent="WeaponRight" index="19"]
+pivotPath = NodePath("Pivot")
+weaponPath = NodePath("Pivot/massdriver")
+audioPath = NodePath("Actuation")
+lightPath = NodePath("Pivot/Light")
+
+[node name="SYSTEM_ACL200P" parent="WeaponRight" index="20"]
+weaponPath = NodePath("Pivot/laster-pulse")
+
+[node name="DroneLeft" parent="." index="25"]
 toggleCommand = "ship_slot_4"
 
-[node name="DroneRight" parent="." index="25"]
+[node name="DroneRight" parent="." index="26"]
 toggleCommand = "ship_slot_5"
 
-[node name="CargoBaffles" parent="." index="27"]
+[node name="CargoBaffles" parent="." index="28"]
 position = Vector2( 0, -81 )
 
-[node name="MineralProcessingUnit_FSO" parent="." index="31"]
+[node name="MineralProcessingUnit_FSO" parent="." index="32"]
 polygon = PoolVector2Array( -40, -179, -36, -179, -32, 9, -25, 17, 24, 17, 32, 9, 36, -179, 40, -179, 40, 27, -40, 27 )
 
 [node name="MineralProcessingUnit" parent="MineralProcessingUnit_FSO" index="0"]
@@ -128,10 +175,13 @@ visible = true
 [node name="CollisionPolygon2D" parent="MineralProcessingUnit_FSO/MineralProcessingUnit" index="0"]
 polygon = PoolVector2Array( -32, 17, 32, 17, 36, -179, -36, -179 )
 
-[node name="MineralProcessingUnit_Furnace" parent="." index="35"]
-polygon = PoolVector2Array( -40, -56, -30, -44, -12, -36, -32, -28, -32, 44, -24, 64, 24, 64, 32, 44, 32, -28, 12, -36, 30, -44, 40, -56, 40, -28, 40, 72, -40, 72, -40, -28 )
+[node name="MineralProcessingUnit_FAB" parent="." index="34"]
+visible = false
 
-[node name="CargoAuxSlot" parent="." index="36"]
+[node name="MineralProcessingUnit_Furnace" parent="." index="36"]
+polygon = PoolVector2Array( -40, -56, -30, -44, -14, -36, -32, -28, -32, 44, -24, 64, 24, 64, 32, 44, 32, -28, 14, -36, 30, -44, 40, -56, 40, -28, 40, 72, -40, 72, -40, -28 )
+
+[node name="CargoAuxSlot" parent="." index="37"]
 position = Vector2( 0, -150 )
 
 [node name="ProcessingArea" parent="CargoAuxSlot/CargoAuxPreProc0x30" index="0"]
@@ -149,11 +199,8 @@ polygon = PoolVector2Array( 36, 0, 40, 14, 40, 174, -40, 174, -40, 16, -36, 0 )
 [node name="ProcessingArea" parent="CargoAuxSlot/CargoAuxStorProc8K" index="0"]
 visible = false
 
-[node name="Grinder" parent="." index="43" instance=ExtResource( 4 )]
-position = Vector2( 0, -172 )
-scale = Vector2( 1.2, 1.2 )
-
 [editable path="Front Bumper"]
+[editable path="Grinder"]
 [editable path="engine-main-1"]
 [editable path="engine-main-2"]
 [editable path="WeaponLeft"]

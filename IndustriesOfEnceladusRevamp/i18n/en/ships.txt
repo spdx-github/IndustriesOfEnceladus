@@ -48,7 +48,7 @@ SHIP_OBERON|UMC Oberon MLP-60
 
 SHIP_OBERON_DESC|The Oberon MLP-60 is a curious vessel manufactured by the United Machine Cults. Originally an autonomous vehicle launched by electromagnetic rail cannons for orbital racing events, it was outmoded by later fusion-propelled units, but enthusiasts quickly bought up the remaining stock and it eventually found its way to the rings. Six belt radiators, three at either side, cool its high-performance reactor and partially shield its exposed fuel tanks, though are hardly needed due to the vessel's comical number of translatory thrusters. \n\nMultiple modifications have been undertaken to make the vessel appropriate for operation within the rings: its magnetic contacts have been cleverly retrofitted into two high-stress hardpoints, interface infrastructure has been built into the small cargo bay in the bow to support mineral processing units (barely, and with meager onboard space allotted to support them), and a HAL-9001 luxury lifepod serves as a comfortable cockpit and crew compartment.
 
-SHIP_OBERON_SPECS|Make: United Machine Cults / Custom-built \nHigh-Stress Hardpoints: 2 \nDrone Bays: 1 \nCrew: 4 \nDry mass: 26,400 kg \nCargo bay: \nProcessed cargo storage: 12,000 kg (combined)
+SHIP_OBERON_SPECS|Make: United Machine Cults / Custom-built \nHigh-Stress Hardpoints: 2 \nDrone Bays: 1 \nCrew: 4 \nDry mass: 26,400 kg \nCargo bay: 50 m^] \nProcessed cargo storage: 12,000 kg (combined)
 
 SYSTEM_REACTOR_OBERON|Oberon performance reactor
 
@@ -76,4 +76,6 @@ SHIP_ATLAS_WASP_SPECS|Make: Sin Space Engineering / Nakamura Dynamics \nLow-Stre
 
 SHIP_PROSPECTOR_PIGEON|Pigeon Prospector
 
-SHIP_PROSPECTOR_PIGEON_DESC|What happens when a Pelican and a Vulture love eachother very much? They make this thing - or so it goes. The 
+SHIP_PROSPECTOR_PIGEON_DESC|What happens when a Pelican and a Vulture love eachother very much? They make this thing - or so it goes. The Pigeon's high price point is entirely on account of the incredible skill that went into its implementation; additional girding struts support a high-stress hardpoint to the fore of the vessel, the entire power and equipment feed system having been reworked to accommodate it. The bay has also been shortened to handle the stress, which has permitted reinstallation of a standard grinder.
+
+SHIP_PROSPECTOR_PIGEON_SPECS|Make: Mitsudaya-Starbus / Conlido RVM \nHigh-Stress Hardpoints: 1 \nLow-Stress Hardpoints: 2 \nCrew: 6 \nDry mass: 70,000 kg \nCargo bay: 70 m^3 \nProcessed cargo storage: 14,000 kg

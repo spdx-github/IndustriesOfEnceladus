@@ -1,6 +1,6 @@
 extends "res://CurrentGame.gd"
 
-const usedShipRollsMax:int = 5
+const usedShipRollsMax:int = 2
 
 # names of ships, ages, probability of appearing
 var shipNames = {
@@ -9,6 +9,7 @@ var shipNames = {
 	"Oberon": [80, 0.2],
 	"OCP-209-DD": [60, 0.3],
 	"OCP-209-Snap": [60, 0.2],
+	"Eagle-Prospector-Pigeon": [40, 0.1],
 	"RA-TRTL-Ram": [120, 0.2],
 	"Tsukuyomi-Decom": [83, 0.1],
 }

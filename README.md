@@ -22,6 +22,7 @@ It all started because I was frustrated with how fast the AR-1500 wore out, so I
  - Tsukuyomi-class Frigate (Decommissioned): has a ton of hardpoints, torch RCS, and is very heavy. technically demilitarised but you can totally make it into a horrific murder machine
  - UMC Oberon MLP-60: entirely custom ship with textures graciously provided by Liqvo! dandy little racing vessel with utterly ridiculous performance
  - KX37 TNTRL RAM: Ringa Aftermarket Modification variant of the KX37, has a grinder and an extra pair of thrusters, plus heavy layout reconfigurations. Heavily inspired by redditor BLKCandy and their custom KX37 mod!
+ - Pigeon Prospector: combines Pelican and Vulture, somehow has drone bays
 	
 ### Engines
  - SSE NANI Torch Refit: it's the NANI in a torch slot. Have fun

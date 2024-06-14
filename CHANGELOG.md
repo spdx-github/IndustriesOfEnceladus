@@ -1,3 +1,7 @@
+# 1.2.0
+ * Added Pigeon Prospector
+ * Adjusted MPU colliders on the Pelican
+ * Fixed SPC Gungnir displaying double on high-stress left/right hardpoints
 # 1.1.5
  * Fixed cargo accessory ammo/drone storage
 # 1.1.4
