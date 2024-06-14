@@ -63,3 +63,17 @@ SHIP_TRTL_RAM_SPECS|Make: Rusatom-Antonoff / Custom-built \nHigh-Stress Hardpoin
 SYSTEM_AMD752S_HACK|AMD-752S computer (custom ROM)
 
 SYSTEM_REACTOR_TNTRL_FORT|Braced K37 nuclear reactor
+
+
+
+SHIP_ATLAS_WASP|Wasp-class Tactical Scout (Decommissioned)
+
+SHIP_ATLAS_WASP_DESC|Manufactured in the mid-2200s, the Nakamura Dynamics Wasp-class of automated tactical scouts utilise [REDACTED] as their power source and [REDACTED], delivering a constant [REDACTED] megawatts of electrical energy as long as the vehicle's [REDACTED] is [REDACTED]. A Faraday cage mesh insulates much of the vehicle, protecting it from static discharges in dense space environments and providing a convenient charge dissipation vector for the [REDACTED]. \n\nNow wasn't that fun? This version, coming to you exclusive from the Sin Space Engineering shipyards, is totally declassified, decommissioned, and probably deillegaled, with a range of nice benefits like a "Reactor Housing" where the redacted-whatever was torn out and a probably-functional cargo bay, all topped with the Conlido Classic™ converted lifepod for her pleasure. \n\nWarranty? Hell no. Fly the goddamn ship, ringa.
+
+SHIP_ATLAS_WASP_SPECS|Make: Sin Space Engineering / Nakamura Dynamics \nLow-Stress Hardpoints: 2 \nCrew: 3 \nDry mass: 12,250 kg \nCargo bay: We don't know \nProcessed cargo storage: 500 kg \nEMP shielding: 320 MW
+
+
+
+SHIP_PROSPECTOR_PIGEON|Pigeon Prospector
+
+SHIP_PROSPECTOR_PIGEON_DESC|What happens when a Pelican and a Vulture love eachother very much? They make this thing - or so it goes. The 

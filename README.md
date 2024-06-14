@@ -1,5 +1,12 @@
 # [SPDX] Industries of Enceladus
 
+## Foreword
+Industries of Enceladus is a mod for Delta-V: Rings of Saturn that focuses on ship configuration and options in a way that tries to be as inline with the established canon and world of the game as possible. Its key feature is the implementation of Cargo Bay Accessories, a separate upgrade route that offers an assortment of modules to be installed inside the cargo bay, with their own benefits and drawbacks.
+
+It all started because I was frustrated with how fast the AR-1500 wore out, so I made another that's tougher, and then I realised how much I wanted some other stuff, and some other stuff, and some other stuff... I think it began to sink in for me after the Cothon-2200 that I was onto something good. I've been having fun and fixing bugs since the 21st of May, and hope to be for the foreseeable future. :]
+
+[If you'd like to support my work, consider donating on Ko-fi!](https://ko-fi.com/pearshapes) I'm not able to work due to disabilities, so I don't get much every month. Any little bit helps. Thank you!
+
 ## Features
 ### Changes
  - Adds four docking bays to the OCP-209 (extends to the DD and SNAP variants)
