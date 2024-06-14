@@ -1,3 +1,5 @@
+# 1.1.5
+ * Fixed cargo accessory ammo/drone storage
 # 1.1.4
  * Fixed SNAP cargo bay behaviour
  * Fixed RA MPU Mk2 not showing in the OCPs
