@@ -174,23 +174,17 @@ polygon = PoolVector2Array( -32, 64, 32, 64, 34, -36, -34, -36 )
 [node name="CargoAuxSlot" parent="." index="37"]
 position = Vector2( 0, -150 )
 
-[node name="ProcessingArea" parent="CargoAuxSlot/CargoAuxPreProc0x30" index="0"]
-visible = false
-
 [node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc0x30/ProcessingArea" index="1"]
-polygon = PoolVector2Array( 36, 0, 40, 14, 40, 174, -40, 174, -40, 16, -36, 0 )
-
-[node name="ProcessingArea" parent="CargoAuxSlot/CargoAuxPreProc20x10" index="0"]
-visible = false
+polygon = PoolVector2Array( 34, 0, 34, 168, -34, 168, -34, 0 )
 
 [node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc20x10/ProcessingArea" index="1"]
-polygon = PoolVector2Array( 36, 0, 40, 14, 40, 174, -40, 174, -40, 16, -36, 0 )
+polygon = PoolVector2Array( 34, 0, 34, 168, -34, 168, -34, 0 )
+
+[node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc40x20/ProcessingArea" index="1"]
+polygon = PoolVector2Array( 34, 0, 34, 168, -34, 168, -34, 0 )
 
 [node name="ProcessingArea" parent="CargoAuxSlot/CargoAuxStorProc8K" index="0"]
 visible = false
-
-[node name="CargoAuxBigFab" parent="CargoAuxSlot" index="5"]
-visible = true
 
 [editable path="Front Bumper"]
 [editable path="Grinder"]
@@ -207,6 +201,7 @@ visible = true
 [editable path="CargoAuxSlot"]
 [editable path="CargoAuxSlot/CargoAuxPreProc0x30"]
 [editable path="CargoAuxSlot/CargoAuxPreProc20x10"]
+[editable path="CargoAuxSlot/CargoAuxPreProc40x20"]
 [editable path="CargoAuxSlot/CargoAuxStorProc8K"]
 [editable path="CargoAuxSlot/CargoAuxStorage4K"]
 [editable path="CargoAuxSlot/CargoAuxFab"]

@@ -1,7 +1,10 @@
+# 1.2.2
+ * Fixed Pelican and Pigeon N1
 # 1.2.1
  * Added Rusatom-Antonoff MPP-N1
  * Adjusted MPP areas on all ships to hopefully prevent clipping issue
  * Did some other stuff??
+ * Added MAD-CERF bay accessory Support
 # 1.2.0
  * Added Pigeon Prospector
  * Adjusted MPU colliders on the Pelican
