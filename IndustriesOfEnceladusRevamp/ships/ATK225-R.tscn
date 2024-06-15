@@ -65,31 +65,10 @@ polygon = PoolVector2Array( -31, -84, -7, -62, -1, -54, 1, -46, 1, -18, -14, -18
 
 [node name="CargoAuxSlot" parent="." index="39" instance=ExtResource( 2 )]
 
-[node name="CargoAuxPreProc0x30" parent="CargoAuxSlot" index="0"]
-visible = false
-
-[node name="CargoAuxPreProc20x10" parent="CargoAuxSlot" index="1"]
-visible = false
-
-[node name="CargoAuxStorProc8K" parent="CargoAuxSlot" index="2"]
-visible = false
-
-[node name="CargoAuxStorage4K" parent="CargoAuxSlot" index="3"]
-visible = false
-
-[node name="CargoAuxFab" parent="CargoAuxSlot" index="4"]
-visible = false
-
 [node name="AI" parent="." index="50"]
 visible = false
 
 [editable path="MineralProcessingUnit_FSO"]
-[editable path="CargoAuxSlot"]
-[editable path="CargoAuxSlot/CargoAuxPreProc0x30"]
-[editable path="CargoAuxSlot/CargoAuxPreProc20x10"]
-[editable path="CargoAuxSlot/CargoAuxStorProc8K"]
-[editable path="CargoAuxSlot/CargoAuxStorage4K"]
-[editable path="CargoAuxSlot/CargoAuxFab"]
 [editable path="weapon-left"]
 [editable path="weapon-right"]
 [editable path="weapon-left-back"]

@@ -1,7 +1,5 @@
 extends "res://enceladus/UpgradeGroup.gd"
 
-export (Array, String) var onlyForShipModels = []
-export (bool) var invertModelLogic = false
 export (Array, String) var onlyForShipNames = []
 export (bool) var invertNameLogic = false
 
@@ -11,23 +9,12 @@ func reexamine():
 	.reexamine()
 	# don't override base logic
 	if visible:
-		if onlyForShipModels.size() > 0:
-			var logic
-			
-			if onlyForShipModels.find(ship.model) >= 0:
-				logic = true
-			else:
-				logic = false
-			
-			if invertModelLogic:
-				visible = not logic
-			else:
-				visible = logic
-				
+		print("Fired! %s" % slot)
+		
 		if onlyForShipNames.size() > 0:
 			var logic
 			
-			if onlyForShipNames.find(ship.shipName) >= 0:
+			if ship.shipName in onlyForShipNames:
 				logic = true
 			else:
 				logic = false
@@ -36,3 +23,5 @@ func reexamine():
 				visible = not logic
 			else:
 				visible = logic
+				
+			print("ShipName fired: %s / %s" % [logic, visible])

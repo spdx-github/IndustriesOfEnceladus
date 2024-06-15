@@ -4,9 +4,7 @@ export (String, "divided", "amorphic", "both") var holdType
 export (int) var addedSpace = 0
 export (int) var amorphicRatio = 0
 
-func _ready():
-	ship = getShip()
-	
+func extend(ship):
 	var capacity = ship.get("processedCargoCapacity")
 	var shipHoldType = ship.get("processedCargoStorageType")
 	
@@ -52,5 +50,3 @@ func _ready():
 					ship.set("processedCargoCapacity",
 						capacity + (addedSpace * amorphicRatio))
 					#print("branch both amorphic")
-						
-	return ._ready()

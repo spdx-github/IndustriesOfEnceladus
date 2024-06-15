@@ -14,4 +14,11 @@ SYSTEM_CARGO_AUX_PREPROC_20x10_SPECS|Ice melt rate: 25 kg/s \nPower draw: 125 KW
 
 
 
+SYSTEM_CARGO_AUX_PREPROC_40x20|Rusatom-Antonoff MPP-N1
+
+SYSTEM_CARGO_AUX_PREPROC_40x20_DESC|One of the best mineral preprocessing solutions on the market, the MPP-N1 provides excellent efficiency gains and remass reprocessing by dumping reactor turbine exhaust plasma directly into the cargo bay. Flow is remotely manipulated using an electromagnetic ring around the emission blister, gently pulling process steam into the ring's cooling array and through a ram-condenser.
+
+SYSTEM_CARGO_AUX_PREPROC_40x20_SPECS|Ice melt rate: 40 kg/s \nPower draw: 375 KW / chunk \nMPU mineral efficiency: x140% \nRemass processing efficiency: 20% \nMass: 6,500 kg \nManufacturer: Rusatom-Antonoff
+
+
 SYSTEM_CARGO_AUX_PREPROC_MANUAL|Reduces ice mass of chunks within a large area. \nReplenishes propellant. \nIncreases MPU efficiency multiplicatively. \nProcesses multiple ore chunks simultaneously. \nPower requirements and processing speed listed per chunk. \nDoes not extract minerals or destroy chunks.

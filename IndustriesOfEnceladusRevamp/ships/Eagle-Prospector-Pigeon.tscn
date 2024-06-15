@@ -73,6 +73,7 @@ hullCustomPaintFile = "user://custom-prospector.png"
 
 [node name="Front Bumper" parent="." index="3"]
 visible = false
+position = Vector2( 0, -312 )
 script = ExtResource( 1 )
 rampUpTime = 1.0
 systemName = ""
@@ -117,7 +118,7 @@ polygon = PoolVector2Array( -50, -194, -50, 40, -74, 64, -74, 108, -61, 120, -34
 polygon = PoolVector2Array( 44, -186, 44, 28, -44, 28, -44, -160, -44, -186, -28, -186, -30, -200, 30, -200, 28, -186 )
 
 [node name="CollisionPolygon2D" parent="CargoHoldAreaHull" index="0"]
-polygon = PoolVector2Array( 24, -200, 48, -190, 48, 40, 70, 104, 32, 118, 28, 228, -28, 228, -32, 118, -70, 104, -48, 40, -48, -190, -24, -200, -20, -208, 20, -208 )
+polygon = PoolVector2Array( 48, -194, 48, 40, 70, 104, 32, 118, 28, 228, -28, 228, -32, 118, -70, 104, -48, 40, -48, -194, -20, -208, -12, -220, 20, -220, 28, -208 )
 
 [node name="Light2D" parent="." index="20"]
 visible = false
@@ -130,32 +131,17 @@ energy = 2.5
 range_height = 1271.9
 
 [node name="HiStressFore" parent="." index="22" instance=ExtResource( 11 )]
-position = Vector2( 0, -258 )
+position = Vector2( 0, -256 )
+z_index = 20
 toggleCommand = "ship_slot_1"
 
 [node name="WeaponLeft" parent="." index="23"]
+position = Vector2( -54, -68 )
 toggleCommand = "ship_slot_2"
 
-[node name="SYSTEM_ACTEMD14" parent="WeaponLeft" index="19"]
-pivotPath = NodePath("Pivot")
-weaponPath = NodePath("Pivot/massdriver")
-audioPath = NodePath("Actuation")
-lightPath = NodePath("Pivot/Light")
-
-[node name="SYSTEM_ACL200P" parent="WeaponLeft" index="20"]
-weaponPath = NodePath("Pivot/laster-pulse")
-
 [node name="WeaponRight" parent="." index="24"]
+position = Vector2( 54, -68 )
 toggleCommand = "ship_slot_3"
-
-[node name="SYSTEM_ACTEMD14" parent="WeaponRight" index="19"]
-pivotPath = NodePath("Pivot")
-weaponPath = NodePath("Pivot/massdriver")
-audioPath = NodePath("Actuation")
-lightPath = NodePath("Pivot/Light")
-
-[node name="SYSTEM_ACL200P" parent="WeaponRight" index="20"]
-weaponPath = NodePath("Pivot/laster-pulse")
 
 [node name="DroneLeft" parent="." index="25"]
 toggleCommand = "ship_slot_4"
@@ -179,7 +165,11 @@ polygon = PoolVector2Array( -32, 17, 32, 17, 36, -179, -36, -179 )
 visible = false
 
 [node name="MineralProcessingUnit_Furnace" parent="." index="36"]
-polygon = PoolVector2Array( -40, -56, -30, -44, -14, -36, -32, -28, -32, 44, -24, 64, 24, 64, 32, 44, 32, -28, 14, -36, 30, -44, 40, -56, 40, -28, 40, 72, -40, 72, -40, -28 )
+visible = true
+polygon = PoolVector2Array( -40, -66, -36, -52, -30, -44, -16, -38, -16, -34, -32, -28, -32, 44, -24, 64, 24, 64, 32, 44, 32, -28, 16, -34, 16, -38, 30, -44, 36, -52, 40, -66, 40, -52, 40, -32, 40, 72, -40, 72, -40, -32, -40, -52 )
+
+[node name="CollisionPolygon2D" parent="MineralProcessingUnit_Furnace/MineralProcessingUnit" index="0"]
+polygon = PoolVector2Array( -32, 64, 32, 64, 34, -36, -34, -36 )
 
 [node name="CargoAuxSlot" parent="." index="37"]
 position = Vector2( 0, -150 )
@@ -198,6 +188,9 @@ polygon = PoolVector2Array( 36, 0, 40, 14, 40, 174, -40, 174, -40, 16, -36, 0 )
 
 [node name="ProcessingArea" parent="CargoAuxSlot/CargoAuxStorProc8K" index="0"]
 visible = false
+
+[node name="CargoAuxBigFab" parent="CargoAuxSlot" index="5"]
+visible = true
 
 [editable path="Front Bumper"]
 [editable path="Grinder"]

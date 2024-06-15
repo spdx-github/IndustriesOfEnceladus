@@ -43,8 +43,20 @@ polygon = PoolVector2Array( 40, 0, 44, 16, 44, 186, 28, 262, -28, 262, -44, 186,
 [node name="VentRemass" parent="CargoAuxPreProc20x10" index="1"]
 position = Vector2( 44, 8 )
 
-[node name="CargoAuxStorProc8K" parent="." index="2"]
-visible = false
+[node name="CargoAuxPreProc40x20" parent="." index="2"]
+position = Vector2( -40, 0 )
+polygon = PoolVector2Array( 0, -32, 10, -28, 8, -12, 2, -8, 8, -6, 10, 0, 8, 6, 2, 8, 8, 12, 10, 28, 0, 32, -4, 32, -4, 8, -4, -8, -4, -22 )
+
+[node name="ProcessingArea" parent="CargoAuxPreProc40x20" index="0"]
+position = Vector2( 40, 0 )
+
+[node name="ZoneTop" parent="CargoAuxPreProc40x20/ProcessingArea" index="0"]
+polygon = PoolVector2Array( 38, 0, 28, -18, 12, -26, -12, -26, -28, -18, -36, 0 )
+
+[node name="ZoneBottom" parent="CargoAuxPreProc40x20/ProcessingArea" index="1"]
+polygon = PoolVector2Array( 38, 0, 38, 186, 24, 256, -24, 256, -38, 186, -36, 0 )
+
+[node name="CargoAuxStorProc8K" parent="." index="3"]
 position = Vector2( -44, 0 )
 polygon = PoolVector2Array( 0, 42, 0, 8, 0, 0, 8, -22, 20, -28, 20, 10, 10, 18, 10, 30 )
 __meta__ = {
@@ -60,29 +72,28 @@ polygon = PoolVector2Array( 24, -24, 34, 34, -38, 34, -24, -24 )
 [node name="VentRemass" parent="CargoAuxStorProc8K" index="1"]
 position = Vector2( 44, 16 )
 
-[node name="CargoAuxStorage4K" parent="." index="3"]
-visible = false
+[node name="CargoAuxStorage4K" parent="." index="4"]
 position = Vector2( -44, 0 )
 polygon = PoolVector2Array( 0, 24, 0, 0, 8, -22, 14, -16, 14, 4 )
 __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="CargoAuxFab" parent="." index="4"]
-visible = false
+[node name="CargoAuxFab" parent="." index="5"]
 position = Vector2( -44, 0 )
 polygon = PoolVector2Array( 0, 0, 8, -22, 28, -30, 32, -4, 32, 30, 18, 30, 10, 40, 10, 52, 0, 64, 0, 40 )
 __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="CargoAuxBigFab" parent="." index="5"]
-visible = false
+[node name="CargoAuxBigFab" parent="." index="6"]
 position = Vector2( -44, 0 )
 polygon = PoolVector2Array( 0, 0, 8, -22, 28, -30, 28, -24, 36, -16, 36, 40, 20, 44, 18, 50, 12, 52, 12, 66, 0, 78, 0, 36 )
 
 [editable path="CargoAuxPreProc0x30"]
 [editable path="CargoAuxPreProc20x10"]
+[editable path="CargoAuxPreProc40x20"]
 [editable path="CargoAuxStorProc8K"]
 [editable path="CargoAuxStorage4K"]
 [editable path="CargoAuxFab"]
+[editable path="CargoAuxBigFab"]

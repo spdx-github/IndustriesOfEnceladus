@@ -27,6 +27,7 @@ func _ready():
 	else: if not (self in ship.get_children()):
 		var dupe = self.duplicate()
 		dupe.set_position(Vector2(self.position[0], self.get_parent().position[1]))
+		dupe.set_rotation(self.rotation)
 		ship.call_deferred("add_child", dupe)
 		Tool.remove(self)
 	else :

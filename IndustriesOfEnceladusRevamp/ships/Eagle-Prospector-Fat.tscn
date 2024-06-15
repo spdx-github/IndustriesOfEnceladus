@@ -18,6 +18,12 @@ polygon = PoolVector2Array( 46, -270, 46, 30, -46, 30, -46, -270 )
 light_mask = 0
 polygon = PoolVector2Array( 48, -276, 48, 40, 70, 104, 32, 118, 28, 228, -28, 228, -32, 118, -70, 104, -48, 39, -48, -276, -18, -276, -8, -316, 8, -316, 16, -276 )
 
+[node name="WeaponLeft" parent="." index="21"]
+position = Vector2( -56, -64 )
+
+[node name="WeaponRight" parent="." index="22"]
+position = Vector2( 56, -64 )
+
 [node name="CargoBaffles" parent="." index="26"]
 visible = false
 slot = "cargo.aux"

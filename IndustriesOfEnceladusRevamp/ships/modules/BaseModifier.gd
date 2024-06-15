@@ -14,6 +14,9 @@ var ship
 
 func _ready():
 	var ship = getShip()
+	extend(ship)
+	
+func extend(ship):
 	return true
 	
 func getShip():

@@ -308,8 +308,8 @@ margin_top = 2930.0
 margin_right = 1228.0
 margin_bottom = 4687.0
 slot = "weaponSlot.mainLeft.type"
-onlyForShipModels = [ "SHIP_TSUKUYOMI_IOT" ]
-invertModelLogic = true
+onlyForShipNames = [ "SHIP_TSUKUYOMI_IOT" ]
+invertNameLogic = true
 
 [node name="VBoxContainer" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/LeftHighSlot" index="0"]
 margin_right = 1212.0
@@ -566,8 +566,8 @@ margin_top = 4691.0
 margin_right = 1228.0
 margin_bottom = 6448.0
 slot = "weaponSlot.mainRight.type"
-onlyForShipModels = [ "SHIP_TSUKUYOMI_IOT" ]
-invertModelLogic = true
+onlyForShipNames = [ "SHIP_TSUKUYOMI_IOT" ]
+invertNameLogic = true
 
 [node name="VBoxContainer" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/RightHighSlot" index="0"]
 margin_right = 1212.0
@@ -824,8 +824,8 @@ margin_top = 6452.0
 margin_right = 1228.0
 margin_bottom = 8431.0
 slot = "weaponSlot.left.type"
-onlyForShipModels = [ "PROSPECTOR" ]
-invertModelLogic = true
+onlyForShipNames = [ "SHIP_PROSPECTOR", "SHIP_PROSPECTOR_VP", "SHIP_PROSPECTOR_LUX", "SHIP_PROSPECTOR_FAT", "SHIP_PROSPECTOR_PIGEON" ]
+invertNameLogic = true
 
 [node name="VBoxContainer" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/LeftWeaponSlotRepl" index="0"]
 margin_right = 1212.0
@@ -1063,7 +1063,7 @@ margin_top = 8435.0
 margin_right = 1228.0
 margin_bottom = 10562.0
 slot = "weaponSlot.left.type"
-onlyForShipModels = [ "PROSPECTOR" ]
+onlyForShipNames = [ "SHIP_PROSPECTOR", "SHIP_PROSPECTOR_VP", "SHIP_PROSPECTOR_LUX", "SHIP_PROSPECTOR_FAT", "SHIP_PROSPECTOR_PIGEON" ]
 
 [node name="VBoxContainer" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/LeftWeaponSlotProspector" index="0"]
 margin_right = 1212.0
@@ -1590,8 +1590,8 @@ margin_top = 12105.0
 margin_right = 1228.0
 margin_bottom = 14084.0
 slot = "weaponSlot.right.type"
-onlyForShipModels = [ "PROSPECTOR" ]
-invertModelLogic = true
+onlyForShipNames = [ "SHIP_PROSPECTOR", "SHIP_PROSPECTOR_VP", "SHIP_PROSPECTOR_LUX", "SHIP_PROSPECTOR_FAT", "SHIP_PROSPECTOR_PIGEON" ]
+invertNameLogic = true
 
 [node name="VBoxContainer" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/RightWeaponSlotRepl" index="0"]
 margin_right = 1212.0
@@ -1831,7 +1831,7 @@ margin_top = 14088.0
 margin_right = 1228.0
 margin_bottom = 16363.0
 slot = "weaponSlot.right.type"
-onlyForShipModels = [ "PROSPECTOR" ]
+onlyForShipNames = [ "SHIP_PROSPECTOR", "SHIP_PROSPECTOR_VP", "SHIP_PROSPECTOR_LUX", "SHIP_PROSPECTOR_FAT", "SHIP_PROSPECTOR_PIGEON" ]
 
 [node name="VBoxContainer" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/RightWeaponSlotProspector" index="0"]
 margin_right = 1212.0

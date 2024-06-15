@@ -1,3 +1,7 @@
+# 1.2.1
+ * Added Rusatom-Antonoff MPP-N1
+ * Adjusted MPP areas on all ships to hopefully prevent clipping issue
+ * Did some other stuff??
 # 1.2.0
  * Added Pigeon Prospector
  * Adjusted MPU colliders on the Pelican

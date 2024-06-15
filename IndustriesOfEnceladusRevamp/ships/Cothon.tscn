@@ -73,6 +73,12 @@ type = "cargo.modifierDivided"
 
 [node name="CargoAuxSlot" parent="." index="23" instance=ExtResource( 2 )]
 
+[node name="ZoneTop" parent="CargoAuxSlot/CargoAuxPreProc40x20/ProcessingArea" index="0"]
+polygon = PoolVector2Array( 38, 0, 28, -18, 12, -26, -12, -26, -28, -18, -36, 0 )
+
+[node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc40x20/ProcessingArea" index="1"]
+polygon = PoolVector2Array( 38, 0, 38, 186, 24, 256, -24, 256, -38, 186, -36, 0 )
+
 [node name="MineralProcessingUnit_Bulker" parent="." index="24" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/cothon/MineralProcessingUnit_Bulker.tscn"]
 visible = false
 
@@ -105,6 +111,14 @@ polygon = PoolVector2Array( -26, 24, 22, 24, 22, -18, -26, -18 )
 visible = false
 
 [editable path="CargoBaffles"]
+[editable path="CargoAuxSlot"]
+[editable path="CargoAuxSlot/CargoAuxPreProc0x30"]
+[editable path="CargoAuxSlot/CargoAuxPreProc20x10"]
+[editable path="CargoAuxSlot/CargoAuxPreProc40x20"]
+[editable path="CargoAuxSlot/CargoAuxStorProc8K"]
+[editable path="CargoAuxSlot/CargoAuxStorage4K"]
+[editable path="CargoAuxSlot/CargoAuxFab"]
+[editable path="CargoAuxSlot/CargoAuxBigFab"]
 [editable path="MineralProcessingUnit_FSO"]
 [editable path="MineralProcessingUnit_FAB"]
 [editable path="weapon-left"]

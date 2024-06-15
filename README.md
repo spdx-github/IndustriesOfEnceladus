@@ -74,6 +74,7 @@ It all started because I was frustrated with how fast the AR-1500 wore out, so I
  - THI Mineral Tank Module: bulky storage module that increases mineral hold space and behaves kind of like an ore preprocessor since it's warm
  - SSE Voyager Fabricator: literally just the Voyager RSLS Fabrication Plant but without the mineral processor
  - RMS-PAL: a much better fabricator that produces at a faster rate than both the fabricator MPU and aux module combined
+ - Rusatom-Antonoff MPP-N1: best MPP available on the market, ridculously powerful but very expensive
 
 ### Mineral Hold Kits
  - Both amorphic and divided holds are supported
