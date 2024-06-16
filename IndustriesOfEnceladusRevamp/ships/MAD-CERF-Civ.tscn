@@ -155,7 +155,7 @@ radius = 64.0
 [node name="MAD-CERF-Civ" type="RigidBody2D" groups=["ships"]]
 collision_layer = 1042
 collision_mask = 7
-mass = 212.0
+mass = 190.0
 physics_material_override = ExtResource( 22 )
 linear_damp = 0.0
 angular_damp = 0.0
@@ -243,6 +243,7 @@ stiffness = 64.0
 position = Vector2( -9, 0 )
 collision_layer = 2
 collision_mask = 7
+mass = 2.5
 physics_material_override = ExtResource( 18 )
 script = ExtResource( 10 )
 pinned = false
@@ -294,6 +295,7 @@ stiffness = 64.0
 position = Vector2( 9, 0 )
 collision_layer = 2
 collision_mask = 7
+mass = 2.5
 physics_material_override = ExtResource( 18 )
 script = ExtResource( 10 )
 pinned = false
@@ -732,28 +734,6 @@ polygon = PoolVector2Array( 22, -10, 22, -72, 8, -94, -8, -94, -22, -72, -22, -1
 [node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc20x10/ProcessingArea" index="1"]
 polygon = PoolVector2Array( 234, 0, 234, 234, -234, 234, -234, 0 )
 
-[node name="Sprite" parent="CargoAuxSlot/CargoAuxPreProc20x10" index="5"]
-material = SubResource( 13 )
-position = Vector2( 2, -3 )
-rotation = 1.5708
-scale = Vector2( 0.75, 0.35 )
-z_index = -10
-texture = ExtResource( 5 )
-normal_map = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 868, 291, 41, 117 )
-
-[node name="Sprite2" parent="CargoAuxSlot/CargoAuxPreProc20x10" index="6"]
-material = SubResource( 13 )
-position = Vector2( 222, -3 )
-rotation = 1.5708
-scale = Vector2( 0.75, 0.35 )
-z_index = -10
-texture = ExtResource( 5 )
-normal_map = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 868, 291, 41, 117 )
-
 [node name="CargoAuxPreProc40x20" parent="CargoAuxSlot" index="2"]
 visible = false
 light_mask = 0
@@ -814,16 +794,6 @@ region_rect = Rect2( 689, 61, 105, 40 )
 position = Vector2( 152, 0 )
 rotation = 1.5708
 polygon = PoolVector2Array( -14, -32, 5.99998, -32, 22, -28, 22, 36, 6, 40, 4, 46, -2, 48, -2, 60, -14, 72, -14, 32 )
-
-[node name="Sprite" parent="CargoAuxSlot/CargoAuxBigFab" index="1"]
-material = SubResource( 13 )
-position = Vector2( 1.3522, 3.98519 )
-scale = Vector2( 0.764298, 0.707405 )
-z_index = -10
-texture = ExtResource( 5 )
-normal_map = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 843, 291, 63, 117 )
 
 [node name="CargoBaffles" parent="." instance=ExtResource( 49 )]
 visible = false

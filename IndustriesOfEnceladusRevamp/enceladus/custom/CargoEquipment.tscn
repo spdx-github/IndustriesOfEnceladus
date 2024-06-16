@@ -10,7 +10,7 @@
 margin_right = 1228.0
 margin_bottom = 499.0
 script = ExtResource( 5 )
-onlyForShipNames = [ "SHIP_PROSPECTOR_BALD", "SHIP_KITSUNE", "SHIP_OCP209", "SHIP_TRTL_T", "SHIP_TRTL_R" ]
+onlyForShipNames = [ "SHIP_PROSPECTOR_BALD", "SHIP_KITSUNE", "SHIP_TRTL_T", "SHIP_TRTL_R", "SHIP_EIME", "SHIP_OCP209", "SHIP_OCP209_SNAP", "SHIP_OBERON" ]
 invertNameLogic = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]

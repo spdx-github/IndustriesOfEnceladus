@@ -6,6 +6,7 @@
 [node name="CargoEquipmentLimited" instance=ExtResource( 1 )]
 slot = "cargo.equipment"
 always = false
+onlyForShipNames = [ "SHIP_PROSPECTOR_BALD", "SHIP_KITSUNE", "SHIP_TRTL_T", "SHIP_TRTL_R", "SHIP_EIME", "SHIP_OCP209", "SHIP_OCP209_SNAP", "SHIP_OBERON" ]
 invertNameLogic = false
 
 [node name="VBoxContainer" parent="." index="0"]

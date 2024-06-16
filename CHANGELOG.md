@@ -1,3 +1,8 @@
+# 1.2.3
+ * Fixed hold modifier behaviour
+ * Fixed Oberon slot toggles and increased its excavator close force
+ * Adjusted MAD-CERF mass
+ * Fixed cargo mod behaviour
 # 1.2.2
  * Fixed Pelican and Pigeon N1
 # 1.2.1

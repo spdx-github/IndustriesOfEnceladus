@@ -126,6 +126,7 @@ colliderPaths = [ "Collider", "LeftTank", "RightTank" ]
 aiPilotingSkillAdjust = 0.5
 dialogTree = NodePath("UberConversation")
 cargoHoldArea = Rect2( -36, -250, 72, 150 )
+cargoHoldOffset = Vector2( 0, -225 )
 
 [node name="allbright" type="Light2D" parent="."]
 editor_only = true
@@ -150,6 +151,7 @@ script = ExtResource( 7 )
 
 [node name="Front Bumper" parent="." instance=ExtResource( 9 )]
 position = Vector2( 0, -205 )
+closeForce = 25000
 
 [node name="ShipCamera" parent="." instance=ExtResource( 17 )]
 
@@ -204,7 +206,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 slot = "mainLeft"
-toggleCommand = "ship_slot_left_toggle"
+toggleCommand = "ship_slot_1"
 
 [node name="SYSTEM_SALVAGE_ARM" parent="MainLeft" index="11"]
 flip = true
@@ -225,7 +227,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 slot = "mainRight"
-toggleCommand = "ship_slot_right_toggle"
+toggleCommand = "ship_slot_2"
 
 [node name="SYSTEM_SALVAGE_ARM" parent="MainRight" index="11"]
 feedVelocity = Vector2( 60, -280 )
