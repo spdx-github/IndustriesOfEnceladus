@@ -32,7 +32,7 @@ gimbalPerSecond = 6.282
 pulsePerSecond = 30.0
 tuneThrustMin = 0.75
 tuneThrustMax = 2.0
-systemName = "SYSTEM_THRUSTER_K69V"
+systemName = "SYSTEM_MAIN_ENGINE_THUNDER"
 mass = 950
 maxVolume = -15
 

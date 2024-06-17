@@ -8,7 +8,7 @@ const MOD_PRIORITY = 0
 var _savedObjects = []
 
 var modName = "[SPDX] Industries of Enceladus"
-var modVersion = "1.2.3"
+var modVersion = "1.2.4"
 var modPath = ""
 
 func _init(modLoader = ModLoader):
@@ -20,25 +20,21 @@ func _init(modLoader = ModLoader):
 # Must load DLC early for it to properly function.
 	loadDLC()
 	
-# install drone-plant.gd which adjusts drone tuning behaviour
-	installScriptExtension("weapons/drone-plant.gd")
-	
 # replace slots for all our new equipment
 	replaceScene("ships/modules/AuxSlot.tscn")
 	replaceScene("ships/modules/ThrusterSlot.tscn")
 	replaceScene("ships/modules/TorchSlot.tscn")
 	replaceScene("weapons/WeaponSlot.tscn")
 	
+# install the Shipyard.gd script extension, which loads replacements + new ships
+	installScriptExtension("ships/Shipyard.gd")
+# install CurrentGame.gd which loads new ships into the game
+	installScriptExtension("CurrentGame.gd")
+	
 # replace the Upgrades.tscn containing equipment modifications
 	replaceScene("enceladus/Upgrades.tscn")
 # replace Dealer.tscn for our "promo images" (that i don't have lol)
 	replaceScene("enceladus/Dealer.tscn")
-	
-# install the Shipyard.gd script extension, which loads replacements + new ships
-	installScriptExtension("ships/Shipyard.gd")
-	
-# install CurrentGame.gd which loads new ships into the game
-	installScriptExtension("CurrentGame.gd")
 	
 # Load custom translations
 	updateTL("en") 

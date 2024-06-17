@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://ships/modules/SalvageArm.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ships/modules/canadarm-c.png" type="Texture" id=2]
@@ -6,8 +6,50 @@
 [ext_resource path="res://lights/light-mask.png" type="Texture" id=4]
 [ext_resource path="res://weapons/weapons-n.png" type="Texture" id=5]
 [ext_resource path="res://weapons/weapons-c.png" type="Texture" id=6]
+[ext_resource path="res://shader/ao-spec-difuse-fast.shader" type="Shader" id=7]
+[ext_resource path="res://weapons/weapons-m.png" type="Texture" id=8]
+[ext_resource path="res://ships/modules/canadarm-m.png" type="Texture" id=9]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 7 )
+shader_param/maxval = 5.0
+shader_param/sparkBias = 0.0
+shader_param/scale = Vector2( 0.5, 1 )
+shader_param/coatColor = Vector3( 0.02, 0.02, 0.02 )
+shader_param/ref = 0.1
+shader_param/roughness = 0.5
+shader_param/reflectiveness = 1.0
+shader_param/shine = 0.6
+shader_param/mipmapBias = 0.0
+shader_param/map = ExtResource( 8 )
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 7 )
+shader_param/maxval = 5.0
+shader_param/sparkBias = 0.0
+shader_param/scale = Vector2( 0.5, 1 )
+shader_param/coatColor = Vector3( 0.02, 0.02, 0.02 )
+shader_param/ref = -0.2
+shader_param/roughness = 3.0
+shader_param/reflectiveness = 2.0
+shader_param/shine = 0.6
+shader_param/mipmapBias = 0.0
+shader_param/map = ExtResource( 9 )
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 7 )
+shader_param/maxval = 5.0
+shader_param/sparkBias = 0.0
+shader_param/scale = Vector2( 0.5, 1 )
+shader_param/coatColor = Vector3( 0.02, 0.02, 0.02 )
+shader_param/ref = 0.2
+shader_param/roughness = 3.0
+shader_param/reflectiveness = 2.0
+shader_param/shine = 1.0
+shader_param/mipmapBias = 0.0
+shader_param/map = ExtResource( 9 )
+
+[sub_resource type="CapsuleShape2D" id=4]
 radius = 450.0
 height = 200.0
 
@@ -51,6 +93,7 @@ enabled = false
 
 [node name="Beam" type="Sprite" parent="Arm/A/B" index="0"]
 show_behind_parent = true
+material = SubResource( 2 )
 position = Vector2( -156, 0 )
 rotation = -1.5708
 scale = Vector2( 1, 2.3 )
@@ -61,6 +104,7 @@ region_rect = Rect2( 885, 273, 22, 117 )
 
 [node name="HeavyArm" type="Sprite" parent="Arm/A/B" index="1"]
 show_behind_parent = true
+material = SubResource( 3 )
 position = Vector2( -144, -0.00012207 )
 scale = Vector2( 1, 1.2 )
 texture = ExtResource( 2 )
@@ -69,6 +113,7 @@ region_enabled = true
 region_rect = Rect2( 162, 43, 347, 38 )
 
 [node name="SubClaw" type="Sprite" parent="Arm/A/B/Arm" index="0"]
+material = SubResource( 1 )
 rotation = 0.785398
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 2 )
@@ -96,6 +141,7 @@ region_rect = Rect2( 885, 273, 22, 117 )
 
 [node name="HeavyArm" type="Sprite" parent="Arm/A" index="3"]
 show_behind_parent = true
+material = SubResource( 3 )
 position = Vector2( -144, 0.000518799 )
 scale = Vector2( 1, 1.2 )
 texture = ExtResource( 2 )
@@ -110,7 +156,7 @@ visible = false
 visible = true
 position = Vector2( 0, 56 )
 rotation = 1.5708
-shape = SubResource( 1 )
+shape = SubResource( 4 )
 
 [node name="DockSlot" parent="." index="3"]
 visible = false

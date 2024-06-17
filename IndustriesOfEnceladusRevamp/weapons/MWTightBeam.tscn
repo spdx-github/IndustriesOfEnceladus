@@ -8,6 +8,7 @@
 [node name="SYSTEM_MWTIGHTBEAM" instance=ExtResource( 1 )]
 position = Vector2( 0, -20 )
 scale = Vector2( 0.8, 1 )
+z_index = 2
 region_rect = Rect2( 885, 329, 22, 61 )
 repairReplacementPrice = 165000
 repairFixPrice = 3500
@@ -35,18 +36,18 @@ scale = Vector2( 0.5, 4 )
 [node name="Sparks" parent="." index="2"]
 scale = Vector2( 0.5, 1 )
 
-[node name="base" type="Sprite" parent="." index="3"]
-position = Vector2( 0, 174 )
-z_index = 1
-texture = ExtResource( 3 )
-normal_map = ExtResource( 2 )
-region_enabled = true
-region_rect = Rect2( 1263, 321, 34, 63 )
-
-[node name="tip" type="Sprite" parent="." index="4"]
+[node name="tip" type="Sprite" parent="." index="3"]
 position = Vector2( -0.69567, 139.5 )
 scale = Vector2( 0.821461, 0.85 )
 texture = ExtResource( 3 )
 normal_map = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 1995, 126, 47, 26 )
+
+[node name="base" type="Sprite" parent="tip" index="0"]
+position = Vector2( 0.846869, 40.5882 )
+scale = Vector2( 1.21734, 1.17647 )
+texture = ExtResource( 3 )
+normal_map = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1263, 321, 34, 63 )

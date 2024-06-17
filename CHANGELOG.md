@@ -1,3 +1,9 @@
+# 1.2.4
+ * Fixed crashes with the RAM and Pigeon, finally
+ * Adjusted aux slot inheritance for TNTRL series
+ * Fixed DMW turret showing duplicate entries on right low-stress hardpoint
+ * Fixed cargo bay description for the Oberon
+ * Fixed sprite shaders on the ORD
 # 1.2.3
  * Fixed hold modifier behaviour
  * Fixed Oberon slot toggles and increased its excavator close force

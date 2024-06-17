@@ -8,8 +8,6 @@
 script = ExtResource( 2 )
 slot = "weaponSlot.main.type"
 always = false
-onlyForShipModels = [  ]
-invertModelLogic = false
 onlyForShipNames = [  ]
 invertNameLogic = false
 

@@ -14,3 +14,9 @@ SYSTEM_CARGO_AUX_STORPROC_8K_DESC|Titan Heavy Industries' internal storage solut
 SYSTEM_CARGO_AUX_STORPROC_8K_SPECS|Cargo capacity: 8,000kg / mineral (48,000 kg total) \nIce melt rate: 5 kg/s \nPower draw: 250 KW / chunk (heating losses) \nRemass processing efficiency: 10% \nMass: 8,000 kg \nManufacturer: Titan Heavy Industries
 
 SYSTEM_CARGO_AUX_STORPROC_MANUAL|Requires an MPU to properly utilise. \nPassively increases onboard processed cargo volume. \nProcessed ore stored in seperate containers, with capacity limited per mineral type. \nReduces ice mass of chunks within a small area. \nTakes up some space in the cargo bay.
+
+
+
+SYSTEM_CARGO_AUX_STORAGE_12K|MPI Roving Silo
+
+SYSTEM_CARGO_AUX_STORAGE_12K_DESC|The MPI Roving Silo is by far the largest 

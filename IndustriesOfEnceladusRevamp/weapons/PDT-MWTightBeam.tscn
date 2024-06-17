@@ -19,6 +19,7 @@ height = 1200.0
 radius = 1600.0
 
 [node name="SYSTEM_MWTIGHTBEAM_PDT" type="Node2D"]
+z_index = 1
 script = ExtResource( 3 )
 advancedTargeting = true
 repairFixPrice = 8000

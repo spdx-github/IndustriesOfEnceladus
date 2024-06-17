@@ -407,6 +407,12 @@ var phantomVars = {
 }
 
 func _ready():
+	for key in shipReplacementPaths.keys():
+		var replacementShip = load("res://%s/ships/%s.tscn" %
+			[modName, shipReplacementPaths[key]]
+		)
+		ships[key] = replacementShip.duplicate()
+		
 	for key in hardOverrides.keys():
 		ships[key] = hardOverrides[key]
 	
@@ -415,12 +421,6 @@ func _ready():
 		var varToChange = get(key)
 		
 		varToChange.merge(phantomVars[key])
-		
-	for key in shipReplacementPaths.keys():
-		var replacementShip = load("res://%s/ships/%s.tscn" %
-			[modName, shipReplacementPaths[key]]
-		)
-		ships[key] = replacementShip.duplicate()
 		
 	for key in newShipNames.keys():
 		# make sure we're not accidentally overriding the... hard override. lol

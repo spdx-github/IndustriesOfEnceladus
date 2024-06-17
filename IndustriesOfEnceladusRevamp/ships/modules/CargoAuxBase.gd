@@ -19,17 +19,20 @@ export var mirrorCollider = false
 export (Vector2) var mirrorCentreOffset = Vector2(0,0)
 
 var ship
+var duped = false
 
 func _ready():
 	ship = getShip()
 	if ship.getConfig(slot) != systemName:
 		Tool.remove(self)
-	else: if not (self in ship.get_children()):
+	else: if not duped:
 		var dupe = self.duplicate()
 		dupe.set_position(Vector2(self.position[0], self.get_parent().position[1]))
 		dupe.set_rotation(self.rotation)
+		dupe.duped = true
 		ship.call_deferred("add_child", dupe)
-		Tool.remove(self)
+		self.queue_free()
+		return true
 	else :
 		visible = true
 		if registerExternal:
