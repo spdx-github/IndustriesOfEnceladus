@@ -212,7 +212,7 @@ aiHunterMaxVelocity = 1200
 aiCuriosityMaxVelocity = 500
 aiFleeMaxVelocity = 1200
 dialogTree = NodePath("UberConversation")
-cargoHoldArea = Rect2( -28, -144, 56, 128 )
+cargoHoldArea = Rect2( -28, -152, 56, 128 )
 cargoHoldOffset = Vector2( 0, 96 )
 
 [node name="allbright" type="Light2D" parent="."]
@@ -394,6 +394,16 @@ texture_scale = 4.0
 energy = 2.0
 range_height = 50.0
 
+[node name="LoStressPort" parent="." instance=ExtResource( 9 )]
+position = Vector2( -60, -148 )
+z_index = 20
+slot = "middleLeft"
+
+[node name="LoStressStbd" parent="." instance=ExtResource( 9 )]
+position = Vector2( 60, -148 )
+z_index = 20
+slot = "middleRight"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "appear"
 anims/appear = SubResource( 3 )
@@ -426,14 +436,6 @@ shape = SubResource( 5 )
 
 [node name="Hud" parent="." instance=ExtResource( 12 )]
 defaultHudType = "SYSTEM_HUD_PROSPECTOR_BALD"
-
-[node name="LoStressPort" parent="." instance=ExtResource( 9 )]
-position = Vector2( -60, -148 )
-slot = "middleLeft"
-
-[node name="LoStressStbd" parent="." instance=ExtResource( 9 )]
-position = Vector2( 60, -148 )
-slot = "middleRight"
 
 [node name="HoldModifiers" parent="." instance=ExtResource( 42 )]
 type = "cargo.modifierDivided"
@@ -563,6 +565,11 @@ __meta__ = {
 [node name="Noises" parent="." instance=ExtResource( 4 )]
 
 [node name="UberConversation" parent="." instance=ExtResource( 32 )]
+
+[connection signal="body_entered" from="CargoHoldArea" to="." method="_on_CargoHoldArea_body_entered"]
+[connection signal="body_exited" from="CargoHoldArea" to="." method="_on_CargoHoldArea_body_exited"]
+[connection signal="body_entered" from="CargoHoldAreaHull" to="." method="_on_CargoHoldArea_body_entered"]
+[connection signal="body_exited" from="CargoHoldAreaHull" to="." method="_on_CargoHoldArea_body_exited"]
 
 [editable path="Grinder"]
 [editable path="SYSTEM_REACTIONWHEEL"]

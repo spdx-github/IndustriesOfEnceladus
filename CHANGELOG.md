@@ -1,3 +1,6 @@
+# 1.3.1
+ * Fixed cargo hold collection detection on Wasp
+ * Fixed weapon visual layer
 # 1.3.0: BIG STING, LITTLE GUY
  * Added Wasp-class Scout (Decommissioned)
  * Fixed DD accessories not appearing properly
