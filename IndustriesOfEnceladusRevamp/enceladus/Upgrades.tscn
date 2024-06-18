@@ -4885,6 +4885,7 @@ slot = "cargo.equipment"
 [node name="CargoAccessories" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="68" instance=ExtResource( 3 )]
 margin_top = 47307.0
 margin_bottom = 48028.0
+onlyForShipNames = [ "SHIP_PROSPECTOR_BALD", "SHIP_KITSUNE", "SHIP_TRTL_T", "SHIP_TRTL_R", "SHIP_EIME", "SHIP_OCP209", "SHIP_OCP209_SNAP", "SHIP_OBERON", "SHIP_ATLAS_WASP" ]
 
 [node name="Autopilot" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="69"]
 margin_top = 48032.0
