@@ -1,3 +1,9 @@
+# 1.3.0: BIG STING, LITTLE GUY
+ * Added Wasp-class Scout (Decommissioned)
+ * Fixed DD accessories not appearing properly
+ * Fixed Pigeon cargo hold area for better drone/arm behaviour
+ * Fixed Gungnir right mount not equipping properly on right low-stress hardpoints
+ * Increased overall chances of IoE vessels spawning in the Dealer
 # 1.2.4
  * Fixed crashes with the RAM and Pigeon, finally
  * Adjusted aux slot inheritance for TNTRL series
@@ -16,7 +22,7 @@
  * Adjusted MPP areas on all ships to hopefully prevent clipping issue
  * Did some other stuff??
  * Added MAD-CERF bay accessory Support
-# 1.2.0
+# 1.2.0: THE BIRDS ARE COMING
  * Added Pigeon Prospector
  * Adjusted MPU colliders on the Pelican
  * Fixed SPC Gungnir displaying double on high-stress left/right hardpoints

@@ -34,6 +34,7 @@ var shipReplacementPaths = {
 }
 
 var newShipNames = {
+	"ATLAS-Wasp": "WASP",
 	"Cothon-Lux": "COTHON",
 	"MAD-CERF-Civ": "MADCERF", # custom aux modules
 	"OCP-209-DD": "OCP209", # custom aux modules
@@ -45,6 +46,31 @@ var newShipNames = {
 }
 
 var shipConfigs = {
+	"ATLAS-Wasp": {"config": {
+		"ammo":{
+			"capacity": 1000.0,
+			"initial": 1000.0
+		},
+		"autopilot":{"type":"SYSTEM_AUTOPILOT_MK2"}, 
+		"capacitor":{"capacity": 1500.0}, 
+		"cargo":{
+			"equipment":"SYSTEM_CARGO_STANDARD",
+		},
+		"fuel":{
+			"capacity": 15000.0, 
+			"initial": 15000.0, 
+		}, 
+		"propulsion":{
+			"rcs":"SYSTEM_THRUSTER_GHET"
+		}, 
+		"reactor":{"power": 4.0},
+		"shielding":{"emp": 320},  
+		"turbine":{"power": 500.0},
+		"weaponSlot":{
+			"middleLeft":{"type":"SYSTEM_RAILTOR"}, 
+			"middleRight":{"type":"SYSTEM_RAILTOR"}
+		}, 
+	}},
 	"Cothon-Lux": {"config": {
 		"ammo":{
 			"capacity": 1000.0, 
@@ -322,6 +348,9 @@ var shipConfigs = {
 }
 
 var shipConfigsUsed = {
+	"ATLAS-Wasp": [
+		
+	],
 	"Cothon-Lux": usedShipConfigs["COTHON"],
 	"MAD-CERF-Civ": [
 		

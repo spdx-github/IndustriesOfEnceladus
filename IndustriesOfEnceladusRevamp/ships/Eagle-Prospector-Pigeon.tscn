@@ -116,6 +116,16 @@ rest_length = 56.0
 [node name="Collider" parent="." index="7"]
 polygon = PoolVector2Array( -50, -194, -50, 40, -74, 64, -74, 108, -61, 120, -34, 120, -38, 148, -38, 202, -30, 230, 30, 230, 38, 202, 38, 148, 34, 120, 61, 120, 74, 108, 74, 64, 50, 40, 50, -194, 36, -208, 24, -198, 24, -188, 40, -188, 40, 24, -40, 24, -40, -188, -24, -188, -24, -198, -36, -208 )
 
+light_mask = 0
+polygon = PoolVector2Array( 44, -192, 44, 28, -44, 28, -44, -190, -28, -194, -16, -218, 16, -218, 28, -194 )
+
+[node name="CargoHoldAreaHull" parent="." index="9"]
+visible = true
+
+[node name="CollisionPolygon2D" parent="CargoHoldAreaHull" index="0"]
+light_mask = 0
+polygon = PoolVector2Array( 48, -194, 48, 40, 72, 96, 32, 118, 36, 148, 36, 202, 28, 228, -28, 228, -36, 202, -36, 148, -32, 118, -72, 96, -48, 39, -48, -192, -20, -222, 20, -222 )
+
 [node name="HiStressFore" parent="." index="22" instance_placeholder="res://weapons/WeaponSlot.tscn"]
 visible = false
 position = Vector2( 0, -224 )

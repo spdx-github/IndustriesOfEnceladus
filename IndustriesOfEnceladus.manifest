@@ -1,0 +1,5 @@
+[package]
+
+id = "spdx.IndustriesOfEnceladus"
+name = "[SPDX] Industries of Enceladus"
+group = "gameplay"

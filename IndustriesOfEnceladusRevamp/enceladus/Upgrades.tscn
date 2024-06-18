@@ -42,10 +42,10 @@ texture = SubResource( 1 )
 texture = SubResource( 2 )
 
 [node name="MarginContainer" parent="VB/MarginContainer/ScrollContainer" index="0"]
-margin_bottom = 50278.0
+margin_bottom = 50130.0
 
 [node name="Items" parent="VB/MarginContainer/ScrollContainer/MarginContainer" index="0"]
-margin_bottom = 50262.0
+margin_bottom = 50114.0
 
 [node name="MainWeaponSlot" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="0"]
 visible = false
@@ -2311,15 +2311,15 @@ margin_right = 1196.0
 margin_bottom = 1087.0
 
 [node name="SYNCHRO-L" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/MiddleRightWeaponSlotRepl/VBoxContainer" index="38"]
+visible = false
 margin_top = 1091.0
 margin_right = 1196.0
 margin_bottom = 1161.0
 
 [node name="SYNCHRO-R" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/MiddleRightWeaponSlotRepl/VBoxContainer" index="39"]
-visible = false
-margin_top = 1535.0
+margin_top = 1091.0
 margin_right = 1196.0
-margin_bottom = 1605.0
+margin_bottom = 1161.0
 
 [node name="NANI" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/MiddleRightWeaponSlotRepl/VBoxContainer" index="40"]
 margin_top = 1165.0
@@ -4288,12 +4288,12 @@ margin_bottom = 1087.0
 [node name="ReversedLeftBay1" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="44" instance=ExtResource( 7 )]
 margin_top = 35559.0
 margin_right = 1228.0
-margin_bottom = 36724.0
+margin_bottom = 36650.0
 slot = "weaponSlot.leftBayRev1.type"
 
 [node name="VBoxContainer" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/ReversedLeftBay1" index="0"]
 margin_right = 1212.0
-margin_bottom = 1163.0
+margin_bottom = 1089.0
 
 [node name="HBoxContainer" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/ReversedLeftBay1/VBoxContainer" index="0"]
 margin_right = 1196.0
@@ -4391,6 +4391,7 @@ margin_right = 1196.0
 margin_bottom = 791.0
 
 [node name="MWTIGHTBEAM_PDT" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/ReversedLeftBay1/VBoxContainer" index="35"]
+visible = false
 margin_top = 795.0
 margin_right = 1196.0
 margin_bottom = 865.0
@@ -4402,34 +4403,34 @@ margin_right = 1196.0
 margin_bottom = 643.0
 
 [node name="MWTIGHTBEAM_PDT-R" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/ReversedLeftBay1/VBoxContainer" index="37"]
+margin_top = 795.0
+margin_right = 1196.0
+margin_bottom = 865.0
+
+[node name="DND_HAUL" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/ReversedLeftBay1/VBoxContainer" index="42"]
 margin_top = 869.0
 margin_right = 1196.0
 margin_bottom = 939.0
 
-[node name="DND_HAUL" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/ReversedLeftBay1/VBoxContainer" index="42"]
+[node name="DND_FIX" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/ReversedLeftBay1/VBoxContainer" index="43"]
 margin_top = 943.0
 margin_right = 1196.0
 margin_bottom = 1013.0
 
-[node name="DND_FIX" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/ReversedLeftBay1/VBoxContainer" index="43"]
+[node name="DND_HARVHAUL" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/ReversedLeftBay1/VBoxContainer" index="44"]
 margin_top = 1017.0
 margin_right = 1196.0
 margin_bottom = 1087.0
 
-[node name="DND_HARVHAUL" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/ReversedLeftBay1/VBoxContainer" index="44"]
-margin_top = 1091.0
-margin_right = 1196.0
-margin_bottom = 1161.0
-
 [node name="ReversedRightBay1" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="45" instance=ExtResource( 7 )]
-margin_top = 36728.0
+margin_top = 36654.0
 margin_right = 1228.0
-margin_bottom = 37893.0
+margin_bottom = 37745.0
 slot = "weaponSlot.rightBayRev1.type"
 
 [node name="VBoxContainer" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/ReversedRightBay1" index="0"]
 margin_right = 1212.0
-margin_bottom = 1163.0
+margin_bottom = 1089.0
 
 [node name="HBoxContainer" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/ReversedRightBay1/VBoxContainer" index="0"]
 margin_right = 1196.0
@@ -4525,14 +4526,15 @@ margin_right = 1196.0
 margin_bottom = 791.0
 
 [node name="MWTIGHTBEAM_PDT" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/ReversedRightBay1/VBoxContainer" index="35"]
+visible = false
 margin_top = 795.0
 margin_right = 1196.0
 margin_bottom = 865.0
 
 [node name="MWTIGHTBEAM_PDT-L" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/ReversedRightBay1/VBoxContainer" index="36"]
-margin_top = 869.0
+margin_top = 795.0
 margin_right = 1196.0
-margin_bottom = 939.0
+margin_bottom = 865.0
 
 [node name="MWTIGHTBEAM_PDT-R" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/ReversedRightBay1/VBoxContainer" index="37"]
 visible = false
@@ -4541,19 +4543,19 @@ margin_right = 1196.0
 margin_bottom = 791.0
 
 [node name="DND_HAUL" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/ReversedRightBay1/VBoxContainer" index="42"]
+margin_top = 869.0
+margin_right = 1196.0
+margin_bottom = 939.0
+
+[node name="DND_FIX" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/ReversedRightBay1/VBoxContainer" index="43"]
 margin_top = 943.0
 margin_right = 1196.0
 margin_bottom = 1013.0
 
-[node name="DND_FIX" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/ReversedRightBay1/VBoxContainer" index="43"]
+[node name="DND_HARVHAUL" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/ReversedRightBay1/VBoxContainer" index="44"]
 margin_top = 1017.0
 margin_right = 1196.0
 margin_bottom = 1087.0
-
-[node name="DND_HARVHAUL" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/ReversedRightBay1/VBoxContainer" index="44"]
-margin_top = 1091.0
-margin_right = 1196.0
-margin_bottom = 1161.0
 
 [node name="AmmunitionDelivery" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="46"]
 visible = false
@@ -4563,16 +4565,16 @@ always = false
 restrictType = "NULL"
 
 [node name="AmmoSlot" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="47" instance=ExtResource( 11 )]
-margin_top = 37897.0
-margin_bottom = 38544.0
+margin_top = 37749.0
+margin_bottom = 38396.0
 
 [node name="DisposableDrones" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="48"]
-margin_top = 38548.0
-margin_bottom = 39047.0
+margin_top = 38400.0
+margin_bottom = 38899.0
 
 [node name="Propellant" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="49"]
-margin_top = 39051.0
-margin_bottom = 39550.0
+margin_top = 38903.0
+margin_bottom = 39402.0
 
 [node name="Thrusters" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="50"]
 visible = false
@@ -4599,14 +4601,14 @@ warnIfThermalBelow = 1.3
 warnIfElectricBelow = 250.0
 
 [node name="ThrusterSlot" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="51" instance=ExtResource( 9 )]
-margin_top = 39554.0
-margin_bottom = 40423.0
+margin_top = 39406.0
+margin_bottom = 40275.0
 slot = "propulsion.rcs"
 always = false
 
 [node name="TorchRCSSlot" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="52" instance=ExtResource( 8 )]
-margin_top = 40427.0
-margin_bottom = 41592.0
+margin_top = 40279.0
+margin_bottom = 41444.0
 slot = "propulsion.rcsLarge"
 
 [node name="VBoxContainer" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/TorchRCSSlot" index="0"]
@@ -4707,8 +4709,8 @@ slot = ""
 restrictType = "NULL"
 
 [node name="TorchSlot" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="54" instance=ExtResource( 8 )]
-margin_top = 41596.0
-margin_bottom = 42761.0
+margin_top = 41448.0
+margin_bottom = 42613.0
 
 [node name="Rods" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="55"]
 visible = false
@@ -4718,8 +4720,8 @@ always = false
 restrictType = "NULL"
 
 [node name="RodSlot" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="56" instance=ExtResource( 13 )]
-margin_top = 42765.0
-margin_bottom = 43486.0
+margin_top = 42617.0
+margin_bottom = 43338.0
 
 [node name="Capacitor" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="57"]
 visible = false
@@ -4729,8 +4731,8 @@ always = false
 restrictType = "NULL"
 
 [node name="CapacitorSlot" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="58" instance=ExtResource( 12 )]
-margin_top = 43490.0
-margin_bottom = 43989.0
+margin_top = 43342.0
+margin_bottom = 43841.0
 
 [node name="Turbine" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="59"]
 visible = false
@@ -4740,8 +4742,8 @@ always = false
 restrictType = "NULL"
 
 [node name="TurbineSlot" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="60" instance=ExtResource( 15 )]
-margin_top = 43993.0
-margin_bottom = 44492.0
+margin_top = 43845.0
+margin_bottom = 44344.0
 
 [node name="AuxilaryPower" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="61"]
 visible = false
@@ -4751,8 +4753,8 @@ always = false
 restrictType = "NULL"
 
 [node name="AuxPowerSlot" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="62" instance=ExtResource( 14 )]
-margin_top = 44496.0
-margin_bottom = 45291.0
+margin_top = 44348.0
+margin_bottom = 45143.0
 
 [node name="CargoBay" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="63"]
 visible = false
@@ -4760,8 +4762,8 @@ slot = "NULL"
 always = false
 
 [node name="HoldModifiersDivided" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="64" instance=ExtResource( 4 )]
-margin_top = 45295.0
-margin_bottom = 45794.0
+margin_top = 45147.0
+margin_bottom = 45646.0
 slot = "cargo.modifierDivided"
 
 [node name="VBoxContainer" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersDivided" index="0"]
@@ -4815,8 +4817,8 @@ margin_right = 1196.0
 margin_bottom = 495.0
 
 [node name="HoldModifiersAmorphic" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="65" instance=ExtResource( 4 )]
-margin_top = 45798.0
-margin_bottom = 46223.0
+margin_top = 45650.0
+margin_bottom = 46075.0
 slot = "cargo.modifierAmorphic"
 
 [node name="VBoxContainer" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/HoldModifiersAmorphic" index="0"]
@@ -4871,34 +4873,34 @@ margin_right = 1196.0
 margin_bottom = 421.0
 
 [node name="CargoEquipmentLimited" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="66" instance=ExtResource( 16 )]
-margin_top = 46227.0
-margin_bottom = 46874.0
+margin_top = 46079.0
+margin_bottom = 46726.0
 always = true
 
 [node name="CargoEquipment" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="67" instance=ExtResource( 2 )]
-margin_top = 46878.0
-margin_bottom = 47451.0
+margin_top = 46730.0
+margin_bottom = 47303.0
 slot = "cargo.equipment"
 
 [node name="CargoAccessories" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="68" instance=ExtResource( 3 )]
-margin_top = 47455.0
-margin_bottom = 48176.0
+margin_top = 47307.0
+margin_bottom = 48028.0
 
 [node name="Autopilot" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="69"]
-margin_top = 48180.0
-margin_bottom = 48679.0
+margin_top = 48032.0
+margin_bottom = 48531.0
 
 [node name="Hud" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="70"]
-margin_top = 48683.0
-margin_bottom = 49478.0
+margin_top = 48535.0
+margin_bottom = 49330.0
 
 [node name="Lidar" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="71"]
-margin_top = 49482.0
-margin_bottom = 49907.0
+margin_top = 49334.0
+margin_bottom = 49759.0
 
 [node name="ReconDrone" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="72"]
-margin_top = 49911.0
-margin_bottom = 50262.0
+margin_top = 49763.0
+margin_bottom = 50114.0
 
 [editable path="VB/HeaderWithMoney"]
 [editable path="VB/WindowMargin/TabHintContainer"]
