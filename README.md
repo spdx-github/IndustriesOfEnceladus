@@ -13,6 +13,7 @@ It all started because I was frustrated with how fast the AR-1500 wore out, so I
  - Reworks all ship colliders in the interest of better performance
  - Subcolliders (MPUs and cargo baffles) too
  - Extends some default functionalities on the backend like a ship-name filter on UpgradeGroups and removal of hard caps on drone tuning
+ - Changes some sprites to be more aesthetically-pleasing
 
 ### Ships
  - SSE Cothon-2200-XL: expands crew space to 6, increases flight comfort, adds a set of left-right translatory thrusters and optimises the manual firing binds

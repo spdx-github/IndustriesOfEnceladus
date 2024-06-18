@@ -8,14 +8,30 @@ const MOD_PRIORITY = 0
 var _savedObjects = []
 
 var modName = "[SPDX] Industries of Enceladus"
-var modVersion = "1.3.0"
+var modVersion = "1.3.2"
 var modPath = ""
+var configFile:ConfigFile = ConfigFile.new()
+
+var aesthetics:bool = true
+var addShips:bool = true
+var verbose:bool = true # failsafe
 
 func _init(modLoader = ModLoader):
-	Debug.l(modName + ": Initializing, version " + modVersion)
+	sLog("Initialising! Version %s" % modVersion)
 
 # Get current path of script
-	modPath = get_script().resource_path.get_base_dir() + "/"
+	modPath = get_script().resource_path.get_base_dir()
+	
+	# config file loader
+	if configFile.load("%s.ini" % modPath) == OK:
+		aesthetics = configFile.get_value("General", "aesthetic-stuff")
+		addShips = configFile.get_value("General", "add-new-ships")
+		verbose = configFile.get_value("Debug", "verbose")
+	else:
+		sLog("ERROR! Couldn't load config file, falling back on default values")
+	
+	# needed since this is stupid
+	modPath += "/"
 
 # Must load DLC early for it to properly function.
 	loadDLC()
@@ -24,32 +40,41 @@ func _init(modLoader = ModLoader):
 	replaceScene("ships/modules/AuxSlot.tscn")
 	replaceScene("ships/modules/ThrusterSlot.tscn")
 	replaceScene("ships/modules/TorchSlot.tscn")
+	
+# replace weapons and WeaponSlot
+	if aesthetics:
+		sLog("Setting up aesthetic adjustments")
+		replaceScene("weapons/railgun_tor.tscn")
+		
 	replaceScene("weapons/WeaponSlot.tscn")
 	
 # install the Shipyard.gd script extension, which loads replacements + new ships
 	installScriptExtension("ships/Shipyard.gd")
 # install CurrentGame.gd which loads new ships into the game
-	installScriptExtension("CurrentGame.gd")
+	if addShips:
+		sLog("Injecting new ships")
+		installScriptExtension("CurrentGame.gd")
 	
 # replace the Upgrades.tscn containing equipment modifications
 	replaceScene("enceladus/Upgrades.tscn")
 # replace Dealer.tscn for our "promo images" (that i don't have lol)
-	replaceScene("enceladus/Dealer.tscn")
+	if addShips:
+		replaceScene("enceladus/Dealer.tscn")
 	
 # Load custom translations
 	updateTL("en") 
 
-	Debug.l(modName + ": Initialized")
+	sLog("Initialised!")
 
 
 func _ready():
-	Debug.l(modName + ": Ready")
+	sLog("Ready!")
 
 
 # Helper script to load translations, as the ModLoader one seemingly does not function.
 # This is not a good function, but it works.
 func updateTL(locale:String, path:String = modPath + "i18n"):
-	Debug.l(modName + ": Updating translations")
+	sLog("Updating translations")
 
 	# preprocess i18n directory files
 	var operatingPath = "%s/%s/" % [path, locale]
@@ -69,7 +94,7 @@ func updateTL(locale:String, path:String = modPath + "i18n"):
 			if fileName:
 				tlFile.open(operatingPath + fileName)
 				
-				Debug.l("%s: Loaded translation file %s" % [modName, fileName])
+				if verbose: sLog("Loaded translation file %s" % fileName)
 		
 				while tlFile.get_position() < tlFile.get_len():
 					var line = tlFile.get_line()
@@ -79,7 +104,7 @@ func updateTL(locale:String, path:String = modPath + "i18n"):
 						var val = tr(split[1]).c_unescape()
 						
 						translation.add_message(key, val)
-						Debug.l("Added translation %s" % key)
+						if verbose: Debug.l("Added translation %s" % key)
 				
 				tlFile.close()
 			else:
@@ -88,23 +113,24 @@ func updateTL(locale:String, path:String = modPath + "i18n"):
 
 		TranslationServer.add_translation(translation)
 	else:
-		Debug.l("%s: Error in loading translation files" % modName)
+		sLog("ERROR! Couldn't find path '%s'!" % operatingPath)
 
-	Debug.l(modName + ": Translations updated")
+	sLog("Translations updated")
 
 
 # Instances Settings.gd, loads DLC, then frees the script.
 func loadDLC():
-	Debug.l(modName + ": Preloading DLC as workaround")
+	sLog("Preloading DLC")
 	var DLCLoader = load("res://Settings.gd").new()
 	DLCLoader.loadDLC()
 	DLCLoader.queue_free()
-	Debug.l(modName + ": Finished loading DLC")
+	sLog("Finished loading DLC")
 
 
 # Helper function to replace scenes
 func replaceScene(path:String, oldPath:String = "none"):
-	Debug.l("Updating scene: %s" % path)
+	if verbose: sLog("Updating scene %s" % path)
+	
 	var newScene
 	var oldScene
 
@@ -119,8 +145,8 @@ func replaceScene(path:String, oldPath:String = "none"):
 	var scene = load(newScene)
 	scene.take_over_path(oldScene)
 	_savedObjects.append(scene)
-	Debug.l("Finished updating: %s" % oldScene)
-
+	
+	if verbose: sLog("Updated %s" % path)
 
 # Helper function to extend scripts
 func installScriptExtension(path:String , oldPath:String = "none"):
@@ -132,6 +158,10 @@ func installScriptExtension(path:String , oldPath:String = "none"):
 	var parentScript = childScript.get_base_script()
 	var parentPath = parentScript.resource_path
 
-	Debug.l("Installing script extension: %s <- %s" % [parentPath, childPath])
+	if verbose: sLog("Installing script extension (%s <- %s)" % [parentPath, childPath])
 
 	childScript.take_over_path(parentPath)
+
+# quick helper for Debug.l "soft log"
+func sLog(text:String):
+	Debug.l("%s: %s" % [modName, text])

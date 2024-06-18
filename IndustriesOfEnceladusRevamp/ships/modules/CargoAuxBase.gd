@@ -27,9 +27,9 @@ func _ready():
 		Tool.remove(self)
 	else: if not duped:
 		var dupe = self.duplicate()
+		dupe.duped = true
 		dupe.set_position(Vector2(self.position[0], self.get_parent().position[1]))
 		dupe.set_rotation(self.rotation)
-		dupe.duped = true
 		ship.call_deferred("add_child", dupe)
 		self.queue_free()
 		return true

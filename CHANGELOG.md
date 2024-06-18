@@ -1,3 +1,17 @@
+# 1.3.2
+ * On Wasp:
+  - Added rear thruster and adjusted firing groups to accommodate
+  - Set side thruster default angle to ~90 degrees
+  - Replaced computer with Obonto 600
+  - Replaced default HUD with Kitsune
+  - Slightly adjusted MPU colliders
+  - Adjusted centre of mass to be further rearward
+  - Changed reaction wheel characteristics for better performance
+  - Fixed auxiliary power systems not being equipped
+  - Increased threshold before strain sounds are played
+  - Slightly adjusted thermal sprites
+ * Added limited config for turning off custom ships and aesthetic changes
+ * Added railgun sprite modification since I didn't like the default
 # 1.3.1
  * Fixed cargo hold collection detection on Wasp
  * Fixed weapon visual layer
