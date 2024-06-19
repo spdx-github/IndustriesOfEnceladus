@@ -1,3 +1,5 @@
+# 1.4.2
+ * Adjusted Prospector KRB-500 positions
 # 1.4.1
  * Added Prospector placements for the KRB-500
 # 1.4.0: EVERYTHING RETURNS TO CRAB

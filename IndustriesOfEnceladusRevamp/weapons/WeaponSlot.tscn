@@ -21,13 +21,13 @@ visible = false
 
 [node name="SYSTEM_SALVAGE_ARM_LIGHT_PROSP-L" parent="." index="16" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/SalvageArmLight-R.tscn"]
 visible = false
-position = Vector2( 16, 8 )
+position = Vector2( 16, -40 )
 flip = true
 feedVelocity = Vector2( -72, -320 )
 
 [node name="SYSTEM_SALVAGE_ARM_LIGHT_PROSP-R" parent="." index="17" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/SalvageArmLight-R.tscn"]
 visible = false
-position = Vector2( -16, 8 )
+position = Vector2( -16, -40 )
 
 [node name="SYSTEM_SALVAGE_ARM_HEAVY" parent="." index="18" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/SalvageArmHeavy.tscn"]
 visible = false

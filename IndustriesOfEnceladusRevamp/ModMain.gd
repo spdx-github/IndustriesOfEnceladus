@@ -77,7 +77,7 @@ func _init(modLoader = ModLoader):
 	sLog("Initialised!", modName)
 
 
-func _ready():
+func _ready():	
 	sLog("Ready!")
 
 
