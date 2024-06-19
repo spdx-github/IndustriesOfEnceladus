@@ -51,4 +51,11 @@ SYSTEM_CARGO_MOD_AMORPH5_DESC|The Titan Heavy Industries MD-5 Hold Kit is well-k
 SYSTEM_CARGO_MOD_AMORPH5_SPECS|Conversion mode: Divided to Dynamic \nConversion ratio: 6:5 (17% reduction) \nMass: 2,500 kg \nManufacturer: Titan Heavy Industries
 
 
+SYSTEM_CARGO_MOD_AMORPH6|NDSBH
+
+SYSTEM_CARGO_MOD_AMORPH6_DESC|Nakamura Dynamics' Soft Body Hold is the ultimate dynamic conversion kit for divided holds, removing the default partitions and replacing them with a simple, yet effective rolling baffle system that's custom-commissioned according to a ship's specifications. Compressed air is used to create a frictionless cushion as the baffles move, and a control computer manages and predicts future geometry changes through a direct link to the cargo bay's processing unit and microseismic imaging system.
+
+SYSTEM_CARGO_MOD_AMORPH6_SPECS|Conversion mode: Divided to Dynamic \nConversion ratio: 1:1 (no reduction) \nMass: 3,750 kg \nManufacturer: Nakamura Dynamics
+
+
 SYSTEM_CARGO_MOD_AMORPH_MANUAL|Requires an MPU to properly utilise. \nConverts the mineral hold storage volume to Dynamic. \nIncreases or decreases total hold storage volume according to the conversion ratio. Percentage indicated in specification. \nDoes not require power or reactor heat.

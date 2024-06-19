@@ -17,7 +17,7 @@ always = false
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 1221.0
-margin_bottom = 565.0
+margin_bottom = 639.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 margin_right = 1214.0
@@ -138,5 +138,18 @@ description = "SYSTEM_CARGO_MOD_6K_DESC"
 manual = "SYSTEM_CARGO_MOD_BOTH_MANUAL"
 specs = "SYSTEM_CARGO_MOD_6K_SPECS"
 price = 350000
+testProtocol = "takeoff"
+default = true
+
+[node name="CargoModifierAMORPH6" parent="VBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 562.0
+margin_right = 1214.0
+margin_bottom = 632.0
+slot = "cargo.modifierDivided"
+system = "SYSTEM_CARGO_MOD_AMORPH6"
+manual = "SYSTEM_CARGO_MOD_AMORPH_MANUAL"
+price = 445000
 testProtocol = "takeoff"
 default = true

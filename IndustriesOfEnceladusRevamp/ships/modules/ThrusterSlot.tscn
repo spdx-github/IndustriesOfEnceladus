@@ -5,3 +5,5 @@
 [node name="ThrusterSlot" instance=ExtResource( 1 )]
 
 [node name="SYSTEM_THRUSTER_PIN150" parent="." index="12" instance_placeholder="res://IndustriesOfEnceladusRevamp/sfx/thruster-pin150.tscn"]
+
+[node name="SYSTEM_THRUSTER_BLAST" parent="." index="13" instance_placeholder="res://IndustriesOfEnceladusRevamp/sfx/thruster-blast.tscn"]

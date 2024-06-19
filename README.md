@@ -8,6 +8,7 @@ It all started because I was frustrated with how fast the AR-1500 wore out, so I
 [If you'd like to support my work, consider donating on Ko-fi!](https://ko-fi.com/pearshapes) I'm not able to work due to disabilities, so I don't get much every month. Any little bit helps. Thank you!
 
 ## Features
+
 ### Changes
  - Adds four docking bays to the OCP-209 (extends to the DD and SNAP variants)
  - Reworks all ship colliders in the interest of better performance
@@ -24,10 +25,10 @@ It all started because I was frustrated with how fast the AR-1500 wore out, so I
  - Pigeon Prospector: combines Pelican and Vulture with a high-stress hardpoint *alongside* two low-stress. basically the best(?) prospector on hardware alone but is the most massive
  - UMC Oberon MLP-60: entirely custom ship with textures graciously provided by Liqvo! dandy little racing vessel with utterly ridiculous performance
  - KX37 TNTRL RAM: Ringa Aftermarket Modification variant of the KX37, has a grinder and an extra pair of thrusters, plus heavy layout reconfigurations. heavily inspired by redditor BLKCandy and their custom KX37 mod!
- - Wasp-class Scout (Decommissioned): incredibly light scout ship with only three thrusters, basically a Kitsune but carries two low-stress hardpoints, 320MW EM shielding, and less thrusters. can handle more thermal power too, just don't ask about the reactor
+ - Wasp-class Scout (Decommissioned): incredibly light scout ship with only four thrusters, basically a Kitsune but carries two low-stress hardpoints, 320MW EM shielding, and less thrusters. can handle more thermal power too, just don't ask about the reactor
 	
 ### Engines
- - SSE NANI Torch Refit: it's the NANI in a torch slot. Have fun
+ - SSE NANI Torch Refit: it's the NANI in a torch slot. have fun
  - MA-NTR600-II: twin torch, relatively expensive but incredibly efficient for its thrust class
  - RA-TNTRL-R44: quad torch, literally just the K44 RCS thrusters on a torch mount
  - RA-K69V Quad Engine: custom-made quad torch, same as above but it's the K69Vs and they fucking gimbal
@@ -36,6 +37,7 @@ It all started because I was frustrated with how fast the AR-1500 wore out, so I
 
 ### Thrusters
  - RMS Pin-C50: extremely efficient pulsed induction thruster that has incredible gimbal range and second-to-none wear statistics but has very high power demand
+ - ERS-BlasTR 7200: efficient MPD thruster with great thrust, draws a lot of power
 
 ### Power Systems
 
@@ -48,7 +50,7 @@ It all started because I was frustrated with how fast the AR-1500 wore out, so I
  - ND-iSMB Dual Coupling: even lighter capacitor that's just two smaller iSMB units braided together
 
 #### Turbines
- - Thermocouple Array: uses reactor heat and cold propellant to produce a little power, very light, best used in conjunction with an MPDG
+ - Thermocouple Array: uses reactor heat and cold propellant to produce a little power. very light, best used in conjunction with an MPDG
  - Laminar Turbine: a lighter turbine that produces more power than the base turbine
  - Dual Laminar Turbine: two of them!
 
@@ -57,11 +59,13 @@ It all started because I was frustrated with how fast the AR-1500 wore out, so I
  - MPI City-class MPDG: produces 2000 MW of power, MPI might have made a pact with Satan
 
 #### Auxiliary Power Storage
- - OPS-10 Capacitor Bank: a relatively light, cheap APS that stores 10 MJ and discharges at the same rate as a capacitor
-
+ - OPS-10 Capacitor Bank: a heavy but cheap APS that stores 10 MJ and can discharge all of its power in one second
+ 
 #### Hardpoint Equipment
  - Rusatom-Antonoff Ore Recovery Device: a hardened AR-1500 Manipulator that wears slower than the base model and is stronger
- - RA DMW Cannon: a tight-beam microwave gun with greater range and power than the MWG, but inefficient and power-hungry. Comes in turreted variant that's a lot slower than the PDMWG
+ - Runasimi KRB-500: a light manipulator meant to handle ore chunks, hard-wearing with quick-to-replace components but expensive to repair
+ - THI Dyna-Cargo Container: a cargo container that has a dynamic hold at the expense of reduced overall storage
+ - RA DMW Cannon: a tight-beam microwave gun with greater range and power than the MWG, but inefficient and power-hungry. comes in turreted variant that's a lot slower than the PDMWG
  - THI Harvester-class Haul Drones: high-power haul drones that can operate over double the distance of the base version and provide double the effective force, but take significantly more power and need lots of drone components
 
 ### MPUs
@@ -86,6 +90,7 @@ It all started because I was frustrated with how fast the AR-1500 wore out, so I
  - E-Prime Hold Rejoin: adds a generous amount of mineral hold space
  - THI MD-5 (divided): converts the hold to amorphic, 6:5 (reduces total by 17%)
  - Conlido freightReady Hoppers: adds a large amount of mineral hold space
+ - NDSBH: converts the hold to amorphic, 1:1 (perfect equivalent)
 
 ## Installation (Steam)
 

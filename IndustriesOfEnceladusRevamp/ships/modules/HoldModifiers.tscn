@@ -91,3 +91,12 @@ repairFixTime = 4
 mass = 2500.0
 holdType = "amorphic"
 amorphicRatio = 5
+
+[node name="SYSTEM_CARGO_MOD_AMORPH6" parent="." instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/HoldModifier.tscn"]
+repairReplacementPrice = 445000
+repairReplacementTime = 1
+repairFixPrice = 5000
+repairFixTime = 1
+mass = 3750.0
+holdType = "amorphic"
+amorphicRatio = 6

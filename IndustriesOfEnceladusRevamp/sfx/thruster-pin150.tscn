@@ -4,8 +4,8 @@
 [ext_resource path="res://sfx/thrusters-fusion.png" type="Texture" id=2]
 
 [node name="SYSTEM_THRUSTER_PIN150" instance=ExtResource( 1 )]
-position = Vector2( 0, 2.26498e-06 )
-scale = Vector2( 0.4, 0.6 )
+position = Vector2( -4.76837e-07, -3 )
+scale = Vector2( 0.25, 0.6 )
 texture = ExtResource( 2 )
 offset = Vector2( -32, 0 )
 repairReplacementPrice = 31500
@@ -23,7 +23,7 @@ damageChokeCapacity = 128000.0
 damageChokeThreshold = 64000.0
 specificImpulse = 90
 thermalFactor = 1.0
-powerDraw = 60000.0
+powerDraw = 90000.0
 gimbalPowerDraw = 15000.0
 gimbal = 0.628
 gimbalAccurancy = 0.85
@@ -33,7 +33,7 @@ pulseEngine = false
 externalPower = true
 tuneThrustMax = 1.25
 systemName = "SYSTEM_THRUSTER_PIN150"
-mass = 135
+mass = 185
 
 [node name="Flare" parent="." index="2"]
 color = Color( 0.733333, 0.494118, 1, 1 )

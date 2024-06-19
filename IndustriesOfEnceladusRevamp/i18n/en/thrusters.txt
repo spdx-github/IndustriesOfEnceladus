@@ -2,4 +2,12 @@ SYSTEM_THRUSTER_PIN150|RMS Pin-C50 thruster
 
 SYSTEM_THRUSTER_PIN150_DESC|The Rasamama Material Solutions Pin-C50 is a unique solid-state thruster system that utilises pulsed induction to accelerate and vector hydrogen plasma without the need for any mechanical components, massively minimising the damage-related issues associated with conventional thrusters. \n\nWhile incredibly hard-wearing, the installation of heavy plasma conduits and supporting power infrastructure, as well as the thrusters' direct embedment into the vessel hull, requires specialist assistance that may be difficult to afford.
 
-SYSTEM_THRUSTER_PIN150_SPECS|Thrust: 150 kN \nExhaust velocity: 90 km/s \nPropellant consumption: 1.6 kg/s \nPower consumption: 75 MW \nOperation mode: Virtual variable thrust, gimballed \nGimbal angle: 36 deg \nGimbal speed: instantaneous \nPropellant: Hydrogen plasma \nMass: 135 kg (per thruster) \nManufacturer: Rasamama Material Solutions
+SYSTEM_THRUSTER_PIN150_SPECS|Thrust: 150 kN \nExhaust velocity: 90 km/s \nPropellant consumption: 1.6 kg/s \nPower consumption: 90 MW \nOperation mode: Virtual variable thrust, gimballed \nGimbal angle: 36 deg \nGimbal speed: instantaneous \nPropellant: Hydrogen plasma \nMass: 185 kg (per thruster) \nManufacturer: Rasamama Material Solutions
+
+
+
+SYSTEM_THRUSTER_BLAST|ERS-BlasTR 7200
+
+SYSTEM_THRUSTER_BLAST_DESC|Electro Ride Systems' BlasTR is a complete deviation from their previous NAGHET, utilising a helical magnetoplasmadynamic accelerator to achieve spectacular thrust at equally improbable exhaust velocities. Primarily marketed towards racing ships, it has also seen interest from operators of heavy vessels, whose high thrust requirements have long been overserved by thrusters with poor propellant economies.
+
+SYSTEM_THRUSTER_BLAST_SPECS|Thrust: 450 kN \nExhaust velocity: 22 km/s \nPropellant consumption: 20.5 kg/s \nPower consumption: 72 MW \nThermal consumption: 5.0 GW \nOperation mode: Variable thrust \nPropellant: Oxygen-Hydrogen plasma \nMass: 145 kg (per thruster) \nManufacturer: Electro Ride Systems

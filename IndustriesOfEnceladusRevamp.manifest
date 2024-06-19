@@ -2,5 +2,5 @@
 
 id = "spdx.IndustriesOfEnceladus"
 name = "[SPDX] Industries of Enceladus"
-version = "1.3.3"
+version = "1.4.0"
 group = "gameplay"

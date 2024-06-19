@@ -555,7 +555,7 @@ systemName = "SYSTEM_REACTOR_JURYRIG"
 
 [node name="ReactorPhysics" parent="reactor" index="6"]
 visible = false
-position = Vector2( 0, 122 )
+position = Vector2( 0, 147 )
 
 [node name="PinJoint2D" parent="reactor/ReactorPhysics" index="0"]
 node_b = NodePath("../../..")
