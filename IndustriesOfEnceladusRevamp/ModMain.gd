@@ -7,17 +7,17 @@ const MOD_PRIORITY = 0
 
 var _savedObjects = []
 
-var modName = "[SPDX] Industries of Enceladus"
-var modVersion = "1.3.2"
+var modName = "IoE"
+var modVersion = "Unknown"
 var modPath = ""
 var configFile:ConfigFile = ConfigFile.new()
+var manifestFile:ConfigFile = ConfigFile.new()
 
 var aesthetics:bool = true
 var addShips:bool = true
 var verbose:bool = true # failsafe
 
 func _init(modLoader = ModLoader):
-	sLog("Initialising! Version %s" % modVersion)
 
 # Get current path of script
 	modPath = get_script().resource_path.get_base_dir()
@@ -28,8 +28,15 @@ func _init(modLoader = ModLoader):
 		addShips = configFile.get_value("General", "add-new-ships")
 		verbose = configFile.get_value("Debug", "verbose")
 	else:
-		sLog("ERROR! Couldn't load config file, falling back on default values")
+		sLog("ERROR! Couldn't load config, falling back on default values")
 	
+	if manifestFile.load("%s.manifest" % modPath) == OK:
+		modName = manifestFile.get_value("package", "name")
+		modVersion = manifestFile.get_value("package", "version")
+	else:
+		sLog("ERROR! Couldn't load manifest, falling back on default values")
+	
+	sLog("Initialising! Version %s" % modVersion)
 	# needed since this is stupid
 	modPath += "/"
 
