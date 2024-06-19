@@ -1,3 +1,5 @@
+# 1.4.1
+ * Added Prospector placements for the KRB-500
 # 1.4.0: EVERYTHING RETURNS TO CRAB
  * Expanded version control to use .manifest file for name, version, and ID in the interest of reusability
  * Added Runasimi KRB-500

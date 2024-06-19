@@ -24,11 +24,14 @@ visible = false
 [node name="CargoAuxPreProc40x20" parent="." instance=ExtResource( 8 )]
 mirrorCollider = true
 
+[node name="ProcessingArea" parent="CargoAuxPreProc40x20" index="0"]
+position = Vector2( 28, 0 )
+
 [node name="ZoneTop" parent="CargoAuxPreProc40x20/ProcessingArea" index="0"]
-polygon = PoolVector2Array( 30, 0, 12, -32, -12, -32, -30, 0 )
+polygon = PoolVector2Array( 26, 0, 12, -32, -12, -32, -26, 0 )
 
 [node name="ZoneBottom" parent="CargoAuxPreProc40x20/ProcessingArea" index="1"]
-polygon = PoolVector2Array( 30, 0, 30, 32, -30, 32, -30, 0 )
+polygon = PoolVector2Array( 26, 0, 26, 32, -26, 32, -26, 0 )
 
 [node name="CargoAuxStorProc8K" parent="." instance=ExtResource( 1 )]
 visible = false

@@ -6,7 +6,7 @@ export  var repairReplacementPrice = 0
 export  var repairReplacementTime = 0
 export  var repairFixPrice = 0
 export  var repairFixTime = 0
-export (float) var mass = 0
+export (int) var mass = 0
 var enabled = true
 export var registerExternal = false
 
