@@ -7,6 +7,7 @@ const MOD_PRIORITY = 0
 
 var _savedObjects = []
 
+var modID = "Unknown"
 var modName = "IoE"
 var modVersion = "Unknown"
 var modPath = ""
@@ -26,17 +27,19 @@ func _init(modLoader = ModLoader):
 	if configFile.load("%s.ini" % modPath) == OK:
 		aesthetics = configFile.get_value("General", "aesthetic-stuff")
 		addShips = configFile.get_value("General", "add-new-ships")
+		
 		verbose = configFile.get_value("Debug", "verbose")
 	else:
 		sLog("ERROR! Couldn't load config, falling back on default values")
 	
 	if manifestFile.load("%s.manifest" % modPath) == OK:
+		modID = manifestFile.get_value("package", "id")
 		modName = manifestFile.get_value("package", "name")
 		modVersion = manifestFile.get_value("package", "version")
 	else:
 		sLog("ERROR! Couldn't load manifest, falling back on default values")
 	
-	sLog("Initialising! Version %s" % modVersion)
+	sLog("Version %s initialising!" % modVersion, modName)
 	# needed since this is stupid
 	modPath += "/"
 
@@ -71,7 +74,7 @@ func _init(modLoader = ModLoader):
 # Load custom translations
 	updateTL("en") 
 
-	sLog("Initialised!")
+	sLog("Initialised!", modName)
 
 
 func _ready():
@@ -170,5 +173,5 @@ func installScriptExtension(path:String , oldPath:String = "none"):
 	childScript.take_over_path(parentPath)
 
 # quick helper for Debug.l "soft log"
-func sLog(text:String):
-	Debug.l("%s: %s" % [modName, text])
+func sLog(text:String, title:String = modID):
+	Debug.l("%s: %s" % [title, text])
