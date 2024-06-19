@@ -2,6 +2,7 @@
  * Expanded version control to use .manifest file for name, version, and ID in the interest of reusability
  * Added Runasimi KRB-500
  * Added ERS-BlasTR 7200
+ * Added NDSBH
  * Changed ORD name to be shorter
  * Adjusted reactor physics on Wasp
 # 1.3.2
