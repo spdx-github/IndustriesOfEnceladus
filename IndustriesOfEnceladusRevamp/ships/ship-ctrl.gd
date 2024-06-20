@@ -8,5 +8,31 @@ func sensorGet(sensor):
 					return processedCargoCapacity * 6
 				"amorphic":
 					return processedCargoCapacity
+				"mono":
+					return processedCargoCapacity
 		_:
 			return .sensorGet(sensor)
+
+func hasFbw()->bool:
+	var type = getAutopilotType()
+	
+	match type:
+		"SYSTEM_AUTOPILOT_337MOD":
+			return true
+		_:
+			return .hasFbw()
+	
+func autopilotControl(delta, fbw = false):
+	var type = getAutopilotType()
+	
+	var solveThrust:bool
+	var observeRotation:bool
+	var computeRotation:bool
+
+	match type:
+		"SYSTEM_AUTOPILOT_337MOD":
+			solveThrust = true
+			observeRotation = true
+			computeRotation = false
+			
+	.autopilotControl(delta, hasFbw())

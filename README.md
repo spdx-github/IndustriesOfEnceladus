@@ -5,7 +5,11 @@ Industries of Enceladus is a mod for Delta-V: Rings of Saturn that focuses on sh
 
 It all started because I was frustrated with how fast the AR-1500 wore out, so I made another that's tougher, and then I realised how much I wanted some other stuff, and some other stuff, and some other stuff... I think it began to sink in for me after the Cothon-2200 that I was onto something good. I've been having fun and fixing bugs since the 21st of May, and hope to be for the foreseeable future. :]
 
-[If you'd like to support my work, consider donating on Ko-fi!](https://ko-fi.com/pearshapes) I'm not able to work due to disabilities, so I don't get much every month. Any little bit helps. Thank you!
+### Supporting Development
+[If you'd like to support the development of IoE, consider donating on Ko-fi!](https://ko-fi.com/pearshapes) I'm not able to work due to disabilities, so I don't get much every month. Any little bit helps. Thank you!
+
+Current market share statistics across the Industries of Enceladus are:
+	- WT: 100%
 
 ## Features
 

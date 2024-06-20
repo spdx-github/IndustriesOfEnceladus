@@ -1,3 +1,6 @@
+# 1.5.0: A FLAW-LESS SYSTEM
+ * Added MA-337-MAX Autopilot
+ * Adjusted actuation sound of KRB-500
 # 1.4.4
  * On SNAP:
    * Increased bay door opening angle

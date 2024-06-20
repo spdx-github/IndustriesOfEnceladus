@@ -12,6 +12,7 @@ height = 120.0
 
 [node name="SYSTEM_SALVAGE_ARM_LIGHT" instance=ExtResource( 5 )]
 scale = Vector2( 0.5, 0.5 )
+actuationPitchFactor = 3.0
 massLimit = 500
 response = 0.9
 repairFixPrice = 4000
@@ -89,16 +90,20 @@ region_enabled = true
 region_rect = Rect2( 884, 273, 24, 116 )
 
 [node name="DockArea" parent="." index="2"]
-position = Vector2( 0, -400 )
+position = Vector2( 0, -484 )
 rotation = 1.5708
 
 [node name="CollisionShape2D" parent="DockArea" index="0"]
 visible = true
-position = Vector2( 0, 0 )
+position = Vector2( 0, 1.43051e-06 )
 shape = SubResource( 1 )
 
 [node name="DockSlot" parent="." index="3"]
 position = Vector2( 0, -580 )
+
+[node name="Actuation" parent="." index="8"]
+volume_db = -5.0
+pitch_scale = 1.0
 
 [editable path="Arm"]
 [editable path="Arm/A/B/Spotlight"]

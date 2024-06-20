@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://enceladus/Upgrades.tscn" type="PackedScene" id=1]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/enceladus/custom/CargoEquipment.tscn" type="PackedScene" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://IndustriesOfEnceladusRevamp/enceladus/custom/TubeSlot.tscn" type="PackedScene" id=18]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/enceladus/custom/TurretSlot.tscn" type="PackedScene" id=19]
 [ext_resource path="res://hud/SensorDisplay.gd" type="Script" id=20]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/enceladus/custom/AutopilotSlot.tscn" type="PackedScene" id=21]
 
 [sub_resource type="ViewportTexture" id=1]
 flags = 5
@@ -155,10 +156,10 @@ texture = SubResource( 1 )
 texture = SubResource( 2 )
 
 [node name="MarginContainer" parent="VB/MarginContainer/ScrollContainer" index="0"]
-margin_bottom = 51388.0
+margin_bottom = 51462.0
 
 [node name="Items" parent="VB/MarginContainer/ScrollContainer/MarginContainer" index="0"]
-margin_bottom = 51372.0
+margin_bottom = 51446.0
 
 [node name="MainWeaponSlot" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="0"]
 visible = false
@@ -5521,20 +5522,26 @@ margin_bottom = 49286.0
 onlyForShipNames = [ "SHIP_PROSPECTOR_BALD", "SHIP_KITSUNE", "SHIP_TRTL_T", "SHIP_TRTL_R", "SHIP_EIME", "SHIP_OCP209", "SHIP_OCP209_SNAP", "SHIP_OBERON", "SHIP_ATLAS_WASP" ]
 
 [node name="Autopilot" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="70"]
+visible = false
 margin_top = 49290.0
 margin_bottom = 49789.0
+always = false
+restrictType = "NULL"
 
-[node name="Hud" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="71"]
-margin_top = 49793.0
-margin_bottom = 50588.0
+[node name="AutopilotSlot" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="71" instance=ExtResource( 21 )]
+margin_bottom = 49863.0
 
-[node name="Lidar" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="72"]
-margin_top = 50592.0
-margin_bottom = 51017.0
+[node name="Hud" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="72"]
+margin_top = 49867.0
+margin_bottom = 50662.0
 
-[node name="ReconDrone" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="73"]
-margin_top = 51021.0
-margin_bottom = 51372.0
+[node name="Lidar" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="73"]
+margin_top = 50666.0
+margin_bottom = 51091.0
+
+[node name="ReconDrone" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="74"]
+margin_top = 51095.0
+margin_bottom = 51446.0
 
 [editable path="VB/HeaderWithMoney"]
 [editable path="VB/WindowMargin/TabHintContainer"]
