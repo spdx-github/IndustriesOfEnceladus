@@ -46,6 +46,9 @@ func _init(modLoader = ModLoader):
 # Must load DLC early for it to properly function.
 	loadDLC()
 	
+# install ship-ctrl.gd
+	installScriptExtension("ships/ship-ctrl.gd")
+
 # replace slots for all our new equipment
 	replaceScene("ships/modules/AuxSlot.tscn")
 	replaceScene("ships/modules/ThrusterSlot.tscn")

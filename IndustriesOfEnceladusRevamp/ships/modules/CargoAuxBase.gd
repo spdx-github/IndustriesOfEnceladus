@@ -38,10 +38,11 @@ func _ready():
 		if registerExternal:
 			ship.externalSystems.append(self)
 			
-		if ship.processedCargoStorage == "amorphic":
-			ship.processedCargoCapacity += internalStorage * 6
-		else:
-			ship.processedCargoCapacity += internalStorage
+		match ship.processedCargoStorageType:
+			"divided":
+				ship.processedCargoCapacity += internalStorage
+			"amorphic":
+				ship.processedCargoCapacity += internalStorage * 6
 		
 		ship.massDriverAmmoMax = ship.getConfig("ammo.capacity") + ammoStorage
 		ship.dronePartsMax = ship.getConfig("drones.capacity") + droneStorage

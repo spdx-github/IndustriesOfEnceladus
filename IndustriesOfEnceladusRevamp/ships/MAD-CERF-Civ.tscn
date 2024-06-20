@@ -618,7 +618,8 @@ slot = "leftBay3"
 remove = true
 toggleCommand = "ship_slot_8"
 
-[node name="HoldModifiersDivided" parent="." instance=ExtResource( 45 )]
+[node name="HoldModifiers" parent="." instance=ExtResource( 45 )]
+type = "cargo.modifierDivided"
 
 [node name="MineralProcessingUnit" parent="." instance_placeholder="res://ships/modules/MineralProcessingUnit.tscn"]
 visible = false

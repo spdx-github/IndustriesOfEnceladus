@@ -1,3 +1,7 @@
+# 1.4.3
+ * Added mineral hold capacity readout to equipment preview
+ * Fixed critical bug in accessory storage that caused them not to work properly in amorphic holds
+ * Did... something? With the Pigeon? I think I reordered its cargo accessory slot
 # 1.4.2
  * Adjusted Prospector KRB-500 positions
 # 1.4.1
