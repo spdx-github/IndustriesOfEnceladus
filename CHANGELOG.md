@@ -1,3 +1,11 @@
+# 1.4.4
+ * On SNAP:
+   * Increased bay door opening angle
+   * Adjusted bay door colliders
+   * Adjusted bay stoppers for more reliable open-close
+   * Increased cargo bay area coverage
+ * Adjusted Harvester-class haul drone accuracy
+ * Adjusted RAM collider for better grinder performance
 # 1.4.3
  * Added mineral hold capacity readout to equipment preview
  * Fixed critical bug in accessory storage that caused them not to work properly in amorphic holds

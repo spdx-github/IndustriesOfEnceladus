@@ -24,14 +24,11 @@ lauchPowerDraw = 20000.0
 power = 25000.0
 systemName = "SYSTEM_DND_HARVHAUL"
 dronesPerSecond = 100
-scanEvery = 0.2
+scanEvery = 0.5
 laserRange = 8000
 maxDroneDistance = 8000
 minEnergyToTarget = 1
-haulDistance = 2500
-haulGatherDeadzone = 250.0
-haulAccurancy = 0.94
-haulDeadConeDistance = 750
+haulAccurancy = 0.96
 launchVector = Vector2( 0, -50 )
 builtInDroneStorage = 2500
 droneFunction = "haul"
@@ -40,7 +37,6 @@ mass = 8000
 [node name="DroneLaunchManager" parent="." index="2"]
 acceleration = 4000
 drones = 128
-laserFiring = true
 
 [node name="Shape" parent="DronePickupArea" index="0"]
 shape = SubResource( 1 )
