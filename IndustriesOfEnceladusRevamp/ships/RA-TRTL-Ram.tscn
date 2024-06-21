@@ -22,14 +22,14 @@ openTime = 0.5
 openFactor = 0.7
 
 [node name="Collider" parent="." index="7"]
-polygon = PoolVector2Array( -24, -191, -12, -175, -12, -141, -32, -117, -32, 3, -20, 31, 20, 31, 32, 3, 32, -117, 12, -141, 12, -175, 24, -191, 56, -191, 56, -213, 72, -213, 72, -173, 72, 55, 72, 127, 56, 127, 56, 87, 40, 97, 34, 111, 20, 121, 24, 137, 22, 143, -22, 143, -24, 137, -20, 121, -34, 111, -40, 97, -56, 87, -56, 127, -72, 127, -72, 55, -72, -173, -72, -213, -56, -213, -56, -191 )
+polygon = PoolVector2Array( -24, -191, -14, -187, -12, -175, -12, -141, -32, -117, -32, 3, -20, 31, 20, 31, 32, 3, 32, -117, 12, -141, 12, -175, 14, -187, 24, -191, 56, -191, 56, -213, 72, -213, 72, -173, 72, 55, 72, 127, 56, 127, 56, 87, 40, 97, 34, 111, 20, 121, 24, 137, 22, 143, -22, 143, -24, 137, -20, 121, -34, 111, -40, 97, -56, 87, -56, 127, -72, 127, -72, 55, -72, -173, -72, -213, -56, -213, -56, -191 )
 
 [node name="CargoHoldArea" parent="." index="8"]
 visible = false
 
 [node name="CollisionPolygon2D" parent="CargoHoldArea" index="0"]
 light_mask = 0
-polygon = PoolVector2Array( 14, -173, 14, -143, 34, -119, 34, 3, 22, 33, -22, 33, -34, 3, -34, -119, -14, -143, -14, -173, -24, -191, -24, -195, 24, -195, 24, -191 )
+polygon = PoolVector2Array( 14, -173, 14, -143, 34, -119, 34, 3, 22, 33, -22, 33, -34, 3, -34, -119, -14, -143, -14, -173, -16, -185, -20, -187, -20, -195, 20, -195, 20, -187, 16, -185 )
 
 [node name="CargoHoldAreaHull" parent="." index="9"]
 visible = false
@@ -47,13 +47,13 @@ position = Vector2( 74, -195 )
 rotation = -2.35619
 
 [node name="thruster-bl2" parent="." index="17" instance_placeholder="res://ships/modules/ThrusterSlot.tscn"]
-position = Vector2( -74, 118 )
+position = Vector2( -74, 71 )
 rotation = 1.5708
 extraGimbal = 0.175
 command = "l>"
 
 [node name="thruster-br2" parent="." index="18" instance_placeholder="res://ships/modules/ThrusterSlot.tscn"]
-position = Vector2( 74, 118 )
+position = Vector2( 74, 71 )
 rotation = -1.5708
 extraGimbal = 0.175
 command = "r<"
@@ -108,6 +108,9 @@ position = Vector2( 0, -95 )
 
 [node name="AI" parent="." index="40"]
 visible = false
+
+[node name="reactor" parent="." index="42"]
+systemName = "SYSTEM_REACTOR_TNTRL_FORT"
 
 [node name="CargoBaffles" parent="." index="43"]
 position = Vector2( 0, 0 )

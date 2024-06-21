@@ -12,7 +12,7 @@ onlyForShipNames = [  ]
 invertNameLogic = false
 
 [node name="VBoxContainer" parent="." index="0"]
-margin_bottom = 3235.0
+margin_bottom = 3309.0
 
 [node name="HUNK-L" parent="VBoxContainer" index="2"]
 visible = true
@@ -330,16 +330,29 @@ margin_bottom = 3011.0
 margin_top = 3015.0
 margin_bottom = 3085.0
 
-[node name="DND_FIX" parent="VBoxContainer" index="46"]
-margin_top = 3089.0
-margin_bottom = 3159.0
-
-[node name="DND_HARVHAUL" parent="VBoxContainer" index="47" instance=ExtResource( 3 )]
+[node name="DND_HARVTUG" parent="VBoxContainer" index="46" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 3163.0
+margin_top = 3089.0
 margin_right = 1226.0
+margin_bottom = 3159.0
+slot = "weaponSlot.main.type"
+system = "SYSTEM_DND_HARVTUG"
+manual = "SYSTEM_DND_TS_MANUAL"
+price = 385000
+testProtocol = "drone"
+warnIfElectricBelow = 50.0
+
+[node name="DND_FIX" parent="VBoxContainer" index="47"]
+margin_top = 3163.0
 margin_bottom = 3233.0
+
+[node name="DND_HARVHAUL" parent="VBoxContainer" index="48" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 3237.0
+margin_right = 1226.0
+margin_bottom = 3307.0
 slot = "weaponSlot.main.type"
 system = "SYSTEM_DND_HARVHAUL"
 manual = "SYSTEM_DND_HAUL_MANUAL"

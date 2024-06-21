@@ -10,12 +10,3 @@ SYSTEM_SALVAGE_ARM_LIGHT|Runasimi KRB-500
 SYSTEM_SALVAGE_ARM_LIGHT_DESC|The Runasimi KRB-500 Sample Manipulator was originally developed for the vessels of lesser-funded research organisations, but has recently found a new niche in the mining sector as a convenient alternative to nanodrone systems. \n\nThe manipulator's actuators use fluid couplings with brake discs to simulate the precision of stepper or servo motors, a novel implementation that minimises maintenance expenses and overall mass. In addition, its claw can be magnetised to clamp to the outer hull of small ferromagnetic objects such as drone hulls, but its holding strength may be inadequate for larger vessels. \n\nNote: analysis and experiment packages are available as a separate purchase.
 
 SYSTEM_SALVAGE_ARM_LIGHT_SPECS|Arm strength: 500 kN \nReach: 35 m \nPower draw (peak): 60 MW \nMass: 2,050 kg \nManufacturer: Runasimi Inc.
-
-
-
-SYSTEM_EXODYN|THI Dyna-Cargo Container
-
-SYSTEM_EXODYN_DESC|An experimental dynamic variant of the THI Cargo Container, released to the public in the mid-2200s. Requires on-site mineral processing units to utilise. The equipment purchase of the cargo cradle comes with a lease covering the resupply of new pods for as long as the owner holds the license. \n\nDyna-Cargo is a trademark of Titan Heavy Industries. All rights reserved. Station control warns that retrofit with certain RCS configurations may risk overheating the Cargo Container's micro-reactor. Captains assume all such liability.
-
-
-SYSTEM_EXODYN_SPECS|Cargo capacity: 72,000 kg (combined) \nPower usage (nominal): 20 MW \nCradle mass: 500 kg \nManufacturer: Titan Heavy Industries

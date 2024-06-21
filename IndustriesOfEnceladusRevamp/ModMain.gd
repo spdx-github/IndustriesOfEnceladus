@@ -19,7 +19,6 @@ var addShips:bool = true
 var verbose:bool = true # failsafe
 
 func _init(modLoader = ModLoader):
-
 # Get current path of script
 	modPath = get_script().resource_path.get_base_dir()
 	
@@ -46,10 +45,13 @@ func _init(modLoader = ModLoader):
 # Must load DLC early for it to properly function.
 	loadDLC()
 	
-# install ship-ctrl.gd, just adds hold sensor for now
+# install ship-ctrl.gd, adds hold sensors and AP setup
 	installScriptExtension("ships/ship-ctrl.gd")
 # install AutopilotOverlay.gd for new AP type
 	installScriptExtension("hud/AutopilotOverlay.gd")
+	
+# replace ShipParams for hold percentage fill readout
+	replaceScene("hud/trtl/ShipParams.tscn")
 
 # replace slots for all our new equipment
 	replaceScene("ships/modules/AuxSlot.tscn")

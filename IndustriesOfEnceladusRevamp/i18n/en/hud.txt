@@ -1,5 +1,7 @@
 HUD_HOLD_CAP|total hold capacity
 
+HUD_HOLD_FILL|hold fill level
+
 
 
 SYSTEM_AUTOPILOT_337MOD|MA-337-MAX Autopilot

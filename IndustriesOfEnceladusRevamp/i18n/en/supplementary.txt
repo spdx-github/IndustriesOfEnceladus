@@ -1,17 +1,1 @@
 SLOT_CARGO_AUX|Cargo Bay Accessories
-
-
-
-SYSTEM_EXSTORAGE_ALT|THI Cargo Container (Alternate)
-
-SYSTEM_EXSTORAGE_ALT_DESC|The Titan Heavy Industries Cargo Containers are fully autonomous storage pods that can relay processed minerals from a mining site. When the cradle is powered down, the pod will return to the designated station. These require on-site mineral processing units to utilize. The equipment purchase of the cargo cradle comes with a lease covering the resupply of new pods for as long as the owner holds the license. \n\nStation control warns that retrofit with certain RCS configurations may risk overheating the Cargo Container's micro-reactor. Captains assume all such liability. \n\nThis alternate version for the Prospector series is placed at the midships for enhanced manoeuvring.
-
-
-SYSTEM_EXMONO_ALT|THI Monocargo Container (Alternate)
-
-SYSTEM_EXMONO_ALT_DESC|A single-ore variant of the standard THI Cargo Container for specialized mining runs that focus on the collection of only one mineral type. These require on-site mineral processing units to utilize. The equipment purchase of the cargo cradle comes with a lease covering the resupply of new pods for as long as the owner holds the license. \n\nStation control warns that retrofit with certain RCS configurations may risk overheating the Cargo Container's micro-reactor. Captains assume all such liability. \n\nThis alternate version for the Prospector series is placed at the midships for enhanced manoeuvring.
-
-
-SYSTEM_EXODYN_ALT|THI Dyna-Cargo Container (Alternate)
-
-SYSTEM_EXODYN_ALT_DESC|An experimental dynamic variant of the THI Cargo Container, released to the public in the mid-2200s. Requires on-site mineral processing units to utilise. The equipment purchase of the cargo cradle comes with a lease covering the resupply of new pods for as long as the owner holds the license. \n\nDyna-Cargo is a trademark of Titan Heavy Industries. All rights reserved. Station control warns that retrofit with certain RCS configurations may risk overheating the Cargo Container's micro-reactor. Captains assume all such liability. \n\nThis alternate version for the Prospector series is placed at the midships for enhanced manoeuvring.

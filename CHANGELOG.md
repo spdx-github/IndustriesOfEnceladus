@@ -1,6 +1,26 @@
 # 1.5.0: A FLAW-LESS SYSTEM
  * Added MA-337-MAX Autopilot
+ * Added OT Hard-Stop Tug Drones
  * Adjusted actuation sound of KRB-500
+ * Adjusted TNTRL-RAM throat collider for better chunk handling since they were getting doubled up and stuck
+ * Adjusted KRB-500 catchment area for better behaviour on side mounts
+ * Some string adjustments:
+   * Rewrote description for MPP-N1
+   * Moved strings relating to cargo containers to drones.txt
+   * Fixed incorrect number of high-stress hardpoints in Tsukuyomi description
+ * Adjusted rear thruster positions on the RAM for better performance
+ * Fixed the same fucking bug as accessories in the Bulker
+   * I hate soft typing
+   * I hate soft typing
+   * I hate soft typing
+   * And fail-quiet, null-return property calls
+   * Seriously, who thought this was a good idea
+   * Why would you make an object-oriented language where you can't assure the type of an object that you then have to orient your code around
+   * It's really clumsy to me. I realise it's a very flexible language for that and it has its quirks but this is just ridiculous
+ * Added hold fill level sensor to (most) HUDs
+   * The colour is always green/yellow/red which won't match some thematically, I can't fix this without making an inherited scene of every single HUD and it's not really worth the effort
+   * It'll probably end up being worth the effort
+   * Consider it an experimental implementation, it just works OK
 # 1.4.4
  * On SNAP:
    * Increased bay door opening angle

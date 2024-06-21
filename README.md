@@ -70,6 +70,7 @@ Current market share statistics across the Industries of Enceladus are:
  - Runasimi KRB-500: a light manipulator meant to handle ore chunks, hard-wearing with quick-to-replace components but expensive to repair
  - THI Dyna-Cargo Container: a cargo container that has a dynamic hold at the expense of reduced overall storage
  - RA DMW Cannon: a tight-beam microwave gun with greater range and power than the MWG, but inefficient and power-hungry. comes in turreted variant that's a lot slower than the PDMWG
+ - OT Hard-Stop Tug Drones: high-power tug drones, basically same stats as the Harvester-class but they tug stuff to a dead stop
  - THI Harvester-class Haul Drones: high-power haul drones that can operate over double the distance of the base version and provide double the effective force, but take significantly more power and need lots of drone components
 
 ### MPUs

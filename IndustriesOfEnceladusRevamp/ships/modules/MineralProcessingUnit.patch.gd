@@ -9,7 +9,7 @@ func _ready():
 		Tool.remove(self)
 		
 	else: if mounted == systemName:
-		if ship.processedCargoStorage == "amorphic":
+		if ship.processedCargoStorageType == "amorphic":
 			ship.processedCargoCapacity += internalStorage * 6
 		else:
 			ship.processedCargoCapacity += internalStorage

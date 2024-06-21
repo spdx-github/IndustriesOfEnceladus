@@ -10,6 +10,8 @@ func sensorGet(sensor):
 					return processedCargoCapacity
 				"mono":
 					return processedCargoCapacity
+		"hold.fill":
+			return getProcessedCargoMass() / sensorGet("hold")
 		_:
 			return .sensorGet(sensor)
 
