@@ -102,6 +102,11 @@ Special thanks go to:
  - Conlido freightReady Hoppers: adds a large amount of mineral hold space
  - NDSBH: converts the hold to amorphic, 1:1 (perfect equivalent)
 
+### Habitat Kits
+ - All ships supported
+ - Conlido bunkX1: cheap beds! adds 2 crew to ships but makes no further accommodations which decreases crew comfort
+ - Conlido mgHome Refit: increases crew comfort a bit
+
 ## Installation (Steam)
 
 1. Open your game install directory
