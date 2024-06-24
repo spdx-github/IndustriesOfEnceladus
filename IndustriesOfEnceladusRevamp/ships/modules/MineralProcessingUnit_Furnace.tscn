@@ -56,6 +56,7 @@ scale_curve = SubResource( 5 )
 color_ramp = SubResource( 2 )
 
 [node name="MineralProcessingUnit_Furnace" type="CollisionPolygon2D"]
+light_mask = 0
 z_index = 50
 polygon = PoolVector2Array( -32, -72, -24, -48, -12, -40, -24, -32, -24, 44, -12, 64, 12, 64, 24, 44, 24, -32, 12, -40, 24, -48, 32, -72, 32, -24, 32, 46, 16, 72, -16, 72, -32, 46, -32, -24 )
 script = ExtResource( 9 )
@@ -72,7 +73,6 @@ mineralEfficiency = 0.6
 remassEfficiency = 0.4
 
 [node name="MineralProcessingUnit" type="Area2D" parent="."]
-visible = false
 z_index = 50
 collision_layer = 524288
 monitorable = false
@@ -83,6 +83,7 @@ linear_damp = 0.0
 angular_damp = 0.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MineralProcessingUnit"]
+light_mask = 0
 polygon = PoolVector2Array( -24, 44, -12, 64, 12, 64, 24, 44, 24, -40, -24, -40 )
 
 [node name="Processing" type="AudioStreamPlayer" parent="."]

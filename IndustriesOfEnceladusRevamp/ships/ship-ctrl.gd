@@ -1,5 +1,7 @@
 extends "res://ships/ship-ctrl.gd"
 
+class_name Ship
+
 func sensorGet(sensor):
 	match sensor:
 		"hold":

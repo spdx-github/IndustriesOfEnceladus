@@ -34,6 +34,7 @@ var shipReplacementPaths = {
 }
 
 var newShipNames = {
+	"ATK225-Stub": "AT225",
 	"ATLAS-Wasp": "WASP",
 	"Cothon-Lux": "COTHON",
 	"MAD-CERF-Civ": "MADCERF", # custom aux modules
@@ -46,6 +47,38 @@ var newShipNames = {
 }
 
 var shipConfigs = {
+	"ATK225-Stub": {"config": {
+		"ammo": {
+			"capacity": 1000.0,
+			"initial": 1000.0
+		},
+		"autopilot": {"type":"SYSTEM_AUTOPILOT_MK2"},
+		"capacitor":{"capacity":500.0}, 
+		"cargo":{
+			"equipment":"SYSTEM_CARGO_MPUFSO"
+		}, 
+		"fuel": {
+			"capacity": 80000.0,
+			"initial": 80000.0
+		},
+		"hud":{"type":"SYSTEM_HUD_AT225"}, 
+		"propulsion":{
+			"main":"SYSTEM_MAIN_ENGINE_BWMT535", 
+			"rcs":"SYSTEM_THRUSTER_K37"
+		}, 
+		"reactor":{"power":16.0},
+		"turbine":{"power":500.0},
+		"weaponSlot":{
+			"middleLeft":{"type":"SYSTEM_NONE"}, 
+			"middleRight":{"type":"SYSTEM_EMD14"}, 
+			"leftDrone":{"type":"SYSTEM_NONE"},
+			"rightDrone":{"type":"SYSTEM_NONE"},
+			"leftBay1":{"type":"SYSTEM_EXSTORAGE-L"}, 
+			"leftBay3":{"type":"SYSTEM_EXSTORAGE-L"}, 
+			"rightBay1":{"type":"SYSTEM_EXSTORAGE-R"}, 
+			"rightBay3":{"type":"SYSTEM_EXSTORAGE-R"}, 
+		}, 
+	}},
 	"ATLAS-Wasp": {"config": {
 		"ammo":{
 			"capacity": 1000.0,
@@ -96,6 +129,28 @@ var shipConfigs = {
 		"weaponSlot":{
 			"right":{"type":"SYSTEM_EMD14"}, 
 			"left":{"type":"SYSTEM_NONE"}
+		}, 
+	}},
+	"Eagle-Prospector-Pigeon": {"config":{
+		"ammo":{
+			"capacity": 1000.0, 
+			"initial": 1000.0, 
+		}, 
+		"autopilot":{"type":"SYSTEM_AUTOPILOT_MK2"}, 
+		"fuel":{
+			"capacity": 50000.0, 
+			"initial": 50000.0, 
+		}, 
+		"propulsion":{
+			"main":"SYSTEM_MAIN_ENGINE_K37", 
+			"rcs":"SYSTEM_THRUSTER_K37"
+		}, 
+		"reactor":{	"power": 16.0},
+		"turbine":{"power": 200.0}, 
+		"weaponSlot":{
+			"main": {"type":"SYSTEM_NONE"},
+			"right":{"type":"SYSTEM_EMD14"}, 
+			"left":{"type":"SYSTEM_EMD14"}
 		}, 
 	}},
 	"MAD-CERF-Civ": {"config": {
@@ -247,28 +302,6 @@ var shipConfigs = {
 			"rightBayRev1":{"type":"SYSTEM_NONE"},
 		},
 	}},
-	"Eagle-Prospector-Pigeon": {"config":{
-		"ammo":{
-			"capacity": 1000.0, 
-			"initial": 1000.0, 
-		}, 
-		"autopilot":{"type":"SYSTEM_AUTOPILOT_MK2"}, 
-		"fuel":{
-			"capacity": 50000.0, 
-			"initial": 50000.0, 
-		}, 
-		"propulsion":{
-			"main":"SYSTEM_MAIN_ENGINE_K37", 
-			"rcs":"SYSTEM_THRUSTER_K37"
-		}, 
-		"reactor":{	"power": 16.0},
-		"turbine":{"power": 200.0}, 
-		"weaponSlot":{
-			"main": {"type":"SYSTEM_NONE"},
-			"right":{"type":"SYSTEM_EMD14"}, 
-			"left":{"type":"SYSTEM_EMD14"}
-		}, 
-	}},
 	"RA-TRTL-Ram": {"config": {
 		"ammo":{
 			"capacity": 1000.0, 
@@ -348,6 +381,14 @@ var shipConfigs = {
 }
 
 var shipConfigsUsed = {
+	"ATK225-Stub": [
+		{
+			"weaponSlot": {
+				"middleLeft":{"type":"SYSTEM_EMD14"},
+				"middleRight":{"type":"SYSTEM_EMD14"}
+			}
+		}
+	],
 	"ATLAS-Wasp": [
 		
 	],
@@ -365,12 +406,10 @@ var shipConfigsUsed = {
 	"Tsukuyomi-Decom": [
 		{
 			"weaponSlot": {
-				"turretLeft":"SYSTEM_PDMWG",
-				"turretRight":"SYSTEM_PDMWG"
+				"turretLeft":{"type":"SYSTEM_PDMWG"},
+				"turretRight":{"type":"SYSTEM_PDMWG"},
 			},
-			"autopilot": {
-				"type":"SYSTEM_AUTOPILOT_MK2"
-			},
+			"autopilot": {"type":"SYSTEM_AUTOPILOT_MK2"},
 			"cargo": {
 				"equipment":"SYSTEM_CARGO_MPUFSO",
 				"aux":"SYSTEM_CARGO_AUX_PREPROC_A"
@@ -389,11 +428,11 @@ var shipConfigsUsed = {
 				"initial":4523.6
 			}, 
 			"weaponSlot": {
-				"main": "SYSTEM_SALVAGE_ARM_HEAVY",
-				"tubeLeftDn": "SYSTEM_DND_HAUL",
-				"tubeRightDn": "SYSTEM_DND_HAUL",
-				"turretLeft": "SYSTEM_PDMWG",
-				"turretRight": "SYSTEM_PDMWG",
+				"main":{"type":"SYSTEM_SALVAGE_ARM_HEAVY"},
+				"tubeLeftDn":{"type":"SYSTEM_DND_HAUL"},
+				"tubeRightDn":{"type":"SYSTEM_DND_HAUL"},
+				"turretLeft":{"type":"SYSTEM_PDMWG"},
+				"turretRight":{"type":"SYSTEM_PDMWG"},
 			},
 		}
 	],

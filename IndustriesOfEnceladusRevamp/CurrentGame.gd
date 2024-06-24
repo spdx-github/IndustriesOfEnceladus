@@ -4,13 +4,14 @@ const usedShipRollsMax:int = 3
 
 # names of ships, ages, probability of appearing
 var shipNames = {
+	"ATK225-Stub": [15, 0.2],
 	"ATLAS-Wasp": [50, 0.1],
 	"Cothon-Lux": [200, 0.4],
+	"Eagle-Prospector-Pigeon": [40, 0.1],
 	"MAD-CERF-Civ": [120, 0.3],
 	"Oberon": [80, 0.2],
 	"OCP-209-DD": [60, 0.3],
 	"OCP-209-Snap": [60, 0.2],
-	"Eagle-Prospector-Pigeon": [40, 0.1],
 	"RA-TRTL-Ram": [120, 0.2],
 	"Tsukuyomi-Decom": [83, 0.1],
 }

@@ -1,6 +1,7 @@
 extends Node
+class_name IoE
 
-# using Za'krin's loader script - thank you!
+# heavily based on Za'krin's loader script - thank you!
 
 # Set mod priority if you want it to load before/after other mods
 const MOD_PRIORITY = 0

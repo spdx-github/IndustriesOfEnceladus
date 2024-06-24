@@ -40,26 +40,18 @@ type = "cargo.modifierDivided"
 visible = false
 
 [node name="MineralProcessingUnit_Furnace" parent="." index="30" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/prospector/MineralProcessingUnit_Furnace.tscn"]
-light_mask = 0
 polygon = PoolVector2Array( -24, -30, -12, -22, -20, -14, -20, 44, -12, 64, 12, 64, 20, 44, 20, -14, 12, -22, 24, -30, 24, 66, -24, 66 )
 
 [node name="CargoAuxSlot" parent="." index="31" instance=ExtResource( 2 )]
 position = Vector2( 0, -136 )
 
-[node name="CargoAuxPreProc0x30" parent="CargoAuxSlot" index="0"]
-visible = false
-
 [node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc0x30/ProcessingArea" index="1"]
 polygon = PoolVector2Array( 20, 0, 20, 156, -20, 156, -20, 0 )
-
-[node name="CargoAuxPreProc20x10" parent="CargoAuxSlot" index="1"]
-visible = false
 
 [node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc20x10/ProcessingArea" index="1"]
 polygon = PoolVector2Array( 20, 0, 20, 156, -20, 156, -20, 0 )
 
 [node name="CargoAuxPreProc40x20" parent="CargoAuxSlot" index="2"]
-visible = false
 light_mask = 0
 
 [node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc40x20/ProcessingArea" index="1"]

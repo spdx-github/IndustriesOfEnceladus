@@ -24,9 +24,6 @@ polygon = PoolVector2Array( 26, 0, 26, 396, 14, 428, -14, 428, -26, 396, -26, 0 
 visible = false
 polygon = PoolVector2Array( 10, -30, 8, -12, 2, -8, 8, -6, 10, 0, 8, 6, 2, 8, 8, 12, 10, 28, 0, 32, -4, 32, -4, 8, -4, -8, -4, -20 )
 
-[node name="ProcessingArea" parent="CargoAuxPreProc40x20" index="0"]
-position = Vector2( 28, 0 )
-
 [node name="ZoneTop" parent="CargoAuxPreProc40x20/ProcessingArea" index="0"]
 polygon = PoolVector2Array( 26, 0, 0, -38, -26, 0 )
 

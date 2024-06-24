@@ -130,7 +130,7 @@ polygon = PoolVector2Array( 48, -194, 48, 40, 72, 96, 32, 118, 36, 148, 36, 202,
 [node name="HiStressFore" parent="." index="22" instance_placeholder="res://weapons/WeaponSlot.tscn"]
 visible = false
 position = Vector2( 0, -224 )
-z_index = 22
+z_index = 21
 toggleCommand = "ship_slot_1"
 
 [node name="WeaponLeft" parent="." index="23"]

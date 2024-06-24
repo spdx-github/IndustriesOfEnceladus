@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://ships/ATK225-R.tscn" type="PackedScene" id=1]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/k225/CargoAuxSlot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/weapons/WeaponSlot.patch.gd" type="Script" id=3]
 
 [node name="ATK225R" instance=ExtResource( 1 )]
 position = Vector2( 0, 18 )
@@ -64,6 +65,16 @@ polygon = PoolVector2Array( -32, -70, -20, -58, -14, -42, -12, -28, -18, -22, -1
 polygon = PoolVector2Array( -31, -84, -7, -62, -1, -54, 1, -46, 1, -18, -14, -18, -23, -8, -23, 12, -11, 24, 13, 24, 25, 12, 25, -48, 27, -66, 33, -84, 33, 2, 29, 16, 21, 42, -19, 42, -27, 16, -31, 2, -31, -26 )
 
 [node name="CargoAuxSlot" parent="." index="39" instance=ExtResource( 2 )]
+
+[node name="weapon-left" parent="." index="41"]
+position = Vector2( -92, -454 )
+script = ExtResource( 3 )
+armVelocityMultiplier = Vector2( 2.5, 1 )
+
+[node name="weapon-right" parent="." index="42"]
+position = Vector2( 92, -454 )
+script = ExtResource( 3 )
+armVelocityMultiplier = Vector2( 2.5, 1 )
 
 [node name="AI" parent="." index="50"]
 visible = false
