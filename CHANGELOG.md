@@ -1,3 +1,11 @@
+# 1.6.0: LONG ROAD, SHORT HAUL
+ * Added Antonoff-Titan K225-SH
+ * Added Habitat Kits, a new avenue of upgrades that lets you expand your onboard crew capacity and/or inhibit crew morale degradation
+   * Available for all ships
+ * Added Conlido bunkX1
+ * Added Conlido mgHome Refit
+ * Added "habitat quality" sensor readout for better exposure of crew morale erosion system
+ * Adjusted MPU colliders in the K225 series
 # 1.5.0: A FLAW-LESS SYSTEM
  * Added MA-337-MAX Autopilot
  * Added OT Hard-Stop Tug Drones
