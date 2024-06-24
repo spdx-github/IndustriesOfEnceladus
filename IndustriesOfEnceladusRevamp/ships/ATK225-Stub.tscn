@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://shader/ao-spec-difuse.shader" type="Shader" id=1]
 [ext_resource path="res://sfx/spark_noise.png" type="Texture" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://ships/k225-mask.png" type="Texture" id=6]
 [ext_resource path="res://ships/k225-m.png" type="Texture" id=7]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/ships/ATK225.tscn" type="PackedScene" id=8]
+[ext_resource path="res://ships/k37-mk3-n.png" type="Texture" id=9]
+[ext_resource path="res://ships/RA-TRTL.material" type="Material" id=10]
+[ext_resource path="res://ships/k37-mk3-cd.png" type="Texture" id=11]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 1 )
@@ -30,7 +33,6 @@ shader_param/charges = ExtResource( 2 )
 shader_param/map = ExtResource( 7 )
 
 [node name="ATK225-Stub" instance=ExtResource( 8 )]
-position = Vector2( -1, 18 )
 mass = 90.0
 continuous_cd = 2
 crewMoraleBonus = 0.1
@@ -52,45 +54,89 @@ cargoHoldArea = Rect2( -40, -400, 80, 480 )
 position = Vector2( 0, -132 )
 
 [node name="Hull" parent="." index="1"]
-position = Vector2( 0, 57 )
+position = Vector2( 0, 50 )
 region_enabled = true
-region_rect = Rect2( -3, 485, 7628, 396 )
+region_rect = Rect2( -3, 472, 7628, 409 )
 
 [node name="ForeHull" type="Sprite" parent="Hull" index="0"]
 light_mask = 5
 material = SubResource( 1 )
-position = Vector2( 0, -317 )
+position = Vector2( 0, -329 )
 texture = ExtResource( 5 )
 normal_map = ExtResource( 4 )
 hframes = 12
 region_enabled = true
-region_rect = Rect2( -3, 0, 7628, 303 )
+region_rect = Rect2( -3, 0, 7628, 267 )
 script = ExtResource( 3 )
 hullCustomPaintFile = "user://custom-atk-225.png"
 
 [node name="Front Bumper" parent="." index="2"]
-position = Vector2( 0, -339 )
+position = Vector2( 0, -336 )
+
+[node name="Claw Holder" parent="Front Bumper" index="0"]
+region_rect = Rect2( 0, 0, 0, 0 )
+
+[node name="Claw Right" parent="Front Bumper/Claw Holder" index="0"]
+position = Vector2( 21, -15 )
+
+[node name="Claw Right" parent="Front Bumper/Claw Holder/Claw Right" index="0"]
+position = Vector2( -2, -20 )
+scale = Vector2( 1.25, 1.25 )
+
+[node name="CollisionPolygon2D" parent="Front Bumper/Claw Holder/Claw Right" index="1"]
+polygon = PoolVector2Array( -4, -64, 2, -64, 12, -38, 12, -25.6702, 16, -21.67, 24, -29.67, 16, -41.67, 14, -52, 8, -64, -1.90735e-06, -72, -4, -72 )
+
+[node name="Claw Left" parent="Front Bumper/Claw Holder" index="1"]
+position = Vector2( -21, -15 )
+
+[node name="Claw Left" parent="Front Bumper/Claw Holder/Claw Left" index="0"]
+position = Vector2( 1, -21 )
+scale = Vector2( 1.25, 1.25 )
+region_rect = Rect2( 80, 16, 33, 64 )
+
+[node name="CollisionPolygon2D" parent="Front Bumper/Claw Holder/Claw Left" index="1"]
+scale = Vector2( -1, 1 )
+polygon = PoolVector2Array( -4, -64, 2, -64, 12, -38, 12, -25.6702, 16, -21.67, 24, -29.67, 16, -41.67, 14, -52, 8, -64, -1.90735e-06, -72, -4, -72 )
+
+[node name="Tube" type="Sprite" parent="Front Bumper" index="1"]
+material = ExtResource( 10 )
+use_parent_material = true
+position = Vector2( 0, 2 )
+scale = Vector2( 1.2, 1.2 )
+z_index = 9
+texture = ExtResource( 11 )
+normal_map = ExtResource( 9 )
+region_enabled = true
+region_rect = Rect2( 99, 93, 58, 53 )
+
+[node name="Claw Right Spring 1" parent="Front Bumper" index="2"]
+length = 72.0
+rest_length = 64.0
+
+[node name="Claw Left Spring 1" parent="Front Bumper" index="3"]
+length = 72.0
+rest_length = 64.0
 
 [node name="CabinLight" parent="." index="3"]
 position = Vector2( 0, -285 )
 
 [node name="Collider" parent="." index="5"]
 position = Vector2( 0, -165 )
-polygon = PoolVector2Array( -24.6154, 140.769, -15.3846, 171.538, 15.3846, 171.538, 24.6154, 140.769, 24.6154, 43.8462, 112.308, 43.8462, 116.923, 51.5385, 38.4615, 51.5385, 38.4615, 140.769, 61.5385, 179.231, 61.5385, 186.154, 75.3846, 186.154, 75.3846, 216.154, 121.538, 270, 121.538, 285.385, 115.385, 297.692, 104.615, 302.308, 55.3846, 302.308, -43.0769, 302.308, -104.615, 302.308, -115.385, 297.692, -121.538, 285.385, -121.538, 270, -75.3846, 216.154, -75.3846, 186.154, -61.5385, 186.154, -38.4615, 140.769, -38.4615, 51.5385, -116.923, 51.5385, -112.308, 43.8462, -24.6154, 43.8462 )
+polygon = PoolVector2Array( -24.6154, 140.769, -15.3846, 171.538, 15.3846, 171.538, 24.6154, 140.769, 24.6154, 43.8462, 112.308, 43.8462, 116.923, 51.5385, 38.4615, 51.5385, 38.4615, 140.769, 61.5385, 186.154, 75.3846, 186.154, 75.3846, 216.154, 121.538, 270, 121.538, 285.385, 115.385, 297.692, 104.615, 302.308, 43.8462, 302.308, -43.0769, 302.308, -104.615, 302.308, -115.385, 297.692, -121.538, 285.385, -121.538, 270, -75.3846, 216.154, -75.3846, 186.154, -61.5385, 186.154, -38.4615, 140.769, -38.4615, 51.5385, -116.923, 51.5385, -112.308, 43.8462, -24.6154, 43.8462 )
 
 [node name="LeftForeCollider" type="CollisionPolygon2D" parent="." index="6"]
 light_mask = 0
 position = Vector2( 0, 49 )
 scale = Vector2( 1.3, 1.3 )
 z_index = 50
-polygon = PoolVector2Array( -75.3846, -120.769, -75.3846, -145.385, -60, -145.385, -38.4615, -191.538, -38.4615, -279.231, -116.923, -279.231, -112.308, -286.923, -38.4615, -286.923, -38.4615, -298.462, -34.6154, -302.308, -19.2308, -302.308, -19.2308, -310, -10.7692, -308.462, -13.8462, -296.154, -13.8462, -279.231, -13.8462, -185.385, -24.6154, -173.077, -24.6154, -113.077, -38.4615, -113.077 )
+polygon = PoolVector2Array( -75.3846, -120.769, -75.3846, -145.385, -60, -145.385, -38.4615, -191.538, -38.4615, -279.231, -116.923, -279.231, -112.308, -286.923, -38.4615, -286.923, -38.4615, -298.462, -34.6154, -302.308, -19.2308, -302.308, -19.2308, -310, -16.9231, -311.539, -13.8462, -296.154, -13.8462, -279.231, -13.8462, -185.385, -24.6154, -173.077, -24.6154, -113.077, -38.4615, -113.077 )
 
 [node name="RightForeCollider" type="CollisionPolygon2D" parent="." index="7"]
 light_mask = 0
 position = Vector2( 0, 49 )
 scale = Vector2( -1.3, 1.3 )
 z_index = 50
-polygon = PoolVector2Array( -75.3846, -120.769, -75.3846, -145.385, -60, -145.385, -38.4615, -191.538, -38.4615, -279.231, -116.923, -279.231, -112.308, -286.923, -38.4615, -286.923, -38.4615, -298.462, -34.6154, -302.308, -19.2308, -302.308, -19.2308, -310, -10.7692, -308.462, -13.8462, -296.154, -13.8462, -279.231, -13.8462, -185.385, -24.6154, -173.077, -24.6154, -113.077, -38.4615, -113.077 )
+polygon = PoolVector2Array( -75.3846, -120.769, -75.3846, -145.385, -60, -145.385, -38.4615, -191.538, -38.4615, -279.231, -116.923, -279.231, -112.308, -286.923, -38.4615, -286.923, -38.4615, -298.462, -34.6154, -302.308, -19.2308, -302.308, -19.2308, -310, -16.9231, -311.539, -13.8462, -296.154, -13.8462, -279.231, -13.8462, -185.385, -24.6154, -173.077, -24.6154, -113.077, -38.4615, -113.077 )
 
 [node name="CargoHoldArea" parent="." index="8"]
 position = Vector2( 0, 82 )
@@ -101,7 +147,7 @@ polygon = PoolVector2Array( 16.1538, -211.538, 16.1538, -91.5385, 26.9231, -79.2
 
 [node name="CollisionPolygon2D" parent="CargoHoldAreaHull" index="0"]
 position = Vector2( 0, -132 )
-polygon = PoolVector2Array( 35.3846, -156.923, 35.3846, -44.6154, 73.8462, 23.0769, 35.3846, 23.0769, 35.3846, 118.462, 67.6923, 189.231, 116.923, 253.846, 98.4615, 273.846, -98.4615, 273.846, -116.923, 253.846, -67.6923, 189.231, -35.3846, 118.462, -35.3846, 23.0769, -73.8462, 23.0769, -35.3846, -44.6154, -35.3846, -156.923, -16.9231, -158.462, -9.23077, -193.846, 0, -198.462, 9.23077, -193.846, 16.9231, -158.462 )
+polygon = PoolVector2Array( 35.3846, -156.923, 35.3846, -44.6154, 73.8462, 23.0769, 35.3846, 23.0769, 35.3846, 118.462, 67.6923, 189.231, 116.923, 253.846, 98.4615, 273.846, -98.4615, 273.846, -116.923, 253.846, -67.6923, 189.231, -35.3846, 118.462, -35.3846, 23.0769, -73.8462, 23.0769, -35.3846, -44.6154, -35.3846, -156.923, -16.9231, -158.462, -6.15385, -198.462, 6.15385, -198.462, 16.9231, -158.462 )
 
 [node name="thruster-lt" parent="." index="10"]
 position = Vector2( -135, -330 )
@@ -247,6 +293,7 @@ position = Vector2( 0, 117 )
 offset = Vector2( 0, -192 )
 region_rect = Rect2( 0, 298, 7560, 500 )
 
+[editable path="Front Bumper"]
 [editable path="MineralProcessingUnit"]
 [editable path="MineralProcessingUnit_FSO"]
 [editable path="MineralProcessingUnit_SMELT"]

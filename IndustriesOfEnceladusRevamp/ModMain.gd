@@ -81,6 +81,7 @@ func _init(modLoader = ModLoader):
 	
 # Load custom translations
 	updateTL("en") 
+	updateTL("uk_UA") 
 
 	sLog("Initialised!", modName)
 
@@ -89,10 +90,10 @@ func _ready():
 	sLog("Ready!")
 
 
-# Helper script to load translations, as the ModLoader one seemingly does not function.
-# This is not a good function, but it works.
+# helper script for translations
+# based on 
 func updateTL(locale:String, path:String = modPath + "i18n"):
-	sLog("Updating translations")
+	sLog("Updating translations for locale %s" % locale)
 
 	# preprocess i18n directory files
 	var operatingPath = "%s/%s/" % [path, locale]
@@ -133,7 +134,7 @@ func updateTL(locale:String, path:String = modPath + "i18n"):
 	else:
 		sLog("ERROR! Couldn't find path '%s'!" % operatingPath)
 
-	sLog("Translations updated")
+	sLog("Translations updated for locale %s" % locale)
 
 
 # Instances Settings.gd, loads DLC, then frees the script.

@@ -9,7 +9,11 @@ It all started because I was frustrated with how fast the AR-1500 wore out, so I
 [If you'd like to support the development of IoE, consider donating on Ko-fi!](https://ko-fi.com/pearshapes) I'm not able to work due to disabilities, so I don't get much every month. Any little bit helps. Thank you!
 
 Current market share statistics across the Industries of Enceladus are:
-	- WT: 100%
+ - WT: 33.3%
+ - KST: 66.6%
+
+Special thanks go to:
+ - WT: Providing Ukrainian translations
 
 ## Features
 
