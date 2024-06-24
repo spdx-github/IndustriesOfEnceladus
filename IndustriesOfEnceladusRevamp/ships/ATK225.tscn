@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://ships/ATK225.tscn" type="PackedScene" id=1]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/k225/CargoAuxSlot.tscn" type="PackedScene" id=2]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/weapons/WeaponSlot.patch.gd" type="Script" id=3]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/HoldModifiers.tscn" type="PackedScene" id=4]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/CrewModifiers.tscn" type="PackedScene" id=5]
 
 [node name="ATK225" instance=ExtResource( 1 )]
 position = Vector2( 0, 18 )
@@ -40,7 +42,7 @@ position = Vector2( -104, 222 )
 [node name="thruster-br" parent="." index="15"]
 position = Vector2( 104, 222 )
 
-[node name="HoldModifiers" parent="." index="26" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/HoldModifiers.tscn"]
+[node name="HoldModifiers" parent="." index="26" instance=ExtResource( 4 )]
 type = "cargo.modifierDivided"
 
 [node name="MineralProcessingUnit_Bulker" parent="." index="27" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/k225/MineralProcessingUnit_Bulker.tscn"]
@@ -101,6 +103,8 @@ visible = false
 
 [node name="AI" parent="." index="44"]
 visible = false
+
+[node name="CrewModifiers" parent="." index="48" instance=ExtResource( 5 )]
 
 [editable path="MineralProcessingUnit"]
 [editable path="MineralProcessingUnit_FSO"]

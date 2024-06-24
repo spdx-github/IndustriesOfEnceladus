@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ships/ATK225-R.tscn" type="PackedScene" id=1]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/k225/CargoAuxSlot.tscn" type="PackedScene" id=2]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/weapons/WeaponSlot.patch.gd" type="Script" id=3]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/CrewModifiers.tscn" type="PackedScene" id=4]
 
 [node name="ATK225R" instance=ExtResource( 1 )]
 position = Vector2( 0, 18 )
@@ -78,6 +79,8 @@ armVelocityMultiplier = Vector2( 2.5, 1 )
 
 [node name="AI" parent="." index="50"]
 visible = false
+
+[node name="CrewModifiers" parent="." index="54" instance=ExtResource( 4 )]
 
 [editable path="MineralProcessingUnit_FSO"]
 [editable path="weapon-left"]

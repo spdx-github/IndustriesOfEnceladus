@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/Excavator.gd" type="Script" id=1]
 [ext_resource path="res://ships/RA-TRTL-LCB.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ships/modules/Grinder.tscn" type="PackedScene" id=3]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/CrewModifiers.tscn" type="PackedScene" id=4]
 
 [node name="TRTL-RAM" instance=ExtResource( 2 )]
 position = Vector2( 0, -7 )
@@ -114,6 +115,8 @@ systemName = "SYSTEM_REACTOR_TNTRL_FORT"
 [node name="CargoBaffles" parent="." index="43"]
 position = Vector2( 0, 0 )
 slot = "cargo.aux"
+
+[node name="CrewModifiers" parent="." index="45" instance=ExtResource( 4 )]
 
 [editable path="Grinder"]
 [editable path="MineralProcessingUnit_FAB"]

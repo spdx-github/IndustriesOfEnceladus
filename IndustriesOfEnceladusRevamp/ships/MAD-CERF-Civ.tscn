@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://ships/ship-ctrl.gd" type="Script" id=1]
 [ext_resource path="res://shader/ao-spec-difuse.shader" type="Shader" id=2]
@@ -45,6 +45,7 @@
 [ext_resource path="res://ships/drone/pods-c.png" type="Texture" id=43]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/CargoAuxSlot.tscn" type="PackedScene" id=44]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/HoldModifiers.tscn" type="PackedScene" id=45]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/CrewModifiers.tscn" type="PackedScene" id=46]
 [ext_resource path="res://ships/modules/CargoBaffles.tscn" type="PackedScene" id=49]
 [ext_resource path="res://lights/ConfigurableLight.gd" type="Script" id=50]
 [ext_resource path="res://ships/modules/NuclearReactor.tscn" type="PackedScene" id=51]
@@ -653,7 +654,6 @@ polygon = PoolVector2Array( -30.0002, -59.9999, -16, -54, -12, -28, -18, -22, -1
 
 [node name="MineralProcessingUnit_Furnace" parent="." instance=ExtResource( 37 )]
 visible = false
-light_mask = 0
 position = Vector2( 0, -220 )
 rotation = -3.14159
 polygon = PoolVector2Array( -32, -60, -40, -68, -96, -68, -96, -84, -40, -160, -18.0004, -154, -14.0004, -146, -34.0004, -146, -80, -84, -70, -72, -38, -72, -28, -62, -28, 0, -12, 24, 12, 24, 28, 0, 28, -62, 38, -72, 70, -72, 80, -84, 33.9996, -146, 13.9996, -146, 17.9996, -154, 40, -160, 94, -84, 94, -68, 40, -68, 32, -60, 32, 3.99992, 32, 20, 20, 32, -20, 32, -32, 20, -32, 4.00008 )
@@ -904,6 +904,8 @@ mass = 0.5
 maxRpm = 1800.0
 powerDraw = 25000.0
 rpmPS = 300.0
+
+[node name="CrewModifiers" parent="." instance=ExtResource( 46 )]
 
 [connection signal="body_entered" from="CargoHoldArea" to="." method="_on_CargoHoldArea_body_entered"]
 [connection signal="body_exited" from="CargoHoldArea" to="." method="_on_CargoHoldArea_body_exited"]
