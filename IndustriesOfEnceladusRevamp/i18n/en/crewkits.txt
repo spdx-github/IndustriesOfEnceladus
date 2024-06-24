@@ -1,0 +1,23 @@
+SLOT_CREW_MOD|Habitat Kits
+HUD_CREW_QUALITY|habitat quality
+
+
+SYSTEM_CREW_ADD_BUNK|Conlido bunkX1
+
+SYSTEM_CREW_ADD_BUNK_DESC|The simplest and cheapest crew accommodation expansion kit money can buy, this set includes two surface-mounted mixed-g beds that implement a memory foam base with basic textile covers and fire-safe insulation. It's surprisingly comfortable, but the lack of further adjustments to the habitat can make some vessels feel crowded. \n\nStation control reminds captains that regulations require at least 3x the allotted provisions for each crewmember over the planned length of excursions into the rings. Failure to do so may result in fines from appropriate regulatory bodies.
+
+SYSTEM_CREW_ADD_BUNK_SPECS|Crew capacity: +2 \nCrew morale erosion per day: +20% (less comfortable) \nManufacturer: Conlido RVM
+
+
+
+SYSTEM_CREW_MOD_HOME|Conlido mgHome Refit
+
+SYSTEM_CREW_MOD_HOME_DESC|Conlido's mgHome is a simple modular kit marketed towards family vessels and light transports. It includes a shared multi-channel entertainment system for crew quarters, a partitioned refrigerator and improved food preparation unit for the galley, and several adjustments to the washroom such as a multi-mode showerhead and memory foam toilet cushioning. \n\nNote: showerhead mister is not appropriate for zero-g usage. For best results, do not wash surfaces or cushions with bleach-based cleaners.
+
+SYSTEM_CREW_MOD_HOME_SPECS|Crew morale erosion per day: -10% (more comfortable) \nManufacturer: Conlido RVM
+
+
+
+SYSTEM_CREW_ADD_MANUAL|Increases or decreases total crew capacity. \n Increases or decreases crew morale erosion per day of operation. \nUnhappy crew may cause worse operational outcomes. \nDoes not require power or reactor heat.
+
+SYSTEM_CREW_MOD_MANUAL|Increases or decreases crew morale erosion per day of operation. \nUnhappy crew may cause worse operational outcomes. \nDoes not require power or reactor heat.

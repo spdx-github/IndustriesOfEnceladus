@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://ships/Cothon.tscn" type="PackedScene" id=1]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/cothon/CargoAuxSlot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/CrewModifiers.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 height = 76.0
@@ -73,12 +74,6 @@ type = "cargo.modifierDivided"
 
 [node name="CargoAuxSlot" parent="." index="23" instance=ExtResource( 2 )]
 
-[node name="ZoneTop" parent="CargoAuxSlot/CargoAuxPreProc40x20/ProcessingArea" index="0"]
-polygon = PoolVector2Array( 38, 0, 28, -18, 12, -26, -12, -26, -28, -18, -36, 0 )
-
-[node name="ZoneBottom" parent="CargoAuxSlot/CargoAuxPreProc40x20/ProcessingArea" index="1"]
-polygon = PoolVector2Array( 38, 0, 38, 186, 24, 256, -24, 256, -38, 186, -36, 0 )
-
 [node name="MineralProcessingUnit_Bulker" parent="." index="24" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/cothon/MineralProcessingUnit_Bulker.tscn"]
 visible = false
 
@@ -109,6 +104,8 @@ polygon = PoolVector2Array( -26, 24, 22, 24, 22, -18, -26, -18 )
 
 [node name="AI" parent="." index="36"]
 visible = false
+
+[node name="CrewModifiers" parent="." index="40" instance=ExtResource( 3 )]
 
 [editable path="CargoBaffles"]
 [editable path="CargoAuxSlot"]

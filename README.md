@@ -32,8 +32,9 @@ Special thanks go to:
  - Tsukuyomi-class Frigate (Decommissioned): has a ton of hardpoints, torch RCS, and is very heavy. technically demilitarised but you can totally make it into a horrific murder machine
  - Pigeon Prospector: combines Pelican and Vulture with a high-stress hardpoint *alongside* two low-stress. basically the best(?) prospector on hardware alone but is the most massive
  - UMC Oberon MLP-60: entirely custom ship with textures graciously provided by Liqvo! dandy little racing vessel with utterly ridiculous performance
- - KX37 TNTRL RAM: Ringa Aftermarket Modification variant of the KX37, has a grinder and an extra pair of thrusters, plus heavy layout reconfigurations. heavily inspired by redditor BLKCandy and their custom KX37 mod!
+ - KX37 TNTRL RAM: Ringa Aftermarket Modification variant of the KX37, has a grinder and an extra pair of thrusters, plus heavy layout reconfigurations and a set of rear drone bays. heavily inspired by redditor BLKCandy and their custom KX37 mod!
  - Wasp-class Scout (Decommissioned): incredibly light scout ship with only four thrusters, basically a Kitsune but carries two low-stress hardpoints, 320MW EM shielding, and less thrusters. can handle more thermal power too, just don't ask about the reactor
+ - Antonoff-Titan K225-SH: a shorter variant of the K225, docking bays reduced to 4 but it's a light and mobile mining barge with two inbuilt drone slots and a bigger excavator
 	
 ### Engines
  - SSE NANI Torch Refit: it's the NANI in a torch slot. have fun
@@ -100,6 +101,11 @@ Special thanks go to:
  - THI MD-5 (divided): converts the hold to amorphic, 6:5 (reduces total by 17%)
  - Conlido freightReady Hoppers: adds a large amount of mineral hold space
  - NDSBH: converts the hold to amorphic, 1:1 (perfect equivalent)
+
+### Habitat Kits
+ - All ships supported
+ - Conlido bunkX1: cheap beds! adds 2 crew to ships but makes no further accommodations which decreases crew comfort
+ - Conlido mgHome Refit: increases crew comfort a bit
 
 ## Installation (Steam)
 

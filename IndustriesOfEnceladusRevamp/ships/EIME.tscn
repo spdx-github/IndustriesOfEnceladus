@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ships/EIME.tscn" type="PackedScene" id=1]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/MineralProcessingUnit_Bulker.tscn" type="PackedScene" id=2]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/MineralProcessingUnit_Furnace.tscn" type="PackedScene" id=3]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/CrewModifiers.tscn" type="PackedScene" id=4]
 
 [node name="EIME" instance=ExtResource( 1 )]
 
@@ -37,13 +38,9 @@ polygon = PoolVector2Array( -20, 9, 22, 9, 14, -33, -24, -31 )
 
 [node name="MineralProcessingUnit_Furnace" parent="Beak/Claw Right" index="3" instance=ExtResource( 3 )]
 visible = false
-light_mask = 0
 position = Vector2( 0, -29 )
 rotation = 3.14159
 polygon = PoolVector2Array( -53, -84, -25, -72, 3, -60, 17, -54, 9, -50, 3, -54, -27, -54, -35, -42, -17, 48, -8.99999, 56, 3.00001, 56, 9.00001, 48, 9, -14, 3, -18, 9, -24, 17, -18, 17, 56, 7.00001, 68, 7.00001, 78, -15, 62, -21, 58, -43, -42 )
-
-[node name="MineralProcessingUnit" parent="Beak/Claw Right/MineralProcessingUnit_Furnace" index="0"]
-visible = true
 
 [node name="CollisionPolygon2D" parent="Beak/Claw Right/MineralProcessingUnit_Furnace/MineralProcessingUnit" index="0"]
 polygon = PoolVector2Array( -15, 56, 9.00001, 56, 9, -54, -39, -54 )
@@ -117,6 +114,8 @@ light_mask = 0
 
 [node name="Light2D2" parent="." index="15"]
 visible = true
+
+[node name="CrewModifiers" parent="." index="35" instance=ExtResource( 4 )]
 
 [editable path="Noises"]
 [editable path="AI"]

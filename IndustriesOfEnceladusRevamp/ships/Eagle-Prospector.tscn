@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://ships/Eagle-Prospector.tscn" type="PackedScene" id=1]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/prospector/CargoAuxSlot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/CrewModifiers.tscn" type="PackedScene" id=3]
 
 [node name="Eagle" instance=ExtResource( 1 )]
 
@@ -33,7 +34,6 @@ type = "cargo.modifierDivided"
 visible = false
 
 [node name="MineralProcessingUnit_Furnace" parent="." index="29" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/prospector/MineralProcessingUnit_Furnace.tscn"]
-light_mask = 0
 
 [node name="CargoAuxSlot" parent="." index="30" instance=ExtResource( 2 )]
 
@@ -67,6 +67,8 @@ polygon = PoolVector2Array( -24, 24, 22, 24, 22, -18, -24, -18 )
 [node name="AI" parent="." index="36"]
 visible = false
 
+[node name="CrewModifiers" parent="." index="41" instance=ExtResource( 3 )]
+
 [editable path="engine-main-1"]
 [editable path="engine-main-2"]
 [editable path="WeaponLeft"]
@@ -74,9 +76,11 @@ visible = false
 [editable path="CargoAuxSlot"]
 [editable path="CargoAuxSlot/CargoAuxPreProc0x30"]
 [editable path="CargoAuxSlot/CargoAuxPreProc20x10"]
+[editable path="CargoAuxSlot/CargoAuxPreProc40x20"]
 [editable path="CargoAuxSlot/CargoAuxStorProc8K"]
 [editable path="CargoAuxSlot/CargoAuxStorage4K"]
 [editable path="CargoAuxSlot/CargoAuxFab"]
+[editable path="CargoAuxSlot/CargoAuxBigFab"]
 [editable path="MineralProcessingUnit"]
 [editable path="MineralProcessingUnit_FSO"]
 [editable path="MineralProcessingUnit_SMELT"]

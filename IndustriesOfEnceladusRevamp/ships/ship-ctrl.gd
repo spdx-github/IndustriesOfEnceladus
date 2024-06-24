@@ -1,7 +1,5 @@
 extends "res://ships/ship-ctrl.gd"
 
-class_name Ship
-
 func sensorGet(sensor):
 	match sensor:
 		"hold":
@@ -14,6 +12,8 @@ func sensorGet(sensor):
 					return processedCargoCapacity
 		"hold.fill":
 			return getProcessedCargoMass() / sensorGet("hold")
+		"crew.quality":
+			return crewMoraleBonus + 1
 		_:
 			return .sensorGet(sensor)
 

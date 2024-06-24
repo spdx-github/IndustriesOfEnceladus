@@ -27,12 +27,7 @@ func getShip(from:Node = self, maxLoops = 10):
 		node = node.get_parent()
 		counter += 1
 		if counter > maxLoops:
-			print("%s exceeded max loop limit!" % from.name)
+			Debug.l("%s exceeded max loop limit!" % from.name)
 			return ERR_PRINTER_ON_FIRE
-			break
-	
-	if node == null:
-		print("Failed to get ship from %s!" % from.name)
-		return ERR_DOES_NOT_EXIST
 		
 	return node

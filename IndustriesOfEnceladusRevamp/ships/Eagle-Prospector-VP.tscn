@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://ships/Eagle-Prospector-VP.tscn" type="PackedScene" id=1]
 [ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/prospector/CargoAuxSlot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/CrewModifiers.tscn" type="PackedScene" id=3]
 
 [node name="Eagle" instance=ExtResource( 1 )]
 
@@ -88,6 +89,8 @@ polygon = PoolVector2Array( -24, 24, 22, 24, 22, -18, -24, -18 )
 
 [node name="AI" parent="." index="37"]
 visible = false
+
+[node name="CrewModifiers" parent="." index="42" instance=ExtResource( 3 )]
 
 [editable path="engine-main-1"]
 [editable path="engine-main-2"]

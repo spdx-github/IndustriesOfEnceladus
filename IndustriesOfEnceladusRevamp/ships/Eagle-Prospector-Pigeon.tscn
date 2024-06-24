@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/Excavator.gd" type="Script" id=1]
 [ext_resource path="res://ships/Eagle-Prospector-Fat.tscn" type="PackedScene" id=2]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/CrewModifiers.tscn" type="PackedScene" id=3]
 [ext_resource path="res://ships/modules/Grinder.tscn" type="PackedScene" id=4]
 [ext_resource path="res://shader/ao-spec-difuse.shader" type="Shader" id=5]
 [ext_resource path="res://sfx/spark_noise.png" type="Texture" id=6]
@@ -194,6 +195,8 @@ visible = false
 [node name="CargoAuxSlot" parent="." index="37" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/prospector/fat/CargoAuxSlot.tscn"]
 visible = false
 position = Vector2( 0, -156 )
+
+[node name="CrewModifiers" parent="." index="44" instance=ExtResource( 3 )]
 
 [editable path="Front Bumper"]
 [editable path="Grinder"]

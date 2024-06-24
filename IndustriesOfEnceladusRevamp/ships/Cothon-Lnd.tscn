@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ships/Cothon-Lnd.tscn" type="PackedScene" id=1]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/CrewModifiers.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 13.0
@@ -94,6 +95,8 @@ polygon = PoolVector2Array( -26, 24, 22, 24, 22, -18, -26, -18 )
 
 [node name="AI" parent="." index="38"]
 visible = false
+
+[node name="CrewModifiers" parent="." index="42" instance=ExtResource( 2 )]
 
 [editable path="CargoBaffles"]
 [editable path="MineralProcessingUnit_FSO"]
