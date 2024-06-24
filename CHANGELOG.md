@@ -1,3 +1,5 @@
+# 1.6.1
+ * Updated with Ukrainian translations
 # 1.6.0: LONG ROAD, SHORT HAUL
  * Added Antonoff-Titan K225-SH
  * Added Habitat Kits, a new avenue of upgrades that lets you expand your onboard crew capacity and/or inhibit crew morale degradation
