@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://ships/modules/ThrusterSlot.gd" type="Script" id=1]
+[ext_resource path="res://IndustriesOfEnceladusRevamp/ships/modules/CrewModifier.tscn" type="PackedScene" id=2]
 
 [node name="CrewModifiers" type="Node2D"]
 script = ExtResource( 1 )
@@ -10,10 +11,23 @@ default = "SYSTEM_NONE"
 
 [node name="SYSTEM_CREW_ADD_BUNK" parent="." instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/CrewModifier.tscn"]
 systemName = "SYSTEM_CREW_ADD_BUNK"
-repairReplacementPrice = 2500
+repairReplacementPrice = 4000
 repairFixPrice = 100
+crewCountChange = 1
+moraleChange = -0.3
+
+[node name="SYSTEM_CREW_ADD_BUNK2" parent="." instance=ExtResource( 2 )]
+systemName = "SYSTEM_CREW_ADD_BUNK2"
+repairReplacementPrice = 7500
+repairFixPrice = 200
 crewCountChange = 2
-moraleChange = -0.2
+moraleChange = -0.4
+
+[node name="SYSTEM_CREW_ADD_CAPSULE" parent="." instance=ExtResource( 2 )]
+systemName = "SYSTEM_CREW_ADD_CAPSULE"
+repairReplacementPrice = 67500
+crewCountChange = 2
+moraleChange = -0.25
 
 [node name="SYSTEM_CREW_MOD_HOME" parent="." instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/CrewModifier.tscn"]
 systemName = "SYSTEM_CREW_MOD_HOME"

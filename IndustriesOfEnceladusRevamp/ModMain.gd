@@ -46,13 +46,13 @@ func _init(modLoader = ModLoader):
 # Must load DLC early for it to properly function.
 	loadDLC()
 	
+# replace ShipParams for hold percentage fill readout
+	replaceScene("hud/trtl/ShipParams.tscn")
+	
 # install ship-ctrl.gd, adds hold sensors and AP setup
 	installScriptExtension("ships/ship-ctrl.gd")
 # install AutopilotOverlay.gd for new AP type
 	installScriptExtension("hud/AutopilotOverlay.gd")
-	
-# replace ShipParams for hold percentage fill readout
-	replaceScene("hud/trtl/ShipParams.tscn")
 
 # replace slots for all our new equipment
 	replaceScene("ships/modules/AuxSlot.tscn")
