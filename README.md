@@ -35,6 +35,7 @@ Special thanks go to:
  - KX37 TNTRL RAM: Ringa Aftermarket Modification variant of the KX37, has a grinder and an extra pair of thrusters, plus heavy layout reconfigurations and a set of rear drone bays. heavily inspired by redditor BLKCandy and their custom KX37 mod!
  - Wasp-class Scout (Decommissioned): incredibly light scout ship with only four thrusters, basically a Kitsune but carries two low-stress hardpoints, 320MW EM shielding, and less thrusters. can handle more thermal power too, just don't ask about the reactor
  - Antonoff-Titan K225-SH: a shorter variant of the K225, docking bays reduced to 4 but it's a light and mobile mining barge with two inbuilt drone slots and a bigger excavator
+ - SSE OK720 TNTRL: joke ship that puts a circular OCP bay (supports OCP cargo bay modules and custom accessories!) on a K-series frame, actually quite fun to fly and has four low-stress hardpoints
 	
 ### Engines
  - SSE NANI Torch Refit: it's the NANI in a torch slot. have fun

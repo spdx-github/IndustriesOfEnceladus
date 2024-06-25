@@ -1,3 +1,18 @@
+# 1.7.0: CIRCLES, THE STRONGEST SHAPE
+ * Added SSE OK720 TNTRL
+ * For Habitat Kits:
+   * Added Conlido bunkX2
+   * Added Runasimi Habitation Capsules
+   * Added Antonoff KMX Upfit
+   * Added OCM-36 Upfit
+	 * Rebalanced Conlido bunkX1
+ * Fixed RA DMW Cannon displaying in rear hardpoints
+ * Fixed Pigeon Prospector name/description and price
+ * Fixed Antonoff-Titan K225-SH cargo bay volume not being shown in the fleet/dealer description
+ * Fixed CargoAuxSlot loading behaviour in some vessels
+ * Fixed ships with habitat kits that change the maximum crew having crewmembers removed whenever the configuration updates
+   * This is an experimental change that shouldn't cause crashes but please let me know if there's any bugs
+ * Changed the way cargo bay accessories are positioned when equipped; shouldn't break anything
 # 1.6.1
  * Updated with Ukrainian translations
 # 1.6.0: LONG ROAD, SHORT HAUL
