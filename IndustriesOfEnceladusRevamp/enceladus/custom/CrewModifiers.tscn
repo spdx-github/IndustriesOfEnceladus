@@ -16,7 +16,7 @@ slot = "crew.modifier"
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 1221.0
-margin_bottom = 343.0
+margin_bottom = 565.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 margin_right = 1214.0
@@ -49,7 +49,7 @@ manual = "SYSTEM_NONE_MANUAL"
 testProtocol = "takeoff"
 default = true
 
-[node name="CrewModifierBunk" parent="VBoxContainer" instance=ExtResource( 4 )]
+[node name="CrewAdderBunk" parent="VBoxContainer" instance=ExtResource( 4 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 118.0
@@ -58,17 +58,65 @@ margin_bottom = 188.0
 slot = "crew.modifier"
 system = "SYSTEM_CREW_ADD_BUNK"
 manual = "SYSTEM_CREW_ADD_MANUAL"
-price = 2500
+price = 4000
 testProtocol = "takeoff"
 
-[node name="CrewModifierHome" parent="VBoxContainer" instance=ExtResource( 4 )]
+[node name="CrewAdderBunk2" parent="VBoxContainer" instance=ExtResource( 4 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 192.0
 margin_right = 1214.0
 margin_bottom = 262.0
 slot = "crew.modifier"
+system = "SYSTEM_CREW_ADD_BUNK2"
+manual = "SYSTEM_CREW_ADD_MANUAL"
+price = 7500
+testProtocol = "takeoff"
+
+[node name="CrewModifierHome" parent="VBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 266.0
+margin_right = 1214.0
+margin_bottom = 336.0
+slot = "crew.modifier"
 system = "SYSTEM_CREW_MOD_HOME"
 manual = "SYSTEM_CREW_MOD_MANUAL"
 price = 35000
+testProtocol = "takeoff"
+
+[node name="CrewAdderCapsule" parent="VBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 340.0
+margin_right = 1214.0
+margin_bottom = 410.0
+slot = "crew.modifier"
+system = "SYSTEM_CREW_ADD_CAPSULE"
+manual = "SYSTEM_CREW_ADD_MANUAL"
+price = 67500
+testProtocol = "takeoff"
+
+[node name="CrewModifierKMX" parent="VBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 414.0
+margin_right = 1214.0
+margin_bottom = 484.0
+slot = "crew.modifier"
+system = "SYSTEM_CREW_MOD_KMX"
+manual = "SYSTEM_CREW_MOD_MANUAL"
+price = 120000
+testProtocol = "takeoff"
+
+[node name="CrewModifierOCM" parent="VBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 488.0
+margin_right = 1214.0
+margin_bottom = 558.0
+slot = "crew.modifier"
+system = "SYSTEM_CREW_MOD_OCM"
+manual = "SYSTEM_CREW_MOD_MANUAL"
+price = 485000
 testProtocol = "takeoff"
