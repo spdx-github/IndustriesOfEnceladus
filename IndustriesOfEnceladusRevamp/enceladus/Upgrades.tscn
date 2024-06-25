@@ -2199,15 +2199,15 @@ margin_right = 1196.0
 margin_bottom = 791.0
 
 [node name="EXMONO-L" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/RightWeaponSlotRepl/VBoxContainer" index="18"]
+visible = false
 margin_top = 795.0
 margin_right = 1196.0
 margin_bottom = 865.0
 
 [node name="EXMONO-R" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/RightWeaponSlotRepl/VBoxContainer" index="19"]
-visible = false
-margin_top = 869.0
+margin_top = 795.0
 margin_right = 1196.0
-margin_bottom = 939.0
+margin_bottom = 865.0
 
 [node name="SCOOP-R" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items/RightWeaponSlotRepl/VBoxContainer" index="20"]
 margin_top = 869.0
@@ -5714,7 +5714,6 @@ slot = "cargo.equipment"
 [node name="CargoAccessories" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="69" instance=ExtResource( 3 )]
 margin_top = 50711.0
 margin_bottom = 51432.0
-onlyForShipNames = [ "SHIP_PROSPECTOR_BALD", "SHIP_KITSUNE", "SHIP_TRTL_T", "SHIP_TRTL_R", "SHIP_EIME", "SHIP_OCP209", "SHIP_OCP209_SNAP", "SHIP_OBERON", "SHIP_ATLAS_WASP" ]
 
 [node name="Autopilot" parent="VB/MarginContainer/ScrollContainer/MarginContainer/Items" index="70"]
 visible = false

@@ -42,6 +42,7 @@ var newShipNames = {
 	"OCP-209-Snap": "OCP209",
 	"Oberon": "OBERON",
 	"Eagle-Prospector-Pigeon": "PROSPECTOR",
+	"RA-TRTL-OCP": "TRTL",
 	"RA-TRTL-Ram": "TRTL",
 	"Tsukuyomi-Decom": "TSUKUYOMI", # custom aux modules
 }
@@ -302,6 +303,34 @@ var shipConfigs = {
 			"rightBayRev1":{"type":"SYSTEM_NONE"},
 		},
 	}},
+	"RA-TRTL-OCP": {"config": {
+		"ammo":{
+			"capacity": 1000.0, 
+			"initial": 1000.0, 
+		}, 
+		"autopilot":{"type":"SYSTEM_AUTOPILOT_MK1"}, 
+		"capacitor":{"capacity": 500.0}, 
+		"cargo":{
+			"equipment":"SYSTEM_CARGO_STANDARD",
+			"modifierDivided":"SYSTEM_CARGO_MOD_2K"
+		},
+		"fuel":{
+			"capacity": 30000.0, 
+			"initial": 30000.0, 
+		}, 
+		"propulsion":{
+			"main":"SYSTEM_MAIN_ENGINE_K37", 
+			"rcs":"SYSTEM_THRUSTER_K37"
+		}, 
+		"reactor":{	"power": 8.0},
+		"turbine":{"power": 100.0}, 
+		"weaponSlot":{
+			"left": {"type":"SYSTEM_EMD14"},
+			"right": {"type":"SYSTEM_EMD14"},
+			"leftBack": {"type":"SYSTEM_NONE"},
+			"rightBack": {"type":"SYSTEM_NONE"},
+		}, 
+	}},
 	"RA-TRTL-Ram": {"config": {
 		"ammo":{
 			"capacity": 1000.0, 
@@ -402,6 +431,9 @@ var shipConfigsUsed = {
 	"Eagle-Prospector-Pigeon": usedShipConfigs["PROSPECTOR-VP"],
 	"OCP-209-DD": usedShipConfigs["OCP209"],
 	"OCP-209-Snap": usedShipConfigs["OCP209"],
+	"RA-TRTL-OCP": [
+		
+	],
 	"RA-TRTL-Ram": usedShipConfigs["TRTL"],
 	"Tsukuyomi-Decom": [
 		{
