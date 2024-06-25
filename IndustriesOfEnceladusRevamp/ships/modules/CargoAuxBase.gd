@@ -24,11 +24,11 @@ var duped = false
 func _ready():
 	ship = getShip()
 	if ship.getConfig(slot) != systemName:
-		Tool.remove(self)
+		self.queue_free()
 	else: if not duped:
 		var dupe = self.duplicate()
 		dupe.duped = true
-		dupe.set_position(Vector2(self.position[0], self.get_parent().position[1]))
+		dupe.set_position(self.position + self.get_parent().position)
 		dupe.set_rotation(self.rotation)
 		ship.call_deferred("add_child", dupe)
 		self.queue_free()

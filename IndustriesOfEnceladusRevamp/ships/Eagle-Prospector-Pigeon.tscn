@@ -50,6 +50,8 @@ shader_param/charges = ExtResource( 6 )
 shader_param/map = ExtResource( 9 )
 
 [node name="Eagle" instance=ExtResource( 2 )]
+shipName = "SHIP_PROSPECTOR_PIGEON"
+hullPrice = 5752500
 
 [node name="FatHull" parent="." index="2"]
 material = SubResource( 1 )

@@ -91,7 +91,7 @@ func _ready():
 
 
 # helper script for translations
-# based on 
+# based on Za'krin's helper script!!
 func updateTL(locale:String, path:String = modPath + "i18n"):
 	sLog("Updating translations for locale %s" % locale)
 

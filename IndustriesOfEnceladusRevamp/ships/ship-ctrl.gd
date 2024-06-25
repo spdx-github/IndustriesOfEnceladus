@@ -1,5 +1,8 @@
 extends "res://ships/ship-ctrl.gd"
 
+func _ready():
+	CurrentGame.validateEmployment()
+
 func sensorGet(sensor):
 	match sensor:
 		"hold":
@@ -40,3 +43,10 @@ func autopilotControl(delta, fbw = false):
 			computeRotation = false
 			
 	.autopilotControl(delta, hasFbw())
+
+# done to make crew count increases work
+# i call setupShip to safe crew count increases prior to actually increasing
+# them with CrewModifiers
+func setupShip():
+	self.setConfig("crewCount", crew)
+	.setupShip()
