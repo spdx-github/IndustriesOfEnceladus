@@ -1,3 +1,7 @@
+# 1.7.1
+ * Fixed crash when equipping certain hardware on OK720 rear hardpoints
+ * Fixed incorrect slot name in OK720 vendor/fleet description
+ * Updated Ukrainian translations
 # 1.7.0: CIRCLES, THE STRONGEST SHAPE
  * Added SSE OK720 TNTRL
  * For Habitat Kits:

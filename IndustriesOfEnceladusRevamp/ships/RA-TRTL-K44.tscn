@@ -53,6 +53,4 @@ slot = "cargo.aux"
 
 [node name="CrewModifiers" parent="." index="42" instance=ExtResource( 2 )]
 
-[editable path="WeaponLeftBack"]
-[editable path="WeaponRightBack"]
 [editable path="AI"]

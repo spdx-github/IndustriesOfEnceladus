@@ -406,18 +406,32 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="WeaponLeftBack" parent="." index="40"]
-visible = true
+[node name="LoStressAftPort" parent="." index="40" instance_placeholder="res://weapons/WeaponSlot.tscn"]
 position = Vector2( -64, 16 )
+z_index = 23
+slot = "leftBack"
+toggleCommand = "ship_slot_3"
 
-[node name="WeaponRightBack" parent="." index="41"]
-visible = true
+[node name="LoStressAftStbd" parent="." index="41" instance_placeholder="res://weapons/WeaponSlot.tscn"]
 position = Vector2( 64, 16 )
+z_index = 23
+slot = "rightBack"
+toggleCommand = "ship_slot_4"
+
+[node name="WeaponLeftBack" parent="." index="42"]
+position = Vector2( -64, 16 )
+slot = "REPLACED"
+remove = true
+
+[node name="WeaponRightBack" parent="." index="43"]
+position = Vector2( 64, 16 )
+slot = "REPLACED"
+remove = true
 
 [node name="SYSTEM_HUNK-R" parent="WeaponRightBack" index="23"]
 visible = false
 
-[node name="MineralProcessingUnit_FAB" parent="." index="42"]
+[node name="MineralProcessingUnit_FAB" parent="." index="44"]
 position = Vector2( 41, 106 )
 rotation = -1.57079
 polygon = PoolVector2Array( -34, -86, -14.0007, -115, 2, -50, 2, -18, -14, -18, -22, -9, -22, 12, -10, 24, 16, 24, 27, 12, 27, -50, 33.9997, -41.0002, 34, 4, 34.0001, 18.9998, 22, 32, -20, 32, -33.9999, 13.0002 )
@@ -425,7 +439,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="MineralProcessingUnit_Bulker" parent="." index="43"]
+[node name="MineralProcessingUnit_Bulker" parent="." index="45"]
 light_mask = 0
 position = Vector2( 0, 110 )
 rotation = -1.5708
@@ -434,14 +448,14 @@ polygon = PoolVector2Array( 4, -24, -18, -24, -24, -18, -24, -6, -18, 0, 18, 0, 
 [node name="CollisionPolygon2D" parent="MineralProcessingUnit_Bulker/MineralProcessingUnit" index="0"]
 polygon = PoolVector2Array( -24, 27, 28, 27, 28, 11, -24, 3 )
 
-[node name="MineralProcessingUnit_Furnace" parent="." index="44"]
+[node name="MineralProcessingUnit_Furnace" parent="." index="46"]
 position = Vector2( 0, 96 )
 polygon = PoolVector2Array( -106, -15, -84, 7, -46, 27, 1.61732e-06, 37, 46, 27, 84, 7, 106, -15, 116, -33, 110, -45, 30, -33, 16, -25, 22, -41, 138, -62, 122, -24, 100, 3.99999, 72, 26, 38, 40, 0, 46, -38, 40, -72, 26, -100, 4.00001, -120, -20, -136, -56, -22, -41, -16, -25, -30, -33, -110, -45, -116, -33 )
 
 [node name="CollisionPolygon2D" parent="MineralProcessingUnit_Furnace/MineralProcessingUnit" index="0"]
 polygon = PoolVector2Array( 1.87959e-06, 43, 76, 19, 118, -29, 110, -45, -1.44248e-06, -33, -110, -47, -118, -29, -76, 19 )
 
-[node name="CargoAuxSlot" parent="." index="45"]
+[node name="CargoAuxSlot" parent="." index="47"]
 position = Vector2( 0, -80 )
 
 [node name="CargoAuxPreProc0x30" parent="CargoAuxSlot" index="0"]
@@ -576,19 +590,19 @@ position = Vector2( -90, -20 )
 rotation = 0.785398
 polygon = PoolVector2Array( -8.48529, -8.48528, 0, -42.4264, 22.6274, -25.4558, 28.2843, -16.9706, 31.1127, -5.65685, 31.1127, 36.7696, 16.9706, 36.7696, 15.5564, 43.8406, 8.48528, 45.2548, 12.7279, 57.9828, 7.07107, 72.1249, -4.24263, 43.8406, -6.02647, 26.6618 )
 
-[node name="AuxSlot" parent="." index="46"]
+[node name="AuxSlot" parent="." index="48"]
 position = Vector2( 0, 70 )
 
-[node name="AI" parent="." index="48"]
+[node name="AI" parent="." index="50"]
 position = Vector2( 0, 70 )
 
 [node name="CollisionShape2D" parent="AI/CollisionArea" index="0"]
 position = Vector2( 0, -70 )
 
-[node name="reactor" parent="." index="50"]
+[node name="reactor" parent="." index="52"]
 position = Vector2( 0, 194 )
 
-[node name="CargoBaffles" parent="." index="51"]
+[node name="CargoBaffles" parent="." index="53"]
 visible = true
 position = Vector2( 0, -34 )
 
@@ -607,7 +621,7 @@ position = Vector2( 6, 8 )
 scale = Vector2( -1, 1 )
 polygon = PoolVector2Array( 9, -12, 28, -6, 29, 0, 4, -4, 4, -10 )
 
-[node name="CrewModifiers" parent="." index="53"]
+[node name="CrewModifiers" parent="." index="55"]
 position = Vector2( 0, 70 )
 
 [editable path="Big Excavator"]
