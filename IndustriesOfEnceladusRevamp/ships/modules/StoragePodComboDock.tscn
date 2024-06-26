@@ -10,7 +10,6 @@ extents = Vector2( 200, 300 )
 radius = 1.0
 
 [node name="SYSTEM_EXODYN-R" instance=ExtResource( 1 )]
-position = Vector2( 0, 196 )
 __meta__ = {
 "_editor_description_": ""
 }
