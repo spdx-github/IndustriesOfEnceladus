@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://IndustriesOfEnceladusRevamp/ships/RA-TRTL-K44.tscn" type="PackedScene" id=1]
 [ext_resource path="res://shader/ao-spec-difuse.shader" type="Shader" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://sfx/spark_noise.png" type="Texture" id=4]
 [ext_resource path="res://ships/Hull.gd" type="Script" id=5]
 [ext_resource path="res://ships/k37-mk3-n.png" type="Texture" id=6]
-[ext_resource path="res://ships/RA-TRTL.material" type="Material" id=7]
 [ext_resource path="res://ships/k37-mk3-m.png" type="Texture" id=8]
 [ext_resource path="res://ships/k37-mk3-cd.png" type="Texture" id=9]
 [ext_resource path="res://ships/obonto-n.png" type="Texture" id=10]
@@ -70,11 +69,6 @@ shader_param/reflectiveness = 0.25
 shader_param/shine = 1.0
 shader_param/charges = ExtResource( 4 )
 shader_param/map = ExtResource( 8 )
-
-[sub_resource type="PhysicsMaterial" id=7]
-friction = 0.5
-rough = true
-bounce = 0.2
 
 [sub_resource type="CircleShape2D" id=4]
 radius = 144.0
@@ -206,113 +200,76 @@ position = Vector2( 0, -200 )
 script = ExtResource( 13 )
 removeThis = true
 
-[node name="Big Excavator" parent="." index="10" instance=ExtResource( 3 )]
-position = Vector2( 0, -208 )
-closeForce = 30000
+[node name="Front Bumper2" parent="." index="10" instance=ExtResource( 3 )]
+position = Vector2( 0, -204 )
 
-[node name="Claw Holder" parent="Big Excavator" index="0"]
-position = Vector2( 0, -3 )
-region_rect = Rect2( 0, 0, 0, 0 )
+[node name="Claw Holder" parent="Front Bumper2" index="0"]
+region_rect = Rect2( 48, 95, 160, 49 )
 
-[node name="Claw Right" parent="Big Excavator/Claw Holder" index="0"]
-position = Vector2( 23, -20 )
-physics_material_override = SubResource( 7 )
+[node name="Claw Right" parent="Front Bumper2/Claw Holder" index="0"]
+position = Vector2( 21, -15 )
 
-[node name="Claw Right" parent="Big Excavator/Claw Holder/Claw Right" index="0"]
-position = Vector2( -9, -5 )
-scale = Vector2( 1.2, 1.2 )
-z_index = 0
-region_rect = Rect2( 143, 16, 26, 64 )
+[node name="Claw Right" parent="Front Bumper2/Claw Holder/Claw Right" index="0"]
+position = Vector2( -1, -18 )
+scale = Vector2( -1.25, 1.25 )
+region_rect = Rect2( 80, 16, 33, 64 )
 
-[node name="CollisionPolygon2D" parent="Big Excavator/Claw Holder/Claw Right" index="1"]
-position = Vector2( -23, 39 )
-scale = Vector2( 1.2, 1.2 )
-z_index = 1
+[node name="CollisionPolygon2D" parent="Front Bumper2/Claw Holder/Claw Right" index="1"]
+position = Vector2( -20, 29 )
+scale = Vector2( -1.25, 1.25 )
+polygon = PoolVector2Array( 0.799998, -63.2, -12, -53.67, -16, -41.67, -24, -29.67, -16, -21.67, -12, -25.6702, -12, -45.6702, -8, -52, 0.799998, -52 )
 
-[node name="PinJoint2D" parent="Big Excavator/Claw Holder/Claw Right" index="2"]
-position = Vector2( -3, 7 )
+[node name="Claw Left" parent="Front Bumper2/Claw Holder" index="1"]
+position = Vector2( -22, -15 )
 
-[node name="Claw Left" parent="Big Excavator/Claw Holder" index="1"]
-position = Vector2( -23, -20 )
-physics_material_override = SubResource( 7 )
+[node name="Claw Left" parent="Front Bumper2/Claw Holder/Claw Left" index="0"]
+position = Vector2( 2, -18 )
+scale = Vector2( 1.25, 1.25 )
+region_rect = Rect2( 80, 16, 33, 64 )
 
-[node name="Claw Left" parent="Big Excavator/Claw Holder/Claw Left" index="0"]
-position = Vector2( 8, -6 )
-scale = Vector2( 1.2, 1.2 )
-z_index = 0
-region_rect = Rect2( 87, 16, 26, 64 )
-
-[node name="CollisionPolygon2D" parent="Big Excavator/Claw Holder/Claw Left" index="1"]
-position = Vector2( 23, 39 )
-scale = Vector2( 1.2, 1.2 )
-z_index = 1
-
-[node name="PinJoint2D" parent="Big Excavator/Claw Holder/Claw Left" index="2"]
-position = Vector2( 3, 7 )
-
-[node name="Claw Right Spring 1" parent="Big Excavator" index="1"]
-position = Vector2( 72, -64 )
-length = 72.0
-rest_length = 64.0
-
-[node name="Claw Left Spring 1" parent="Big Excavator" index="2"]
-position = Vector2( -72, -64 )
-length = 72.0
-rest_length = 64.0
-
-[node name="Claw Holder2" type="Sprite" parent="Big Excavator" index="6"]
-material = ExtResource( 7 )
-use_parent_material = true
-position = Vector2( 0, 7 )
-scale = Vector2( 1.2, 1.2 )
-z_index = 9
-texture = ExtResource( 9 )
-normal_map = ExtResource( 6 )
-region_enabled = true
-region_rect = Rect2( 48, 92, 160, 52 )
+[node name="CollisionPolygon2D" parent="Front Bumper2/Claw Holder/Claw Left" index="1"]
+position = Vector2( 21, 29 )
+scale = Vector2( 1.25, 1.25 )
+polygon = PoolVector2Array( 0.799998, -63.2, -12, -53.67, -16, -41.67, -24, -29.67, -16, -21.67, -12, -25.6702, -12, -45.6702, -8, -52, 0.799998, -52 )
 
 [node name="CabinLight" parent="." index="11"]
 position = Vector2( 0, -179 )
 
 [node name="Collider" parent="." index="13"]
-visible = false
 position = Vector2( 0, 111 )
 polygon = PoolVector2Array( 0, 31, 38, 25, 72, 11, 72, 65, 72, 127, 56, 127, 56, 87, 40, 95, 34, 109, 20, 119, 24, 135, 20, 141, -20, 141, -24, 135, -20, 119, -34, 109, -40, 95, -56, 87, -56, 127, -72, 127, -72, 73, -72, 11, -38, 25 )
 
 [node name="LeftForeCollider" type="CollisionPolygon2D" parent="." index="14"]
-visible = false
 light_mask = 0
 position = Vector2( 0, 29 )
 z_index = 50
-polygon = PoolVector2Array( -32, -235, -30, -253, -22, -255, -20, -251, -20, -229, -20, -169, -40, -165, -72, -161, -72, -229, -72, -259, -56, -259, -56, -235 )
+polygon = PoolVector2Array( -32, -235, -24, -253, -18, -253, -16, -247, -16, -229, -16, -169, -40, -165, -72, -161, -72, -229, -72, -259, -56, -259, -56, -235 )
 
 [node name="RightForeCollider" type="CollisionPolygon2D" parent="." index="15"]
-visible = false
 light_mask = 0
 position = Vector2( 0, 29 )
 scale = Vector2( -1, 1 )
 z_index = 50
-polygon = PoolVector2Array( -32, -235, -30, -253, -22, -255, -20, -251, -20, -229, -20, -169, -40, -165, -72, -161, -72, -229, -72, -259, -56, -259, -56, -235 )
+polygon = PoolVector2Array( -32, -235, -24, -253, -18, -253, -16, -247, -16, -229, -16, -169, -40, -165, -72, -161, -72, -229, -72, -259, -56, -259, -56, -235 )
 
 [node name="LeftShell" type="CollisionPolygon2D" parent="." index="16"]
-visible = false
 light_mask = 0
 z_index = 50
 polygon = PoolVector2Array( -150, 0, -144, -40, -130, -76, -108, -104, -82, -126, -72, -132, -48, -144, -40, -136, -76, -120, -100, -100, -122, -72, -136, -38, -141, 0, -136, 38, -122, 72, -100, 100, -66, 126, -72, 132, -108, 104, -130, 76, -144, 40 )
 
 [node name="RightShell" type="CollisionPolygon2D" parent="." index="17"]
-visible = false
 light_mask = 0
 scale = Vector2( -1, 1 )
 z_index = 50
 polygon = PoolVector2Array( -150, 0, -144, -40, -130, -76, -108, -104, -82, -126, -72, -132, -48, -144, -40, -136, -76, -120, -100, -100, -122, -72, -136, -38, -141, 0, -136, 38, -122, 72, -100, 100, -66, 126, -72, 132, -108, 104, -130, 76, -144, 40 )
 
 [node name="CargoHoldArea" parent="." index="18"]
+visible = true
 position = Vector2( 0, 0 )
 
 [node name="CollisionPolygon2D" parent="CargoHoldArea" index="0"]
 position = Vector2( 0, 40 )
-polygon = PoolVector2Array( 24, -180, -24, -180, -24, -262, 24, -262 )
+polygon = PoolVector2Array( 20, -180, -20, -180, -20, -258, 20, -258 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CargoHoldArea" index="1"]
 shape = SubResource( 4 )
@@ -624,7 +581,7 @@ polygon = PoolVector2Array( 9, -12, 28, -6, 29, 0, 4, -4, 4, -10 )
 [node name="CrewModifiers" parent="." index="55"]
 position = Vector2( 0, 70 )
 
-[editable path="Big Excavator"]
+[editable path="Front Bumper2"]
 [editable path="MineralProcessingUnit_FSO"]
 [editable path="WeaponLeftBack"]
 [editable path="WeaponRightBack"]

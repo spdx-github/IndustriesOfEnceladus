@@ -1,3 +1,6 @@
+# 1.7.2
+ * Adjusted excavator size and behaviour on OK720 + colliders
+ * Fixed warning/error marker behaviour in upgrades menu
 # 1.7.1
  * Fixed crash when equipping certain hardware on OK720 rear hardpoints
  * Fixed incorrect slot name in OK720 vendor/fleet description
