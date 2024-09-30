@@ -17,7 +17,7 @@ invertNameLogic = true
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 1221.0
-margin_bottom = 935.0
+margin_bottom = 1009.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 margin_right = 1214.0
@@ -64,12 +64,25 @@ price = 2500
 testProtocol = "autopilot"
 warnIfThermalBelow = 0.9
 
-[node name="K37" parent="VBoxContainer" instance=ExtResource( 5 )]
+[node name="PNTRM" parent="VBoxContainer" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 192.0
 margin_right = 1214.0
 margin_bottom = 262.0
+slot = "propulsion.rcs"
+system = "SYSTEM_THRUSTER_PNTRM"
+manual = "SYSTEM_THRUSTER_MANUAL"
+price = 2750
+testProtocol = "autopilot"
+warnIfThermalBelow = 0.9
+
+[node name="K37" parent="VBoxContainer" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 266.0
+margin_right = 1214.0
+margin_bottom = 336.0
 slot = "propulsion.rcs"
 system = "SYSTEM_THRUSTER_K37"
 manual = "SYSTEM_THRUSTER_MANUAL"
@@ -81,9 +94,9 @@ warnIfElectricBelow = 5.0
 [node name="MA150HO" parent="VBoxContainer" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 266.0
+margin_top = 340.0
 margin_right = 1214.0
-margin_bottom = 336.0
+margin_bottom = 410.0
 slot = "propulsion.rcs"
 system = "SYSTEM_THRUSTER_MA150HO"
 manual = "SYSTEM_THRUSTER_MANUAL"
@@ -95,9 +108,9 @@ warnIfElectricBelow = 20.0
 [node name="K44" parent="VBoxContainer" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 340.0
+margin_top = 414.0
 margin_right = 1214.0
-margin_bottom = 410.0
+margin_bottom = 484.0
 slot = "propulsion.rcs"
 system = "SYSTEM_THRUSTER_K44"
 manual = "SYSTEM_THRUSTER_MANUAL"
@@ -109,9 +122,9 @@ warnIfElectricBelow = 10.0
 [node name="EIT" parent="VBoxContainer" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 414.0
+margin_top = 488.0
 margin_right = 1214.0
-margin_bottom = 484.0
+margin_bottom = 558.0
 slot = "propulsion.rcs"
 system = "SYSTEM_THRUSTER_EIT"
 manual = "SYSTEM_THRUSTER_MANUAL"
@@ -123,9 +136,9 @@ warnIfElectricBelow = 20.0
 [node name="GHET" parent="VBoxContainer" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 488.0
+margin_top = 562.0
 margin_right = 1214.0
-margin_bottom = 558.0
+margin_bottom = 632.0
 slot = "propulsion.rcs"
 system = "SYSTEM_THRUSTER_GHET"
 manual = "SYSTEM_THRUSTER_MANUAL"
@@ -137,9 +150,9 @@ warnIfElectricBelow = 25.0
 [node name="MA350HO" parent="VBoxContainer" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 562.0
+margin_top = 636.0
 margin_right = 1214.0
-margin_bottom = 632.0
+margin_bottom = 706.0
 slot = "propulsion.rcs"
 system = "SYSTEM_THRUSTER_MA350HO"
 manual = "SYSTEM_THRUSTER_MANUAL"
@@ -151,9 +164,9 @@ warnIfElectricBelow = 30.0
 [node name="AGILE" parent="VBoxContainer" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 636.0
+margin_top = 710.0
 margin_right = 1214.0
-margin_bottom = 706.0
+margin_bottom = 780.0
 slot = "propulsion.rcs"
 system = "SYSTEM_THRUSTER_AGILE"
 manual = "SYSTEM_THRUSTER_MANUAL"
@@ -165,9 +178,9 @@ warnIfElectricBelow = 30.0
 [node name="BLAST" parent="VBoxContainer" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 710.0
+margin_top = 784.0
 margin_right = 1214.0
-margin_bottom = 780.0
+margin_bottom = 854.0
 rect_pivot_offset = Vector2( 4057.23, 2362 )
 slot = "propulsion.rcs"
 system = "SYSTEM_THRUSTER_BLAST"
@@ -180,9 +193,9 @@ warnIfElectricBelow = 35.0
 [node name="K69V" parent="VBoxContainer" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 784.0
+margin_top = 858.0
 margin_right = 1214.0
-margin_bottom = 854.0
+margin_bottom = 928.0
 rect_pivot_offset = Vector2( 4057.23, 2362 )
 slot = "propulsion.rcs"
 system = "SYSTEM_THRUSTER_K69V"
@@ -197,9 +210,9 @@ warnIfElectricBelow = 15.0
 [node name="PIN150" parent="VBoxContainer" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 858.0
+margin_top = 932.0
 margin_right = 1214.0
-margin_bottom = 928.0
+margin_bottom = 1002.0
 slot = "propulsion.rcs"
 system = "SYSTEM_THRUSTER_PIN150"
 manual = "SYSTEM_THRUSTER_MANUAL"

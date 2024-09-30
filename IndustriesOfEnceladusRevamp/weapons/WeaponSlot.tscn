@@ -118,9 +118,11 @@ position = Vector2( -48, 54 )
 
 [node name="SYSTEM_EXODYN-L" parent="." index="62" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/StoragePodComboDock-L.tscn"]
 visible = false
+position = Vector2( 0, 196 )
 
 [node name="SYSTEM_EXODYN-R" parent="." index="63" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/StoragePodComboDock.tscn"]
 visible = false
+position = Vector2( 0, 196 )
 
 [node name="SYSTEM_EXODYN_PROSP-L" parent="." index="64" instance_placeholder="res://IndustriesOfEnceladusRevamp/ships/modules/StoragePodComboDock-L.tscn"]
 visible = false
