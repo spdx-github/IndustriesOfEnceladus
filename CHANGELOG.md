@@ -1,3 +1,9 @@
+# 1.7.4
+ * Adjusted PIN thruster statistics overall for balance
+   * PINs can no longer be tuned past their operational maximum
+   * Reduced thruster wear capacity for both, C50s will wear slower
+   * Wear chance reset to default
+ * Fixed missing propellant tank specs
 # 1.7.3
  * Added PNTRm thruster
  * Added 1,000,000 and 2,000,000 kg propellant tank for Tsukuyomi
