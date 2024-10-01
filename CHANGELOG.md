@@ -1,3 +1,7 @@
+# 1.7.3
+ * Added PNTRm thruster
+ * Added 1,000,000 and 2,000,000 kg propellant tank for Tsukuyomi
+ * Adjusted PIN thruster choke damage behaviour; now chokes a lot more readily
 # 1.7.2
  * Adjusted excavator size and behaviour on OK720 + colliders
  * Fixed warning/error marker behaviour in upgrades menu

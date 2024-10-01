@@ -114,7 +114,7 @@ upgradeLimits = {
 "ammo.capacity": Vector2( 0, 50000 ),
 "capacitor.capacity": Vector2( 0, 1500 ),
 "drones.capacity": Vector2( 0, 50000 ),
-"fuel.capacity": Vector2( 0, 500000 ),
+"fuel.capacity": Vector2( 0, 2e+06 ),
 "reactor.power": Vector2( 0, 50 ),
 "turbine.power": Vector2( 0, 500 )
 }

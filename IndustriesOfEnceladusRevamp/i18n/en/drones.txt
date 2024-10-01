@@ -21,6 +21,10 @@ SYSTEM_EXODYN_DESC|An experimental dynamic variant of the THI Cargo Container, r
 SYSTEM_EXODYN_SPECS|Cargo capacity: 72,000 kg (combined) \nPower usage (nominal): 20 MW \nCradle mass: 500 kg \nManufacturer: Titan Heavy Industries
 
 
+SYSTEM_EXOBIG|THI Jumbo Cargo Container
+
+SYSTEM_EXOBIG_DESC|The 'Jumbo' is a variant of the THI Cargo Container that
+
 
 SYSTEM_EXSTORAGE_ALT|THI Cargo Container (Alternate)
 

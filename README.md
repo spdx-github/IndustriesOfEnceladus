@@ -48,6 +48,7 @@ Special thanks go to:
 ### Thrusters
  - RMS Pin-C50: extremely efficient pulsed induction thruster that has incredible gimbal range and second-to-none wear statistics but has very high power demand
  - ERS-BlasTR 7200: efficient MPD thruster with great thrust, draws a lot of power
+ - ND-PNTRm: micro PNTR with broadest vectoring range of all RCS thrusters, but is a NTR so its efficiency sucks shit
 
 ### Power Systems
 
