@@ -1,3 +1,7 @@
+# 1.7.5
+ * Fixed the EIAA autopilot not working
+   * In a really dumb way
+   * Sorry
 # 1.7.4
  * Adjusted PIN thruster statistics overall for balance
    * PINs can no longer be tuned past their operational maximum
