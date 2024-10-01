@@ -10,13 +10,12 @@ texture = ExtResource( 2 )
 offset = Vector2( -32, 0 )
 repairReplacementPrice = 31500
 repairReplacementTime = 2
-repairFixPrice = 4000
-wearPowerMaxChance = 0.1
+repairFixPrice = 8000
 startJolt = 4000
 thrust = 1500.0
 randomness = 0.01
 minPower = 0.05
-damageWearCapacity = 128000.0
+damageWearCapacity = 72000.0
 damageBentCapacity = 128000.0
 damageBentThreshold = 108000.0
 damageChokeCapacity = 9600.0
@@ -30,9 +29,10 @@ gimbalPerSecond = 25.133
 gimbalVectoredThrust = true
 pulseEngine = false
 externalPower = true
-tuneThrustMax = 1.25
+tuneThrustMax = 1.0
 systemName = "SYSTEM_THRUSTER_PIN150"
 mass = 185
+minChoke = 0.05
 
 [node name="Flare" parent="." index="2"]
 color = Color( 0.733333, 0.494118, 1, 1 )
